@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<?xml-stylesheet type="text/css" href="chrome://global/skin/"?>
+
+<!DOCTYPE overlay [
+    <!ENTITY % brandDTD SYSTEM "chrome://branding/locale/brand.dtd">
+    %brandDTD;
+    <!ENTITY % languagesDTD SYSTEM "chrome://simplels/locale/languages.dtd">
+    %languagesDTD;
+]>
+
+<prefwindow id="simplels-languages-prefwindow"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+            title="&languages.title;"
+            type="child"
+            style="width: &languages.width;; height: &languages.height;;">
+
+
+    <!-- As a precaution, <script/> and other tags are placed on bottom. See:
+            https://bugzilla.mozilla.org/show_bug.cgi?id=296418 -->
+
+    <prefpane id="general-pane"
+              label="General"
+              onpaneload="simplels.onLoad();"
+              flex="1">
+
+        <preferences id="general-preferences">
+            <preference id="intl.locale.matchOS"
+                        name="intl.locale.matchOS"
+                        type="bool"
+                        onchange="simplels.onUpdateMatchPreference();"/>
+            <preference id="general.useragent.locale"
+                        name="general.useragent.locale"
+                        type="string"/>
+        </preferences>
+
+        <description id="switch-about">
+            &languages.switch.description;
+        </description>
+        <radiogroup id="match-group"
+                    preference="intl.locale.matchOS">
+
+            <radio id="match"
+                   value="true"
+                   label="&languages.switch.match.label;"
+                   accesskey="&languages.switch.match.accesskey;"/>
+
+            <hbox id="switch-box" align="center">
+                <radio id="nomatch"
+                       value="false"
+                       label="&languages.switch.select.label;"
+                       accesskey="&languages.switch.select.accesskey;"/>
+
+                <menulist id="switch-list"
+                          preference="general.useragent.locale">
+                    <menupopup id="switch-popup"/>
+                </menulist>
+            </hbox>
+        </radiogroup>
+
+        <separator class="thin"/>
+        <description id="restart-info">
+            &languages.switch.restart.description;
+        </description>
+        <hbox id="restore-defaults-box" align="center">
+            <spacer flex="1"/>
+            <button id="restore-defaults"
+                    label="&languages.switch.restore.label;"
+                    accesskey="&languages.switch.restore.accesskey;"
+                    command="restoreDefaultLanguagePreferences"/>
+        </hbox>
+    </prefpane>
+
+
+    <script type="application/x-javascript"
+            src="chrome://simplels/content/languages.js"/>
+
+    <stringbundleset>
+        <stringbundle id="simplels-language-names"
+                      src="chrome://global/locale/languageNames.properties"/>
+        <stringbundle id="simplels-region-names"
+                      src="chrome://global/locale/regionNames.properties"/>
+        <stringbundle id="simplels-name-formats"
+                      src="chrome://simplels/locale/names.properties"/>
+    </stringbundleset>
+
+    <commandset>
+        <command id="restoreDefaultLanguagePreferences"
+                 oncommand="simplels.restoreDefaults()"/>
+    </commandset>
+
+</prefwindow>

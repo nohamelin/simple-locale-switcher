@@ -1,0 +1,45 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+# Resource protocol aliases
+resource    simplels                        modules/
+
+
+# Chrome registration
+content     simplels                        chrome/content/
+
+skin        simplels       classic/1.0      chrome/skin/
+skin        simplels-os    classic/1.0      chrome/skin/linux/
+skin        simplels-os    classic/1.0      chrome/skin/osx/            os=Darwin
+skin        simplels-os    classic/1.0      chrome/skin/windows/        os=WINNT
+
+locale      simplels       en-US            chrome/locale/en-US/
+locale      simplels       es-ES            chrome/locale/es-ES/
+
+override    chrome://simplels/locale/application/general.dtd            chrome://simplels/locale/firefox/general.dtd        application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+override    chrome://simplels/locale/application/general.dtd            chrome://simplels/locale/thunderbird/general.dtd    application={3550f703-e582-4d05-9a08-453d09bdfdc6}
+
+
+# XUL overlays
+overlay     chrome://browser/content/browser.xul                        chrome://simplels/content/overlay.xul           application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+overlay     chrome://messenger/content/messenger.xul                    chrome://simplels/content/overlay.xul           application={3550f703-e582-4d05-9a08-453d09bdfdc6}
+
+overlay     about:addons                                                chrome://simplels/content/extensions.xul
+overlay     chrome://mozapps/content/extensions/extensions.xul          chrome://simplels/content/extensions.xul
+
+overlay     chrome://browser/content/preferences/main.xul               chrome://simplels/content/general.xul           application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+overlay     chrome://messenger/content/preferences/general.xul          chrome://simplels/content/general.xul           application={3550f703-e582-4d05-9a08-453d09bdfdc6}
+overlay     about:preferences                                           chrome://simplels/content/general.xul           application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}      appversion>=15.0
+overlay     chrome://browser/content/preferences/in-content/main.xul    chrome://simplels/content/general.xul           application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}      appversion>=15.0
+
+
+# Style overlays
+style       chrome://global/content/customizeToolbar.xul                chrome://simplels/skin/overlay.css
+
+
+# XPCOM registration
+component   {92ffb138-103f-11e2-84fe-286f6188709b}      components/LanguageService.js
+contract    @nohamelin/sls/language-service;1           {92ffb138-103f-11e2-84fe-286f6188709b}
+category    profile-after-change                        LanguageService             @nohamelin/sls/language-service;1

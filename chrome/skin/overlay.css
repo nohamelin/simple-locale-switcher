@@ -1,0 +1,50 @@
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+#simplels-button {
+    list-style-image: url("chrome://simplels/skin/button.png");
+}
+toolbar[iconsize="small"] #simplels-button {
+    list-style-image: url("chrome://simplels/skin/button-small.png");
+}
+
+
+/* Fix "absurd" default layout for the toolbar button (Firefox only) */
+#main-window #simplels-button {
+    -moz-box-orient: horizontal;
+}
+
+
+/* Slight ajust of the text padding in the toolbar button, such as Thunderbird
+ * does (Firefox only) */
+#main-window toolbar[mode="full"] #simplels-button .toolbarbutton-text {
+    -moz-padding-start: 2px;
+}
+
+
+#simplels-button-tooltip {
+    max-width: none;
+}
+
+
+#simplels-tooltip-title {
+    margin-bottom: 0.7em;
+}
+
+
+#simplels-tooltip-selected-about {
+    font-style: italic;
+}
+
+
+#simplels-button-tooltip[conflicting="false"] #simplels-tooltip-selected,
+#simplels-tooltip-current,
+.simplels-locale[current="true"] {
+    font-weight: bold;
+}

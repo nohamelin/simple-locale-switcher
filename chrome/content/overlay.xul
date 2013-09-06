@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<?xml-stylesheet type="text/css" href="chrome://simplels/skin/overlay.css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://simplels/locale/overlay.dtd">
+
+<overlay id="simplels-main-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <script type="application/x-javascript"
+            src="chrome://simplels/content/overlay.js"/>
+
+    <stringbundleset>
+        <stringbundle id="simplels-strings"
+                      src="chrome://simplels/locale/overlay.properties"/>
+        <stringbundle id="simplels-language-names"
+                      src="chrome://global/locale/languageNames.properties"/>
+        <stringbundle id="simplels-region-names"
+                      src="chrome://global/locale/regionNames.properties"/>
+        <stringbundle id="simplels-name-formats"
+                      src="chrome://simplels/locale/names.properties"/>
+    </stringbundleset>
+
+    <commandset>
+        <command id="sls_manageLanguages"
+                 oncommand="simplels.openLanguagesManager()"/>
+        <command id="sls_getMoreLanguages"
+                 oncommand="simplels.openGetMoreLanguagesPage()"/>
+        <command id="sls_toggleRestartAfterSwitch"
+                 oncommand="simplels.toggleRestartAfterSwitch()"/>
+        <command id="sls_enableMatchingOS"
+                 oncommand="simplels.enableMatchingOS()"/>
+    </commandset>
+
+    <popupset>
+        <tooltip id="simplels-button-tooltip">
+            <label id="simplels-tooltip-title">&tooltip.title;</label>
+            <grid><rows>
+                <row id="simplels-tooltip-selected-row">
+                    <label>&tooltip.selected.label;</label>
+                    <hbox>
+                        <label id="simplels-tooltip-selected"/>
+                        <label id="simplels-tooltip-selected-about"
+                               hidden="true"/>
+                    </hbox>
+                </row>
+                <row id="simplels-tooltip-current-row"
+                     hidden="true">
+                    <label>&tooltip.current.label;</label>
+                    <label id="simplels-tooltip-current"/>
+                </row>
+            </rows></grid>
+        </tooltip>
+    </popupset>
+
+
+    <!-- Toolbar button -->
+    <toolbarpalette id="BrowserToolbarPalette"> <!-- Firefox -->
+        <toolbarbutton id="simplels-button"/>
+    </toolbarpalette>
+    <toolbarpalette id="MailToolbarPalette"> <!-- Thunderbird -->
+        <toolbarbutton id="simplels-button"/>
+    </toolbarpalette>
+
+    <toolbarbutton id="simplels-button"
+                   class="toolbarbutton-1 chromeclass-toolbar-additional"
+                   type="menu"
+                   label="&button.label;"
+                   tooltip="simplels-button-tooltip">
+
+        <menupopup id="simplels-button-popup">
+            <menuitem id="simplels-button-manage"
+                      label="&popup.manage.label;"
+                      command="sls_manageLanguages"/>
+            <menuitem id="simplels-button-get"
+                      label="&popup.get.label;"
+                      command="sls_getMoreLanguages"/>
+            <menuseparator/>
+
+            <menuitem id="simplels-button-restart"
+                      type="checkbox"
+                      closemenu="none"
+                      label="&popup.restart.label;"
+                      command="sls_toggleRestartAfterSwitch"/>
+            <menuseparator/>
+
+            <menuitem id="simplels-button-match"
+                      type="radio"
+                      autocheck="false"
+                      label="&popup.match.label;"
+                      command="sls_enableMatchingOS"/>
+
+            <!-- The languages' list is added dinamically here -->
+        </menupopup>
+
+    </toolbarbutton>
+</overlay>

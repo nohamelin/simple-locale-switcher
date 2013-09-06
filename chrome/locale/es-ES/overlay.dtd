@@ -1,0 +1,16 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY button.label "Idioma">
+
+<!ENTITY tooltip.title "Idioma de la interfaz de usuario">
+<!ENTITY tooltip.selected.label "Seleccionado:">
+<!ENTITY tooltip.current.label "Usado por la ventana:">
+
+<!ENTITY popup.manage.label "Administrar idiomas…">
+<!ENTITY popup.get.label "Obtener más paquetes de idioma…">
+<!ENTITY popup.restart.label "Reiniciar tras cambiar idioma">
+<!ENTITY popup.match.label "Coincidir con el idioma del sistema">

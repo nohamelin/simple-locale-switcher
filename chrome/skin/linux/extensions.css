@@ -1,0 +1,14 @@
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+/* Recover the focus ring for some elements in the Languages pane.
+ * It's a workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=633840 */
+#simplels-get:-moz-focusring {
+    outline: 1px dotted;
+}

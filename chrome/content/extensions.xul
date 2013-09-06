@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<?xml-stylesheet type="text/css" href="chrome://simplels/skin/extensions.css"?>
+<?xml-stylesheet type="text/css"
+                 href="chrome://simplels-os/skin/extensions.css"?>
+
+<!DOCTYPE overlay [
+    <!ENTITY % brandDTD SYSTEM "chrome://branding/locale/brand.dtd">
+    %brandDTD;
+    <!ENTITY % extensionsDTD SYSTEM "chrome://simplels/locale/extensions.dtd">
+    %extensionsDTD;
+]>
+
+<overlay id="simplels-extensions-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <script type="application/x-javascript"
+            src="chrome://simplels/content/extensions.js"/>
+
+    <commandset>
+        <command id="sls_getMoreLanguages"
+                 oncommand="simplels.openGetMoreLanguagesPage()"/>
+    </commandset>
+
+
+    <vbox id="list-view">
+        <hbox class="view-header sls-global-languages-container"
+              insertbefore="addon-list-empty">
+
+            <hbox flex="1" align="center">
+                <button id="simplels-get"
+                        class="button-link"
+                        label="&languages.get.label;"
+                        command="sls_getMoreLanguages"/>
+            </hbox>
+        </hbox>
+    </vbox>
+
+</overlay>
