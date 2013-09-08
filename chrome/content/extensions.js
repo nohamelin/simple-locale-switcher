@@ -7,6 +7,9 @@
 var simplels = {
 
     openGetMoreLanguagesPage: function() {
+        Cu.import("resource://simplels/general.jsm", this);
+        Cu.import("resource://simplels/urlFormatter.jsm", this);
+
         let prefs = Services.prefs.getBranch("extensions.simplels.");
         let getURL = this.utils.getComplexCharPref(prefs,
                                                    "getMoreLanguagesURL");
@@ -23,7 +26,3 @@ var simplels = {
         }
     }
 };
-
-
-Cu.import("resource://simplels/general.jsm", simplels);
-Cu.import("resource://simplels/urlFormatter.jsm", simplels);

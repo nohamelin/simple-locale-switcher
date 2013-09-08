@@ -41,7 +41,6 @@ var simplels = {
     onLoad: function() {
         Cu.import("resource://simplels/general.jsm", this);
         Cu.import("resource://simplels/language.jsm", this);
-        Cu.import("resource://simplels/urlFormatter.jsm", this);
 
         this.langsvc = Cc["@nohamelin/sls/language-service;1"]
                        .getService().wrappedJSObject;
@@ -292,6 +291,8 @@ var simplels = {
 
 
     openGetMoreLanguagesPage: function() {
+        Cu.import("resource://simplels/urlFormatter.jsm", this);
+
         let getURL = this.utils.getComplexCharPref(this.prefs,
                                                    "getMoreLanguagesURL");
         getURL = this.formatURL(getURL);
