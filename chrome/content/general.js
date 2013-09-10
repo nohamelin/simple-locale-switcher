@@ -19,12 +19,8 @@ var simplels = {
             }
         }
 
-        //
+        // The dialog will be always modal because of its "child" type
         let features = "chrome,titlebar,toolbar,centerscreen";
-        let instantApply = Services.prefs.getBoolPref(
-                                          "browser.preferences.instantApply");
-        features += instantApply ? ",dialog=no" : ",modal";
-
         window.openDialog(languagesUrl, null, features);
     }
 };

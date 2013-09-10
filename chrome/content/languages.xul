@@ -18,6 +18,7 @@
             xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
             title="&languages.title;"
             type="child"
+            onbeforeaccept="return simplels.onBeforeAccept();"
             style="width: &languages.width;; height: &languages.height;;">
 
 
