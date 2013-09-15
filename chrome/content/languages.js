@@ -123,15 +123,9 @@ var simplels = {
         let pickedLocale = langsvc.userLocale;
         let isPickedAvailable = langUtils.isLocaleAvailable(pickedLocale);
 
-        // Build the set of displayed locales
-        let locales = langsvc.availableLocales;
-        if (!isPickedAvailable) {
-            locales = locales.slice();
-            locales.push(pickedLocale);
-        }
+        let locales = langUtils.findRelevantLocales(true);
         langUtils.sortLocales(locales);
 
-        //
         locales.forEach(function(locale) {
             let item = document.createElement("menuitem");
             popup.appendChild(item);

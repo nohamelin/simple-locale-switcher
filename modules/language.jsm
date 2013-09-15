@@ -82,6 +82,21 @@ var langUtils = {
     },
 
 
+    findRelevantLocales: function(includeAll) {
+        let locales = langsvc.availableLocales;
+
+        let isUserLocaleAvailable = this.isLocaleAvailable(langsvc.userLocale);
+        let ignoreUserLocale = !includeAll && langsvc.matchingOS;
+
+        if (!isUserLocaleAvailable && !ignoreUserLocale) {
+            locales = locales.slice();
+            locales.push(langsvc.userLocale);
+        }
+
+        return locales;
+    },
+
+
     isLocaleAvailable: function(locale) {
         let i = 0, available;
 

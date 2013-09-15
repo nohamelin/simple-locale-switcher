@@ -190,51 +190,8 @@ var simplels = {
     updateLocalePopupItems: function() {
         let popup = document.getElementById("simplels-button-popup");
 
-        this.updatePopupLocales(popup);
-    },
-
-
-    updatePopupLocales: function(popup) {
-        let itemCallback = function(locale) {
-            return function() { simplels.switchTo(locale); }
-        };
-        let checkedLocale = this.langsvc.userLocale;
-        let isCheckedAvailable = this.langUtils
-                                     .isLocaleAvailable(checkedLocale);
-        let isCheckedIgnored = this.langsvc.matchingOS;
-
-        // Build the set of displayed locales
-        let locales = this.langsvc.availableLocales;
-        if (!isCheckedAvailable && !isCheckedIgnored) {
-            locales = locales.slice();
-            locales.push(checkedLocale);
-        }
-        this.langUtils.sortLocales(locales);
-
-        //
         this.resetPopupLocales(popup);
-
-        locales.forEach(function(locale) {
-            let item = document.createElement("menuitem");
-            popup.appendChild(item);
-
-            item.className = "simplels-locale";
-            item.id = "simplels-locale-" + locale;
-            item.setAttribute("type", "radio");
-            item.setAttribute("autocheck", "false");
-            item.setAttribute("label", this.getLocaleName(locale));
-            item.setAttribute("tooltiptext", locale);
-            item.addEventListener("command", itemCallback(locale));
-
-            if (locale == this.windowLocale)
-                item.setAttribute("current", "true");
-            if (locale == checkedLocale) {
-                if (!isCheckedIgnored)
-                    item.setAttribute("checked", true);
-                if (!isCheckedAvailable)
-                    item.setAttribute("disabled", true);
-            }
-        }, this);
+        this.populatePopupLocales(popup);
     },
 
 
@@ -247,6 +204,43 @@ var simplels = {
             if (item.classList.contains("simplels-locale"))
                 popup.removeChild(item);
         }
+    },
+
+
+    populatePopupLocales: function(popup) {
+        let checkedLocale = this.langsvc.userLocale;
+        let isCheckedAvailable = this.langUtils
+                                     .isLocaleAvailable(checkedLocale);
+        let isCheckedIgnored = this.langsvc.matchingOS;
+
+        let locales = this.langUtils.findRelevantLocales();
+        this.langUtils.sortLocales(locales);
+
+        locales.forEach(function(locale) {
+            let item = document.createElement("menuitem");
+            popup.appendChild(item);
+
+            item.className = "simplels-locale";
+            item.id = "simplels-locale-" + locale;
+            item.setAttribute("type", "radio");
+            item.setAttribute("autocheck", "false");
+            item.setAttribute("label", this.getLocaleName(locale));
+            item.setAttribute("tooltiptext", locale);
+            item.addEventListener("command", this._switchItemCallback(locale));
+
+            if (locale == this.windowLocale)
+                item.setAttribute("current", "true");
+            if (locale == checkedLocale) {
+                if (!isCheckedIgnored)
+                    item.setAttribute("checked", true);
+                if (!isCheckedAvailable)
+                    item.setAttribute("disabled", true);
+            }
+        }, this);
+    },
+
+    _switchItemCallback: function(locale) {
+        return function() simplels.switchTo(locale);
     },
 
 
