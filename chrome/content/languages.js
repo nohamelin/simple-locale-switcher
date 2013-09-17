@@ -123,7 +123,7 @@ var simplels = {
         let pickedLocale = langsvc.userLocale;
         let isPickedAvailable = langUtils.isLocaleAvailable(pickedLocale);
 
-        let locales = langUtils.findRelevantLocales(true);
+        let locales = langUtils.findRelevantLocales();
         langUtils.sortLocales(locales);
 
         locales.forEach(function(locale) {
@@ -138,7 +138,7 @@ var simplels = {
             item.setAttribute("value", locale);
 
             if (locale == pickedLocale && !isPickedAvailable)
-                item.setAttribute("disabled", true);
+                item.setAttribute("disabled", "true");
         }, this);
     },
 

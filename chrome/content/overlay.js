@@ -212,8 +212,10 @@ var simplels = {
         let isCheckedAvailable = this.langUtils
                                      .isLocaleAvailable(checkedLocale);
         let isCheckedIgnored = this.langsvc.matchingOS;
+        let isCurrentAvailable = this.langUtils
+                                     .isLocaleAvailable(this.windowLocale);
 
-        let locales = this.langUtils.findRelevantLocales();
+        let locales = this.getWindowRelevantLocales();
         this.langUtils.sortLocales(locales);
 
         locales.forEach(function(locale) {
@@ -228,13 +230,20 @@ var simplels = {
             item.setAttribute("tooltiptext", locale);
             item.addEventListener("command", this._switchItemCallback(locale));
 
-            if (locale == this.windowLocale)
+            if (locale == this.windowLocale) {
                 item.setAttribute("current", "true");
+                if (!isCurrentAvailable)
+                    item.setAttribute("disabled", "true");
+            }
             if (locale == checkedLocale) {
                 if (!isCheckedIgnored)
-                    item.setAttribute("checked", true);
-                if (!isCheckedAvailable)
-                    item.setAttribute("disabled", true);
+                    item.setAttribute("checked", "true");
+                if (!isCheckedAvailable) {
+                    item.setAttribute("disabled", "true");
+
+                    if (isCheckedIgnored && locale != this.windowLocale)
+                        item.setAttribute("hidden", "true");  // Not relevant
+                }
             }
         }, this);
     },
@@ -332,6 +341,18 @@ var simplels = {
         let wantRestart = this.prefs.getBoolPref("button.restartAfterSwitch");
         if (wantRestart)
             Application.restart();      // It could be canceled by the user
+    },
+
+
+    getWindowRelevantLocales: function() {
+        let locales = this.langUtils.findRelevantLocales();
+
+        if (locales.indexOf(this.windowLocale) == -1) { // If it isn't found...
+            // TODO: The slicing can to be avoided, in some cases
+            locales = locales.slice();
+            locales.push(this.windowLocale);
+        }
+        return locales;
     },
 
 
