@@ -15,16 +15,13 @@ toolbar[iconsize="small"] #simplels-button {
 }
 
 
-/* Fix "absurd" default layout for the toolbar button (Firefox only) */
+/* Improve the absurd default layout of the toolbar button (Firefox only) */
 #main-window #simplels-button {
     -moz-box-orient: horizontal;
 }
-
-
-/* Slight ajust of the text padding in the toolbar button, such as Thunderbird
- * does (Firefox only) */
-#main-window toolbar[mode="full"] #simplels-button .toolbarbutton-text {
-    -moz-padding-start: 2px;
+#main-window toolbar[mode="full"] #simplels-button {
+    -moz-binding: url(
+        "chrome://global/content/bindings/toolbarbutton.xml#menu-vertical");
 }
 
 
