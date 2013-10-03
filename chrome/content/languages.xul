@@ -17,7 +17,7 @@
 
     <prefwindow id="simplels-languages-prefwindow"
                 title="&languages.title;"
-                style="width: &languages.width;; height: &languages.height;;">
+                style="height: &languages.height;;">
 
 
         <!-- As a precaution, <script/> and other tags are placed on bottom.
@@ -38,7 +38,7 @@
                             type="string"/>
             </preferences>
 
-            <description id="switch-about">
+            <description id="switch-about" style="width: &languages.width;;">
                 &languages.switch.description;
             </description>
             <radiogroup id="match-group"
@@ -63,7 +63,7 @@
             </radiogroup>
 
             <separator class="thin"/>
-            <description id="restart-info">
+            <description id="restart-info" style="width: &languages.width;;">
                 &languages.switch.restart.description;
             </description>
             <hbox id="restore-defaults-box" align="center">
