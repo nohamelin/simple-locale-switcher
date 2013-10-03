@@ -227,6 +227,26 @@ var utils = {
     },
 
 
+    openPreferencesWindow: function(parent, url, title) {
+        let windows = Services.wm.getEnumerator(null);
+        while (windows.hasMoreElements()) {
+            let window = windows.getNext();
+            if (window.document.documentURI == url) {
+                window.focus();
+
+                return;
+            }
+        }
+
+        let features = "chrome,titlebar,toolbar,centerscreen";
+        let instantApply = Services.prefs.getBoolPref(
+                                          "browser.preferences.instantApply");
+        features += instantApply ? ",dialog=no" : ",modal";
+
+        parent.openDialog(url, title, features);
+    },
+
+
     ///////////////////////////////////////////////////////////////////////////
     log: function(msg) {
         msg = "Simple Locale Switcher: " + msg + ".";

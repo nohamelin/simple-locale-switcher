@@ -64,27 +64,6 @@ var simplels = {
     },
 
 
-    onBeforeAccept: function() {
-        let instantApply = Services.prefs.getBoolPref(
-                                          "browser.preferences.instantApply");
-
-        // HACK: It's a temporary workaround for
-        //       https://bugzilla.mozilla.org/show_bug.cgi?id=738797#c3
-        // If the instantApply preference is false (by default in Windows),
-        // our preferences aren't saved when the window is closed if it was
-        // open from about:preferences, because of its "child" type.
-        if (!instantApply && window.opener
-            && window.opener.document.documentElement.localName == "page") {
-
-            // Changing the "type" attribute on closing only should impact
-            // (without problems) to the handler of the dialogaccept event.
-            document.documentElement.setAttribute("type", "");
-        }
-
-        return true;
-    },
-
-
     _reinitializeLocalePreference: function() {
         // TODO: It's basically the same as the preference's constructor. Maybe
         // is possible to use that directly.
