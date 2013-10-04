@@ -4,4 +4,7 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/.
    -->
 
-<!ENTITY languages.get.label "Get more language packs for &brandShortName;…">
+<!ENTITY languages.selected.label "Preferred language for the interface of &brandShortName;:">
+<!ENTITY languages.switch.label "Switch…">
+<!ENTITY languages.get.label "Get more language packs…">
+<!ENTITY languages.get.tooltiptext "Get more language packs for &brandShortName;">

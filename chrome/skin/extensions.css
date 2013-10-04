@@ -17,3 +17,13 @@
 .view-pane:not([type="locale"]) > .sls-global-languages-container {
     display: none;
 }
+
+
+#simplels-selected-about-box {
+    overflow: hidden;
+}
+
+
+#simplels-selected {
+    font-weight: bold;
+}

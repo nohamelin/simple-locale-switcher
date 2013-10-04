@@ -4,4 +4,7 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/.
    -->
 
-<!ENTITY languages.get.label "Obtenga más paquetes de idioma para &brandShortName;…">
+<!ENTITY languages.selected.label "Idioma preferido para la interfaz de &brandShortName;:">
+<!ENTITY languages.switch.label "Cambiar…">
+<!ENTITY languages.get.label "Obtener más paquetes de idioma…">
+<!ENTITY languages.get.tooltiptext "Obtener más paquetes de idioma para &brandShortName;">

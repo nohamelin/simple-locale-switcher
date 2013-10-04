@@ -5,5 +5,5 @@
    -->
 
 <!ENTITY general.languages.caption "User Interface Language">
-<!ENTITY general.languages.choose.description "Choose the language for the user interface of &brandShortName;">
+<!ENTITY general.languages.choose.description "Choose the preferred language for the user interface of &brandShortName;">
 <!ENTITY general.languages.choose.label "Choose…">
