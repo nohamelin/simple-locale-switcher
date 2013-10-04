@@ -39,6 +39,8 @@ var simplels = {
 
 
     onLoad: function() {
+        window.removeEventListener("load", simplels);
+
         Cu.import("resource://simplels/general.jsm", this);
         Cu.import("resource://simplels/language.jsm", this);
 
