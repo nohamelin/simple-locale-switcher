@@ -155,20 +155,24 @@ var utils = {
 
     get channel() {
         if (!("_channel" in this)) {
+            // COMPAT TODO: use the existent module (Gecko 18 and later):
+            //   resource://gre/modules/UpdateChannel.jsm
+
             // User values for the app.update.channel preference are ignored
             // by the application "for to ensure that the channel is tightly
             // coupled with the application and does not apply to other
-            // instances that may use the same profile". We follow it.
+            // instances that may use the same profile".
             try {
                 this._channel = this.getDefaultCharPref("",
                                                         "app.update.channel");
             } catch (e) {
-                // Some builds (Comodo Dragon, linux distributions) may not
-                // have this preference.
-                this.log("could not found the default value of the app." +
-                         "update.channel preference. Assuming \"default\"");
+                // Some builds (linux distributions) may not have this
+                // preference.
                 this._channel = "default";
             }
+
+            // For now, we can to ignore the partnership bits for the channel
+            // string.
         }
         return this._channel;
     },
