@@ -6,5 +6,6 @@
 
 <!ENTITY languages.selected.label "Preferred language for the interface of &brandShortName;:">
 <!ENTITY languages.switch.label "Switch…">
+<!ENTITY languages.switch.tooltiptext "Switch the preferred language for the user interface">
 <!ENTITY languages.get.label "Get more language packs…">
 <!ENTITY languages.get.tooltiptext "Get more language packs for &brandShortName;">

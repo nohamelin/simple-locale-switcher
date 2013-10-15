@@ -6,5 +6,6 @@
 
 <!ENTITY languages.selected.label "Idioma preferido para la interfaz de &brandShortName;:">
 <!ENTITY languages.switch.label "Cambiar…">
+<!ENTITY languages.switch.tooltiptext "Cambiar el idioma preferido para la interfaz de usuario">
 <!ENTITY languages.get.label "Obtener más paquetes de idioma…">
 <!ENTITY languages.get.tooltiptext "Obtener más paquetes de idioma para &brandShortName;">

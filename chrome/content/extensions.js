@@ -61,7 +61,8 @@ var simplels = {
 
         if (this.langsvc.matchingOS) {
             selectedItem.value = this.strings.getString("selected.match");
-            selectedItem.tooltipText = "";
+            selectedItem.tooltipText = this.strings.getString(
+                                            "selected.match.tooltiptext");
         }
         else {
             selectedItem.value = this.getLocaleName(this.langsvc.userLocale);
