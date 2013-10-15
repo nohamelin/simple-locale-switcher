@@ -61,7 +61,6 @@ var simplels = {
         this.prefs.QueryInterface(Ci.nsIPrefBranch2);   // COMPAT: Gecko 12-
         this.prefs.addObserver("", this, false);
 
-        Services.obs.addObserver(this, "sls:matching-changed", false);
         Services.obs.addObserver(this, "sls:selected-changed", false);
         Services.obs.addObserver(this, "sls:availables-changed", false);
 
@@ -81,7 +80,6 @@ var simplels = {
     onUnload: function() {
         this.prefs.removeObserver("", this);
 
-        Services.obs.removeObserver(this, "sls:matching-changed");
         Services.obs.removeObserver(this, "sls:selected-changed");
         Services.obs.removeObserver(this, "sls:availables-changed");
     },
@@ -257,12 +255,8 @@ var simplels = {
 
     observe: function(subject, topic, data) {
         switch (topic) {
-            case "sls:matching-changed" :
-                this.updateMatchCommand();
-                this.tryToUpdateToolbarButton();
-                break;
-
             case "sls:selected-changed" :
+                this.updateMatchCommand();
                 this.tryToUpdateToolbarButton();
                 break;
 

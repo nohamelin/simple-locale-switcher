@@ -143,7 +143,7 @@ LanguageService.prototype = {
 
     _onChangedMatchingOS: function() {
         delete this._matchingOS;
-        Services.obs.notifyObservers(null, "sls:matching-changed", null);
+        Services.obs.notifyObservers(null, "sls:selected-changed", null);
     },
 
 
@@ -228,7 +228,7 @@ LanguageService.prototype = {
 
     _onChangedWillMatchOS: function() {
         delete this._willMatchOS;
-        Services.obs.notifyObservers(null, "sls:matching-will-change", null);
+        Services.obs.notifyObservers(null, "sls:selected-will-change", null);
     },
 
 

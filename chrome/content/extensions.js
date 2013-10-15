@@ -43,7 +43,6 @@ var simplels = {
         this.localeStrings.formats = document.getElementById(
                                                 "simplels-name-formats");
 
-        Services.obs.addObserver(this, "sls:matching-changed", false);
         Services.obs.addObserver(this, "sls:selected-changed", false);
 
         this.updateSelectedItem();
@@ -51,7 +50,6 @@ var simplels = {
 
 
     onUnload: function() {
-        Services.obs.removeObserver(this, "sls:matching-changed");
         Services.obs.removeObserver(this, "sls:selected-changed");
     },
 
@@ -73,7 +71,6 @@ var simplels = {
 
     observe: function(subject, topic, data) {
         switch (topic) {
-            case "sls:matching-changed" :
             case "sls:selected-changed" :
                 this.updateSelectedItem();
                 break;
