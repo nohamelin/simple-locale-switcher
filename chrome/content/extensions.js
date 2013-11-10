@@ -15,6 +15,7 @@ var simplels = {
     handleEvent: function(event) {
         switch (event.type) {
             case "load" :
+                document.removeEventListener("load", simplels, true);
                 this.onLoad();
                 break;
 
@@ -26,8 +27,6 @@ var simplels = {
 
 
     onLoad: function() {
-        document.removeEventListener("load", simplels, true);
-
         Cu.import("resource://simplels/general.jsm", this);
         Cu.import("resource://simplels/language.jsm", this);
 

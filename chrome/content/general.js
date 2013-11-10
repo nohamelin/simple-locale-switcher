@@ -6,6 +6,29 @@
 
 var simplels = {
 
+    handleEvent: function(event) {
+        switch (event.type) {
+            case "load" :
+                window.removeEventListener("load", simplels);
+                this.onLoad();
+                break;
+        }
+    },
+
+
+    onLoad: function() {
+        if (document.documentURI == "about:preferences") {
+            let langsBox = document.getElementById("simplels-languages-group");
+            let anotherBox = document.getElementById("startupGroup");
+
+            // The default visibility for the groupboxes of the General pane
+            // changed with the landing of:
+            //   https://bugzilla.mozilla.org/show_bug.cgi?id=754344
+            langsBox.hidden = anotherBox.hidden;
+        }
+    },
+
+
     openLanguagesDialog: function() {
         // about:preferences (and any other in-content chrome page, probably)
         // doesn't manage very well sub-dialogs. See:
@@ -22,3 +45,6 @@ var simplels = {
         }
     }
 };
+
+
+window.addEventListener("load", simplels);

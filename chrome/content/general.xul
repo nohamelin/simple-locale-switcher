@@ -33,10 +33,9 @@
     <prefpane id="paneGeneral"> <!-- Thunderbird -->
         <groupbox id="simplels-languages-group"/>
     </prefpane>
-    <prefpane id="mainPrefPane"> <!-- Firefox, In-content preferences -->
+    <prefpane id="mainPrefPane"> <!-- Firefox, in-content preferences -->
         <groupbox id="simplels-languages-group"
-                  data-category="paneGeneral"
-                  hidden="true"/>
+                  data-category="paneGeneral"/>
     </prefpane>
 
     <groupbox id="simplels-languages-group">
