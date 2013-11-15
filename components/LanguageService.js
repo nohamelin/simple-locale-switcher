@@ -14,6 +14,7 @@ Cu.import("resource://gre/modules/XPCOMUtils.jsm");
 Cu.import("resource://gre/modules/Services.jsm");
 Cu.import("resource://gre/modules/AddonManager.jsm");
 Cu.import("resource://simplels/general.jsm");
+Cu.import("resource://simplels/scheduler.jsm");
 
 
 const DEFAULT_PACKAGE = "global";
@@ -99,6 +100,13 @@ LanguageService.prototype = {
     },
 
 
+    _onChangedSelectedLocale: function() {
+        delete this._matchingOS;
+        delete this._userLocale;
+        Services.obs.notifyObservers(null, "sls:selected-changed", null);
+    },
+
+
     /**
      * A collection of language tags, associated to any available language that
      * can be effectively applied.
@@ -141,12 +149,6 @@ LanguageService.prototype = {
     },
 
 
-    _onChangedMatchingOS: function() {
-        delete this._matchingOS;
-        Services.obs.notifyObservers(null, "sls:selected-changed", null);
-    },
-
-
     resetMatchingOS: function() {
         Services.prefs.clearUserPref(MATCH_PREF_NAME);
     },
@@ -182,12 +184,6 @@ LanguageService.prototype = {
 
         if (locale != this.userLocale)
             Services.prefs.setCharPref(LOCALE_PREF_NAME, locale);
-    },
-
-
-    _onChangedUserLocale: function() {
-        delete this._userLocale;
-        Services.obs.notifyObservers(null, "sls:selected-changed", null);
     },
 
 
@@ -352,11 +348,10 @@ LanguageService.prototype = {
             case "nsPref:changed" :
                 switch (data) {
                     case "matchOS" :
-                        this._onChangedMatchingOS();
-                        break;
-
                     case "locale" :
-                        this._onChangedUserLocale();
+                        scheduler.queue("selected-changed", function() {
+                            languageService._onChangedSelectedLocale();
+                        }, 40);
                         break;
 
                     case "applyOnQuit.matchOS" :
@@ -377,10 +372,9 @@ LanguageService.prototype = {
             // There isn't much harm if the locale add-on is actually for
             // another extension instead of the main application
             if (install.type == "locale" && addon.isActive)
-                // Not sure why the timeout is neccesary
-                utils.setTimeout(function() {
+                scheduler.queue("install-ended", function() {
                     languageService._onChangedAvailableLocales();
-                }, 20);
+                }, 40);
         }
     },
 
