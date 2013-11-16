@@ -16,8 +16,7 @@
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
     <prefwindow id="simplels-languages-prefwindow"
-                title="&languages.title;"
-                style="height: &languages.height;;">
+                title="&languages.title;">
 
 
         <!-- As a precaution, <script/> and other tags are placed on bottom.
@@ -38,7 +37,8 @@
                             type="string"/>
             </preferences>
 
-            <description id="switch-about" style="width: &languages.width;;">
+            <description id="switch-about"
+                         style="width: &languages.descriptions.width;;">
                 &languages.switch.description;
             </description>
             <radiogroup id="match-group"
@@ -63,7 +63,8 @@
             </radiogroup>
 
             <separator class="thin"/>
-            <description id="restart-info" style="width: &languages.width;;">
+            <description id="restart-info"
+                         style="width: &languages.descriptions.width;;">
                 &languages.switch.restart.description;
             </description>
             <hbox id="restore-defaults-box" align="center">

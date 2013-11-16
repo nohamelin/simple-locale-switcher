@@ -5,8 +5,7 @@
    -->
 
 <!ENTITY languages.title "Idioma de la interfaz de usuario">
-<!ENTITY languages.width "32em">
-<!ENTITY languages.height "18em">
+<!ENTITY languages.descriptions.width "32em">
 
 <!ENTITY languages.switch.description "Escoja el idioma para el texto que aparece en los cuadros de diálogo, menús y barras de herramientas de &brandShortName;:">
 <!ENTITY languages.switch.match.label "Coincidir cuando sea posible con el idioma del sistema">

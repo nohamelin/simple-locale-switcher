@@ -5,8 +5,7 @@
    -->
 
 <!ENTITY languages.title "User Interface Language">
-<!ENTITY languages.width "32em">
-<!ENTITY languages.height "18em">
+<!ENTITY languages.descriptions.width "32em">
 
 <!ENTITY languages.switch.description "Choose the language for text that appears in dialog boxes, menus and toolbars of &brandShortName;:">
 <!ENTITY languages.switch.match.label "Try to match the system's language">

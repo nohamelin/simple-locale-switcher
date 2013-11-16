@@ -58,9 +58,10 @@ var simplels = {
 
         //
         this.onUpdateMatchPreference();
-
         this.populateSwitchList();
         this.localePref.updateElements();
+
+        window.sizeToContent();
     },
 
 
