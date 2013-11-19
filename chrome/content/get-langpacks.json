@@ -1,20 +1,20 @@
 {
     "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}": {
-        "esr":          "https://download-installer.cdn.mozilla.net/pub/mozilla.org/firefox/releases/%VERSION%esr/%__DIR_OS%/xpi/",
-        "release":      "https://download-installer.cdn.mozilla.net/pub/mozilla.org/firefox/releases/%VERSION%/%__DIR_OS%/xpi/",
-        "beta":         "https://download-installer.cdn.mozilla.net/pub/mozilla.org/firefox/releases/%VERSION%b1/%__DIR_OS%/xpi/",
-        "aurora":       "https://download-installer.cdn.mozilla.net/pub/mozilla.org/firefox/nightly/latest-mozilla-aurora-l10n/%__DIR_OS%/xpi/",
-        "nightly":      "https://download-installer.cdn.mozilla.net/pub/mozilla.org/firefox/nightly/latest-mozilla-central-l10n/%__DIR_OS%/xpi/",
+        "esr":          "http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/%VERSION%esr/%__DIR_OS%/xpi/",
+        "release":      "http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/%VERSION%/%__DIR_OS%/xpi/",
+        "beta":         "http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/%VERSION%b1/%__DIR_OS%/xpi/",
+        "aurora":       "http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-mozilla-aurora-l10n/%__DIR_OS%/xpi/",
+        "nightly":      "http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-mozilla-central-l10n/%__DIR_OS%/xpi/",
 
-        "default":      "https://download-installer.cdn.mozilla.net/pub/mozilla.org/firefox/releases/%VERSION%/%__DIR_OS%/xpi/"
+        "default":      "http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/%VERSION%/%__DIR_OS%/xpi/"
     },
     "{3550f703-e582-4d05-9a08-453d09bdfdc6}": {
-        "esr":          "https://download-installer.cdn.mozilla.net/pub/mozilla.org/thunderbird/releases/%VERSION%esr/%__DIR_OS%/xpi/",
-        "release":      "https://download-installer.cdn.mozilla.net/pub/mozilla.org/thunderbird/releases/%VERSION%/%__DIR_OS%/xpi/",
-        "beta":         "https://download-installer.cdn.mozilla.net/pub/mozilla.org/thunderbird/releases/%VERSION%b1/%__DIR_OS%/xpi/",
-        "aurora":       "https://download-installer.cdn.mozilla.net/pub/mozilla.org/thunderbird/nightly/latest-comm-aurora-l10n/%__DIR_OS%/xpi/",
-        "nightly":      "https://download-installer.cdn.mozilla.net/pub/mozilla.org/thunderbird/nightly/latest-comm-central-l10n/%__DIR_OS%/xpi/",
+        "esr":          "http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/%VERSION%esr/%__DIR_OS%/xpi/",
+        "release":      "http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/%VERSION%/%__DIR_OS%/xpi/",
+        "beta":         "http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/%VERSION%b1/%__DIR_OS%/xpi/",
+        "aurora":       "http://ftp.mozilla.org/pub/mozilla.org/thunderbird/nightly/latest-comm-aurora-l10n/%__DIR_OS%/xpi/",
+        "nightly":      "http://ftp.mozilla.org/pub/mozilla.org/thunderbird/nightly/latest-comm-central-l10n/%__DIR_OS%/xpi/",
 
-        "default":      "https://download-installer.cdn.mozilla.net/pub/mozilla.org/thunderbird/releases/%VERSION%/%__DIR_OS%/xpi/"
+        "default":      "http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/%VERSION%/%__DIR_OS%/xpi/"
     }
 }
