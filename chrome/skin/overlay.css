@@ -24,7 +24,8 @@ toolbarpaletteitem[place="palette"] > #simplels-button {
 #main-window #simplels-button {
     -moz-box-orient: horizontal;
 }
-#main-window toolbar[mode="full"] #simplels-button {
+#main-window toolbar[mode="full"] #simplels-button,
+#main-window #simplels-button[cui-areatype="menu-panel"] {
     -moz-binding: url(
         "chrome://global/content/bindings/toolbarbutton.xml#menu-vertical");
 }
