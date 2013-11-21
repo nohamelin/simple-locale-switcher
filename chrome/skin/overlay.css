@@ -10,8 +10,13 @@
 #simplels-button {
     list-style-image: url("chrome://simplels/skin/button.png");
 }
-toolbar[iconsize="small"] #simplels-button {
+toolbar[iconsize="small"] #simplels-button,
+#main-window #simplels-button[cui-areatype="toolbar"] {
     list-style-image: url("chrome://simplels/skin/button-small.png");
+}
+#main-window #simplels-button[cui-areatype="menu-panel"],
+toolbarpaletteitem[place="palette"] > #simplels-button {
+    list-style-image: url("chrome://simplels/skin/button-big.png");
 }
 
 
