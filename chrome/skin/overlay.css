@@ -20,12 +20,12 @@ toolbarpaletteitem[place="palette"] > #simplels-button {
 }
 
 
-/* Improve the absurd default layout of the toolbar button (Firefox only) */
-#main-window #simplels-button {
+/* Improve the absurd default layout of the toolbar button (Firefox only,
+ * pre Australis) */
+#main-window #simplels-button:not([cui-areatype]) {
     -moz-box-orient: horizontal;
 }
-#main-window toolbar[mode="full"] #simplels-button,
-#main-window #simplels-button[cui-areatype="menu-panel"] {
+#main-window toolbar[mode="full"] #simplels-button:not([cui-areatype]) {
     -moz-binding: url(
         "chrome://global/content/bindings/toolbarbutton.xml#menu-vertical");
 }
