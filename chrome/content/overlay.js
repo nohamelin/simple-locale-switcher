@@ -138,7 +138,7 @@ var simplels = {
 
 
     updateToolbarButtonTooltip: function() {
-        let $ = function(id) document.getElementById("simplels-" + id);
+        let $ = function(id) document.getElementById("simplels-tooltip-" + id);
 
         // The tooltip displays information about the next pieces:
         // 1. The locale selected, expected by the user.
@@ -148,8 +148,8 @@ var simplels = {
                                       .isLocaleAvailable(selectedLocale);
         let informAboutSelected = isSelectedMatchingOS || !isSelectedAvailable;
 
-        $("tooltip-selected").value = this.getLocaleName(selectedLocale);
-        $("tooltip-selected-about").hidden = !informAboutSelected;
+        $("selected").value = this.getLocaleName(selectedLocale);
+        $("selected-about").hidden = !informAboutSelected;
 
         let aboutMsg = "";
         if (informAboutSelected) {
@@ -165,19 +165,17 @@ var simplels = {
             else  // !isSelectedAvailable
                 aboutMsg = noAvailableMsg;
         }
-        $("tooltip-selected-about").value = aboutMsg;
+        $("selected-about").value = aboutMsg;
 
         // 2. The locale applied to the current window.
         let currentLocale = this.windowLocale;
         let areLocalesInConflict = currentLocale != selectedLocale;
 
-        $("button-tooltip").setAttribute("conflicting", areLocalesInConflict);
-        $("tooltip-current-row").hidden = !areLocalesInConflict;
-        $("tooltip-current").value = this.getLocaleName(currentLocale);
+        $("current-row").hidden = !areLocalesInConflict;
+        $("current").value = this.getLocaleName(currentLocale);
 
-        // TODO
-        // 3. The locale that will be applied on quit, selected for the next
-        // execution.
+        document.getElementById("simplels-button-tooltip")
+                .setAttribute("conflicting", areLocalesInConflict);
     },
 
 
