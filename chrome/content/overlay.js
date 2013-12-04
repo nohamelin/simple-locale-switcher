@@ -123,6 +123,17 @@ var simplels = {
 
     tryToUpdateToolbarButton: function() {
         let button = document.getElementById("simplels-button");
+
+        // Workaround for
+        //   https://bugzilla.mozilla.org/show_bug.cgi?id=941903
+        if (!button && "CustomizableUI" in window) {
+            let widgetGroup = CustomizableUI.getWidget("simplels-button");
+
+            // areaType is null if the item is in the palette
+            if (widgetGroup.areaType)
+                button = widgetGroup.forWindow(window).node;
+        }
+
         if (button) {
             this.isToolbarButtonUpdatePending = false;
 
@@ -130,7 +141,7 @@ var simplels = {
             // broadcasters, so they are always correctly set, and we can
             // to ignore them here.
             this.updateToolbarButtonTooltip();
-            this.updateLocalePopupItems();
+            this.updateLocalePopupItems(button.firstChild);
         }
         else
             this.isToolbarButtonUpdatePending = true;
@@ -179,9 +190,7 @@ var simplels = {
     },
 
 
-    updateLocalePopupItems: function() {
-        let popup = document.getElementById("simplels-button-popup");
-
+    updateLocalePopupItems: function(popup) {
         this.resetPopupLocales(popup);
         this.populatePopupLocales(popup);
     },
