@@ -85,7 +85,6 @@
             <menuitem id="simplels-button-restart"
                       type="checkbox"
                       closemenu="none"
-                      noautoclose="true"
                       label="&popup.restart.label;"
                       command="sls_toggleRestartAfterSwitch"/>
             <menuseparator/>
