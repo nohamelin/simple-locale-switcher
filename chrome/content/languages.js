@@ -106,9 +106,9 @@ var simplels = {
         let locales = langUtils.findRelevantLocales();
         langUtils.sortLocales(locales);
 
+        let popupFragment = document.createDocumentFragment();
         locales.forEach(function(locale) {
             let item = document.createElement("menuitem");
-            popup.appendChild(item);
 
             item.className = "switch-locale";
             item.id = "switch-locale-" + locale;
@@ -119,7 +119,11 @@ var simplels = {
 
             if (locale == pickedLocale && !isPickedAvailable)
                 item.setAttribute("disabled", "true");
+
+            popupFragment.appendChild(item);
         }, this);
+
+        popup.appendChild(popupFragment);
     },
 
 

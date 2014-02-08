@@ -219,9 +219,9 @@ var simplels = {
         let locales = this.getWindowRelevantLocales();
         this.langUtils.sortLocales(locales);
 
+        let popupFragment = document.createDocumentFragment();
         locales.forEach(function(locale) {
             let item = document.createElement("menuitem");
-            popup.appendChild(item);
 
             item.className = "simplels-locale";
             item.id = "simplels-locale-" + locale;
@@ -246,7 +246,11 @@ var simplels = {
                         item.setAttribute("hidden", "true");  // Not relevant
                 }
             }
+
+            popupFragment.appendChild(item);
         }, this);
+
+        popup.appendChild(popupFragment);
     },
 
     _switchItemCallback: function(locale) {
