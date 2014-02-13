@@ -47,17 +47,11 @@ var simplels = {
             // or "wstring") doesn't work in all the cases.
             this.localePref.type = "wstring";
             this._reinitializeLocalePreference();
-
-            // TODO: As the default value of the preference is dependent of the
-            // current locale, reseting directly the preference doesn't work as
-            // expected. As the user can't do anything about it, the respective
-            // button will be hidden.
-            let restoreBox = document.getElementById("restore-defaults-box");
-            restoreBox.hidden = true;
         }
 
-        //
-        this.onUpdateMatchPreference();
+        this.switchList = document.getElementById("switch-list");
+
+        this.switchList.disabled = this.matchPref.value;
         this.populateSwitchList();
         this.localePref.updateElements();
 
@@ -91,9 +85,15 @@ var simplels = {
 
 
     onUpdateMatchPreference: function() {
-        let switchList = document.getElementById("switch-list");
+        this.switchList.disabled = this.matchPref.value;
 
-        switchList.disabled = this.matchPref.value;
+        if (langsvc.isUserLocaleLocalized)
+            // When we have a localized localePref with its value set to the
+            // default, toggling matchPref will affect this default value.
+            // TODO: There are still some problems managing it if the
+            // instantApply preference is false (uncommon, it isn't its default
+            // value in platforms where localePref can be found localized)
+            this.localePref.updateElements();
     },
 
 
