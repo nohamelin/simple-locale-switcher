@@ -38,6 +38,10 @@
                  oncommand="simplels.enableMatchingOS()"/>
     </commandset>
 
+    <broadcasterset>
+        <broadcaster id="sls_showLocaleDescriptions"/>
+    </broadcasterset>
+
     <popupset>
         <tooltip id="simplels-button-tooltip">
             <label id="simplels-tooltip-title">&tooltip.title;</label>
@@ -72,7 +76,8 @@
                    class="toolbarbutton-1 chromeclass-toolbar-additional"
                    type="menu"
                    label="&button.label;"
-                   tooltip="simplels-button-tooltip">
+                   tooltip="simplels-button-tooltip"
+                   observes="sls_showLocaleDescriptions">
 
         <menupopup id="simplels-button-popup">
             <menuitem id="simplels-button-manage"

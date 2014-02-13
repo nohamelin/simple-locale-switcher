@@ -48,6 +48,12 @@ toolbar[iconsize="small"] #simplels-button,
 
 #simplels-button-tooltip[conflicting="false"] #simplels-tooltip-selected,
 #simplels-tooltip-current,
-.simplels-locale[current="true"] {
+.simplels-locale[current="true"] > .menu-iconic-text {
     font-weight: bold;
+}
+
+
+#simplels-button[descriptions="true"] .simplels-locale-desc-placeholder,
+#simplels-button:not([descriptions="true"]) .simplels-locale-desc {
+    display: none;
 }

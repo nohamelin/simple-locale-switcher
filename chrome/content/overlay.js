@@ -62,6 +62,7 @@ var simplels = {
         this.updateManageCommand();
         this.updateRestartCommand();
         this.updateMatchCommand();
+        this.updateDescriptionsBroadcaster();
 
         window.setTimeout(function() simplels.tryToUpdateToolbarButton(), 60);
 
@@ -118,6 +119,15 @@ var simplels = {
         let wantMatch = this.langsvc.matchingOS;
 
         matchCmd.setAttribute("checked", wantMatch);
+    },
+
+
+    updateDescriptionsBroadcaster: function() {
+        let descBcstr = document.getElementById("sls_showLocaleDescriptions");
+        let wantDescriptions = this.prefs.getBoolPref(
+                                         "button.showDescriptions");
+
+        descBcstr.setAttribute("descriptions", wantDescriptions);
     },
 
 
@@ -228,6 +238,7 @@ var simplels = {
             item.setAttribute("type", "radio");
             item.setAttribute("autocheck", "false");
             item.setAttribute("label", this.getLocaleName(locale));
+            item.setAttribute("description", locale);
             item.setAttribute("tooltiptext", locale);
             item.addEventListener("command", this._switchItemCallback(locale));
 
@@ -274,6 +285,10 @@ var simplels = {
                 switch (data) {
                     case "button.restartAfterSwitch" :
                         this.updateRestartCommand();
+                        break;
+
+                    case "button.showDescriptions" :
+                        this.updateDescriptionsBroadcaster();
                         break;
                 }
                 break;

@@ -8,6 +8,7 @@
 //pref("extensions.simplels.applyOnQuit.locale", "en-US");
 
 pref("extensions.simplels.button.restartAfterSwitch", true);
+pref("extensions.simplels.button.showDescriptions", false);
 
 pref("extensions.simplels.getMoreLanguagesURL", "https://addons.mozilla.org/language-tools/");
 //pref("extensions.simplels.getMoreLanguagesURL.preventDefaultOverriding", true);
