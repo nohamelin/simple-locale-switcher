@@ -4,14 +4,18 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/.
    -->
 
+<!-- Same as the general.languages.caption string in the general.dtd file. -->
 <!ENTITY languages.title "Idioma de la interfaz de usuario">
+<!-- A CSS value, the default width of the paragraphs in the window. You don't need to change it, probably. -->
 <!ENTITY languages.descriptions.width "32em">
 
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox) -->
 <!ENTITY languages.switch.description "Escoja el idioma para el texto que aparece en los cuadros de diálogo, menús y barras de herramientas de &brandShortName;:">
 <!ENTITY languages.switch.match.label "Coincidir cuando sea posible con el idioma del sistema">
 <!ENTITY languages.switch.match.accesskey "C">
 <!ENTITY languages.switch.select.label "Usar el idioma:">
 <!ENTITY languages.switch.select.accesskey "U">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox) -->
 <!ENTITY languages.switch.restart.description "Necesitará reiniciar &brandShortName; para aplicar cualquier cambio a las ventanas ya existentes.">
 <!ENTITY languages.switch.restore.label "Restaurar valores predeterminados">
 <!ENTITY languages.switch.restore.accesskey "R">

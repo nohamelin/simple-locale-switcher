@@ -4,8 +4,10 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/.
    -->
 
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
 <!ENTITY languages.selected.label "Idioma preferido para la interfaz de &brandShortName;:">
 <!ENTITY languages.switch.label "Cambiar…">
 <!ENTITY languages.switch.tooltiptext "Cambiar el idioma preferido para la interfaz de usuario">
 <!ENTITY languages.get.label "Obtener más paquetes de idioma…">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
 <!ENTITY languages.get.tooltiptext "Obtener más paquetes de idioma para &brandShortName;">

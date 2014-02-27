@@ -6,4 +6,6 @@
 
 <!-- LOCALIZATION NOTE: only for Firefox -->
 
+<!-- If possible, it shouldn't coincide with the existing accesskeys in the General pane of the Firefox Options window.
+     Check it with Firefox 10 ESR: later releases removed many preferences from this pane. -->
 <!ENTITY general.languages.choose.accesskey "o">

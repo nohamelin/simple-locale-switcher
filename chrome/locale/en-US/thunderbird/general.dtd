@@ -6,4 +6,5 @@
 
 <!-- LOCALIZATION NOTE: only for Thunderbird -->
 
+<!-- If possible, it shouldn't coincide with the existing accesskeys in the General pane of the Thunderbird Options window. -->
 <!ENTITY general.languages.choose.accesskey "e">
