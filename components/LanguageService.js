@@ -274,13 +274,6 @@ LanguageService.prototype = {
         AddonManager.addAddonListener(this.addonListener);
 
         Services.obs.addObserver(this, "quit-application", false);
-
-        // Set a "suitable" default value, according to the application's UUID
-        // and the updates channel, to our getMoreLanguagesURL preference: the
-        // repository's url from where language packs can to be downloaded.
-        utils.setTimeout(function() {
-            languageService._overrideDefaultGetMoreLanguagesUrl();
-        }, 120);
     },
 
 
@@ -303,35 +296,6 @@ LanguageService.prototype = {
             this.matchingOS = this.willMatchOS;
             this._resetWillMatchOS();
         }
-    },
-
-
-    _overrideDefaultGetMoreLanguagesUrl: function() {
-        try {
-            if (addonBranch.getBoolPref(
-                            "getMoreLanguagesURL.preventDefaultOverriding"))
-                return;
-        } catch (e) {}
-
-        // Because a "default" channel can to correspond to, eh, anything,
-        // here the user probably will need anyway a manual ajustment.
-        if (utils.channel == "default")
-            utils.log("found \"default\" as the application's updates " +
-                      "channel. Assuming \"release\" for to set a suitable " +
-                      "default value for the destination of the \"Get More " +
-                      "Language Packs\" command");
-
-        let getFile = "chrome://simplels/content/get-langpacks.json";
-        let getString = utils.getFileContents(getFile);
-        let getObject = JSON.parse(getString);
-
-        let getURL = getObject[utils.application][utils.channel];
-        if (getURL)
-            utils.setDefaultComplexCharPref(SLS_BRANCH_NAME,
-                                            "getMoreLanguagesURL",
-                                            getURL);
-            // If getURL isn't found, we have a non-common build with an
-            // explicitly non-supported channel (e.g. nightly-ux).
     },
 
 

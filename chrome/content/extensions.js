@@ -85,12 +85,8 @@ var simplels = {
 
 
     openGetMoreLanguagesPage: function() {
-        Cu.import("resource://simplels/urlFormatter.jsm", this);
-
-        let prefs = Services.prefs.getBranch("extensions.simplels.");
-        let getURL = this.utils.getComplexCharPref(prefs,
-                                                   "getMoreLanguagesURL");
-        getURL = this.formatURL(getURL);
+        Cu.import("resource://simplels/langpacks.jsm", this);
+        let getURL = this.getMoreLanguagesURL();
 
         switch (this.utils.application) {
             case this.FIREFOX_ID :

@@ -1,0 +1,65 @@
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
+"use strict";
+
+var EXPORTED_SYMBOLS = [ "getMoreLanguagesURL" ];
+
+const Cc = Components.classes;
+const Ci = Components.interfaces;
+const Cu = Components.utils;
+
+Cu.import("resource://gre/modules/XPCOMUtils.jsm");
+Cu.import("resource://gre/modules/Services.jsm");
+Cu.import("resource://simplels/general.jsm");
+Cu.import("resource://simplels/urlFormatter.jsm");
+
+
+const SLS_BRANCH_NAME = "extensions.simplels.";
+const FTP_GET_MORE_FILE = "chrome://simplels/content/get-ftp-langpacks.json";
+const AMO_FALLBACK_GET_MORE_URL = "https://addons.mozilla.org/language-tools/";
+
+XPCOMUtils.defineLazyGetter(this, "addonBranch", function() {
+    return Services.prefs.getBranch(SLS_BRANCH_NAME);
+});
+
+XPCOMUtils.defineLazyGetter(this, "ftpURL", function() {
+    let getString = utils.getFileContents(FTP_GET_MORE_FILE);
+    let getObject = JSON.parse(getString);
+
+    // It will throw an exception in some non-common builds with an
+    // unsupported updates channel (e.g. nightly-ux).
+    return getObject[utils.application][utils.channel];
+
+
+});
+
+
+function getMoreLanguagesURL() {
+    let destinationType = addonBranch.getIntPref("getMoreLanguages");
+    let getURL;
+
+    switch (destinationType) {
+        case 0 :    // Get the url from our related preference
+            try {
+                getURL = utils.getComplexCharPref(addonBranch,
+                                                  "getMoreLanguagesURL");
+            } catch (e) {}
+            break;
+
+        case 1 :    // Get from AMO
+            getURL = AMO_FALLBACK_GET_MORE_URL;
+            break;
+
+        case 2 :    // Get a suitable url to the Mozilla's file servers
+            try {
+                getURL = ftpURL;
+            } catch (e) {}
+            break;
+    }
+
+    return formatURL(getURL || AMO_FALLBACK_GET_MORE_URL);
+}

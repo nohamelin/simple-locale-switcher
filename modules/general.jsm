@@ -179,41 +179,6 @@ var utils = {
 
 
     ///////////////////////////////////////////////////////////////////////////
-    /**
-     * JS module implementation of nsIDOMJSWindow.setTimeout and .clearTimeout
-     *
-     * SOURCE:
-     * Backport of resource://gre/modules/Timer.jsm (Gecko 23 and later)
-     */
-    _nextTimeoutId: 1,
-    _timeoutTable: {},  // COMPAT: Map() no available in Gecko 12 and before
-
-    setTimeout: function(callback, delay) {
-        let id = this._nextTimeoutId++;
-        let args = Array.slice(arguments, 2);
-        let timer = Cc["@mozilla.org/timer;1"].createInstance(Ci.nsITimer);
-
-        timer.initWithCallback({
-            notify: function(timer) {
-                delete utils._timeoutTable[id];
-                callback.apply(null, args);
-            }
-        }, delay, Ci.nsITimer.TYPE_ONE_SHOT);
-
-        this._timeoutTable[id] = timer;
-        return id;
-    },
-
-
-    clearTimeout: function clearTimeout(id) {
-        if (this._timeoutTable[id]) {
-            this._timeoutTable[id].cancel();
-            delete this._timeoutTable[id];
-        }
-    },
-
-
-    ///////////////////////////////////////////////////////////////////////////
     getFileContents: function(url) {
         let sis = Cc["@mozilla.org/scriptableinputstream;1"]
                   .getService(Ci.nsIScriptableInputStream);
