@@ -1,0 +1,20 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the languages.get.label string in extensions.dtd file -->
+<!ENTITY prefwindow.get.caption "Get More Language Packs">
+<!ENTITY prefwindow.get.destination.label "Destination of the command:">
+<!ENTITY prefwindow.get.destination.accesskey "D">
+<!ENTITY prefwindow.get.destination.list.ftp "Container folder of language packs in Mozilla's FTP server">
+<!ENTITY prefwindow.get.destination.list.amo "Language packs page in Mozilla add-ons' website">
+<!ENTITY prefwindow.get.destination.list.custom "Custom">
+<!ENTITY prefwindow.get.custom.label "Address:">
+<!ENTITY prefwindow.get.custom.accesskey "A">
+<!ENTITY prefwindow.get.custom.placeholder "&prefwindow.get.destination.list.amo;">
+
+<!ENTITY prefwindow.button.caption "Languages Toolbar Button">
+<!ENTITY prefwindow.button.descriptions.label "Show the respective language tag next to the name of each listed language">
+<!ENTITY prefwindow.button.descriptions.accesskey "S">

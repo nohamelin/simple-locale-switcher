@@ -20,6 +20,7 @@ locale      simplels       es-ES            chrome/locale/es-ES/
 
 override    chrome://simplels/locale/application/general.dtd            chrome://simplels/locale/firefox/general.dtd        application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
 override    chrome://simplels/locale/application/general.dtd            chrome://simplels/locale/thunderbird/general.dtd    application={3550f703-e582-4d05-9a08-453d09bdfdc6}
+override    chrome://simplels/locale/preferences-os.dtd                 chrome://simplels/locale/windows/preferences-os.dtd     os=WINNT
 
 
 # XUL overlays

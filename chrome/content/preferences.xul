@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<?xml-stylesheet type="text/css" href="chrome://global/skin/"?>
+
+<!DOCTYPE prefwindow [
+    <!ENTITY % prefsDTD SYSTEM "chrome://simplels/locale/preferences.dtd">
+    %prefsDTD;
+    <!ENTITY % osPrefsDTD SYSTEM "chrome://simplels/locale/preferences-os.dtd">
+    %osPrefsDTD;
+]>
+
+<prefwindow id="simplels-prefwindow"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+            title="&prefwindow.title;">
+
+    <!-- As a precaution, <script/> and other tags are placed on bottom.
+         See: https://bugzilla.mozilla.org/show_bug.cgi?id=296418 -->
+
+    <prefpane id="general-pane"
+              label="General"
+              onpaneload="simplels.onLoad();"
+              flex="1">
+
+        <preferences id="general-preferences">
+            <preference id="getMoreLanguages"
+                        name="extensions.simplels.getMoreLanguages"
+                        type="int"
+                        onchange="simplels.onChangeGetMorePreference();"/>
+            <preference id="getMoreLanguagesURL"
+                        name="extensions.simplels.getMoreLanguagesURL"
+                        type="string"/>
+            <preference id="button.showDescriptions"
+                        name="extensions.simplels.button.showDescriptions"
+                        type="bool"/>
+        </preferences>
+
+        <groupbox id="get-group">
+            <caption label="&prefwindow.get.caption;"/>
+
+            <hbox id="destination-box" align="center">
+                <label id="destination-label"
+                       value="&prefwindow.get.destination.label;"
+                       accesskey="&prefwindow.get.destination.accesskey;"
+                       control="destination-list"/>
+                <menulist id="destination-list"
+                          preference="getMoreLanguages">
+                    <menupopup id="destination-popup">
+                        <menuitem label="&prefwindow.get.destination.list.ftp;"
+                                  value="2"/>
+                        <menuitem label="&prefwindow.get.destination.list.amo;"
+                                  value="1"/>
+                        <menuitem id="custom-destination-list-item"
+                                  label="&prefwindow.get.destination.list.custom;"
+                                  value="0"/>
+                    </menupopup>
+                </menulist>
+            </hbox>
+            <hbox id="custom-box" class="indent" align="center">
+                <label value="&prefwindow.get.custom.label;"
+                       accesskey="&prefwindow.get.custom.accesskey;"
+                       control="get-custom-url"
+                       observes="customDestination"/>
+                <textbox id="get-custom-url"
+                         class="padded uri-element"
+                         preference="getMoreLanguagesURL"
+                         type="autocomplete"
+                         autocompletesearch="history"
+                         placeholder="&prefwindow.get.custom.placeholder;"
+                         observes="customDestination"
+                         flex="1"/>
+            </hbox>
+        </groupbox>
+        <separator class="thin"/>
+
+        <groupbox id="button-group">
+            <caption label="&prefwindow.button.caption;"/>
+
+            <checkbox id="descriptions"
+                      preference="button.showDescriptions"
+                      label="&prefwindow.button.descriptions.label;"
+                      accesskey="&prefwindow.button.descriptions.accesskey;"/>
+        </groupbox>
+    </prefpane>
+
+
+    <script type="application/x-javascript"
+            src="chrome://simplels/content/preferences.js"/>
+
+    <broadcasterset>
+        <broadcaster id="customDestination"/>
+    </broadcasterset>
+
+</prefwindow>

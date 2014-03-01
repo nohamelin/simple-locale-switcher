@@ -20,6 +20,7 @@
         <em:creator>nohamelin</em:creator>
         <em:contributor>Some icons used by this extension are part of the icon theme of the Tango Desktop Project</em:contributor>
 
+        <em:optionsURL>chrome://simplels/content/preferences.xul</em:optionsURL>
         <em:iconURL>chrome://simplels/skin/extension.png</em:iconURL>
         <em:icon64URL>chrome://simplels/skin/extension-big.png</em:icon64URL>
 
