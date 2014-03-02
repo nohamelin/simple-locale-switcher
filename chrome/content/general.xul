@@ -11,7 +11,7 @@
     <!ENTITY % generalDTD SYSTEM "chrome://simplels/locale/general.dtd">
     %generalDTD;
     <!ENTITY % applicationGeneralDTD SYSTEM
-               "chrome://simplels/locale/application/general.dtd">
+               "chrome://simplels/locale/general-application.dtd">
     %applicationGeneralDTD;
 ]>
 
