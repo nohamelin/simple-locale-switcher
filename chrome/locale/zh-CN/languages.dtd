@@ -1,0 +1,16 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY languages.title "用户界面语言">
+<!ENTITY languages.descriptions.width "32em">
+<!ENTITY languages.switch.description "选择出现在 &brandShortName; 对话框、菜单和工具栏等处的语言。">
+<!ENTITY languages.switch.match.label "尝试依照系统的语言">
+<!ENTITY languages.switch.match.accesskey "m">
+<!ENTITY languages.switch.select.label "使用语言：">
+<!ENTITY languages.switch.select.accesskey "U">
+<!ENTITY languages.switch.restart.description "您需要重新启动 &brandShortName; 才能使变更对现有的窗口生效。">
+<!ENTITY languages.switch.restore.label "恢复默认值">
+<!ENTITY languages.switch.restore.accesskey "R">

@@ -1,0 +1,11 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY languages.selected.label "偏好的 &brandShortName; 用户界面语言">
+<!ENTITY languages.switch.label "切换…">
+<!ENTITY languages.switch.tooltiptext "切换偏好的 &brandShortName; 用户界面语言">
+<!ENTITY languages.get.label "获取更多语言包…">
+<!ENTITY languages.get.tooltiptext "获取更多适用 &brandShortName; 的语言包">

@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY prefwindow.get.caption "获取更多语言包">
+<!ENTITY prefwindow.get.destination.label "命令目标：">
+<!ENTITY prefwindow.get.destination.accesskey "D">
+<!ENTITY prefwindow.get.destination.list.ftp "Mozilla FTP 服务器的语言包文件夹">
+<!ENTITY prefwindow.get.destination.list.amo "Mozilla 附加组件网站的语言包页面">
+<!ENTITY prefwindow.get.destination.list.custom "自定义">
+<!ENTITY prefwindow.get.custom.label "地址：">
+<!ENTITY prefwindow.get.custom.accesskey "A">
+<!ENTITY prefwindow.get.custom.placeholder "&prefwindow.get.destination.list.amo;">
+<!ENTITY prefwindow.button.caption "语言包工具栏按钮">
+<!ENTITY prefwindow.button.descriptions.label "在每个语言旁边显示各自语言标签">
+<!ENTITY prefwindow.button.descriptions.accesskey "S">

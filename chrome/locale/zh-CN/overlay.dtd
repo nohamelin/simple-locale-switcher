@@ -1,0 +1,14 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY button.label "语言">
+<!ENTITY tooltip.title "用户界面语言">
+<!ENTITY tooltip.selected.label "已选择：">
+<!ENTITY tooltip.current.label "本窗口使用：">
+<!ENTITY popup.manage.label "管理语言…">
+<!ENTITY popup.get.label "获取更多语言包…">
+<!ENTITY popup.restart.label "切换语言后重启">
+<!ENTITY popup.match.label "依照系统的语言">
