@@ -56,10 +56,10 @@
             <Description>
                 <em:locale>zh-CN</em:locale>
                 <em:name>Simple Locale Switcher</em:name>
-                <em:description>An easier management of the user interface language</em:description>
+                <em:description>添加简单好用的用户界面语言管理功能</em:description>
                 <em:creator>nohamelin</em:creator>
                 <em:translator>YFdyh000</em:translator>
-                <em:contributor>Some icons used by this extension are part of the icon theme of the Tango Desktop Project</em:contributor>
+                <em:contributor>本扩展使用的某些图标源自 Tango Desktop 项目的图标主题</em:contributor>
             </Description>
         </em:localized>
 

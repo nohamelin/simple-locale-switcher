@@ -4,5 +4,4 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/.
    -->
 
-<!-- If possible, it shouldn't coincide with the existing accesskeys in the General pane of the Thunderbird Options window. -->
-<!ENTITY general.languages.choose.accesskey "e">
+<!ENTITY prefwindow.title "Simple Locale Switcher 首选项">

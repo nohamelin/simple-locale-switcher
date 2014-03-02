@@ -4,8 +4,10 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/.
    -->
 
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
 <!ENTITY languages.selected.label "偏好的 &brandShortName; 用户界面语言">
 <!ENTITY languages.switch.label "切换…">
 <!ENTITY languages.switch.tooltiptext "切换偏好的 &brandShortName; 用户界面语言">
 <!ENTITY languages.get.label "获取更多语言包…">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
 <!ENTITY languages.get.tooltiptext "获取更多适用 &brandShortName; 的语言包">
