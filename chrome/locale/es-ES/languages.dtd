@@ -6,7 +6,8 @@
 
 <!-- Same as the general.languages.caption string in the general.dtd file. -->
 <!ENTITY languages.title "Idioma de la interfaz de usuario">
-<!-- A CSS value, the default width of the paragraphs in the window. You don't need to change it, probably. -->
+
+<!-- A CSS value, the default width of the paragraphs in the window. In most cases it doesn't need be changed; CJK languages can use a lower value. -->
 <!ENTITY languages.descriptions.width "32em">
 
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox) -->

@@ -7,7 +7,7 @@
 <!-- Same as the general.languages.caption string in the general.dtd file. -->
 <!ENTITY languages.title "用户界面语言">
 <!-- A CSS value, the default width of the paragraphs in the window. You don't need to change it, probably. -->
-<!ENTITY languages.descriptions.width "32em">
+<!ENTITY languages.descriptions.width "28em">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
 <!ENTITY languages.switch.description "选择出现在 &brandShortName; 对话框、菜单和工具栏等处的语言。">
 <!ENTITY languages.switch.match.label "尝试依照系统的语言">

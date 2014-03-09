@@ -9,11 +9,10 @@
 <!ENTITY prefwindow.get.destination.label "Destination of the command:">
 <!ENTITY prefwindow.get.destination.accesskey "D">
 <!ENTITY prefwindow.get.destination.list.ftp "Container folder of language packs in Mozilla's FTP server">
-<!ENTITY prefwindow.get.destination.list.amo "Language packs page in Mozilla add-ons' website">
+<!ENTITY prefwindow.get.destination.list.amo "Page of language packs in Mozilla add-ons' website">
 <!ENTITY prefwindow.get.destination.list.custom "Custom">
 <!ENTITY prefwindow.get.custom.label "Address:">
 <!ENTITY prefwindow.get.custom.accesskey "A">
-<!ENTITY prefwindow.get.custom.placeholder "&prefwindow.get.destination.list.amo;">
 
 <!ENTITY prefwindow.button.caption "Languages Toolbar Button">
 <!ENTITY prefwindow.button.descriptions.label "Show the respective language tag next to the name of each listed language">

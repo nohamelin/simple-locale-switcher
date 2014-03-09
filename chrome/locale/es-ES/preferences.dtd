@@ -4,7 +4,7 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/.
    -->
 
-<!-- Same as the popup.get.label string in overlay.dtd file -->
+<!-- Same as the languages.get.label string in extensions.dtd file -->
 <!ENTITY prefwindow.get.caption "Obtener más paquetes de idioma">
 <!ENTITY prefwindow.get.destination.label "Destino de la orden:">
 <!ENTITY prefwindow.get.destination.accesskey "D">
@@ -12,8 +12,7 @@
 <!ENTITY prefwindow.get.destination.list.amo "Página de paquetes de idioma en el sitio web de complementos de Mozilla">
 <!ENTITY prefwindow.get.destination.list.custom "Personalizado">
 <!ENTITY prefwindow.get.custom.label "Dirección:">
-<!ENTITY prefwindow.get.custom.accesskey "i">
-<!ENTITY prefwindow.get.custom.placeholder "&prefwindow.get.destination.list.amo;">
+<!ENTITY prefwindow.get.custom.accesskey "r">
 
 <!ENTITY prefwindow.button.caption "Botón de idiomas de la barra de herramientas">
 <!ENTITY prefwindow.button.descriptions.label "Mostrar el respectivo código de idioma junto al nombre de cada idioma listado">

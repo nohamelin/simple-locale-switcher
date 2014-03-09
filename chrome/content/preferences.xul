@@ -70,7 +70,7 @@
                          preference="getMoreLanguagesURL"
                          type="autocomplete"
                          autocompletesearch="history"
-                         placeholder="&prefwindow.get.custom.placeholder;"
+                         placeholder="&prefwindow.get.destination.list.amo;"
                          observes="customDestination"
                          flex="1"/>
             </hbox>
