@@ -190,7 +190,7 @@ LanguageService.prototype = {
     get isUserLocaleLocalized() {
         if (!("_isUserLocaleLocalized" in this)) {
             this._isUserLocaleLocalized = utils.isDefaultCharPrefLocalized(
-                                                "", LOCALE_PREF_NAME);
+                                                LOCALE_PREF_NAME);
         }
         return this._isUserLocaleLocalized;
     },

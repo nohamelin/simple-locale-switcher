@@ -76,63 +76,17 @@ var utils = {
     },
 
 
-    ///////////////////////////////////////////////////////////////////////////
-    getDefaultCharPref: function(branchName, prefName) {
-        let branch = Services.prefs.getDefaultBranch(branchName);
+    getDefaultCharPref: function(prefName) {
+        let branch = Services.prefs.getDefaultBranch("");
 
         return branch.getCharPref(prefName);
     },
 
 
-    setDefaultCharPref: function(branchName, prefName, value) {
-        let branch = Services.prefs.getDefaultBranch(branchName);
-
-        branch.setCharPref(prefName, value);
-    },
-
-
-    getDefaultComplexCharPref: function(branchName, prefName) {
-        let branch = Services.prefs.getDefaultBranch(branchName);
-
-        return this.getComplexCharPref(branch, prefName);
-    },
-
-
-    setDefaultComplexCharPref: function(branchName, prefName, value) {
-        let branch = Services.prefs.getDefaultBranch(branchName);
-
-        this.setComplexCharPref(branch, prefName, value);
-    },
-
-
-    getDefaultLocalizedCharPref: function(branchName, prefName) {
-        let branch = Services.prefs.getDefaultBranch(branchName);
-
-        return this.getLocalizedCharPref(branch, prefName);
-    },
-
-
-    setDefaultLocalizedCharPref: function(branchName, prefName, value) {
-        let branch = Services.prefs.getDefaultBranch(branchName);
-
-        this.setLocalizedCharPref(branch, prefName, value);
-    },
-
-
-    isDefaultCharPrefLocalized: function(branchName, prefName) {
-        let branch = Services.prefs.getDefaultBranch(branchName);
+    isDefaultCharPrefLocalized: function(prefName) {
+        let branch = Services.prefs.getDefaultBranch("");
 
         return this.isCharPrefLocalized(branch, prefName);
-    },
-
-
-    getDefaultCharOrLocalizedCharPref: function(branchName, prefName) {
-        // isDefaultCharPrefLocalized() could be used but the next seems faster
-        try {
-            return this.getDefaultLocalizedCharPref(branchName, prefName);
-        } catch (e) {
-            return this.getDefaultCharPref(branchName, prefName);
-        }
     },
 
 
@@ -163,8 +117,7 @@ var utils = {
             // coupled with the application and does not apply to other
             // instances that may use the same profile".
             try {
-                this._channel = this.getDefaultCharPref("",
-                                                        "app.update.channel");
+                this._channel = this.getDefaultCharPref("app.update.channel");
             } catch (e) {
                 // Some builds (linux distributions) may not have this
                 // preference.
