@@ -57,8 +57,7 @@ var langUtils = {
                 name = formats.getFormattedString("languageRegionName",
                                                   [ languageName, regionName ]);
             else
-                name = formats.getFormattedString("languageName",
-                                                  [ languageName ]);
+                name = languageName;
         } catch (e) {
             name = formats.getFormattedString("unnamed", [ locale ]);
         }
