@@ -43,13 +43,13 @@ var simplels = {
         this.windowLocale = this.langsvc.currentLocale;
 
         this.prefs = Services.prefs.getBranch("extensions.simplels.");
-        this.strings = document.getElementById("simplels-strings");
+        this.strings = this.getStringBundle("simplels-strings");
 
-        this.localeStrings.languageNames = document.getElementById(
+        this.localeStrings.languageNames = this.getStringBundle(
                                                 "simplels-language-names");
-        this.localeStrings.regionNames = document.getElementById(
+        this.localeStrings.regionNames = this.getStringBundle(
                                                 "simplels-region-names");
-        this.localeStrings.formats = document.getElementById(
+        this.localeStrings.formats = this.getStringBundle(
                                                 "simplels-name-formats");
 
         this.prefs.QueryInterface(Ci.nsIPrefBranch2);   // COMPAT: Gecko 12-
@@ -371,6 +371,11 @@ var simplels = {
 
     getLocaleName: function(locale) {
         return this.langUtils.buildLocaleName(locale, this.localeStrings);
+    },
+
+
+    getStringBundle: function(id) {
+        return this.langUtils.getStringBundle(id, document);
     }
 };
 

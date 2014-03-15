@@ -33,13 +33,13 @@ var simplels = {
         this.langsvc = Cc["@nohamelin/sls/language-service;1"]
                        .getService().wrappedJSObject;
 
-        this.strings = document.getElementById("simplels-strings");
+        this.strings = this.getStringBundle("simplels-strings");
 
-        this.localeStrings.languageNames = document.getElementById(
+        this.localeStrings.languageNames = this.getStringBundle(
                                                 "simplels-language-names");
-        this.localeStrings.regionNames = document.getElementById(
+        this.localeStrings.regionNames = this.getStringBundle(
                                                 "simplels-region-names");
-        this.localeStrings.formats = document.getElementById(
+        this.localeStrings.formats = this.getStringBundle(
                                                 "simplels-name-formats");
 
         Services.obs.addObserver(this, "sls:selected-changed", false);
@@ -102,6 +102,11 @@ var simplels = {
 
     getLocaleName: function(locale) {
         return this.langUtils.buildLocaleName(locale, this.localeStrings);
+    },
+
+
+    getStringBundle: function(id) {
+        return this.langUtils.getStringBundle(id, document);
     }
 };
 

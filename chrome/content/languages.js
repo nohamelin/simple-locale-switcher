@@ -32,11 +32,13 @@ var simplels = {
 
 
     onLoad: function() {
-        this.localeStrings.languageNames = document.getElementById(
+        Cu.import("resource://simplels/language.jsm", this);
+
+        this.localeStrings.languageNames = this.getStringBundle(
                                                 "simplels-language-names");
-        this.localeStrings.regionNames = document.getElementById(
+        this.localeStrings.regionNames = this.getStringBundle(
                                                 "simplels-region-names");
-        this.localeStrings.formats = document.getElementById(
+        this.localeStrings.formats = this.getStringBundle(
                                                 "simplels-name-formats");
 
         this.matchPref = document.getElementById(MATCH_PREF_NAME);
@@ -139,5 +141,10 @@ var simplels = {
 
     getLocaleName: function(locale) {
         return langUtils.buildLocaleName(locale, this.localeStrings);
+    },
+
+
+    getStringBundle: function(id) {
+        return this.langUtils.getStringBundle(id, document);
     }
 };

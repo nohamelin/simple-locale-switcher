@@ -66,6 +66,19 @@ var langUtils = {
     },
 
 
+    getStringBundle: function(id, document) {
+        let stringBundle = document.getElementById(id);
+
+        // Ensure that the src URI of the stringbundle is resolved now,
+        // not later (in first use, a event that can be delayed), because
+        // the preferred locale may be different then.
+        // It prevents, for example, building names in mixed languages.
+        stringBundle.strings;
+
+        return stringBundle;
+    },
+
+
     /**
      * Sort an Array of language tags.
      *
