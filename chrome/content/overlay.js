@@ -333,20 +333,16 @@ var simplels = {
 
 
     enableMatchingOS: function() {
-        // Try to setup the restart *before* the switch for to prevent
-        // displaying the confirmation's dialog in a different language.
-        this.restartAfterSwitch();
-
         this.langsvc.matchingOS = true;
+
+        this.restartAfterSwitch();
     },
 
 
     switchTo: function(locale) {
-        // Try to setup the restart *before* the switch for to prevent
-        // displaying the confirmation's dialog in a different language.
-        this.restartAfterSwitch();
-
         this.langsvc.userLocale = locale;
+
+        this.restartAfterSwitch();
     },
 
 

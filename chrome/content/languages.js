@@ -57,6 +57,8 @@ var simplels = {
         this.populateSwitchList();
         this.localePref.updateElements();
 
+        // Having a specific width for the XUL descriptions elements isn't
+        // very well managed by default, so we need the next.
         window.sizeToContent();
     },
 

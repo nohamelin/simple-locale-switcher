@@ -157,8 +157,8 @@ LanguageService.prototype = {
     /**
      * general.useragent.locale
      *
-     * A system preference, a language tag according to the BCP 47 standard
-     * (i.e. "en-US", "fr"), corresponding to the desired locale for the
+     * A system preference, a language tag as defined by the BCP 47 document
+     * (i.e. "en-US", "fr"), corresponding to the preferred locale for the
      * application. It's ignored if the intl.locale.matchOS preference is true.
      * Changing its value will not affect to existent windows, but it will be
      * effective for new windows and new chrome pages (i.e. about:addons).

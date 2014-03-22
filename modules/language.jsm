@@ -26,12 +26,15 @@ var langUtils = {
 
     /**
      * Build a pretty name for a language tag. The exact format is dependent of
-     * the selected language. Examples (en-US locale):
+     * the localization work. Examples (en-US):
      *
      *  eo        -->  Esperanto
      *  es-CL     -->  Spanish (Chile)
      *  ja-JP-mac -->  Japanese (Japan/mac)
      *  other     -->  "other"
+     *
+     * Note that only tags with those forms used currently by language packs
+     * are recognized. TODO: Manage any valid tag according to BCP 47.
      */
     buildLocaleName: function(locale, stringbundles) {
         let [ language, region, variant ] = locale.split(/[-_]/);

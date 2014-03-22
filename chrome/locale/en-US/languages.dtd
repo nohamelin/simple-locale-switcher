@@ -10,7 +10,7 @@
 <!-- A CSS value, the default width of the paragraphs in the window. In most cases it doesn't need be changed; CJK languages can use a lower value. -->
 <!ENTITY languages.descriptions.width "32em">
 
-<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
 <!ENTITY languages.switch.description "Choose the language for text that appears in dialog boxes, menus and toolbars of &brandShortName;:">
 <!ENTITY languages.switch.match.label "Try to match the system's language">
 <!ENTITY languages.switch.match.accesskey "m">
