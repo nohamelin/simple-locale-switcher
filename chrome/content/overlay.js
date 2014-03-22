@@ -44,7 +44,6 @@ var simplels = {
 
         this.prefs = Services.prefs.getBranch("extensions.simplels.");
         this.strings = this.getStringBundle("simplels-strings");
-
         this.localeStrings.languageNames = this.getStringBundle(
                                                 "simplels-language-names");
         this.localeStrings.regionNames = this.getStringBundle(
@@ -58,6 +57,14 @@ var simplels = {
         Services.obs.addObserver(this, "sls:selected-changed", false);
         Services.obs.addObserver(this, "sls:availables-changed", false);
 
+        let firstRun = true;
+        try {
+            firstRun = this.prefs.getBoolPref("firstRun");
+        } catch (e) {}
+
+        if (firstRun)
+            this.onFirstRun();
+
         // Initialize dinamic attributes of commands and toolbar button
         this.updateManageCommand();
         this.updateRestartCommand();
@@ -67,7 +74,7 @@ var simplels = {
         window.setTimeout(function() simplels.tryToUpdateToolbarButton(), 60);
 
         // Don't miss to update the toolbar button when it's added from the
-        // toolbar palette too.
+        // toolbar palette.
         window.addEventListener("aftercustomization", simplels);
     },
 
@@ -77,6 +84,16 @@ var simplels = {
 
         Services.obs.removeObserver(this, "sls:selected-changed");
         Services.obs.removeObserver(this, "sls:availables-changed");
+    },
+
+
+    onFirstRun: function() {
+        this.prefs.setBoolPref("firstRun", false);
+
+        if ("CustomizableUI" in window) {   // Firefox 29 and later
+            CustomizableUI.addWidgetToArea("simplels-button",
+                                           CustomizableUI.AREA_PANEL);
+        }
     },
 
 
