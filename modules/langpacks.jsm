@@ -30,11 +30,8 @@ XPCOMUtils.defineLazyGetter(this, "ftpURL", function() {
     let getString = utils.getFileContents(FTP_GET_MORE_FILE);
     let getObject = JSON.parse(getString);
 
-    // It will throw an exception in some non-common builds with an
-    // unsupported updates channel (e.g. nightly-ux).
-    return getObject[utils.application][utils.channel];
-
-
+    return getObject[utils.application][utils.channel] ||
+           getObject["fallback"][utils.application];
 });
 
 
@@ -55,9 +52,7 @@ function getMoreLanguagesURL() {
             break;
 
         case 2 :    // Get a suitable url to the Mozilla's file servers
-            try {
-                getURL = ftpURL;
-            } catch (e) {}
+            getURL = ftpURL;
             break;
     }
 
