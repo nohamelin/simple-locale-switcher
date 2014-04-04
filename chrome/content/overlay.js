@@ -134,8 +134,15 @@ var simplels = {
     updateMatchCommand: function() {
         let matchCmd = document.getElementById("sls_enableMatchingOS");
         let wantMatch = this.langsvc.matchingOS;
+        let disableMatch = this.langsvc.isMatchingOSLocked;
 
         matchCmd.setAttribute("checked", wantMatch);
+        if (disableMatch)
+            matchCmd.setAttribute("disabled", "true");
+        else
+            // removeAttribute doesn't raise an exception if the attribute
+            // isn't found.
+            matchCmd.removeAttribute("disabled");
     },
 
 
@@ -240,6 +247,7 @@ var simplels = {
         let isCheckedAvailable = this.langUtils
                                      .isLocaleAvailable(checkedLocale);
         let isCheckedIgnored = this.langsvc.matchingOS;
+        let isCheckedLocked = this.langsvc.isUserLocaleLocked;
         let isCurrentAvailable = this.langUtils
                                      .isLocaleAvailable(this.windowLocale);
 
@@ -274,6 +282,8 @@ var simplels = {
                         item.setAttribute("hidden", "true");  // Not relevant
                 }
             }
+            if (isCheckedLocked)
+                item.setAttribute("disabled", "true");
 
             popupFragment.appendChild(item);
         }, this);

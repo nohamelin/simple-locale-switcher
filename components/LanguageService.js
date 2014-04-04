@@ -103,6 +103,8 @@ LanguageService.prototype = {
     _onChangedSelectedLocale: function() {
         delete this._matchingOS;
         delete this._userLocale;
+        delete this._isMatchingOSLocked;
+        delete this._isUserLocaleLocked;
         Services.obs.notifyObservers(null, "sls:selected-changed", null);
     },
 
@@ -146,6 +148,15 @@ LanguageService.prototype = {
 
     set matchingOS(shouldMatch) {
         Services.prefs.setBoolPref(MATCH_PREF_NAME, shouldMatch);
+    },
+
+
+    get isMatchingOSLocked() {
+        if (!("_isMatchingOSLocked" in this)) {
+            this._isMatchingOSLocked = Services.prefs.prefIsLocked(
+                                                      MATCH_PREF_NAME);
+        }
+        return this._isMatchingOSLocked;
     },
 
 
@@ -193,6 +204,15 @@ LanguageService.prototype = {
                                                 LOCALE_PREF_NAME);
         }
         return this._isUserLocaleLocalized;
+    },
+
+
+    get isUserLocaleLocked() {
+        if (!("_isUserLocaleLocked" in this)) {
+            this._isUserLocaleLocked = Services.prefs.prefIsLocked(
+                                                      LOCALE_PREF_NAME);
+        }
+        return this._isUserLocaleLocked;
     },
 
 
