@@ -57,3 +57,10 @@ toolbar[iconsize="small"] #simplels-button,
 #simplels-button:not([descriptions="true"]) .simplels-locale-desc {
     display: none;
 }
+
+
+/* It's redundant with the default theme, but a lot of themes lack
+ * the appropriate support for xul descriptions. */
+.simplels-locale-desc {
+    font-style: italic;
+}
