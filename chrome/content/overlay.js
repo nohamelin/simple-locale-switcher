@@ -57,14 +57,6 @@ var simplels = {
         Services.obs.addObserver(this, "sls:selected-changed", false);
         Services.obs.addObserver(this, "sls:availables-changed", false);
 
-        let firstRun = true;
-        try {
-            firstRun = this.prefs.getBoolPref("firstRun");
-        } catch (e) {}
-
-        if (firstRun)
-            this.onFirstRun();
-
         // Initialize dinamic attributes of commands and toolbar button
         this.updateManageCommand();
         this.updateRestartCommand();
@@ -84,16 +76,6 @@ var simplels = {
 
         Services.obs.removeObserver(this, "sls:selected-changed");
         Services.obs.removeObserver(this, "sls:availables-changed");
-    },
-
-
-    onFirstRun: function() {
-        this.prefs.setBoolPref("firstRun", false);
-
-        if ("CustomizableUI" in window) {   // Firefox 29 and later
-            CustomizableUI.addWidgetToArea("simplels-button",
-                                           CustomizableUI.AREA_PANEL);
-        }
     },
 
 
