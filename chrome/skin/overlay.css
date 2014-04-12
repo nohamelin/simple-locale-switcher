@@ -11,11 +11,11 @@
     list-style-image: url("chrome://simplels/skin/button.png");
 }
 toolbar[iconsize="small"] #simplels-button,
-#main-window #simplels-button[cui-areatype="toolbar"] {
+#simplels-button[cui-areatype] {
     list-style-image: url("chrome://simplels/skin/button-small.png");
 }
-#main-window #simplels-button[cui-areatype="menu-panel"],
-#main-window toolbarpaletteitem[place="palette"] > #simplels-button {
+#simplels-button[cui-areatype="menu-panel"],
+toolbarpaletteitem[place="palette"] > #simplels-button {
     list-style-image: url("chrome://simplels/skin/button-big.png");
 }
 
@@ -48,6 +48,7 @@ toolbar[iconsize="small"] #simplels-button,
 
 #simplels-button-tooltip[conflicting="false"] #simplels-tooltip-selected,
 #simplels-tooltip-current,
+.simplels-locale[current="true"] > .toolbarbutton-text,
 .simplels-locale[current="true"] > .menu-iconic-text {
     font-weight: bold;
 }
