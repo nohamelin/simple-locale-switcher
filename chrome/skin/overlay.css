@@ -34,13 +34,9 @@ toolbarpaletteitem[place="palette"] > #simplels-button {
 #simplels-button-tooltip {
     max-width: none;
 }
-
-
 #simplels-tooltip-title {
     margin-bottom: 0.7em;
 }
-
-
 #simplels-tooltip-selected-about {
     font-style: italic;
 }
@@ -57,6 +53,13 @@ toolbarpaletteitem[place="palette"] > #simplels-button {
 #simplels-button[descriptions="true"] .simplels-locale-desc-placeholder,
 #simplels-button:not([descriptions="true"]) .simplels-locale-desc {
     display: none;
+}
+#simplels-button-view[descriptions="true"] .simplels-locale::after {
+   content: attr(description);
+   float: right;
+   font-style: italic;
+   color: hsl(0,0%,50%);
+   -moz-margin-start: 1ex;
 }
 
 

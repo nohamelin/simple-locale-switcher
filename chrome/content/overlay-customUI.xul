@@ -13,7 +13,9 @@
     <toolbarbutton id="simplels-button" removeelement="true"/>
 
     <panelmultiview id="PanelUI-multiView">
-        <panelview id="simplels-button-view" flex="1">
+        <panelview id="simplels-button-view"
+                   flex="1"
+                   observes="sls_showLocaleDescriptions">
             <label value="&tooltip.title;" class="panel-subview-header"/>
 
             <vbox id="simplels-view-body" class="panel-subview-body">
