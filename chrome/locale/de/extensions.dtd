@@ -1,0 +1,13 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.selected.label "Bevorzugte Sprache für die &brandShortName;-Oberfläche:">
+<!ENTITY languages.switch.label "Ändern…">
+<!ENTITY languages.switch.tooltiptext "Die bevorzugte Sprache für die Benutzeroberfläche ändern">
+<!ENTITY languages.get.label "Weitere Sprachpakete herunterladen…">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.get.tooltiptext "Weitere Sprachpakete für &brandShortName; herunterladen">

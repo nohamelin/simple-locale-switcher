@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the languages.get.label string in extensions.dtd file -->
+<!ENTITY prefwindow.get.caption "Weitere Sprachpakete herunterladen">
+<!ENTITY prefwindow.get.destination.label "Quelle:">
+<!ENTITY prefwindow.get.destination.accesskey "u">
+<!ENTITY prefwindow.get.destination.list.ftp "Sprachpaket-Verzeichnis des Mozilla FTP-Servers">
+<!ENTITY prefwindow.get.destination.list.amo "Seite verfügbarer Sprachpakete der Mozilla Add-ons Website">
+<!ENTITY prefwindow.get.destination.list.custom "Benutzerdefiniert">
+<!ENTITY prefwindow.get.custom.label "Link-Adresse:">
+<!ENTITY prefwindow.get.custom.accesskey "A">
+<!ENTITY prefwindow.button.caption "Sprachen-Symbolleistenschaltfläche">
+<!ENTITY prefwindow.button.descriptions.label "Hinter jeder verfügbaren Sprache das jeweilige Sprachkürzel anzeigen">
+<!ENTITY prefwindow.button.descriptions.accesskey "H">

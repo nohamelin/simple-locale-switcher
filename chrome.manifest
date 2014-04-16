@@ -15,6 +15,7 @@ skin        simplels-os    classic/1.0      chrome/skin/linux/
 skin        simplels-os    classic/1.0      chrome/skin/osx/            os=Darwin
 skin        simplels-os    classic/1.0      chrome/skin/windows/        os=WINNT
 
+locale      simplels       de               chrome/locale/de/
 locale      simplels       en-US            chrome/locale/en-US/
 locale      simplels       es-ES            chrome/locale/es-ES/
 locale      simplels       zh-CN            chrome/locale/zh-CN/

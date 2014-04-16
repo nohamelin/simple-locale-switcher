@@ -1,0 +1,11 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the languages.title string in the languages.dtd file. -->
+<!ENTITY general.languages.caption "Sprachen - Benutzeroberfläche">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY general.languages.choose.description "Bevorzugte Sprache für die Benutzeroberfläche von &brandShortName; wählen">
+<!ENTITY general.languages.choose.label "Wählen…">
