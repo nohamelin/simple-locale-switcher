@@ -37,8 +37,11 @@ var langUtils = {
      * are recognized. TODO: Manage any valid tag according to BCP 47.
      */
     buildLocaleName: function(locale, stringbundles) {
-        let [ language, region, variant ] = locale.split(/[-_]/);
         let { languageNames, regionNames, formats } = stringbundles;
+        if (locale === "")
+            return formats.getString("unspecified");
+
+        let [ language, region, variant ] = locale.split(/[-_]/);
 
         let languageName, regionName, name;
         try {
