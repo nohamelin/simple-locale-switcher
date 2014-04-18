@@ -174,6 +174,25 @@ var simplels = {
                     node.tooltip = "simplels-button-tooltip";
                 }
             });
+
+            // Ensure that, after updating the extension (from 0.6 or older),
+            // the widget is placed in the same original position of the XUL
+            // button.
+            let buttonPlacement = CustomizableUI.getPlacementOfWidget(
+                                                 "simplels-button");
+            if (buttonPlacement) {
+                let migrated = false;
+                try {
+                    migrated = this.prefs.getBoolPref("button.migrated");
+                } catch (e) {}
+
+                if (!migrated) {
+                    CustomizableUI.addWidgetToArea("simplels-widget",
+                                                   buttonPlacement.area,
+                                                   buttonPlacement.position);
+                    this.prefs.setBoolPref("button.migrated", true);
+                }
+            }
         }
     },
 
