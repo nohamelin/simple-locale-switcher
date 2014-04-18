@@ -165,8 +165,14 @@ var simplels = {
                 type: "view",
                 viewId: "simplels-button-view",
                 label: widgetLabel,
+                tooltiptext: "Language",   // HACK, see below
 
                 onCreated: function(node) {
+                    // HACK: The tooltiptext property was specified only for
+                    // to prevent a dummy "Could not localize property..."
+                    // warning from the application while building the widget;
+                    // this callback is run after that.
+                    node.removeAttribute("tooltiptext");
                     node.tooltip = "simplels-button-tooltip";
                 }
             });
