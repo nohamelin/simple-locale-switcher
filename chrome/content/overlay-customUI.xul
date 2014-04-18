@@ -13,23 +13,23 @@
     <toolbarbutton id="simplels-button" removeelement="true"/>
 
     <panelmultiview id="PanelUI-multiView">
-        <panelview id="simplels-button-view"
+        <panelview id="simplels-widget-view"
                    flex="1"
                    observes="sls_showLocaleDescriptions">
             <label value="&tooltip.title;" class="panel-subview-header"/>
 
             <vbox id="simplels-view-body" class="panel-subview-body">
-                <toolbarbutton id="simplels-button-manage"
+                <toolbarbutton id="simplels-view-manage"
                                class="subviewbutton"
                                label="&popup.manage.label;"
                                command="sls_manageLanguages"/>
-                <toolbarbutton id="simplels-button-get"
+                <toolbarbutton id="simplels-view-get"
                                class="subviewbutton"
                                label="&popup.get.label;"
                                command="sls_getMoreLanguages"/>
                 <toolbarseparator/>
 
-                <toolbarbutton id="simplels-button-restart"
+                <toolbarbutton id="simplels-view-restart"
                                class="subviewbutton"
                                type="checkbox"
                                closemenu="none"
@@ -37,7 +37,7 @@
                                command="sls_toggleRestartAfterSwitch"/>
                 <toolbarseparator/>
 
-                <toolbarbutton id="simplels-button-match"
+                <toolbarbutton id="simplels-view-match"
                                class="subviewbutton"
                                type="radio"
                                autocheck="false"

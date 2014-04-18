@@ -152,19 +152,17 @@ var simplels = {
 
 
     createToolbarButtonAsWidget: function() {
-        let widgetGroup = CustomizableUI.getWidget("simplels-button");
+        let widgetGroup = CustomizableUI.getWidget("simplels-widget");
 
         if (!widgetGroup || widgetGroup.provider == "xul") {
             if (widgetGroup)
-                CustomizableUI.destroyWidget("simplels-button");
-
-            let widgetLabel = this.strings.getString("widget.label");
+                CustomizableUI.destroyWidget("simplels-widget");
 
             CustomizableUI.createWidget({
-                id: "simplels-button",
+                id: "simplels-widget",
                 type: "view",
-                viewId: "simplels-button-view",
-                label: widgetLabel,
+                viewId: "simplels-widget-view",
+                label: simplels.strings.getString("widget.label"),
                 tooltiptext: "Language",   // HACK, see below
 
                 onCreated: function(node) {
@@ -181,19 +179,11 @@ var simplels = {
 
 
     tryToUpdateToolbarButton: function() {
-        let button = document.getElementById("simplels-button");
+        let foundButton = (this.WIDGET_MODE)
+                    ? CustomizableUI.getPlacementOfWidget("simplels-widget")
+                    : document.getElementById("simplels-button");
 
-        // The button could not be found if it's placed inside the Firefox
-        // menu panel and this panel has not been open. See:
-        //   https://bugzilla.mozilla.org/show_bug.cgi?id=941903
-        if (!button && this.WIDGET_MODE) {
-            let widgetGroup = CustomizableUI.getWidget("simplels-button");
-
-            if (widgetGroup.areaType)   // null if the item is in the palette
-                button = widgetGroup.forWindow(window).node;
-        }
-
-        if (button) {
+        if (foundButton) {
             this.isToolbarButtonUpdatePending = false;
 
             this.updateToolbarButtonTooltip();
