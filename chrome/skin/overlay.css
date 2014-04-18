@@ -10,12 +10,12 @@
 #simplels-button {
     list-style-image: url("chrome://simplels/skin/button.png");
 }
-toolbar[iconsize="small"] #simplels-button,
-#main-window #simplels-button[cui-areatype="toolbar"] {
+#simplels-widget,
+toolbar[iconsize="small"] #simplels-button {
     list-style-image: url("chrome://simplels/skin/button-small.png");
 }
-#main-window #simplels-button[cui-areatype="menu-panel"],
-#main-window toolbarpaletteitem[place="palette"] > #simplels-button {
+#simplels-widget[cui-areatype="menu-panel"],
+toolbarpaletteitem[place="palette"] > #simplels-widget {
     list-style-image: url("chrome://simplels/skin/button-big.png");
 }
 
@@ -34,13 +34,9 @@ toolbar[iconsize="small"] #simplels-button,
 #simplels-button-tooltip {
     max-width: none;
 }
-
-
 #simplels-tooltip-title {
     margin-bottom: 0.7em;
 }
-
-
 #simplels-tooltip-selected-about {
     font-style: italic;
 }
@@ -48,6 +44,7 @@ toolbar[iconsize="small"] #simplels-button,
 
 #simplels-button-tooltip[conflicting="false"] #simplels-tooltip-selected,
 #simplels-tooltip-current,
+.simplels-locale[current="true"] > .toolbarbutton-text,
 .simplels-locale[current="true"] > .menu-iconic-text {
     font-weight: bold;
 }
@@ -56,6 +53,13 @@ toolbar[iconsize="small"] #simplels-button,
 #simplels-button[descriptions="true"] .simplels-locale-desc-placeholder,
 #simplels-button:not([descriptions="true"]) .simplels-locale-desc {
     display: none;
+}
+#simplels-widget-view[descriptions="true"] .simplels-locale::after {
+   content: attr(description);
+   float: right;
+   font-style: italic;
+   color: hsl(0,0%,50%);
+   -moz-margin-start: 1ex;
 }
 
 

@@ -15,6 +15,17 @@ var simplels = {
 
     isToolbarButtonUpdatePending: false,
 
+    get WIDGET_MODE() {
+        // Decides whether to build the toolbar button with XUL or with the
+        // new mechanisms implemented by the Australis customization system.
+        // But note that it *has already been decided* by the fact of
+        // applying overlay-customUI.xul since Firefox 29; any recent
+        // alternative build without Australis (Pale Moon?) will lost *both*
+        // forms of the toolbar button.
+        delete this.WIDGET_MODE;
+        return this.WIDGET_MODE = "CustomizableUI" in window;
+    },
+
 
     handleEvent: function(event) {
         switch (event.type) {
@@ -56,6 +67,9 @@ var simplels = {
 
         Services.obs.addObserver(this, "sls:selected-changed", false);
         Services.obs.addObserver(this, "sls:availables-changed", false);
+
+        if (this.WIDGET_MODE)
+            this.createToolbarButtonAsWidget();
 
         // Initialize dinamic attributes of commands and toolbar button
         this.updateManageCommand();
@@ -137,27 +151,68 @@ var simplels = {
     },
 
 
-    tryToUpdateToolbarButton: function() {
-        let button = document.getElementById("simplels-button");
+    createToolbarButtonAsWidget: function() {
+        let widgetGroup = CustomizableUI.getWidget("simplels-widget");
 
-        // Workaround for
-        //   https://bugzilla.mozilla.org/show_bug.cgi?id=941903
-        if (!button && "CustomizableUI" in window) {
-            let widgetGroup = CustomizableUI.getWidget("simplels-button");
+        if (!widgetGroup || widgetGroup.provider == "xul") {
+            if (widgetGroup)
+                CustomizableUI.destroyWidget("simplels-widget");
 
-            // areaType is null if the item is in the palette
-            if (widgetGroup.areaType)
-                button = widgetGroup.forWindow(window).node;
+            CustomizableUI.createWidget({
+                id: "simplels-widget",
+                type: "view",
+                viewId: "simplels-widget-view",
+                label: simplels.strings.getString("widget.label"),
+                tooltiptext: "Language",   // HACK, see below
+
+                onCreated: function(node) {
+                    // HACK: The tooltiptext property was specified only for
+                    // to prevent a dummy "Could not localize property..."
+                    // warning from the application while building the widget;
+                    // this callback is run after that.
+                    node.removeAttribute("tooltiptext");
+                    node.tooltip = "simplels-button-tooltip";
+                }
+            });
+
+            // Ensure that, after updating the extension (from 0.6 or older),
+            // the widget is placed in the same original position of the XUL
+            // button.
+            let buttonPlacement = CustomizableUI.getPlacementOfWidget(
+                                                 "simplels-button");
+            if (buttonPlacement) {
+                let migrated = false;
+                try {
+                    migrated = this.prefs.getBoolPref("button.migrated");
+                } catch (e) {}
+
+                if (!migrated) {
+                    CustomizableUI.addWidgetToArea("simplels-widget",
+                                                   buttonPlacement.area,
+                                                   buttonPlacement.position);
+                    this.prefs.setBoolPref("button.migrated", true);
+                }
+            }
         }
+    },
 
-        if (button) {
+
+    tryToUpdateToolbarButton: function() {
+        let foundButton = (this.WIDGET_MODE)
+                    ? CustomizableUI.getPlacementOfWidget("simplels-widget")
+                    : document.getElementById("simplels-button");
+
+        if (foundButton) {
             this.isToolbarButtonUpdatePending = false;
+
+            this.updateToolbarButtonTooltip();
 
             // The general items of the toolbar button's popup work with
             // broadcasters, so they are always correctly set, and we can
             // to ignore them here.
-            this.updateToolbarButtonTooltip();
-            this.updateLocalePopupItems(button.firstChild);
+            let popup = document.getElementById("simplels-button-popup") ||
+                        document.getElementById("simplels-view-body");
+            this.updateLocalePopupItems(popup);
         }
         else
             this.isToolbarButtonUpdatePending = true;
@@ -238,9 +293,10 @@ var simplels = {
 
         let popupFragment = document.createDocumentFragment();
         locales.forEach(function(locale) {
-            let item = document.createElement("menuitem");
-
-            item.className = "simplels-locale";
+            let item = document.createElement(this.WIDGET_MODE
+                                              ? "toolbarbutton" : "menuitem");
+            item.className = this.WIDGET_MODE
+                        ? "simplels-locale subviewbutton" : "simplels-locale";
             item.id = "simplels-locale-" + locale;
             item.setAttribute("type", "radio");
             item.setAttribute("autocheck", "false");

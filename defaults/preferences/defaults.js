@@ -7,6 +7,7 @@
 //pref("extensions.simplels.applyOnQuit.matchOS", false);
 //pref("extensions.simplels.applyOnQuit.locale", "en-US");
 
+//pref("extensions.simplels.button.migrated", false);
 pref("extensions.simplels.button.restartAfterSwitch", true);
 pref("extensions.simplels.button.showDescriptions", false);
 

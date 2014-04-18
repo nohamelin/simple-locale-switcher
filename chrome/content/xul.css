@@ -7,7 +7,7 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 
-.simplels-locale {
+#simplels-button-popup > .simplels-locale {
     -moz-binding: url(
         "chrome://simplels/content/menu.xml#menuitem-iconic-locale");
 }
