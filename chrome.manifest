@@ -41,6 +41,9 @@ overlay     chrome://browser/content/preferences/in-content/main.xul    chrome:/
 # Style overlays
 style       chrome://global/content/customizeToolbar.xul                chrome://simplels/skin/overlay.css
 
+style       chrome://browser/content/browser.xul                        chrome://simplels/skin/overlay.fx29.css         application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}      appversion<=29.*
+style       chrome://browser/content/browser.xul                        chrome://simplels-os/skin/overlay.fx29.css      application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}      appversion<=29.*         os=Darwin
+
 
 # XPCOM registration
 component   {92ffb138-103f-11e2-84fe-286f6188709b}      components/LanguageService.js
