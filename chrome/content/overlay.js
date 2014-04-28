@@ -35,7 +35,7 @@ var simplels = {
                 break;
 
             case "aftercustomization" :
-                this.onAfterCustomization();
+                this.checkIfUpdatingToolbarButton();
                 break;
 
             case "unload" :
@@ -81,7 +81,14 @@ var simplels = {
 
         // Don't miss to update the toolbar button when it's added from the
         // toolbar palette.
-        window.addEventListener("aftercustomization", simplels);
+        if ("CustomizableUI" in window)
+            CustomizableUI.addListener(this.customizableListener);
+        else
+            // The next is no longer enougth with CustomizableUI because
+            // adding our widget to some area from the palette make it
+            // immediately full interactive in any existent browser window
+            // except the one displaying yet about:customizing
+            window.addEventListener("aftercustomization", simplels);
     },
 
 
@@ -90,12 +97,6 @@ var simplels = {
 
         Services.obs.removeObserver(this, "sls:selected-changed");
         Services.obs.removeObserver(this, "sls:availables-changed");
-    },
-
-
-    onAfterCustomization: function() {
-        if (this.isToolbarButtonUpdatePending)
-            this.tryToUpdateToolbarButton();
     },
 
 
@@ -194,6 +195,12 @@ var simplels = {
                 }
             }
         }
+    },
+
+
+    checkIfUpdatingToolbarButton: function() {
+        if (this.isToolbarButtonUpdatePending)
+            this.tryToUpdateToolbarButton();
     },
 
 
@@ -357,6 +364,15 @@ var simplels = {
                         break;
                 }
                 break;
+        }
+    },
+
+
+    customizableListener: {
+        onWidgetAdded: function(id) {
+            if (id == "simplels-widget")
+                window.setTimeout(function()
+                                  simplels.checkIfUpdatingToolbarButton(), 60);
         }
     },
 
