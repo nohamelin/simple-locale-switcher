@@ -13,7 +13,6 @@
 <!ENTITY prefwindow.get.destination.list.custom "自定义">
 <!ENTITY prefwindow.get.custom.label "地址：">
 <!ENTITY prefwindow.get.custom.accesskey "A">
-<!ENTITY prefwindow.get.custom.placeholder "&prefwindow.get.destination.list.amo;">
 <!ENTITY prefwindow.button.caption "语言包工具栏按钮">
 <!ENTITY prefwindow.button.descriptions.label "在每个语言旁边显示各自语言标签">
 <!ENTITY prefwindow.button.descriptions.accesskey "S">

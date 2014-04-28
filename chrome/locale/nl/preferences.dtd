@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the languages.get.label string in extensions.dtd file -->
+<!ENTITY prefwindow.get.caption "Meer taalpakketten downloaden">
+<!ENTITY prefwindow.get.destination.label "Opdrachtdoel:">
+<!ENTITY prefwindow.get.destination.accesskey "O">
+<!ENTITY prefwindow.get.destination.list.ftp "Map met taalpakketten in FTP-server Mozilla">
+<!ENTITY prefwindow.get.destination.list.amo "Pagina met taalpakketten op AMO">
+<!ENTITY prefwindow.get.destination.list.custom "Aangepast">
+<!ENTITY prefwindow.get.custom.label "Adres:">
+<!ENTITY prefwindow.get.custom.accesskey "A">
+<!ENTITY prefwindow.button.caption "Knop Taalwerkbalk">
+<!ENTITY prefwindow.button.descriptions.label "Taallabel naast de naam van elke taal in de lijst weergeven">
+<!ENTITY prefwindow.button.descriptions.accesskey "T">

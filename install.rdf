@@ -63,6 +63,28 @@
             </Description>
         </em:localized>
 
+        <em:localized> <!-- French -->
+            <Description>
+                <em:locale>fr</em:locale>
+                <em:name>Simple Locale Switcher</em:name>
+                <em:description>Une gestion plus facile de la langue de l'interface utilisateur</em:description>
+                <em:creator>nohamelin</em:creator>
+                <em:translator>AriesFr</em:translator>
+                <em:contributor>Certaines icônes utilisées par cette extension font partie du thème d'icônes de Tango Desktop Project</em:contributor>
+            </Description>
+        </em:localized>
+
+        <em:localized> <!-- Dutch -->
+            <Description>
+                <em:locale>nl</em:locale>
+                <em:name>Simple Locale Switcher</em:name>
+                <em:description>Een eenvoudiger beheer van de gebruikersinterfacetaal</em:description>
+                <em:creator>nohamelin</em:creator>
+                <em:translator>markh van BabelZilla.org</em:translator>
+                <em:contributor>Sommige door deze extensie gebruikte pictogrammen zijn onderdeel van het pictogrammenthema van het Tango Desktop Project</em:contributor>
+            </Description>
+        </em:localized>
+
         <em:localized> <!-- Chinese Simplified -->
             <Description>
                 <em:locale>zh-CN</em:locale>

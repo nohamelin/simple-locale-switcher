@@ -1,0 +1,14 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY button.label "Taal">
+<!ENTITY tooltip.title "Gebruikersinterfacetaal">
+<!ENTITY tooltip.selected.label "Geselecteerd:">
+<!ENTITY tooltip.current.label "Gebruikt in venster:">
+<!ENTITY popup.manage.label "Talen beheren…">
+<!ENTITY popup.get.label "Meer taalpakketten downloaden…">
+<!ENTITY popup.restart.label "Herstarten na taalwisseling">
+<!ENTITY popup.match.label "Afstemmen op systeemtaal">

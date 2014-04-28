@@ -5,16 +5,16 @@
    -->
 
 <!-- Same as the general.languages.caption string in the general.dtd file. -->
-<!ENTITY languages.title "用户界面语言">
+<!ENTITY languages.title "Langue de l'interface utilisateur">
 <!-- A CSS value, the default width of the paragraphs in the window. In most cases it doesn't need be changed; CJK languages can use a lower value. -->
-<!ENTITY languages.descriptions.width "28em">
+<!ENTITY languages.descriptions.width "32em">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
-<!ENTITY languages.switch.description "选择出现在 &brandShortName; 对话框、菜单和工具栏等处的语言。">
-<!ENTITY languages.switch.match.label "尝试依照系统的语言">
-<!ENTITY languages.switch.match.accesskey "m">
-<!ENTITY languages.switch.select.label "使用语言：">
+<!ENTITY languages.switch.description "Choisir la langue du texte apparaissant dans les boîtes de dialogue, menus et barres d'outils de &brandShortName; :">
+<!ENTITY languages.switch.match.label "Essayer d'adapter à la langue du système">
+<!ENTITY languages.switch.match.accesskey "a">
+<!ENTITY languages.switch.select.label "Utiliser la langue :">
 <!ENTITY languages.switch.select.accesskey "U">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
-<!ENTITY languages.switch.restart.description "您需要重新启动 &brandShortName; 才能使变更对现有的窗口生效。">
-<!ENTITY languages.switch.restore.label "恢复默认值">
+<!ENTITY languages.switch.restart.description "Vous devrez redémarrer &brandShortName; pour appliquer les changements aux fenêtres existantes.">
+<!ENTITY languages.switch.restore.label "Restaurer les paramètres par défaut">
 <!ENTITY languages.switch.restore.accesskey "R">

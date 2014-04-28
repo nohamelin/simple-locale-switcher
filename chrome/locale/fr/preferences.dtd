@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the languages.get.label string in extensions.dtd file -->
+<!ENTITY prefwindow.get.caption "Obtenir d'autres paquets linguistiques">
+<!ENTITY prefwindow.get.destination.label "Destination de la commande :">
+<!ENTITY prefwindow.get.destination.accesskey "D">
+<!ENTITY prefwindow.get.destination.list.ftp "Dossier des paquets linguistiques sur le serveur FTP de Mozilla">
+<!ENTITY prefwindow.get.destination.list.amo "Page des paquets linguistiques sur le site des extensions de Mozilla">
+<!ENTITY prefwindow.get.destination.list.custom "Personnaliser">
+<!ENTITY prefwindow.get.custom.label "Adresse :">
+<!ENTITY prefwindow.get.custom.accesskey "A">
+<!ENTITY prefwindow.button.caption "Bouton des langues sur la barre d'outils">
+<!ENTITY prefwindow.button.descriptions.label "Montrer l'étiquette de langue correspondante à côté de chaque langue de la liste">
+<!ENTITY prefwindow.button.descriptions.accesskey "M">
