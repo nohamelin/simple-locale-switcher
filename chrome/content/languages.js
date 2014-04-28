@@ -32,8 +32,6 @@ var simplels = {
 
 
     onLoad: function() {
-        Cu.import("resource://simplels/language.jsm", this);
-
         this.localeStrings.languageNames = this.getStringBundle(
                                                 "simplels-language-names");
         this.localeStrings.regionNames = this.getStringBundle(
@@ -147,6 +145,6 @@ var simplels = {
 
 
     getStringBundle: function(id) {
-        return this.langUtils.getStringBundle(id, document);
+        return langUtils.getStringBundle(id, document);
     }
 };
