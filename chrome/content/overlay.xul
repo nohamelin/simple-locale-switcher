@@ -5,7 +5,6 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/.
    -->
 
-<?xml-stylesheet type="text/css" href="chrome://simplels/content/xul.css"?>
 <?xml-stylesheet type="text/css" href="chrome://simplels/skin/overlay.css"?>
 
 <!DOCTYPE overlay SYSTEM "chrome://simplels/locale/overlay.dtd">
