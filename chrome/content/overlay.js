@@ -13,18 +13,8 @@ var simplels = {
     strings: null,
     localeStrings: { languageNames: null, regionNames: null, formats: null },
 
+    WIDGET_MODE: null,
     isToolbarButtonUpdatePending: false,
-
-    get WIDGET_MODE() {
-        // Decides whether to build the toolbar button with XUL or with the
-        // new mechanisms implemented by the Australis customization system.
-        // But note that it *has already been decided* by the fact of
-        // applying overlay-customUI.xul since Firefox 29; any recent
-        // alternative build without Australis (Pale Moon?) will lost *both*
-        // forms of the toolbar button.
-        delete this.WIDGET_MODE;
-        return this.WIDGET_MODE = "CustomizableUI" in window;
-    },
 
 
     handleEvent: function(event) {
@@ -68,6 +58,12 @@ var simplels = {
         Services.obs.addObserver(this, "sls:selected-changed", false);
         Services.obs.addObserver(this, "sls:availables-changed", false);
 
+        // In Firefox 29 and later, the toolbar button is built with the new
+        // mechanisms supported by CustomizableUI, instead of direct XUL.
+        // Any newer alternative build without CustomizableUI (Pale Moon?)
+        // will *lost* the toolbar button (in a smooth way, I expect).
+        this.WIDGET_MODE = "CustomizableUI" in window;
+
         if (this.WIDGET_MODE)
             this.createToolbarButtonAsWidget();
 
@@ -97,6 +93,9 @@ var simplels = {
 
         Services.obs.removeObserver(this, "sls:selected-changed");
         Services.obs.removeObserver(this, "sls:availables-changed");
+
+        if ("CustomizableUI" in window)
+            CustomizableUI.removeListener(this.customizableListener);
     },
 
 
@@ -205,7 +204,7 @@ var simplels = {
 
 
     tryToUpdateToolbarButton: function() {
-        let foundButton = (this.WIDGET_MODE)
+        let foundButton = this.WIDGET_MODE
                     ? CustomizableUI.getPlacementOfWidget("simplels-widget")
                     : document.getElementById("simplels-button");
 
@@ -217,8 +216,10 @@ var simplels = {
             // The general items of the toolbar button's popup work with
             // broadcasters, so they are always correctly set, and we can
             // to ignore them here.
-            let popup = document.getElementById("simplels-button-popup") ||
-                        document.getElementById("simplels-view-body");
+
+            let popup = this.WIDGET_MODE
+                        ? document.getElementById("simplels-view-body")
+                        : document.getElementById("simplels-button-popup");
             this.updateLocalePopupItems(popup);
         }
         else
