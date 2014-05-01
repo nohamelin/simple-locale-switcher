@@ -373,6 +373,12 @@ var simplels = {
             if (id == "simplels-widget")
                 window.setTimeout(function()
                                   simplels.checkIfUpdatingToolbarButton(), 60);
+        },
+
+        onWidgetUndoMove: function(node) {
+            if (node.id == "simplels-widget")
+                window.setTimeout(function()
+                                  simplels.checkIfUpdatingToolbarButton(), 60);
         }
     },
 
