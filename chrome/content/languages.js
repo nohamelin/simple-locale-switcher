@@ -113,7 +113,7 @@ var simplels = {
             let item = document.createElement("menuitem");
 
             item.className = "switch-locale";
-            item.id = "switch-locale-" + locale;
+            item.setAttribute("locale", locale);
             item.setAttribute("label", this.getLocaleName(locale));
             item.setAttribute("description", locale);
             item.setAttribute("tooltiptext", locale);

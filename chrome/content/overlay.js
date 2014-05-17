@@ -220,7 +220,8 @@ var simplels = {
             let popup = this.WIDGET_MODE
                         ? document.getElementById("simplels-view-body")
                         : document.getElementById("simplels-button-popup");
-            this.updateLocalePopupItems(popup);
+            this.resetPopupLocales(popup);
+            this.populatePopupLocales(popup);
         }
         else
             this.isToolbarButtonUpdatePending = true;
@@ -269,12 +270,6 @@ var simplels = {
     },
 
 
-    updateLocalePopupItems: function(popup) {
-        this.resetPopupLocales(popup);
-        this.populatePopupLocales(popup);
-    },
-
-
     resetPopupLocales: function(popup) {
         let items = popup.childNodes;
 
@@ -288,6 +283,13 @@ var simplels = {
 
 
     populatePopupLocales: function(popup) {
+        let localeItemType = this.WIDGET_MODE ? "toolbarbutton" : "menuitem";
+        let localeItemClass = this.WIDGET_MODE ? "simplels-locale subviewbutton"
+                                               : "simplels-locale";
+        let localeItemCallback = function(locale) {
+            return function() simplels.switchTo(locale);
+        };
+
         let checkedLocale = this.langsvc.userLocale;
         let isCheckedAvailable = this.langUtils
                                      .isLocaleAvailable(checkedLocale);
@@ -301,17 +303,16 @@ var simplels = {
 
         let popupFragment = document.createDocumentFragment();
         locales.forEach(function(locale) {
-            let item = document.createElement(this.WIDGET_MODE
-                                              ? "toolbarbutton" : "menuitem");
-            item.className = this.WIDGET_MODE
-                        ? "simplels-locale subviewbutton" : "simplels-locale";
-            item.id = "simplels-locale-" + locale;
+            let item = document.createElement(localeItemType);
+
+            item.className = localeItemClass;
             item.setAttribute("type", "radio");
             item.setAttribute("autocheck", "false");
+            item.setAttribute("locale", locale);
             item.setAttribute("label", this.getLocaleName(locale));
             item.setAttribute("description", locale);
             item.setAttribute("tooltiptext", locale);
-            item.addEventListener("command", this._switchItemCallback(locale));
+            item.addEventListener("command", localeItemCallback(locale));
 
             if (locale == this.windowLocale) {
                 item.setAttribute("current", "true");
@@ -335,10 +336,6 @@ var simplels = {
         }, this);
 
         popup.appendChild(popupFragment);
-    },
-
-    _switchItemCallback: function(locale) {
-        return function() simplels.switchTo(locale);
     },
 
 
