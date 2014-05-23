@@ -34,16 +34,16 @@ toolbarpaletteitem[place="palette"] > #simplels-widget {
 #simplels-button-tooltip {
     max-width: none;
 }
-#simplels-tooltip-title {
+#simplels-button-tooltip-title {
     margin-bottom: 0.7em;
 }
-#simplels-tooltip-selected-about {
+#simplels-button-tooltip-selected-about {
     font-style: italic;
 }
 
 
-#simplels-button-tooltip[conflicting="false"] #simplels-tooltip-selected,
-#simplels-tooltip-current,
+#simplels-button-tooltip[conflicting="false"] #simplels-button-tooltip-selected,
+#simplels-button-tooltip-current,
 .simplels-locale[current="true"] > .toolbarbutton-text,
 .simplels-locale[current="true"] > .menu-iconic-text {
     font-weight: bold;

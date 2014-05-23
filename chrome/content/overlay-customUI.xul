@@ -18,7 +18,9 @@
                    observes="sls_showLocaleDescriptions">
             <label value="&tooltip.title;" class="panel-subview-header"/>
 
-            <vbox id="simplels-view-body" class="panel-subview-body">
+            <vbox id="simplels-view-body"
+                  class="panel-subview-body"
+                  tooltip="simplels-locale-tooltip">
                 <toolbarbutton id="simplels-view-manage"
                                class="subviewbutton"
                                label="&popup.manage.label;"

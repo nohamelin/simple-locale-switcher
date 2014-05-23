@@ -43,22 +43,28 @@
 
     <popupset>
         <tooltip id="simplels-button-tooltip">
-            <label id="simplels-tooltip-title">&tooltip.title;</label>
+            <label id="simplels-button-tooltip-title">&tooltip.title;</label>
             <grid><rows>
-                <row id="simplels-tooltip-selected-row">
+                <row id="simplels-button-tooltip-selected-row">
                     <label>&tooltip.selected.label;</label>
                     <hbox>
-                        <label id="simplels-tooltip-selected"/>
-                        <label id="simplels-tooltip-selected-about"
+                        <label id="simplels-button-tooltip-selected"/>
+                        <label id="simplels-button-tooltip-selected-about"
                                hidden="true"/>
                     </hbox>
                 </row>
-                <row id="simplels-tooltip-current-row"
+                <row id="simplels-button-tooltip-current-row"
                      hidden="true">
                     <label>&tooltip.current.label;</label>
-                    <label id="simplels-tooltip-current"/>
+                    <label id="simplels-button-tooltip-current"/>
                 </row>
             </rows></grid>
+        </tooltip>
+
+        <tooltip id="simplels-locale-tooltip"
+                 onpopupshowing="return simplels.updatePopupLocaleTooltip()">
+            <label id="simplels-locale-tooltip-name" class="tooltip-label"/>
+            <label id="simplels-locale-tooltip-tag" class="tooltip-label"/>
         </tooltip>
     </popupset>
 
@@ -78,7 +84,9 @@
                    tooltip="simplels-button-tooltip"
                    observes="sls_showLocaleDescriptions">
 
-        <menupopup id="simplels-button-popup">
+        <menupopup id="simplels-button-popup"
+                   tooltip="simplels-locale-tooltip">
+
             <menuitem id="simplels-button-manage"
                       label="&popup.manage.label;"
                       command="sls_manageLanguages"/>

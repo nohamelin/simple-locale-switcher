@@ -229,7 +229,8 @@ var simplels = {
 
 
     updateToolbarButtonTooltip: function() {
-        let $ = function(id) document.getElementById("simplels-tooltip-" + id);
+        let $ = function(id)
+                    document.getElementById("simplels-button-tooltip-" + id);
 
         // The tooltip displays information about the next pieces:
         // 1. The locale selected, expected by the user.
@@ -311,7 +312,6 @@ var simplels = {
             item.setAttribute("locale", locale);
             item.setAttribute("label", this.getLocaleName(locale));
             item.setAttribute("description", locale);
-            item.setAttribute("tooltiptext", locale);
             item.addEventListener("command", localeItemCallback(locale));
 
             if (locale == this.windowLocale) {
@@ -336,6 +336,23 @@ var simplels = {
         }, this);
 
         popup.appendChild(popupFragment);
+    },
+
+
+    updatePopupLocaleTooltip: function() {
+        let node = document.tooltipNode;
+
+        // The locale attribute is used here instead of the simplels-locale
+        // class for to include the case of an empty locale.
+        if (!node.getAttribute("locale"))
+            return false;
+
+        document.getElementById("simplels-locale-tooltip-name")
+                .value = node.label;
+        document.getElementById("simplels-locale-tooltip-tag")
+                .value = node.getAttribute("locale");
+
+        return true;    // Show the tooltip
     },
 
 
