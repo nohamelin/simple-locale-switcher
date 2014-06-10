@@ -6,6 +6,7 @@
    -->
 
 <?xml-stylesheet type="text/css" href="chrome://simplels/skin/overlay.css"?>
+<?xml-stylesheet type="text/css" href="chrome://simplels-os/skin/overlay.css"?>
 
 <!DOCTYPE overlay SYSTEM "chrome://simplels/locale/overlay.dtd">
 
