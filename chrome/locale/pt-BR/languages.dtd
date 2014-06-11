@@ -1,0 +1,20 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the general.languages.caption string in the general.dtd file. -->
+<!ENTITY languages.title "Idioma da interface do usuário">
+<!-- A CSS value, the default width of the paragraphs in the window. In most cases it doesn't need be changed; CJK languages can use a lower value. -->
+<!ENTITY languages.descriptions.width "32em">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
+<!ENTITY languages.switch.description "Escolha o idioma dos textos que aparecem nas caixas de diálogo, menus e barras de ferramentas do &brandShortName;:">
+<!ENTITY languages.switch.match.label "Tente o mesmo idioma do sistema">
+<!ENTITY languages.switch.match.accesskey "m">
+<!ENTITY languages.switch.select.label "Use o idioma:">
+<!ENTITY languages.switch.select.accesskey "U">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.switch.restart.description "Você precisará reiniciar o &brandShortName; para aplicar qualquer alteração nas janelas existentes.">
+<!ENTITY languages.switch.restore.label "Restaurar Padrão">
+<!ENTITY languages.switch.restore.accesskey "R">

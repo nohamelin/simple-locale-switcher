@@ -85,6 +85,17 @@
             </Description>
         </em:localized>
 
+        <em:localized> <!-- Portuguese -->
+            <Description>
+                <em:locale>pt-BR</em:locale>
+                <em:name>Simple Locale Switcher</em:name>
+                <em:description>Uma gestão mais fácil do idioma da interface do usuário</em:description>
+                <em:creator>nohamelin</em:creator>
+                <em:translator>ouesten</em:translator>
+                <em:contributor>Alguns ícones utilizados por esta extensão fazem parte do tema de ícones da área de trabalho do Projeto Tango</em:contributor>
+            </Description>
+        </em:localized>
+
         <em:localized> <!-- Chinese Simplified -->
             <Description>
                 <em:locale>zh-CN</em:locale>
