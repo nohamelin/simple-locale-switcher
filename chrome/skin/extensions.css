@@ -7,13 +7,6 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 
-/* Force the display of the Languages pane. By default it's hidden if no
- * language packs are found by the application. */
-#category-locale {
-    display: -moz-box !important;
-}
-
-
 .view-pane:not([type="locale"]) > .sls-global-languages-container {
     display: none;
 }

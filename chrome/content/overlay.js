@@ -68,7 +68,6 @@ var simplels = {
             this.createToolbarButtonAsWidget();
 
         // Initialize dinamic attributes of commands and toolbar button
-        this.updateManageCommand();
         this.updateRestartCommand();
         this.updateMatchCommand();
         this.updateDescriptionsBroadcaster();
@@ -96,25 +95,6 @@ var simplels = {
 
         if ("CustomizableUI" in window)
             CustomizableUI.removeListener(this.customizableListener);
-    },
-
-
-    updateManageCommand: function() {
-        // TODO: If no language packs are found, opening directly the
-        // "Languages" pane of the Add-ons Manager doesn't work. As a weak,
-        // temporary workaround, the command will be disabled in this case.
-        Cu.import("resource://gre/modules/AddonManager.jsm");
-
-        AddonManager.getAddonsByTypes([ "locale" ], function(addons) {
-            let manageCmd = document.getElementById("sls_manageLanguages");
-
-            if (!addons.length)
-                manageCmd.setAttribute("disabled", "true");
-            else
-                // removeAttribute doesn't raise an exception if the attribute
-                // isn't found.
-                manageCmd.removeAttribute("disabled");
-        });
     },
 
 
@@ -364,7 +344,6 @@ var simplels = {
                 break;
 
             case "sls:availables-changed" :
-                this.updateManageCommand();
                 this.tryToUpdateToolbarButton();
                 break;
 

@@ -294,6 +294,14 @@ LanguageService.prototype = {
         AddonManager.addAddonListener(this.addonListener);
 
         Services.obs.addObserver(this, "quit-application", false);
+
+
+        // The "locale" add-on type is registered in the Add-ons Manager with
+        // the TYPE_UI_HIDE_EMPTY flag, so that "the type should be hidden
+        // from the UI if no add-ons of that type are currently installed".
+        // We change the visibility of it zeroing the flag.
+        AddonManager.addonTypes["locale"].flags ^= AddonManager
+                                                   .TYPE_UI_HIDE_EMPTY;
     },
 
 
