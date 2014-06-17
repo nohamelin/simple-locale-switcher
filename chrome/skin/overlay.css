@@ -65,6 +65,9 @@ toolbarpaletteitem[place="palette"] > #simplels-widget {
    float: right;
    font-style: italic;
    color: hsl(0,0%,50%);
+   -moz-margin-start: 2ex;
+}
+#PanelUI-multiView #simplels-widget-view[descriptions="true"] .simplels-locale::after {
    -moz-margin-start: 1ex;
 }
 
