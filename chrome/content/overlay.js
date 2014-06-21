@@ -4,7 +4,16 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-var simplels = {
+var simplels = (function() {
+
+    // Our global simplels container is defined via a closure for to get
+    // privately the shorthands for Components, not available in SeaMonkey.
+    const Cc = Components.classes;
+    const Ci = Components.interfaces;
+    const Cu = Components.utils;
+
+
+  return {      // 3 indentation levels before starting *real* coding? No way
 
     langsvc: null,
     windowLocale: null,
@@ -386,6 +395,10 @@ var simplels = {
             case this.THUNDERBIRD_ID :
                 openAddonsMgr("addons://list/locale");
                 break;
+
+            case this.SEAMONKEY_ID :
+                toEM("addons://list/locale");
+                break;
         }
     },
 
@@ -401,6 +414,10 @@ var simplels = {
 
             case this.THUNDERBIRD_ID :
                 this.tbUtils.openContentTab(getURL);
+                break;
+
+            case this.SEAMONKEY_ID :
+                openUILink(getURL);
                 break;
         }
     },
@@ -454,7 +471,9 @@ var simplels = {
     getStringBundle: function(id) {
         return this.langUtils.getStringBundle(id, document);
     }
-};
+  };
+
+})();
 
 
 window.addEventListener("load", simplels);

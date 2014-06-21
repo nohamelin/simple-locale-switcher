@@ -90,6 +90,7 @@ var simplels = {
 
         switch (this.utils.application) {
             case this.FIREFOX_ID :
+            case this.SEAMONKEY_ID :
                 openURL(getURL);
                 break;
 
