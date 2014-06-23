@@ -42,10 +42,10 @@
 
 
     <vbox id="list-view">
-        <hbox class="view-header sls-global-languages-container"
+        <hbox class="view-header global-info-container sls-languages-info-container"
               insertbefore="addon-list-empty">
 
-            <hbox id="simplels-main-top-box" flex="1" align="center">
+            <hbox flex="1" align="center">
                 <spacer flex="5000"/>   <!-- Allow the about label to wrap -->
 
                 <label id="simplels-selected-about" flex="1" crop="end"

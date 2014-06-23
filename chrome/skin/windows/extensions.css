@@ -5,17 +5,3 @@
  */
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
-
-/* Match style of the top bar of the Plugins pane (.global-info-container) */
-.sls-global-languages-container {
-    background-color: #f3f7fb;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-}
-
-
-#simplels-switch {
-    margin-top: 0;
-    margin-bottom: 0;
-}
