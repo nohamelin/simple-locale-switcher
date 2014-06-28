@@ -13,5 +13,6 @@
 <!ENTITY prefwindow.get.destination.list.custom "Personalizado">
 <!ENTITY prefwindow.get.custom.label "Endereço:">
 <!ENTITY prefwindow.get.custom.accesskey "E">
+<!ENTITY prefwindow.button.caption "Botão barra de ferramentas de idiomas">
 <!ENTITY prefwindow.button.descriptions.label "Mostrar a marca de idioma correspondente ao lado do nome de cada idioma listado">
 <!ENTITY prefwindow.button.descriptions.accesskey "M">
