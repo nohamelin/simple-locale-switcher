@@ -71,10 +71,10 @@
 
 
     <!-- Toolbar button -->
-    <toolbarpalette id="BrowserToolbarPalette"> <!-- Firefox -->
+    <toolbarpalette id="BrowserToolbarPalette"> <!-- Firefox & SeaMonkey -->
         <toolbarbutton id="simplels-button"/>
     </toolbarpalette>
-    <toolbarpalette id="MailToolbarPalette"> <!-- Thunderbird -->
+    <toolbarpalette id="MailToolbarPalette"> <!-- Thunderbird & SeaMonkey -->
         <toolbarbutton id="simplels-button"/>
     </toolbarpalette>
 
