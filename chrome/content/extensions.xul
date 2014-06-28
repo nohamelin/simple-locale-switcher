@@ -50,11 +50,11 @@
 
                 <label id="simplels-selected-about" flex="1" crop="end"
                        value="&languages.selected.label;"
-                       tooltiptext="&languages.selected.label;"
-                       control="simplels-switch"/>
+                       tooltiptext="&languages.selected.label;"/>
                 <label id="simplels-selected"/>
                 <button id="simplels-switch"
                         label="&languages.switch.label;"
+                        accesskey="&languages.switch.accesskey;"
                         tooltiptext="&languages.switch.tooltiptext;"
                         command="sls_openLanguagesDialog"/>
                 <spacer flex="5000"/>   <!-- Allow the about label to wrap -->

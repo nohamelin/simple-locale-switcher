@@ -7,6 +7,7 @@
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
 <!ENTITY languages.selected.label "Voorkeurstaal voor de interface van &brandShortName;:">
 <!ENTITY languages.switch.label "Wisselen…">
+<!ENTITY languages.switch.accesskey "W">
 <!ENTITY languages.switch.tooltiptext "De voorkeurstaal voor de gebruikersinterface wisselen">
 <!ENTITY languages.get.label "Meer taalpakketten downloaden…">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->

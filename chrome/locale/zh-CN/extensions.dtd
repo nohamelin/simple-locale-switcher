@@ -7,6 +7,7 @@
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
 <!ENTITY languages.selected.label "偏好的 &brandShortName; 用户界面语言">
 <!ENTITY languages.switch.label "切换…">
+<!ENTITY languages.switch.accesskey "S">
 <!ENTITY languages.switch.tooltiptext "切换偏好的 &brandShortName; 用户界面语言">
 <!ENTITY languages.get.label "获取更多语言包…">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->

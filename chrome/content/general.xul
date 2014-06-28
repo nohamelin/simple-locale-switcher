@@ -43,11 +43,11 @@
         <caption label="&general.languages.caption;"/>
 
         <hbox id="simplels-choose-box" align="center">
-            <description id="simplels-choose-about"
-                         control="simplels-choose"
-                         flex="1">
+            <label id="simplels-choose-about"
+                   control="simplels-choose"
+                   flex="1">
                 &general.languages.choose.description;
-            </description>
+            </label>
             <button id="simplels-choose"
                     label="&general.languages.choose.label;"
                     accesskey="&general.languages.choose.accesskey;"
