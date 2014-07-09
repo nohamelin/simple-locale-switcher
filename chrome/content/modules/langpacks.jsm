@@ -14,8 +14,8 @@ const Cu = Components.utils;
 
 Cu.import("resource://gre/modules/XPCOMUtils.jsm");
 Cu.import("resource://gre/modules/Services.jsm");
-Cu.import("resource://simplels/general.jsm");
-Cu.import("resource://simplels/urlFormatter.jsm");
+Cu.import("chrome://simplels/content/modules/general.jsm");
+Cu.import("chrome://simplels/content/modules/urlFormatter.jsm");
 
 
 const SLS_BRANCH_NAME = "extensions.simplels.";

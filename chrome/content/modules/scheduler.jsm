@@ -16,8 +16,13 @@ const Cu = Components.utils;
 var waiting = Object.create(null);  // No inherited keys
                                     // COMPAT TODO: Use Map() (Gecko 13+)
 
+/*
+ * It does basically the same as the first version of the DeferredTask.jsm
+ * module (available since Gecko 18, and rewritten for Gecko 28):
+ * It allows to run a task after a delay; multiple attempts to run the same
+ * task before the delay will be coalesced.
+ */
 var scheduler = {
-    // A simple alternative to setTimeout()
 
     queue: function(id, callback, delay) {
         waiting[id] = waiting[id] ||

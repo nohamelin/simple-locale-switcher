@@ -13,7 +13,7 @@ const Ci = Components.interfaces;
 const Cu = Components.utils;
 
 Cu.import("resource://gre/modules/Services.jsm");
-Cu.import("resource://simplels/general.jsm");
+Cu.import("chrome://simplels/content/modules/general.jsm");
 
 
 function getPlatformDirectory() {

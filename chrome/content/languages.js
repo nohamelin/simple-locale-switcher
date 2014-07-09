@@ -10,8 +10,8 @@ const Cu = Components.utils;
 
 Cu.import("resource://gre/modules/XPCOMUtils.jsm");
 Cu.import("resource://gre/modules/Services.jsm");
-Cu.import("resource://simplels/general.jsm");
-Cu.import("resource://simplels/language.jsm");
+Cu.import("chrome://simplels/content/modules/general.jsm");
+Cu.import("chrome://simplels/content/modules/language.jsm");
 
 
 const LOCALE_PREF_NAME = "general.useragent.locale";

@@ -45,8 +45,8 @@ var simplels = (function() {
 
 
     onLoad: function() {
-        Cu.import("resource://simplels/general.jsm", this);
-        Cu.import("resource://simplels/language.jsm", this);
+        Cu.import("chrome://simplels/content/modules/general.jsm", this);
+        Cu.import("chrome://simplels/content/modules/language.jsm", this);
 
         this.langsvc = Cc["@nohamelin/sls/language-service;1"]
                        .getService().wrappedJSObject;
@@ -404,7 +404,7 @@ var simplels = (function() {
 
 
     openGetMoreLanguagesPage: function() {
-        Cu.import("resource://simplels/langpacks.jsm", this);
+        Cu.import("chrome://simplels/content/modules/langpacks.jsm", this);
         let getURL = this.getMoreLanguagesURL();
 
         switch (this.utils.application) {

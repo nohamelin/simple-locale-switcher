@@ -34,7 +34,7 @@ var simplels = {
         // doesn't manage very well sub-dialogs. See:
         //   https://bugzilla.mozilla.org/show_bug.cgi?id=738797#c3
         if (document.documentURI == "about:preferences") {
-            Cu.import("resource://simplels/general.jsm", this);
+            Cu.import("chrome://simplels/content/modules/general.jsm", this);
 
             let langsURL = "chrome://simplels/content/languages-outer.xul";
             this.utils.openPreferencesWindow(window, langsURL);
