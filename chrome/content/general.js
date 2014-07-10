@@ -6,6 +6,9 @@
 
 var simplels = {
 
+    inContentPrefs: null,
+
+
     handleEvent: function(event) {
         switch (event.type) {
             case "load" :
@@ -17,7 +20,10 @@ var simplels = {
 
 
     onLoad: function() {
-        if (document.documentURI == "about:preferences") {
+        this.inContentPrefs = document.documentURI.toLowerCase()
+                                        .indexOf("about:preferences") == 0;
+
+        if (this.inContentPrefs) {
             let langsBox = document.getElementById("simplels-languages-group");
             let anotherBox = document.getElementById("startupGroup");
 
@@ -30,17 +36,19 @@ var simplels = {
 
 
     openLanguagesDialog: function() {
-        // about:preferences (and any other in-content chrome page, probably)
-        // doesn't manage very well sub-dialogs. See:
+        // about:preferences can't manage well sub-dialogs (prefwindows with
+        // a "type" attribute with a "child" value). See:
         //   https://bugzilla.mozilla.org/show_bug.cgi?id=738797#c3
-        if (document.documentURI == "about:preferences") {
+        let langsURL;
+
+        if (this.inContentPrefs) {
             Cu.import("chrome://simplels/content/modules/general.jsm", this);
 
-            let langsURL = "chrome://simplels/content/languages-outer.xul";
+            langsURL = "chrome://simplels/content/languages-outer.xul";
             this.utils.openPreferencesWindow(window, langsURL);
         }
         else {
-            let langsURL = "chrome://simplels/content/languages-outer-c.xul";
+            langsURL = "chrome://simplels/content/languages-outer-c.xul";
             document.documentElement.openSubDialog(langsURL, "", null);
         }
     }
