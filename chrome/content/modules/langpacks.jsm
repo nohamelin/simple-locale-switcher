@@ -18,12 +18,12 @@ Cu.import("chrome://simplels/content/modules/general.jsm");
 Cu.import("chrome://simplels/content/modules/urlFormatter.jsm");
 
 
-const SLS_BRANCH_NAME = "extensions.simplels.";
+const ADDON_BRANCH_NAME = "extensions.simplels.";
 const FTP_GET_MORE_FILE = "chrome://simplels/content/get-ftp-langpacks.json";
 const AMO_FALLBACK_GET_MORE_URL = "https://addons.mozilla.org/language-tools/";
 
 XPCOMUtils.defineLazyGetter(this, "addonBranch", function() {
-    return Services.prefs.getBranch(SLS_BRANCH_NAME);
+    return Services.prefs.getBranch(ADDON_BRANCH_NAME);
 });
 
 XPCOMUtils.defineLazyGetter(this, "ftpURL", function() {

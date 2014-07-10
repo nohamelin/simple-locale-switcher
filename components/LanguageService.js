@@ -19,7 +19,8 @@ Cu.import("chrome://simplels/content/modules/scheduler.jsm");
 
 const DEFAULT_PACKAGE = "global";
 
-const SLS_BRANCH_NAME = "extensions.simplels.";
+const ADDON_ID = "simplels@nohamelin";
+const ADDON_BRANCH_NAME = "extensions.simplels.";
 const LOCALE_BRANCH_NAME = "general.useragent.";
 const LOCALE_PREF_NAME = "general.useragent.locale";
 const MATCH_BRANCH_NAME = "intl.locale.";
@@ -36,7 +37,7 @@ XPCOMUtils.defineLazyServiceGetter(this, "ls",
                                    "nsILocaleService");
 
 XPCOMUtils.defineLazyGetter(this, "addonBranch", function() {
-    return Services.prefs.getBranch(SLS_BRANCH_NAME);
+    return Services.prefs.getBranch(ADDON_BRANCH_NAME);
 });
 XPCOMUtils.defineLazyGetter(this, "localeBranch", function() {
     return Services.prefs.getBranch(LOCALE_BRANCH_NAME);
@@ -315,15 +316,32 @@ LanguageService.prototype = {
 
         Services.obs.removeObserver(this, "quit-application");
 
-        //
-        if (this.nextLocale !== undefined) {
-            this.userLocale = this.nextLocale;
-            this._resetNextLocale();
-        }
-        if (this.willMatchOS !== undefined) {
-            this.matchingOS = this.willMatchOS;
-            this._resetWillMatchOS();
-        }
+
+        AddonManager.getAddonByID(ADDON_ID, function(addon) {
+            let addonDisabledAfterRestart = addon.pendingOperations &
+                                            AddonManager.PENDING_DISABLE;
+            let addonUninstalledAfterRestart = addon.pendingOperations &
+                                               AddonManager.PENDING_UNINSTALL;
+            let addonAvailableAfterRestart = !addonDisabledAfterRestart &&
+                                             !addonUninstalledAfterRestart;
+
+            if (languageService.nextLocale !== undefined) {
+                // Don't give surprises to the user *after* that this add-on
+                // was uninstalled or disabled.
+                if (addonAvailableAfterRestart)
+                    languageService.userLocale = languageService.nextLocale;
+
+                languageService._resetNextLocale();
+            }
+            if (languageService.willMatchOS !== undefined) {
+                // Don't give surprises to the user *after* that this add-on
+                // was uninstalled or disabled.
+                if (addonAvailableAfterRestart)
+                    languageService.matchingOS = languageService.willMatchOS;
+
+                languageService._resetWillMatchOS();
+            }
+        });
     },
 
 
