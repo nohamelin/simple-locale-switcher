@@ -22,7 +22,9 @@ var simplels = (function() {
     strings: null,
     localeStrings: { languageNames: null, regionNames: null, formats: null },
 
-    WIDGET_MODE: null,
+    widgetMode: null,
+    toolbarButtonId: null,
+
     isToolbarButtonUpdatePending: false,
 
 
@@ -67,13 +69,13 @@ var simplels = (function() {
         Services.obs.addObserver(this, "sls:selected-changed", false);
         Services.obs.addObserver(this, "sls:availables-changed", false);
 
-        // In Firefox 29 and later, the toolbar button is built with the new
-        // mechanisms supported by CustomizableUI, instead of direct XUL.
-        // Any newer alternative build without CustomizableUI (Pale Moon?)
-        // will *lost* the toolbar button (in a smooth way, I expect).
-        this.WIDGET_MODE = "CustomizableUI" in window;
+        // In Firefox 29 and later, the toolbar button will be built with the
+        // new mechanisms provided by CustomizableUI, instead of plain XUL.
+        this.widgetMode = !!document.getElementById("simplels-widget-view");
 
-        if (this.WIDGET_MODE)
+        this.toolbarButtonId = this.widgetMode ? "simplels-widget"
+                                               : "simplels-button";
+        if (this.widgetMode)
             this.createToolbarButtonAsWidget();
 
         // Initialize dinamic attributes of commands and toolbar button
@@ -193,7 +195,7 @@ var simplels = (function() {
 
 
     tryToUpdateToolbarButton: function() {
-        let foundButton = this.WIDGET_MODE
+        let foundButton = this.widgetMode
                     ? CustomizableUI.getPlacementOfWidget("simplels-widget")
                     : document.getElementById("simplels-button");
 
@@ -206,7 +208,7 @@ var simplels = (function() {
             // broadcasters, so they are always correctly set, and we can
             // to ignore them here.
 
-            let popup = this.WIDGET_MODE
+            let popup = this.widgetMode
                         ? document.getElementById("simplels-view-body")
                         : document.getElementById("simplels-button-popup");
             this.resetPopupLocales(popup);
@@ -273,9 +275,9 @@ var simplels = (function() {
 
 
     populatePopupLocales: function(popup) {
-        let localeItemType = this.WIDGET_MODE ? "toolbarbutton" : "menuitem";
-        let localeItemClass = this.WIDGET_MODE ? "simplels-locale subviewbutton"
-                                               : "simplels-locale";
+        let localeItemType = this.widgetMode ? "toolbarbutton" : "menuitem";
+        let localeItemClass = this.widgetMode ? "simplels-locale subviewbutton"
+                                              : "simplels-locale";
         let localeItemCallback = function(locale) {
             return function() simplels.switchTo(locale);
         };
@@ -373,13 +375,13 @@ var simplels = (function() {
 
     customizableListener: {
         onWidgetAdded: function(id) {
-            if (id == "simplels-widget")
+            if (id == simplels.toolbarButtonId)
                 window.setTimeout(function()
                                   simplels.checkIfUpdatingToolbarButton(), 60);
         },
 
         onWidgetUndoMove: function(node) {
-            if (node.id == "simplels-widget")
+            if (node.id == simplels.toolbarButtonId)
                 window.setTimeout(function()
                                   simplels.checkIfUpdatingToolbarButton(), 60);
         }
