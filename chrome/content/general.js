@@ -22,16 +22,6 @@ var simplels = {
     onLoad: function() {
         this.inContentPrefs = document.documentURI.toLowerCase()
                                         .indexOf("about:preferences") == 0;
-
-        if (this.inContentPrefs) {
-            let langsBox = document.getElementById("simplels-languages-group");
-            let anotherBox = document.getElementById("startupGroup");
-
-            // The default visibility for the groupboxes of the General pane
-            // changed with the landing of:
-            //   https://bugzilla.mozilla.org/show_bug.cgi?id=754344
-            langsBox.hidden = anotherBox.hidden;
-        }
     },
 
 

@@ -35,7 +35,7 @@ overlay     chrome://mozapps/content/extensions/extensions.xul          chrome:/
 overlay     chrome://browser/content/preferences/main.xul               chrome://simplels/content/general.xul           application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
 overlay     chrome://messenger/content/preferences/general.xul          chrome://simplels/content/general.xul           application={3550f703-e582-4d05-9a08-453d09bdfdc6}
 overlay     about:preferences                                           chrome://simplels/content/general.xul           application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}      appversion>=15.0
-overlay     chrome://browser/content/preferences/in-content/main.xul    chrome://simplels/content/general.xul           application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}      appversion>=15.0
+overlay     about:preferences                                           chrome://simplels/content/general.fx28-31.xul   application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}      appversion>=28.0a1      platformversion<31.*
 
 
 # Style overlays

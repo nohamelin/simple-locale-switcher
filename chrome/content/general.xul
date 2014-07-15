@@ -36,6 +36,7 @@
     <prefpane id="mainPrefPane"> <!-- Firefox, in-content preferences -->
         <groupbox id="simplels-languages-group"
                   data-category="paneGeneral"
+                  hidden="true"
                   insertafter="downloadsGroup"/>
     </prefpane>
 
