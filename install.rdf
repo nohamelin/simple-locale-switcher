@@ -13,7 +13,7 @@
     <!-- General Info -->
         <em:id>simplels@nohamelin</em:id>
         <em:type>2</em:type>
-        <em:version>0.8</em:version>
+        <em:version>0.8.1</em:version>
         <em:name>Simple Locale Switcher</em:name>
 
         <em:description>An easier management of the user interface language</em:description>
