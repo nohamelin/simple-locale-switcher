@@ -168,14 +168,6 @@ var utils = {
         features += instantApply ? ",dialog=no" : ",modal";
 
         parent.openDialog(url, title, features);
-    },
-
-
-    ///////////////////////////////////////////////////////////////////////////
-    log: function(msg) {
-        msg = "Simple Locale Switcher: " + msg + ".";
-
-        Services.console.logStringMessage(msg);
     }
 };
 
