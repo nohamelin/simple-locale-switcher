@@ -54,10 +54,27 @@ function LanguageService() {
     if (languageService) return languageService;    // Enforce single instance
     languageService = this;
 
-    this.wrappedJSObject = this;                    // TODO: Get rid of it
+    this.wrappedJSObject = this;
 }
 
 
+/*
+ * A few definitions
+ * -----------------
+ *
+ * A "language tag" is a string identifying a single language; its format
+ * is the defined by the IETF's BCP 47 document:
+ *   http://tools.ietf.org/html/bcp47
+ *
+ * ...though this service doesn't make any assumption about the internal
+ * structure of these strings. The language.jsm module deals with that.
+ *
+ * The term "locale" is loosely used here as a synonym of language tag;
+ * it's never about objects implementing the nsILocale interface, as
+ * nsILocaleService does:
+ *   https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocale
+ *   https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocaleService
+ */
 LanguageService.prototype = {
 
     classID: Components.ID("{92ffb138-103f-11e2-84fe-286f6188709b}"),
@@ -65,8 +82,8 @@ LanguageService.prototype = {
 
 
     /**
-     * A language tag associated to the user preference for locale from the
-     * operating system.
+     * A language tag associated to the preferred language for the UI of
+     * applications, according to the operating system.
      */
     get osLocale() {
         if (!("_osLocale" in this)) {
@@ -78,9 +95,14 @@ LanguageService.prototype = {
 
 
     /**
-     * A language tag associated to the locale being used by the current main
-     * window. It can be different of the expected, selected locale if the last
-     * isn't available.
+     * A language tag associated to the "nearest" language to the preferred
+     * language, selected between the currently available locales for the
+     * application, and effectively used for new windows and chrome pages.
+     *
+     * Changes to how the application figures this "best-match" is out of the
+     * defined scope for this add-on; there are a few, old enhancement bugs
+     * about that:
+     *   https://bugzilla.mozilla.org/show_bug.cgi?id=288670
      */
     get currentLocale() {
         return xcr.getSelectedLocale(DEFAULT_LOCALE_PROVIDER);
@@ -88,15 +110,16 @@ LanguageService.prototype = {
 
 
     /**
-     * A language tag associated to the preferred, expected (if available)
-     * locale.
+     * A language tag associated to the preferred, expected language for the
+     * UI of the application (no caring about availability).
      */
     get selectedLocale() {
         // TODO: It's wrong. It should take into account if the application
-        // was launched with the -UILocale command-line flag, but it seems that
-        // there isn't a reliable way for to figure it: the flag is managed by
-        // the application in a very early stage, a point unreachable to an
-        // add-on. See:
+        // was launched with the -UILocale command-line flag, but it seems
+        // that we don't have a reliable way for to figure it: the application
+        // manages the flag and hides the language tag passed as parameter
+        // in a very early runtime stage, a point unreachable for an add-on.
+        // See:
         // http://mxr.mozilla.org/mozilla-release/source/chrome/src/nsChromeRegistryChrome.cpp?rev=21cd4d9e679b#371
         return this.matchingOS ? this.osLocale : this.userLocale;
     },
@@ -144,9 +167,11 @@ LanguageService.prototype = {
     /**
      * intl.locale.matchOS
      *
-     * This system preference determines if the application's UI language is
-     * decided from the OS (if true) or from the general.useragent.locale
+     * This preference determines if the preferred language for the UI is
+     * taken from the OS (if true) or from the general.useragent.locale
      * preference.
+     *
+     * It can be overridden by the -UILocale command-line parameter.
      */
     get matchingOS() {
         if (!("_matchingOS" in this)) {
@@ -178,14 +203,15 @@ LanguageService.prototype = {
     /**
      * general.useragent.locale
      *
-     * A system preference, a language tag as defined by the BCP 47 document
-     * (i.e. "en-US", "fr"), corresponding to the preferred locale for the
-     * application. It's ignored if the intl.locale.matchOS preference is true.
-     * Changing its value will not affect to existent windows, but it will be
-     * effective for new windows and new chrome pages (i.e. about:addons).
+     * This preference stores the language tag corresponding to the preferred
+     * language for the UI.
      *
-     * It's in some cases (some linux distributions) a localized preference,
-     * with its default value read from:
+     * It's ignored when the intl.locale.matchOS preference is true or the
+     * -UILocale command-line parameter is used.
+     *
+     * In some cases (e.g. builds provided by some Linux distributions) it
+     * can be found as a localized, complex preference, with its default value
+     * read dynamically from:
      *   chrome://global/locale/intl.properties
      */
     get userLocale() {
@@ -234,10 +260,10 @@ LanguageService.prototype = {
     /**
      * extensions.simplels.applyOnQuit.matchOS
      *
-     * It and the next are volatile (without a explicit default value) prefs.
-     * Their existences are checked on quit, where its value is set to the
-     * intl.locale.matchOS and general.useragent.locale preferences,
-     * respectively, for their use during the next execution.
+     * A volatile (without an explicit default value) preference.
+     * Its existence is checked during the shutdown of the application, where
+     * its value is copied to the intl.locale.matchOS preference, and then
+     * this preference is reset.
      */
     get willMatchOS() {
         if (!("_willMatchOS" in this)) {
@@ -259,12 +285,18 @@ LanguageService.prototype = {
 
 
     _resetWillMatchOS: function() {
-        addonBranch.clearUserPref("applyOnQuit.matchOS");   // It never throws
+        addonBranch.clearUserPref("applyOnQuit.matchOS");
     },
 
 
     /**
      * extensions.simplels.applyOnQuit.locale
+     *
+     * A volatile (without an explicit default value) preference.
+     * Its existence is checked during the shutdown of the application, where
+     * its value is copied to the general.useragent.locale preference, setting
+     * intl.locale.matchOS to false if it's required, and then this preference
+     * is reset.
      */
     get nextLocale() {
         if (!("_nextLocale" in this)) {
@@ -286,7 +318,7 @@ LanguageService.prototype = {
 
 
     _resetNextLocale: function() {
-        addonBranch.clearUserPref("applyOnQuit.locale");    // It never throws
+        addonBranch.clearUserPref("applyOnQuit.locale");
     },
 
 
@@ -360,7 +392,7 @@ LanguageService.prototype = {
         // The "locale" add-on type is registered in the Add-ons Manager with
         // the TYPE_UI_HIDE_EMPTY flag, so that "the type should be hidden
         // from the UI if no add-ons of that type are currently installed".
-        // We change the visibility of it zeroing the flag.
+        // We undo it zeroing the flag.
         AddonManager.addonTypes["locale"].flags ^= AddonManager
                                                    .TYPE_UI_HIDE_EMPTY;
     },
