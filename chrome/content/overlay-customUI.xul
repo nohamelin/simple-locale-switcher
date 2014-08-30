@@ -47,6 +47,13 @@
                                command="sls_enableMatchingOS"/>
 
                 <!-- The languages list is added dinamically here -->
+
+                <toolbarseparator observes="sls_customLanguagesProvider"/>
+                <toolbarbutton id="simplels-view-provider"
+                               class="subviewbutton"
+                               label="&popup.provider.label;"
+                               command="sls_resetLanguagesProvider"
+                               observes="sls_customLanguagesProvider"/>
             </vbox>
         </panelview>
     </panelmultiview>

@@ -9,8 +9,10 @@
 <!ENTITY tooltip.title "User Interface Language">
 <!ENTITY tooltip.selected.label "Selected:">
 <!ENTITY tooltip.current.label "Used by the window:">
+<!ENTITY tooltip.provider.label "Languages provider package:">
 
 <!ENTITY popup.manage.label "Manage Languages…">
 <!ENTITY popup.get.label "Get More Language Packs…">
 <!ENTITY popup.restart.label "Restart After to Switch Language">
 <!ENTITY popup.match.label "Match the System Language">
+<!ENTITY popup.provider.label "Use the Default Languages Provider">

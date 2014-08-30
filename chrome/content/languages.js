@@ -102,10 +102,13 @@ var simplels = {
     populateSwitchList: function() {
         let popup = document.getElementById("switch-popup");
 
+        // This language selector always will work with the available locales
+        // for the main application, no caring if the user have set a custom
+        // locale provider.
         let pickedLocale = langsvc.userLocale;
-        let isPickedAvailable = langUtils.isLocaleAvailable(pickedLocale);
+        let isPickedAvailable = langUtils.isLocaleAvailable(pickedLocale, true);
 
-        let locales = langUtils.findRelevantLocales();
+        let locales = langUtils.findRelevantLocales(true);
         langUtils.sortLocales(locales);
 
         let popupFragment = document.createDocumentFragment();

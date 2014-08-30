@@ -18,7 +18,7 @@ Cu.import("chrome://simplels/content/modules/logger.jsm");
 Cu.import("chrome://simplels/content/modules/scheduler.jsm");
 
 
-const DEFAULT_PACKAGE = "global";
+const DEFAULT_LOCALE_PROVIDER = "global";
 
 const ADDON_ID = "simplels@nohamelin";
 const ADDON_BRANCH_NAME = "extensions.simplels.";
@@ -83,7 +83,7 @@ LanguageService.prototype = {
      * isn't available.
      */
     get currentLocale() {
-        return xcr.getSelectedLocale(DEFAULT_PACKAGE);
+        return xcr.getSelectedLocale(DEFAULT_LOCALE_PROVIDER);
     },
 
 
@@ -112,23 +112,31 @@ LanguageService.prototype = {
 
 
     /**
-     * A collection of language tags, associated to any available language that
-     * can be effectively applied.
+     * An object mapping each chrome package selected as locale provider
+     * with a collection of language tags: all the available languages that
+     * can be effectively applied to that package.
      */
-    get availableLocales() {
-        if (!("_availableLocales" in this)) {
-            this._availableLocales = new Array();
+    _availableLocales: Object.create(null),
 
-            let availables = tcr.getLocalesForPackage(DEFAULT_PACKAGE);
+
+    getAvailableLocales: function(fromGlobalProvider) {
+        let provider = fromGlobalProvider ? DEFAULT_LOCALE_PROVIDER
+                                          : this.selectedProvider;
+
+        if (!(provider in this._availableLocales)) {
+            this._availableLocales[provider] = new Array();
+
+            let availables = tcr.getLocalesForPackage(provider);
             while (availables.hasMore())
-                this._availableLocales.push(availables.getNext());
+                this._availableLocales[provider].push(availables.getNext());
         }
-        return this._availableLocales;
+        return this._availableLocales[provider];
     },
 
 
     _onChangedAvailableLocales: function() {
-        delete this._availableLocales;
+        this._availableLocales = Object.create(null);
+
         Services.obs.notifyObservers(null, "sls:availables-changed", null);
     },
 
@@ -282,6 +290,57 @@ LanguageService.prototype = {
     },
 
 
+    /**
+     * extensions.simplels.provider
+     *
+     * Name of the chrome package from whom the list of available locales is
+     * obtained. It can be any package registered as a locale provider via a
+     * chrome.manifest file. Names of packages unknown for the application,
+     * or of packages without locales associated to them will be ignored.
+     */
+    get selectedProvider() {
+        if (!("_selectedProvider" in this)) {
+            // Chrome packages have their names normalized to lowercase when
+            // they are registered.
+            let provider = addonBranch.getCharPref("provider").toLowerCase();
+
+            if (!provider || provider == DEFAULT_LOCALE_PROVIDER)
+                this._selectedProvider = DEFAULT_LOCALE_PROVIDER;
+            else {
+                try {
+                    xcr.getSelectedLocale(provider);
+                    this._selectedProvider = provider;
+                } catch (e) {
+                    logger.warning("impossible to get the preferred locale " +
+                                   "for the specified locale provider " +
+                                   "'" + provider + "'. The defaults will " +
+                                   "be used.");
+
+                    this._selectedProvider = DEFAULT_LOCALE_PROVIDER;
+                }
+            }
+        }
+        return this._selectedProvider;
+    },
+
+
+    get isSelectedProviderDefault() {
+        return this.selectedProvider == DEFAULT_LOCALE_PROVIDER;
+    },
+
+
+    _onChangedSelectedProvider: function() {
+        delete this._selectedProvider;
+
+        Services.obs.notifyObservers(null, "sls:availables-changed", null);
+    },
+
+
+    resetSelectedProvider: function() {
+        addonBranch.clearUserPref("provider");
+    },
+
+
     ///////////////////////////////////////////////////////////////////////////
     startup: function() {
         addonBranch.QueryInterface(Ci.nsIPrefBranch2);  // COMPAT: Gecko 12-
@@ -365,6 +424,10 @@ LanguageService.prototype = {
                         }, 40);
                         break;
 
+                    case "provider" :
+                        this._onChangedSelectedProvider();
+                        break;
+
                     case "applyOnQuit.matchOS" :
                         this._onChangedWillMatchOS();
                         break;
@@ -380,8 +443,6 @@ LanguageService.prototype = {
 
     installListener: {
         onInstallEnded: function(install, addon) {
-            // There isn't much harm if the locale add-on is actually for
-            // another extension instead of the main application
             if (install.type == "locale" && addon.isActive)
                 scheduler.queue("install-ended", function() {
                     languageService._onChangedAvailableLocales();
@@ -392,8 +453,6 @@ LanguageService.prototype = {
 
     addonListener: {
         onEnabled: function(addon) {
-            // There isn't much harm if the locale add-on is actually for
-            // another extension instead of the main application
             if (addon.type == "locale")
                 languageService._onChangedAvailableLocales();
         },

@@ -13,3 +13,5 @@ pref("extensions.simplels.button.showDescriptions", false);
 
 pref("extensions.simplels.getMoreLanguages", 2);
 //pref("extensions.simplels.getMoreLanguagesURL", "https://addons.mozilla.org/language-tools/");
+
+pref("extensions.simplels.provider", "global");

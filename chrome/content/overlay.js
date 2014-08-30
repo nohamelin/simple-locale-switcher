@@ -82,6 +82,7 @@ var simplels = (function() {
         this.updateRestartCommand();
         this.updateMatchCommand();
         this.updateDescriptionsBroadcaster();
+        this.updateCustomProviderBroadcaster();
 
         window.setTimeout(function() simplels.tryToUpdateToolbarButton(), 60);
 
@@ -139,6 +140,21 @@ var simplels = (function() {
                                          "button.showDescriptions");
 
         descBcstr.setAttribute("descriptions", wantDescriptions);
+    },
+
+
+    updateCustomProviderBroadcaster: function() {
+        let customBcstr = document.getElementById(
+                                   "sls_customLanguagesProvider");
+        let resetCmd = document.getElementById("sls_resetLanguagesProvider");
+        let customProvider = !this.langsvc.isSelectedProviderDefault;
+
+        customBcstr.setAttribute("hidden", !customProvider);
+
+        if (customProvider)
+            resetCmd.removeAttribute("disabled");
+        else
+            resetCmd.setAttribute("disabled", "true");
     },
 
 
@@ -224,6 +240,7 @@ var simplels = (function() {
                     document.getElementById("simplels-button-tooltip-" + id);
 
         // The tooltip displays information about the next pieces:
+        //
         // 1. The locale selected, expected by the user.
         let selectedLocale = this.langsvc.selectedLocale;
         let isSelectedMatchingOS = this.langsvc.matchingOS;
@@ -251,6 +268,7 @@ var simplels = (function() {
         $("selected-about").value = aboutMsg;
 
         // 2. The locale applied to the current window.
+        //    It's hidden if its value matches the currently selected locale.
         let currentLocale = this.windowLocale;
         let areLocalesInConflict = currentLocale != selectedLocale;
 
@@ -259,6 +277,14 @@ var simplels = (function() {
 
         document.getElementById("simplels-button-tooltip")
                 .setAttribute("conflicting", areLocalesInConflict);
+
+        // 3. The locale provider selected.
+        //    It's hidden (by a broadcaster) if the default provider is used.
+        let selectedProvider = this.langsvc.selectedProvider;
+        let selectedProviderName = this.localeStrings.formats
+                                   .getFormattedString("unnamed",
+                                                       [ selectedProvider ]);
+        $("provider").value = selectedProviderName;
     },
 
 
@@ -326,7 +352,10 @@ var simplels = (function() {
             popupFragment.appendChild(item);
         }, this);
 
-        popup.appendChild(popupFragment);
+        let matchNode = this.widgetMode
+                        ? document.getElementById("simplels-view-match")
+                        : document.getElementById("simplels-button-match");
+        popup.insertBefore(popupFragment, matchNode.nextSibling);
     },
 
 
@@ -355,6 +384,7 @@ var simplels = (function() {
                 break;
 
             case "sls:availables-changed" :
+                this.updateCustomProviderBroadcaster();
                 this.tryToUpdateToolbarButton();
                 break;
 
@@ -450,6 +480,11 @@ var simplels = (function() {
         let wantRestart = this.prefs.getBoolPref("button.restartAfterSwitch");
         if (wantRestart)
             Application.restart();      // It could be canceled by the user
+    },
+
+
+    resetLanguagesProvider: function() {
+        this.langsvc.resetSelectedProvider();
     },
 
 

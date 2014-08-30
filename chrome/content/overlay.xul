@@ -36,10 +36,13 @@
                  oncommand="simplels.toggleRestartAfterSwitch()"/>
         <command id="sls_enableMatchingOS"
                  oncommand="simplels.enableMatchingOS()"/>
+        <command id="sls_resetLanguagesProvider"
+                 oncommand="simplels.resetLanguagesProvider()"/>
     </commandset>
 
     <broadcasterset>
         <broadcaster id="sls_showLocaleDescriptions"/>
+        <broadcaster id="sls_customLanguagesProvider"/>
     </broadcasterset>
 
     <popupset>
@@ -58,6 +61,12 @@
                      hidden="true">
                     <label>&tooltip.current.label;</label>
                     <label id="simplels-button-tooltip-current"/>
+                </row>
+                <row id="simplels-button-tooltip-provider-row"
+                     hidden="true"
+                     observes="sls_customLanguagesProvider">
+                    <label>&tooltip.provider.label;</label>
+                    <label id="simplels-button-tooltip-provider"/>
                 </row>
             </rows></grid>
         </tooltip>
@@ -109,7 +118,13 @@
                       label="&popup.match.label;"
                       command="sls_enableMatchingOS"/>
 
-            <!-- The languages' list is added dinamically here -->
+            <!-- The languages list is added dinamically here -->
+
+            <menuseparator observes="sls_customLanguagesProvider"/>
+            <menuitem id="simplels-button-provider"
+                      label="&popup.provider.label;"
+                      command="sls_resetLanguagesProvider"
+                      observes="sls_customLanguagesProvider"/>
         </menupopup>
 
     </toolbarbutton>

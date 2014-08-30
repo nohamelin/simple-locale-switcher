@@ -9,8 +9,10 @@
 <!ENTITY tooltip.title "Idioma de la interfaz de usuario">
 <!ENTITY tooltip.selected.label "Seleccionado:">
 <!ENTITY tooltip.current.label "Usado por la ventana:">
+<!ENTITY tooltip.provider.label "Paquete proveedor de idiomas:">
 
 <!ENTITY popup.manage.label "Administrar idiomas…">
 <!ENTITY popup.get.label "Obtener más paquetes de idioma…">
 <!ENTITY popup.restart.label "Reiniciar tras cambiar idioma">
 <!ENTITY popup.match.label "Coincidir con el idioma del sistema">
+<!ENTITY popup.provider.label "Usar el proveedor de idiomas predeterminado">
