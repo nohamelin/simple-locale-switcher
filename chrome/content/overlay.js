@@ -84,7 +84,9 @@ var simplels = (function() {
         this.updateDescriptionsBroadcaster();
         this.updateCustomProviderBroadcaster();
 
-        window.setTimeout(function() simplels.tryToUpdateToolbarButton(), 60);
+        window.setTimeout(function() {
+            simplels.tryToUpdateToolbarButton();
+        }, 60);
 
         // Don't miss to update the toolbar button when it's added from the
         // toolbar palette.
@@ -236,8 +238,9 @@ var simplels = (function() {
 
 
     updateToolbarButtonTooltip: function() {
-        let $ = function(id)
-                    document.getElementById("simplels-button-tooltip-" + id);
+        let $ = function(id) {
+            return document.getElementById("simplels-button-tooltip-" + id);
+        };
 
         // The tooltip displays information about the next pieces:
         //
@@ -305,7 +308,7 @@ var simplels = (function() {
         let localeItemClass = this.widgetMode ? "simplels-locale subviewbutton"
                                               : "simplels-locale";
         let localeItemCallback = function(locale) {
-            return function() simplels.switchTo(locale);
+            return function() { simplels.switchTo(locale); };
         };
 
         let checkedLocale = this.langsvc.userLocale;
@@ -406,14 +409,16 @@ var simplels = (function() {
     customizableListener: {
         onWidgetAdded: function(id) {
             if (id == simplels.toolbarButtonId)
-                window.setTimeout(function()
-                                  simplels.checkIfUpdatingToolbarButton(), 60);
+                window.setTimeout(function() {
+                    simplels.checkIfUpdatingToolbarButton();
+                }, 60);
         },
 
         onWidgetUndoMove: function(node) {
             if (node.id == simplels.toolbarButtonId)
-                window.setTimeout(function()
-                                  simplels.checkIfUpdatingToolbarButton(), 60);
+                window.setTimeout(function() {
+                    simplels.checkIfUpdatingToolbarButton();
+                }, 60);
         }
     },
 
