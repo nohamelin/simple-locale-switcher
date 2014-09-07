@@ -43,10 +43,12 @@ var simplels = {
         this.localePref = document.getElementById(LOCALE_PREF_NAME);
 
         if (langsvc.isUserLocaleLocalized) {
-            // Having a static value for the preference's type (either "string"
-            // or "wstring") doesn't work in all the cases.
             this.localePref.type = "wstring";
-            this._reinitializeLocalePreference();
+
+            // After changing the type, we need to reinitialize the
+            // preference. See:  /toolkit/content/widgets/preferences.xml
+            let value = this.localePref.valueFromPreferences;
+            this.localePref._setValue(value, false);
         }
 
         this.switchList = document.getElementById("switch-list");
@@ -58,31 +60,6 @@ var simplels = {
         // Having a specific width for the XUL descriptions elements isn't
         // very well managed by default, so we need the next.
         window.sizeToContent();
-    },
-
-
-    _reinitializeLocalePreference: function() {
-        // TODO: It's basically the same as the preference's constructor. Maybe
-        // is possible to use that directly.
-        // SOURCE: /toolkit/content/widgets/preferences.xml
-        let parentPref = null;
-        if (!this.localePref.instantApply && window.opener) {
-            let pdoc = window.opener.document;
-
-            let prefSets = pdoc.getElementsByTagName("preferences");
-            for (let k = 0; k < prefSets.length && !parentPref; ++k) {
-                let prefs = prefSets[k].getElementsByAttribute(
-                                        "name", this.localePref.name);
-
-                for (let l = 0; l < prefs.length && !parentPref; ++l) {
-                    if (prefs[l].localName == "preference")
-                        parentPref = prefs[l];
-                }
-            }
-        }
-        let value = parentPref ? parentPref.value
-                               : this.localePref.valueFromPreferences;
-        this.localePref._setValue(value, false);
     },
 
 

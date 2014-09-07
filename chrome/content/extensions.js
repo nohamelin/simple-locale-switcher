@@ -78,7 +78,7 @@ var simplels = {
 
 
     openLanguagesDialog: function() {
-        let langsURL = "chrome://simplels/content/languages-outer.xul";
+        let langsURL = "chrome://simplels/content/languages.xul";
 
         this.utils.openPreferencesWindow(window, langsURL);
     },
