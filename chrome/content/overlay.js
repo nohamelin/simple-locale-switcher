@@ -425,16 +425,17 @@ var simplels = (function() {
 
     openLanguagesManager: function() {
         switch (this.utils.application) {
-            case this.FIREFOX_ID :
-                BrowserOpenAddonsMgr("addons://list/locale");
-                break;
-
             case this.THUNDERBIRD_ID :
                 openAddonsMgr("addons://list/locale");
                 break;
 
             case this.SEAMONKEY_ID :
                 toEM("addons://list/locale");
+                break;
+
+            case this.FIREFOX_ID :
+            default :
+                BrowserOpenAddonsMgr("addons://list/locale");
                 break;
         }
     },
@@ -445,16 +446,17 @@ var simplels = (function() {
         let getURL = this.getMoreLanguagesURL();
 
         switch (this.utils.application) {
-            case this.FIREFOX_ID :
-                openUILinkIn(getURL, "tab");
-                break;
-
             case this.THUNDERBIRD_ID :
                 this.tbUtils.openContentTab(getURL);
                 break;
 
             case this.SEAMONKEY_ID :
                 openUILink(getURL);
+                break;
+
+            case this.FIREFOX_ID :
+            default :
+                openUILinkIn(getURL, "tab");
                 break;
         }
     },

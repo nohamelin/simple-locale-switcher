@@ -30,8 +30,14 @@ XPCOMUtils.defineLazyGetter(this, "ftpURL", function() {
     let getString = utils.getFileContents(FTP_GET_MORE_FILE);
     let getObject = JSON.parse(getString);
 
-    return getObject[utils.application][utils.channel] ||
-           getObject["fallback"][utils.application];
+    let url;
+    let getApplicationObject = getObject[utils.application];
+    if (getApplicationObject)
+        url = getApplicationObject[utils.channel];
+
+    return url ||
+           getObject["fallback"][utils.application] ||
+           getObject["fallback-all"];
 });
 
 

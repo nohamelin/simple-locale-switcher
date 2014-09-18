@@ -89,13 +89,14 @@ var simplels = {
         let getURL = this.getMoreLanguagesURL();
 
         switch (this.utils.application) {
-            case this.FIREFOX_ID :
-            case this.SEAMONKEY_ID :
-                openURL(getURL);
-                break;
-
             case this.THUNDERBIRD_ID :
                 this.tbUtils.openContentTab(getURL);
+                break;
+
+            case this.FIREFOX_ID :
+            case this.SEAMONKEY_ID :
+            default :
+                openURL(getURL);
                 break;
         }
     },
