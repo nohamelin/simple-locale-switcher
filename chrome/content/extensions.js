@@ -14,9 +14,9 @@ var simplels = {
 
     handleEvent: function(event) {
         switch (event.type) {
-            case "load" :
-                document.removeEventListener("load", simplels, true);
-                this.onLoad();
+            case "DOMContentLoaded" :
+                window.removeEventListener("DOMContentLoaded", simplels);
+                this.onContentLoad();
                 break;
 
             case "unload" :
@@ -26,7 +26,7 @@ var simplels = {
     },
 
 
-    onLoad: function() {
+    onContentLoad: function() {
         Cu.import("chrome://simplels/content/modules/general.jsm", this);
         Cu.import("chrome://simplels/content/modules/language.jsm", this);
 
@@ -60,8 +60,7 @@ var simplels = {
             selectedItem.value = this.strings.getString("selected.match");
             selectedItem.tooltipText = this.strings.getString(
                                             "selected.match.tooltiptext");
-        }
-        else {
+        } else {
             selectedItem.value = this.getLocaleName(this.langsvc.userLocale);
             selectedItem.tooltipText = this.langsvc.userLocale;
         }
@@ -113,5 +112,5 @@ var simplels = {
 };
 
 
-document.addEventListener("load", simplels, true);
+window.addEventListener("DOMContentLoaded", simplels);
 window.addEventListener("unload", simplels);
