@@ -7,16 +7,6 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 
-.view-pane:not([type="locale"]) > .sls-languages-info-container {
-    display: none;
-}
-/* COMPAT: Fix the display of our container being messed up by the
- * global-info-container class (Gecko 30 and before) */
-.view-pane[type="locale"] > .sls-languages-info-container {
-    display: -moz-box !important;
-}
-
-
 #simplels-selected {
     font-weight: bold;
 }

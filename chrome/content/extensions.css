@@ -1,0 +1,17 @@
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+.view-pane:not([type="locale"]) > .sls-languages-info-container {
+    display: none;
+}
+/* COMPAT: Fix the displaying of our container being messed up by the
+ * global-info-container class (Gecko 30 and before) */
+.view-pane[type="locale"] > .sls-languages-info-container {
+    display: -moz-box !important;
+}

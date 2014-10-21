@@ -26,17 +26,6 @@ toolbarpaletteitem[place="palette"] > #simplels-widget {
 }
 
 
-/* Improve the absurd default layout of the toolbar button (Firefox only,
- * pre Australis) */
-#main-window toolbar:not([grippytooltiptext]) #simplels-button {
-    -moz-box-orient: horizontal;
-}
-#main-window toolbar[mode="full"]:not([grippytooltiptext]) #simplels-button {
-    -moz-binding: url(
-        "chrome://global/content/bindings/toolbarbutton.xml#menu-vertical");
-}
-
-
 #simplels-button-tooltip {
     max-width: none;
 }
@@ -56,18 +45,7 @@ toolbarpaletteitem[place="palette"] > #simplels-widget {
 }
 
 
-#simplels-button-popup > .simplels-locale {
-    -moz-binding: url(
-        "chrome://simplels/content/menu.xml#menuitem-iconic-locale");
-}
-
-
-#simplels-button[descriptions="true"] .simplels-locale-desc-placeholder,
-#simplels-button:not([descriptions="true"]) .simplels-locale-desc {
-    display: none;
-}
 #simplels-widget-view[descriptions="true"] .simplels-locale::after {
-   content: attr(description);
    float: right;
    font-style: italic;
    color: hsl(0,0%,50%);
