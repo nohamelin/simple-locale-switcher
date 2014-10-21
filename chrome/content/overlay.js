@@ -407,18 +407,30 @@ var simplels = (function() {
 
 
     customizableListener: {
+
         onWidgetAdded: function(id) {
             if (id == simplels.toolbarButtonId)
-                window.setTimeout(function() {
-                    simplels.checkIfUpdatingToolbarButton();
-                }, 60);
+                this.handle();
         },
 
         onWidgetUndoMove: function(node) {
             if (node.id == simplels.toolbarButtonId)
-                window.setTimeout(function() {
-                    simplels.checkIfUpdatingToolbarButton();
-                }, 60);
+                this.handle();
+        },
+
+        // At least one add-on (The Puzzle Piece 2, aka Puzzle Toolbars)
+        // relies that we handle onAreaNodeRegistered to initialize our
+        // button if it's placed in an extra toolbar provided by them.
+        onAreaNodeRegistered: function(area, container) {
+            this.handle();
+        },
+
+        handle: function() {
+            // Note that CustomizableUI events are dispatched synchronously
+            // on the UI thread.
+            window.setTimeout(function() {
+                simplels.checkIfUpdatingToolbarButton();
+            }, 60);
         }
     },
 
