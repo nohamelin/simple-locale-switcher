@@ -60,7 +60,7 @@
                 </row>
                 <row id="simplels-button-tooltip-current-row"
                      hidden="true">
-                    <label>&tooltip.current.label;</label>
+                    <label>&tooltip.current.label-2;</label>
                     <label id="simplels-button-tooltip-current"/>
                 </row>
                 <row id="simplels-button-tooltip-provider-row"
