@@ -101,6 +101,23 @@ var simplels = {
     },
 
 
+    openLearnMoreAboutLanguagesPage: function() {
+        let learnURL = "https://support.mozilla.org/kb/install-language-packs-get-more-languages";
+
+        switch (this.utils.application) {
+            case this.THUNDERBIRD_ID :
+                this.tbUtils.openContentTab(learnURL);
+                break;
+
+            case this.FIREFOX_ID :
+            case this.SEAMONKEY_ID :
+            default :
+                openURL(learnURL);
+                break;
+        }
+    },
+
+
     getLocaleName: function(locale) {
         return this.langUtils.buildLocaleName(locale, this.localeStrings);
     },

@@ -14,6 +14,9 @@
     %brandDTD;
     <!ENTITY % extensionsDTD SYSTEM "chrome://simplels/locale/extensions.dtd">
     %extensionsDTD;
+    <!ENTITY % extensions2DTD SYSTEM
+        "chrome://mozapps/locale/extensions/extensions.dtd">
+    %extensions2DTD;
 ]>
 
 <overlay id="simplels-extensions-overlay"
@@ -38,6 +41,8 @@
                  oncommand="simplels.openLanguagesDialog()"/>
         <command id="sls_getMoreLanguages"
                  oncommand="simplels.openGetMoreLanguagesPage()"/>
+        <command id="sls_learnMoreAboutLanguages"
+                 oncommand="simplels.openLearnMoreAboutLanguagesPage()"/>
     </commandset>
 
 
@@ -66,6 +71,26 @@
                         command="sls_getMoreLanguages"/>
             </hbox>
         </hbox>
+
+        <!-- TODO: At least one popular add-on (Stylish) overlays this
+             addon-list-empty box in a similar way (position-based).
+             It isn't a robust approach. No CSS conflicts in this case,
+             but a safer option will be to move on to an independent
+             container. -->
+        <vbox id="addon-list-empty">
+            <vbox class="alert sls-list-empty-box" position="2">
+                <label id="simplels-empty-empty"
+                       value="&listEmpty.installed.label;"/>
+                <description id="simplels-empty-about">
+                    &languages.empty.description;
+                </description>
+                <button id="simplels-empty-learn"
+                        class="discover-button"
+                        label="&languages.empty.learn.label;"
+                        accesskey="&languages.empty.learn.accesskey;"
+                        command="sls_learnMoreAboutLanguages"/>
+            </vbox>
+        </vbox>
     </vbox>
 
 </overlay>

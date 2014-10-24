@@ -15,3 +15,9 @@
 .view-pane[type="locale"] > .sls-languages-info-container {
     display: -moz-box !important;
 }
+
+
+.view-pane:not([type="locale"]) .sls-list-empty-box,
+.view-pane[type="locale"] .sls-list-empty-box ~ .alert {
+    display: none;
+}

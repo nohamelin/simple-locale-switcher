@@ -12,3 +12,8 @@
 <!ENTITY languages.get.label "Get more language packs…">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
 <!ENTITY languages.get.tooltiptext "Get more language packs for &brandShortName;">
+
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.empty.description "Language packs provide additional languages for the interface of &brandShortName; and extensions">
+<!ENTITY languages.empty.learn.label "Learn more about language packs">
+<!ENTITY languages.empty.learn.accesskey "L">
