@@ -102,7 +102,8 @@ var simplels = {
 
 
     openLearnMoreAboutLanguagesPage: function() {
-        let learnURL = "https://support.mozilla.org/kb/install-language-packs-get-more-languages";
+        Cu.import("chrome://simplels/content/modules/langpacks.jsm", this);
+        let learnURL = this.learnMoreAboutLanguagesURL();
 
         switch (this.utils.application) {
             case this.THUNDERBIRD_ID :

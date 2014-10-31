@@ -6,7 +6,10 @@
 
 "use strict";
 
-var EXPORTED_SYMBOLS = [ "getMoreLanguagesURL" ];
+var EXPORTED_SYMBOLS = [
+    "getMoreLanguagesURL",
+    "learnMoreAboutLanguagesURL"
+];
 
 const Cc = Components.classes;
 const Ci = Components.interfaces;
@@ -63,4 +66,11 @@ function getMoreLanguagesURL() {
     }
 
     return formatURL(getURL || AMO_FALLBACK_GET_MORE_URL);
+}
+
+
+function learnMoreAboutLanguagesURL() {
+    let learnURL = utils.getComplexCharPref(addonBranch,
+                                            "learnMoreAboutLanguagesURL");
+    return formatURL(learnURL);
 }
