@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the languages.get.label string in extensions.dtd file -->
+<!ENTITY prefwindow.get.caption "Telechargiar dapli pachets da lingua">
+<!ENTITY prefwindow.get.destination.label "Destinaziun dal cummond:">
+<!ENTITY prefwindow.get.destination.accesskey "D">
+<!ENTITY prefwindow.get.destination.list.ftp "Ordinatur cun tut ils pachets da lingua sin il server da FTP da Mozilla">
+<!ENTITY prefwindow.get.destination.list.amo "Pagina cun ils pachets da lingua sin la pagina da supplements da Mozilla">
+<!ENTITY prefwindow.get.destination.list.custom "Persunalisà">
+<!ENTITY prefwindow.get.custom.label "Adressa:">
+<!ENTITY prefwindow.get.custom.accesskey "A">
+<!ENTITY prefwindow.button.caption "Buttun per la trav da linguas">
+<!ENTITY prefwindow.button.descriptions.label "Mussar il tag da mintga lingua sper il num da mintga lingua sin la glista">
+<!ENTITY prefwindow.button.descriptions.accesskey "M">

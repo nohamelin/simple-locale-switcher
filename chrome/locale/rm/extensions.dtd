@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
+<!ENTITY languages.selected.label "Lingua preferida per la surfatscha da &brandShortName;:">
+<!ENTITY languages.switch.label "Midar…">
+<!ENTITY languages.switch.accesskey "M">
+<!ENTITY languages.switch.tooltiptext "Midar la lingua preferida per la surfatscha">
+<!ENTITY languages.get.label "Telechargiar dapli pachets da lingua…">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.get.tooltiptext "Telechargiar dapli pachets da lingua per &brandShortName;">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.empty.description "Pachets da lingua porschan ulteriuras linguas per la surfatscha da &brandShortName; e dad extensiuns">
+<!ENTITY languages.empty.learn.label "Ulteriuras infurmaziuns davart pachets da linguas">
+<!ENTITY languages.empty.learn.accesskey "U">

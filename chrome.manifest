@@ -17,6 +17,7 @@ locale      simplels       es-ES            chrome/locale/es-ES/
 locale      simplels       fr               chrome/locale/fr/
 locale      simplels       nl               chrome/locale/nl/
 locale      simplels       pt-BR            chrome/locale/pt-BR/
+locale      simplels       rm               chrome/locale/rm/
 locale      simplels       zh-CN            chrome/locale/zh-CN/
 
 override    chrome://simplels/locale/preferences-os.dtd                 chrome://simplels/locale/preferences-os.win.dtd         os=WINNT

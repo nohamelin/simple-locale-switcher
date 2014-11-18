@@ -104,6 +104,17 @@
             </Description>
         </em:localized>
 
+        <em:localized> <!-- Romansh -->
+            <Description>
+                <em:locale>rm</em:locale>
+                <em:name>Simple Locale Switcher</em:name>
+                <em:description>Ina administraziun pli simpla da la lingua da la surfatscha</em:description>
+                <em:creator>nohamelin</em:creator>
+                <em:translator>gionandri</em:translator>
+                <em:contributor>Intginas iconas che questa extensiun utilisescha fan part dal theme Tango Desktop Project</em:contributor>
+            </Description>
+        </em:localized>
+
         <em:localized> <!-- Chinese Simplified -->
             <Description>
                 <em:locale>zh-CN</em:locale>

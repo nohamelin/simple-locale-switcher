@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY button.label "Lingua">
+<!ENTITY tooltip.title "Lingua da la surfatscha">
+<!-- It refers to a language -->
+<!ENTITY tooltip.selected.label "Tschernì:">
+<!-- It refers to a language -->
+<!ENTITY tooltip.current.label-2 "Applitgà a questa fanestra:">
+<!ENTITY tooltip.provider.label "Pachet che porscha la glista da linguas:">
+<!ENTITY popup.manage.label "Administrar linguas…">
+<!ENTITY popup.get.label "Telechargiar dapli pachets da lingua…">
+<!ENTITY popup.restart.label "Reaviar suenter midar la lingua">
+<!ENTITY popup.match.label "Surprender la lingua dal sistem">
+<!ENTITY popup.provider.label "Restaurar la glista da las linguas disponiblas">
