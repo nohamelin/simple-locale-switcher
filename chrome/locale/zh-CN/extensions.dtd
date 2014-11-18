@@ -12,3 +12,7 @@
 <!ENTITY languages.get.label "获取更多语言包…">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
 <!ENTITY languages.get.tooltiptext "获取更多适用 &brandShortName; 的语言包">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.empty.description "语言包可为 &brandShortName; 和扩展提供额外的界面语言支持">
+<!ENTITY languages.empty.learn.label "详细了解语言包">
+<!ENTITY languages.empty.learn.accesskey "L">

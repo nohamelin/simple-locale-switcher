@@ -6,9 +6,13 @@
 
 <!ENTITY button.label "语言">
 <!ENTITY tooltip.title "用户界面语言">
+<!-- It refers to a language -->
 <!ENTITY tooltip.selected.label "已选择：">
-<!ENTITY tooltip.current.label "本窗口使用：">
+<!-- It refers to a language -->
+<!ENTITY tooltip.current.label-2 "此窗口已应用：">
+<!ENTITY tooltip.provider.label "语言包提供者列表：">
 <!ENTITY popup.manage.label "管理语言…">
 <!ENTITY popup.get.label "获取更多语言包…">
 <!ENTITY popup.restart.label "切换语言后重启">
 <!ENTITY popup.match.label "依照系统的语言">
+<!ENTITY popup.provider.label "恢复可用语言的列表">

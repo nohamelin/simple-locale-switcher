@@ -6,9 +6,13 @@
 
 <!ENTITY button.label "Taal">
 <!ENTITY tooltip.title "Gebruikersinterfacetaal">
+<!-- It refers to a language -->
 <!ENTITY tooltip.selected.label "Geselecteerd:">
-<!ENTITY tooltip.current.label "Gebruikt in venster:">
+<!-- It refers to a language -->
+<!ENTITY tooltip.current.label-2 "Toegepast op dit venster:">
+<!ENTITY tooltip.provider.label "Providerpakket van de talenlijst:">
 <!ENTITY popup.manage.label "Talen beheren…">
 <!ENTITY popup.get.label "Meer taalpakketten downloaden…">
 <!ENTITY popup.restart.label "Herstarten na taalwisseling">
 <!ENTITY popup.match.label "Afstemmen op systeemtaal">
+<!ENTITY popup.provider.label "Lijst van beschikbare talen herstellen">

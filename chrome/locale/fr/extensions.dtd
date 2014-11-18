@@ -12,3 +12,7 @@
 <!ENTITY languages.get.label "Obtenir d'autres paquets linguistiques…">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
 <!ENTITY languages.get.tooltiptext "Obtenir d'autres paquets linguistiques pour &brandShortName;">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.empty.description "Les paquets linguistiques apportent des langues supplémentaires pour l'interface de &brandShortName; et ses extensions">
+<!ENTITY languages.empty.learn.label "En savoir plus sur les paquets linguistiques">
+<!ENTITY languages.empty.learn.accesskey "E">

@@ -12,3 +12,7 @@
 <!ENTITY languages.get.label "Meer taalpakketten downloaden…">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
 <!ENTITY languages.get.tooltiptext "Meer taalpakketten voor &brandShortName; downloaden">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.empty.description "Taalpakketten bieden aanvullende talen voor de interface van &brandShortName; en extensies">
+<!ENTITY languages.empty.learn.label "Meer lezen over taalpakketten">
+<!ENTITY languages.empty.learn.accesskey "M">
