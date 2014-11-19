@@ -78,10 +78,11 @@
              but a safer option will be to move on to an independent
              container. -->
         <vbox id="addon-list-empty">
-            <vbox class="alert sls-list-empty-box" position="2">
+            <vbox class="alert sls-list-empty-box" position="2" align="center">
                 <label id="simplels-empty-empty"
                        value="&listEmpty.installed.label;"/>
-                <description id="simplels-empty-about">
+                <description id="simplels-empty-about"
+                             style="width: &languages.empty.description.width;">
                     &languages.empty.description;
                 </description>
                 <button id="simplels-empty-learn"

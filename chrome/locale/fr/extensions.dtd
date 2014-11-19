@@ -14,5 +14,7 @@
 <!ENTITY languages.get.tooltiptext "Obtenir d'autres paquets linguistiques pour &brandShortName;">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
 <!ENTITY languages.empty.description "Les paquets linguistiques apportent des langues supplémentaires pour l'interface de &brandShortName; et ses extensions">
+<!-- A CSS value. In most cases it doesn't need be changed; CJK languages (and other very compact languages) should use the value "auto". -->
+<!ENTITY languages.empty.description.width "30em">
 <!ENTITY languages.empty.learn.label "En savoir plus sur les paquets linguistiques">
 <!ENTITY languages.empty.learn.accesskey "E">
