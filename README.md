@@ -9,8 +9,8 @@ Install it from [the extension page in addons.mozilla.org] (https://addons.mozil
 Documentation
 -------------
 
-* [A (still fairly incomplete) general user guide](wiki/Simple-User-Guide)
-* [A description of some extra, hidden preferences](wiki/Advanced-Preferences)
+* [A (still fairly incomplete) general user guide](https://github.com/nohamelin/simple-locale-switcher/wiki/Simple-User-Guide)
+* [A description of some extra, hidden preferences](https://github.com/nohamelin/simple-locale-switcher/wiki/Advanced-Hidden-Preferences)
 
 Other external, related resources:
 
