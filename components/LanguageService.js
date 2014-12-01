@@ -474,11 +474,21 @@ LanguageService.prototype = {
 
 
     installListener: {
+        // The install (and immediate enabling) of a restartless language pack
+        // doesn't trigger the onEnabled event in our addonListener, so the
+        // next is required too.
         onInstallEnded: function(install, addon) {
-            if (install.type == "locale" && addon.isActive)
-                scheduler.queue("install-ended", function() {
+            if (install.type == "locale" && addon.isActive) {
+                // A little delay is always required here to let to the
+                // Toolkit Chrome Registry learns about the new locale, but
+                // the queue is to try to prevent too triggering it multiples
+                // times when a bunch of language packs are [un]installed at
+                // the same time (e.g. using the "Install Add-on From File..."
+                // tool of the Add-ons Manager).
+                scheduler.queue("addon-install-ended", function() {
                     languageService._onChangedAvailableLocales();
-                }, 40);
+                }, 80);
+            }
         }
     },
 
@@ -486,22 +496,22 @@ LanguageService.prototype = {
     addonListener: {
         onEnabled: function(addon) {
             if (addon.type == "locale")
-                languageService._onChangedAvailableLocales();
+                this._handle();
         },
 
         onDisabled: function(addon) {
             if (addon.type == "locale")
-                languageService._onChangedAvailableLocales();
+                this._handle();
         },
 
-        onInstalled: function(addon) {
-            if (addon.type == "locale")
+        _handle: function() {
+            // At this point the Toolkit Chrome Registry already know about
+            // the change of availability of the locale; the queue is to try
+            // to prevent running it multiples times, although I don't know
+            // any public tool to batch enabling/disabling of language packs.
+            scheduler.queue("addon-availability-changed", function() {
                 languageService._onChangedAvailableLocales();
-        },
-
-        onUninstalled: function(addon) {
-            if (addon.type == "locale")
-                languageService._onChangedAvailableLocales();
+            }, 80);
         }
     }
 };
