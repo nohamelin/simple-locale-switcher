@@ -329,6 +329,14 @@ LanguageService.prototype = {
      * obtained. It can be any package registered as a locale provider via a
      * chrome.manifest file. Names of packages unknown for the application,
      * or of packages without locales associated to them will be ignored.
+     *
+     * WARN: some events that unregister the selected package aren't detected
+     * currently (e.g. a restartless disabling of a extension -not a language
+     * pack- providing it), letting effectively to have selected an unknown
+     * package and causing inconsistences about the current available locales.
+     * Triggering an event that rebuild that data can fix the latter issue,
+     * until that a new change of the provider preference or a restart of the
+     * application is done.
      */
     get selectedProvider() {
         if (!("_selectedProvider" in this)) {
@@ -362,6 +370,13 @@ LanguageService.prototype = {
 
 
     _onChangedSelectedProvider: function() {
+        if (!this.isSelectedProviderDefault) {
+            // Force to the list of available locales for the custom provider
+            // being currently changed to be rebuilt the next time that this
+            // same provider will be selected by the user, because undetected
+            // changes can happen to this data meanwhile.
+            delete this._availableLocales[this._selectedProvider];
+        }
         delete this._selectedProvider;
 
         Services.obs.notifyObservers(null, "sls:availables-changed", null);
