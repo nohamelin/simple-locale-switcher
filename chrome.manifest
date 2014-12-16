@@ -11,14 +11,11 @@ skin        simplels-os    classic/1.0      chrome/skin/linux/
 skin        simplels-os    classic/1.0      chrome/skin/osx/            os=Darwin
 skin        simplels-os    classic/1.0      chrome/skin/windows/        os=WINNT
 
-locale      simplels       de               chrome/locale/de/
 locale      simplels       en-US            chrome/locale/en-US/
 locale      simplels       es-ES            chrome/locale/es-ES/
-locale      simplels       fr               chrome/locale/fr/
-locale      simplels       nl               chrome/locale/nl/
-locale      simplels       pt-BR            chrome/locale/pt-BR/
-locale      simplels       rm               chrome/locale/rm/
-locale      simplels       zh-CN            chrome/locale/zh-CN/
+
+### @extra-locales-registration-placeholder@
+
 
 override    chrome://simplels/locale/preferences-os.dtd                 chrome://simplels/locale/preferences-os.win.dtd         os=WINNT
 
