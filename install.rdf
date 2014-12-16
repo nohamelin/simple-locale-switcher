@@ -17,6 +17,7 @@
         <em:name>Simple Locale Switcher</em:name>
 
         <em:description>An easier management of the user interface language</em:description>
+        <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
         <em:creator>nohamelin</em:creator>
         <em:contributor>Some icons used by this extension are part of the icon theme of the Tango Desktop Project</em:contributor>
 
@@ -55,6 +56,7 @@
                 <em:locale>de</em:locale>
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Die Sprache der Benutzeroberfläche einfacher verwalten</em:description>
+                <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
                 <em:creator>nohamelin</em:creator>
                 <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com)</em:translator>
                 <em:contributor>Einige der hier verwendeten Symbole sind Teil des Symbolthemas des Tango Desktop Projects</em:contributor>
@@ -66,6 +68,7 @@
                 <em:locale>es-ES</em:locale>
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Un más fácil control del idioma de la interfaz de usuario</em:description>
+                <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
                 <em:creator>nohamelin</em:creator>
                 <em:contributor>Algunos iconos usados por esta extensión son parte de la biblioteca de iconos del proyecto de escritorio Tango</em:contributor>
             </Description>
@@ -76,6 +79,7 @@
                 <em:locale>fr</em:locale>
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Une gestion plus facile de la langue de l'interface utilisateur</em:description>
+                <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
                 <em:creator>nohamelin</em:creator>
                 <em:translator>AriesFr</em:translator>
                 <em:contributor>Certaines icônes utilisées par cette extension font partie du thème d'icônes de Tango Desktop Project</em:contributor>
@@ -87,6 +91,7 @@
                 <em:locale>nl</em:locale>
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Een eenvoudiger beheer van de gebruikersinterfacetaal</em:description>
+                <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
                 <em:creator>nohamelin</em:creator>
                 <em:translator>markh van BabelZilla.org</em:translator>
                 <em:contributor>Sommige door deze extensie gebruikte pictogrammen zijn onderdeel van het pictogrammenthema van het Tango Desktop Project</em:contributor>
@@ -98,6 +103,7 @@
                 <em:locale>pt-BR</em:locale>
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Uma gestão mais fácil do idioma da interface do usuário</em:description>
+                <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
                 <em:creator>nohamelin</em:creator>
                 <em:translator>ouesten</em:translator>
                 <em:contributor>Alguns ícones utilizados por esta extensão fazem parte do tema de ícones da área de trabalho do Projeto Tango</em:contributor>
@@ -109,6 +115,7 @@
                 <em:locale>rm</em:locale>
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Ina administraziun pli simpla da la lingua da la surfatscha</em:description>
+                <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
                 <em:creator>nohamelin</em:creator>
                 <em:translator>gionandri</em:translator>
                 <em:contributor>Intginas iconas che questa extensiun utilisescha fan part dal theme Tango Desktop Project</em:contributor>
@@ -120,6 +127,7 @@
                 <em:locale>zh-CN</em:locale>
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>添加简单好用的用户界面语言管理功能</em:description>
+                <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
                 <em:creator>nohamelin</em:creator>
                 <em:translator>YFdyh000</em:translator>
                 <em:contributor>本扩展使用的某些图标源自 Tango Desktop 项目的图标主题</em:contributor>
