@@ -18,6 +18,7 @@ const Cu = Components.utils;
 Cu.import("resource://gre/modules/XPCOMUtils.jsm");
 Cu.import("resource://gre/modules/Services.jsm");
 Cu.import("chrome://simplels/content/modules/general.jsm");
+Cu.import("chrome://simplels/content/modules/preferences.jsm");
 Cu.import("chrome://simplels/content/modules/urlFormatter.jsm");
 
 
@@ -51,7 +52,7 @@ function getMoreLanguagesURL() {
     switch (destinationType) {
         case 0 :    // Get the url from our related preference
             try {
-                getURL = utils.getComplexCharPref(addonBranch,
+                getURL = prefs.getComplexCharPref(addonBranch,
                                                   "getMoreLanguagesURL");
             } catch (e) {}
             break;
@@ -70,7 +71,7 @@ function getMoreLanguagesURL() {
 
 
 function learnMoreAboutLanguagesURL() {
-    let learnURL = utils.getComplexCharPref(addonBranch,
+    let learnURL = prefs.getComplexCharPref(addonBranch,
                                             "learnMoreAboutLanguagesURL");
     return formatURL(learnURL);
 }

@@ -19,18 +19,7 @@ const Ci = Components.interfaces;
 const Cu = Components.utils;
 
 Cu.import("resource://gre/modules/Services.jsm");
-
-
-function getComplexValue(branch, prefName, type) {
-    return branch.getComplexValue(prefName, type).data;
-}
-
-function setComplexValue(branch, prefName, type, value) {
-    let cs = Cc["@mozilla.org/supports-string;1"].createInstance(type);
-
-    cs.data = value;
-    branch.setComplexValue(prefName, type, cs);
-}
+Cu.import("chrome://simplels/content/modules/preferences.jsm");
 
 
 const FIREFOX_ID = "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}";
@@ -40,59 +29,6 @@ const SEAMONKEY_ID = "{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}";
 
 var utils = {
 
-    getComplexCharPref: function(branch, prefName) {
-        return getComplexValue(branch, prefName, Ci.nsISupportsString);
-    },
-
-
-    setComplexCharPref: function(branch, prefName, value) {
-        setComplexValue(branch, prefName, Ci.nsISupportsString, value);
-    },
-
-
-    getLocalizedCharPref: function(branch, prefName) {
-        return getComplexValue(branch, prefName, Ci.nsIPrefLocalizedString);
-    },
-
-
-    setLocalizedCharPref: function(branch, prefName, value) {
-        setComplexValue(branch, prefName, Ci.nsIPrefLocalizedString, value);
-    },
-
-
-    isCharPrefLocalized: function(branch, prefName) {
-        let value = this.getComplexCharPref(branch, prefName);
-
-        // SOURCE: about:config
-        return /^chrome:\/\/.+\/locale\/.+\.properties/.test(value);
-    },
-
-
-    getCharOrLocalizedCharPref: function(branch, prefName) {
-        // isCharPrefLocalized() could be used but the next seems faster
-        try {
-            return this.getLocalizedCharPref(branch, prefName);
-        } catch (e) {
-            return branch.getCharPref(prefName);
-        }
-    },
-
-
-    getDefaultCharPref: function(prefName) {
-        let branch = Services.prefs.getDefaultBranch("");
-
-        return branch.getCharPref(prefName);
-    },
-
-
-    isDefaultCharPrefLocalized: function(prefName) {
-        let branch = Services.prefs.getDefaultBranch("");
-
-        return this.isCharPrefLocalized(branch, prefName);
-    },
-
-
-    ///////////////////////////////////////////////////////////////////////////
     get os() {
         if (!("_os" in this)) {
             this._os = Services.appinfo.OS.toLowerCase();
@@ -119,7 +55,7 @@ var utils = {
             // coupled with the application and does not apply to other
             // instances that may use the same profile".
             try {
-                this._channel = this.getDefaultCharPref("app.update.channel");
+                this._channel = prefs.getDefaultCharPref("app.update.channel");
             } catch (e) {
                 // Some builds (linux distributions) may not have this
                 // preference.
@@ -133,7 +69,6 @@ var utils = {
     },
 
 
-    ///////////////////////////////////////////////////////////////////////////
     getFileContents: function(url) {
         let sis = Cc["@mozilla.org/scriptableinputstream;1"]
                   .getService(Ci.nsIScriptableInputStream);

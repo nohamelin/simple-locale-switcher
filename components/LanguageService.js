@@ -14,6 +14,7 @@ Cu.import("resource://gre/modules/XPCOMUtils.jsm");
 Cu.import("resource://gre/modules/Services.jsm");
 Cu.import("resource://gre/modules/AddonManager.jsm");
 Cu.import("chrome://simplels/content/modules/general.jsm");
+Cu.import("chrome://simplels/content/modules/preferences.jsm");
 Cu.import("chrome://simplels/content/modules/logger.jsm");
 Cu.import("chrome://simplels/content/modules/scheduler.jsm");
 
@@ -216,7 +217,7 @@ LanguageService.prototype = {
      */
     get userLocale() {
         if (!("_userLocale" in this)) {
-            this._userLocale = utils.getCharOrLocalizedCharPref(localeBranch,
+            this._userLocale = prefs.getCharOrLocalizedCharPref(localeBranch,
                                                                 "locale");
         }
         return this._userLocale;
@@ -236,7 +237,7 @@ LanguageService.prototype = {
 
     get isUserLocaleLocalized() {
         if (!("_isUserLocaleLocalized" in this)) {
-            this._isUserLocaleLocalized = utils.isDefaultCharPrefLocalized(
+            this._isUserLocaleLocalized = prefs.isDefaultCharPrefLocalized(
                                                 LOCALE_PREF_NAME);
         }
         return this._isUserLocaleLocalized;
