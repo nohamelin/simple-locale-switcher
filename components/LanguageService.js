@@ -231,7 +231,7 @@ LanguageService.prototype = {
         if (this.matchingOS)
             this.matchingOS = false;
 
-        if (locale != this.userLocale)
+        if (locale !== this.userLocale)
             Services.prefs.setCharPref(LOCALE_PREF_NAME, locale);
     },
 
@@ -346,7 +346,7 @@ LanguageService.prototype = {
             // they are registered.
             let provider = addonBranch.getCharPref("provider").toLowerCase();
 
-            if (!provider || provider == DEFAULT_LOCALE_PROVIDER) {
+            if (!provider || provider === DEFAULT_LOCALE_PROVIDER) {
                 this._selectedProvider = DEFAULT_LOCALE_PROVIDER;
             } else {
                 try {
@@ -367,7 +367,7 @@ LanguageService.prototype = {
 
 
     get isSelectedProviderDefault() {
-        return this.selectedProvider == DEFAULT_LOCALE_PROVIDER;
+        return this.selectedProvider === DEFAULT_LOCALE_PROVIDER;
     },
 
 
@@ -495,7 +495,7 @@ LanguageService.prototype = {
         // doesn't trigger the onEnabled event in our addonListener, so the
         // next is required too.
         onInstallEnded: function(install, addon) {
-            if (install.type == "locale" && addon.isActive) {
+            if (install.type === "locale" && addon.isActive) {
                 // A little delay is always required here to let to the
                 // Toolkit Chrome Registry learns about the new locale, but
                 // the queue is to try to prevent too triggering it multiples
@@ -512,12 +512,12 @@ LanguageService.prototype = {
 
     addonListener: {
         onEnabled: function(addon) {
-            if (addon.type == "locale")
+            if (addon.type === "locale")
                 this._handle();
         },
 
         onDisabled: function(addon) {
-            if (addon.type == "locale")
+            if (addon.type === "locale")
                 this._handle();
         },
 

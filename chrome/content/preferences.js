@@ -29,7 +29,7 @@ var simplels = {
 
 
     onChangeGetMorePreference: function() {
-        if (this.getMoreLanguagesPref.value != this.customListItem.value)
+        if (this.getMoreLanguagesPref.value !== this.customListItem.value)
             this.customBcstr.setAttribute("disabled", "true");
         else
             this.customBcstr.removeAttribute("disabled");

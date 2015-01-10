@@ -99,7 +99,7 @@ var simplels = {
             item.setAttribute("tooltiptext", locale);
             item.setAttribute("value", locale);
 
-            if (locale == pickedLocale && !isPickedAvailable)
+            if (locale === pickedLocale && !isPickedAvailable)
                 item.setAttribute("disabled", "true");
 
             popupFragment.appendChild(item);

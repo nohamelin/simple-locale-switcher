@@ -104,7 +104,7 @@ var langUtils = {
     findRelevantLocales: function(fromGlobalProvider) {
         let locales = langsvc.getAvailableLocales(fromGlobalProvider);
 
-        if (locales.indexOf(langsvc.userLocale) == -1) { // If it isn't found...
+        if (locales.indexOf(langsvc.userLocale) === -1) { // If it isn't found:
             locales = locales.slice();
             locales.push(langsvc.userLocale);
         }
@@ -117,7 +117,7 @@ var langUtils = {
         let i = 0, available;
 
         while (available = availableLocales[i++]) {
-            if (available == locale)
+            if (available === locale)
                 return true;
         }
         return false;

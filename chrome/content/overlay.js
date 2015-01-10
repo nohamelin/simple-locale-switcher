@@ -160,10 +160,10 @@ var simplels = (function() {
 
 
     createToolbarButtonAsWidget: function() {
-        let widgetGroup = CustomizableUI.getWidget("simplels-widget");
+        let widget = CustomizableUI.getWidget("simplels-widget");
 
-        if (!widgetGroup || widgetGroup.provider == "xul") {
-            if (widgetGroup)
+        if (!widget || widget.provider === CustomizableUI.PROVIDER_XUL) {
+            if (widget)
                 CustomizableUI.destroyWidget("simplels-widget");
 
             CustomizableUI.createWidget({
@@ -273,11 +273,10 @@ var simplels = (function() {
 
         // 2. The locale applied to the current window.
         //    It's hidden if its value matches the currently selected locale.
-        let currentLocale = this.windowLocale;
-        let areLocalesInConflict = currentLocale != selectedLocale;
+        let areLocalesInConflict = (this.windowLocale !== selectedLocale);
 
         $("current-row").hidden = !areLocalesInConflict;
-        $("current").value = this.getLocaleName(currentLocale);
+        $("current").value = this.getLocaleName(this.windowLocale);
 
         document.getElementById("simplels-button-tooltip")
                 .setAttribute("conflicting", areLocalesInConflict);
@@ -336,18 +335,18 @@ var simplels = (function() {
             item.setAttribute("description", locale);
             item.addEventListener("command", localeItemCallback(locale));
 
-            if (locale == this.windowLocale) {
+            if (locale === this.windowLocale) {
                 item.setAttribute("current", "true");
                 if (!isCurrentAvailable)
                     item.setAttribute("disabled", "true");
             }
-            if (locale == checkedLocale) {
+            if (locale === checkedLocale) {
                 if (!isCheckedIgnored)
                     item.setAttribute("checked", "true");
                 if (!isCheckedAvailable) {
                     item.setAttribute("disabled", "true");
 
-                    if (isCheckedIgnored && locale != this.windowLocale)
+                    if (isCheckedIgnored && locale !== this.windowLocale)
                         item.setAttribute("hidden", "true");  // Not relevant
                 }
             }
@@ -412,12 +411,12 @@ var simplels = (function() {
     customizableListener: {
 
         onWidgetAdded: function(id) {
-            if (id == simplels.toolbarButtonId)
+            if (id === simplels.toolbarButtonId)
                 this._handle();
         },
 
         onWidgetUndoMove: function(node) {
-            if (node.id == simplels.toolbarButtonId)
+            if (node.id === simplels.toolbarButtonId)
                 this._handle();
         },
 
@@ -513,8 +512,8 @@ var simplels = (function() {
     getWindowRelevantLocales: function() {
         let locales = this.langUtils.findRelevantLocales();
 
-        if (locales.indexOf(this.windowLocale) == -1) { // If it isn't found...
-            // TODO: The slicing can to be avoided, in some cases
+        if (locales.indexOf(this.windowLocale) === -1) { // If it isn't found:
+            // TODO: The slicing could to be avoided in some cases
             locales = locales.slice();
             locales.push(this.windowLocale);
         }

@@ -90,7 +90,7 @@ var utils = {
         let windows = Services.wm.getEnumerator(null);
         while (windows.hasMoreElements()) {
             let window = windows.getNext();
-            if (window.document.documentURI == url) {
+            if (window.document.documentURI === url) {
                 window.focus();
 
                 return;
