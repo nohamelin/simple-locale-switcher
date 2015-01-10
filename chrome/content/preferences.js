@@ -32,8 +32,6 @@ var simplels = {
         if (this.getMoreLanguagesPref.value != this.customListItem.value)
             this.customBcstr.setAttribute("disabled", "true");
         else
-            // removeAttribute doesn't raise an exception if the attribute
-            // isn't found.
             this.customBcstr.removeAttribute("disabled");
     }
 };

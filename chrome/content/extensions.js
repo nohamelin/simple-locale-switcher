@@ -9,17 +9,17 @@ var simplels = {
     langsvc: null,
 
     strings: null,
-    localeStrings: { languageNames: null, regionNames: null, formats: null },
+    localeStrings: {languageNames: null, regionNames: null, formats: null},
 
 
     handleEvent: function(event) {
         switch (event.type) {
-            case "DOMContentLoaded" :
+            case "DOMContentLoaded":
                 window.removeEventListener("DOMContentLoaded", simplels);
                 this.onContentLoad();
                 break;
 
-            case "unload" :
+            case "unload":
                 this.onUnload();
                 break;
         }
@@ -69,7 +69,7 @@ var simplels = {
 
     observe: function(subject, topic, data) {
         switch (topic) {
-            case "sls:selected-changed" :
+            case "sls:selected-changed":
                 this.updateSelectedItem();
                 break;
         }
@@ -88,13 +88,13 @@ var simplels = {
         let getURL = this.getMoreLanguagesURL();
 
         switch (this.utils.application) {
-            case this.THUNDERBIRD_ID :
+            case this.THUNDERBIRD_ID:
                 this.tbUtils.openContentTab(getURL);
                 break;
 
-            case this.FIREFOX_ID :
-            case this.SEAMONKEY_ID :
-            default :
+            case this.FIREFOX_ID:
+            case this.SEAMONKEY_ID:
+            default:
                 openURL(getURL);
                 break;
         }
@@ -106,13 +106,13 @@ var simplels = {
         let learnURL = this.learnMoreAboutLanguagesURL();
 
         switch (this.utils.application) {
-            case this.THUNDERBIRD_ID :
+            case this.THUNDERBIRD_ID:
                 this.tbUtils.openContentTab(learnURL);
                 break;
 
-            case this.FIREFOX_ID :
-            case this.SEAMONKEY_ID :
-            default :
+            case this.FIREFOX_ID:
+            case this.SEAMONKEY_ID:
+            default:
                 openURL(learnURL);
                 break;
         }

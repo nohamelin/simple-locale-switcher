@@ -6,7 +6,7 @@
 
 "use strict";
 
-var EXPORTED_SYMBOLS = [ "logger" ];
+var EXPORTED_SYMBOLS = ["logger"];
 
 const Cc = Components.classes;
 const Ci = Components.interfaces;

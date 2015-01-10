@@ -20,7 +20,7 @@ var simplels = (function() {
 
     prefs: null,
     strings: null,
-    localeStrings: { languageNames: null, regionNames: null, formats: null },
+    localeStrings: {languageNames: null, regionNames: null, formats: null},
 
     widgetMode: null,
     toolbarButtonId: null,
@@ -30,16 +30,16 @@ var simplels = (function() {
 
     handleEvent: function(event) {
         switch (event.type) {
-            case "load" :
+            case "load":
                 window.removeEventListener("load", simplels);
                 this.onLoad();
                 break;
 
-            case "aftercustomization" :
+            case "aftercustomization":
                 this.checkIfUpdatingToolbarButton();
                 break;
 
-            case "unload" :
+            case "unload":
                 this.onUnload();
                 break;
         }
@@ -90,14 +90,15 @@ var simplels = (function() {
 
         // Don't miss to update the toolbar button when it's added from the
         // toolbar palette.
-        if ("CustomizableUI" in window)
+        if ("CustomizableUI" in window) {
             CustomizableUI.addListener(this.customizableListener);
-        else
+        } else {
             // The next is no longer enougth with CustomizableUI because
             // adding our widget to some area from the palette make it
             // immediately full interactive in any existent browser window
             // except the one displaying yet about:customizing
             window.addEventListener("aftercustomization", simplels);
+        }
     },
 
 
@@ -130,8 +131,6 @@ var simplels = (function() {
         if (disableMatch)
             matchCmd.setAttribute("disabled", "true");
         else
-            // removeAttribute doesn't raise an exception if the attribute
-            // isn't found.
             matchCmd.removeAttribute("disabled");
     },
 
@@ -207,8 +206,9 @@ var simplels = (function() {
 
 
     checkIfUpdatingToolbarButton: function() {
-        if (this.isToolbarButtonUpdatePending)
+        if (this.isToolbarButtonUpdatePending) {
             this.tryToUpdateToolbarButton();
+        }
     },
 
 
@@ -231,9 +231,9 @@ var simplels = (function() {
                         : document.getElementById("simplels-button-popup");
             this.resetPopupLocales(popup);
             this.populatePopupLocales(popup);
-        }
-        else
+        } else {
             this.isToolbarButtonUpdatePending = true;
+        }
     },
 
 
@@ -259,14 +259,15 @@ var simplels = (function() {
             let matchingMsg = this.strings.getString("tooltip.matchingOS");
             let noAvailableMsg = this.strings.getString("tooltip.noAvailable");
 
-            if (isSelectedMatchingOS && !isSelectedAvailable)
+            if (isSelectedMatchingOS && !isSelectedAvailable) {
                 aboutMsg = this.strings.getFormattedString("tooltip.both",
-                                                           [ matchingMsg,
-                                                             noAvailableMsg ]);
-            else if (isSelectedMatchingOS)
+                                                           [matchingMsg,
+                                                            noAvailableMsg]);
+            } else if (isSelectedMatchingOS) {
                 aboutMsg = matchingMsg;
-            else  // !isSelectedAvailable
+            } else {    // !isSelectedAvailable
                 aboutMsg = noAvailableMsg;
+            }
         }
         $("selected-about").value = aboutMsg;
 
@@ -284,9 +285,10 @@ var simplels = (function() {
         // 3. The locale provider selected.
         //    It's hidden (by a broadcaster) if the default provider is used.
         let selectedProvider = this.langsvc.selectedProvider;
-        let selectedProviderName = this.localeStrings.formats
-                                   .getFormattedString("unnamed",
-                                                       [ selectedProvider ]);
+        let selectedProviderName = this.localeStrings
+                                       .formats
+                                       .getFormattedString("unnamed",
+                                                           [selectedProvider]);
         $("provider").value = selectedProviderName;
     },
 
@@ -349,8 +351,9 @@ var simplels = (function() {
                         item.setAttribute("hidden", "true");  // Not relevant
                 }
             }
-            if (isCheckedLocked)
+            if (isCheckedLocked) {
                 item.setAttribute("disabled", "true");
+            }
 
             popupFragment.appendChild(item);
         }, this);
@@ -381,23 +384,23 @@ var simplels = (function() {
 
     observe: function(subject, topic, data) {
         switch (topic) {
-            case "sls:selected-changed" :
+            case "sls:selected-changed":
                 this.updateMatchCommand();
                 this.tryToUpdateToolbarButton();
                 break;
 
-            case "sls:availables-changed" :
+            case "sls:availables-changed":
                 this.updateCustomProviderBroadcaster();
                 this.tryToUpdateToolbarButton();
                 break;
 
-            case "nsPref:changed" :
+            case "nsPref:changed":
                 switch (data) {
-                    case "button.restartAfterSwitch" :
+                    case "button.restartAfterSwitch":
                         this.updateRestartCommand();
                         break;
 
-                    case "button.showDescriptions" :
+                    case "button.showDescriptions":
                         this.updateDescriptionsBroadcaster();
                         break;
                 }
@@ -437,16 +440,16 @@ var simplels = (function() {
 
     openLanguagesManager: function() {
         switch (this.utils.application) {
-            case this.THUNDERBIRD_ID :
+            case this.THUNDERBIRD_ID:
                 openAddonsMgr("addons://list/locale");
                 break;
 
-            case this.SEAMONKEY_ID :
+            case this.SEAMONKEY_ID:
                 toEM("addons://list/locale");
                 break;
 
-            case this.FIREFOX_ID :
-            default :
+            case this.FIREFOX_ID:
+            default:
                 BrowserOpenAddonsMgr("addons://list/locale");
                 break;
         }
@@ -458,16 +461,16 @@ var simplels = (function() {
         let getURL = this.getMoreLanguagesURL();
 
         switch (this.utils.application) {
-            case this.THUNDERBIRD_ID :
+            case this.THUNDERBIRD_ID:
                 this.tbUtils.openContentTab(getURL);
                 break;
 
-            case this.SEAMONKEY_ID :
+            case this.SEAMONKEY_ID:
                 openUILink(getURL);
                 break;
 
-            case this.FIREFOX_ID :
-            default :
+            case this.FIREFOX_ID:
+            default:
                 openUILinkIn(getURL, "tab");
                 break;
         }

@@ -6,7 +6,7 @@
 
 "use strict";
 
-var EXPORTED_SYMBOLS = [ "langUtils" ];
+var EXPORTED_SYMBOLS = ["langUtils"];
 
 const Cc = Components.classes;
 const Ci = Components.interfaces;
@@ -37,16 +37,15 @@ var langUtils = {
      * are recognized. TODO: Manage any valid tag according to BCP 47.
      */
     buildLocaleName: function(locale, stringbundles) {
-        let { languageNames, regionNames, formats } = stringbundles;
+        let {languageNames, regionNames, formats} = stringbundles;
+
         if (locale === "")
             return formats.getString("unspecified");
 
-        let [ language, region, variant ] = locale.split(/[-_]/);
-
+        let [language, region, variant] = locale.split(/[-_]/);
         let languageName, regionName, name;
         try {
             languageName = languageNames.getString(language.toLowerCase());
-
             if (region) {
                 try {
                     regionName = regionNames.getString(region.toLowerCase());
@@ -55,17 +54,19 @@ var langUtils = {
                 }
             }
 
-            if (variant)
+            if (variant) {
                 name = formats.getFormattedString("languageRegionVariantName",
-                                                  [ languageName, regionName,
-                                                    variant ]);
-            else if (region)
+                                                  [languageName,
+                                                   regionName,
+                                                   variant]);
+            } else if (region) {
                 name = formats.getFormattedString("languageRegionName",
-                                                  [ languageName, regionName ]);
-            else
+                                                  [languageName, regionName]);
+            } else {
                 name = languageName;
+            }
         } catch (e) {
-            name = formats.getFormattedString("unnamed", [ locale ]);
+            name = formats.getFormattedString("unnamed", [locale]);
         }
 
         return name;

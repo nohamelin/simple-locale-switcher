@@ -50,18 +50,18 @@ function getMoreLanguagesURL() {
     let getURL;
 
     switch (destinationType) {
-        case 0 :    // Get the url from our related preference
+        case 0:    // Get the url from our related preference
             try {
                 getURL = prefs.getComplexCharPref(addonBranch,
                                                   "getMoreLanguagesURL");
             } catch (e) {}
             break;
 
-        case 1 :    // Get from AMO
+        case 1:    // Get from AMO
             getURL = AMO_FALLBACK_GET_MORE_URL;
             break;
 
-        case 2 :    // Get a suitable url to the Mozilla's file servers
+        case 2:    // Get a suitable url to the Mozilla's file servers
             getURL = ftpURL;
             break;
     }

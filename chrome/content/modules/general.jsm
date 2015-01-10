@@ -122,7 +122,7 @@ var tbUtils = {
         }
         let litRegExp = 'new RegExp("' + handlerRegExp + '")';
         let handler = "specialTabs.siteClickHandler(event, " + litRegExp + ");";
-        let tabParams = { contentPage: url, clickHandler: handler };
+        let tabParams = {contentPage: url, clickHandler: handler};
 
         let tabmail;
         let mail3PaneWindow = Services.wm.getMostRecentWindow("mail:3pane");
@@ -130,11 +130,14 @@ var tbUtils = {
             tabmail = mail3PaneWindow.document.getElementById("tabmail");
             mail3PaneWindow.focus();
         }
-        if (tabmail)
+        if (tabmail) {
             tabmail.openTab("contentTab", tabParams);
-        else
-            window.openDialog("chrome://messenger/content/", "_blank",
-                              "chrome,dialog=no,all", null,
-                              { tabType: "contentTab", tabParams: tabParams });
+        } else {
+            window.openDialog("chrome://messenger/content/",
+                              "_blank",
+                              "chrome,dialog=no,all",
+                              null,
+                              {tabType: "contentTab", tabParams: tabParams});
+        }
     }
 };

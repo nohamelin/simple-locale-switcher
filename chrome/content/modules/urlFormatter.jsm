@@ -6,7 +6,7 @@
 
 "use strict";
 
-var EXPORTED_SYMBOLS = [ "formatURL" ];
+var EXPORTED_SYMBOLS = ["formatURL"];
 
 const Cc = Components.classes;
 const Ci = Components.interfaces;
@@ -21,13 +21,13 @@ function getPlatformDirectory() {
     // platform-specific stuff in its file servers. See, for example:
     //   ftp://ftp.mozilla.org/pub/firefox/releases/latest/
     switch (utils.os) {
-        case "winnt" :
+        case "winnt":
             return "win32";
 
-        case "darwin" :
+        case "darwin":
             return "mac";
 
-        default :
+        default:
             return "linux-i686";  // TODO: should we care about "linux-x86_64"?
     }
 }

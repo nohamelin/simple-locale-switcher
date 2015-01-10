@@ -52,9 +52,10 @@ XPCOMUtils.defineLazyGetter(this, "matchBranch", function() {
 var languageService = null;
 
 function LanguageService() {
-    if (languageService) return languageService;    // Enforce single instance
-    languageService = this;
+    if (languageService)
+        return languageService;    // Enforce single instance
 
+    languageService = this;
     this.wrappedJSObject = this;
 }
 
@@ -79,7 +80,7 @@ function LanguageService() {
 LanguageService.prototype = {
 
     classID: Components.ID("{92ffb138-103f-11e2-84fe-286f6188709b}"),
-    QueryInterface:	XPCOMUtils.generateQI([ Ci.nsIObserver ]),
+    QueryInterface:	XPCOMUtils.generateQI([Ci.nsIObserver]),
 
 
     /**
@@ -345,9 +346,9 @@ LanguageService.prototype = {
             // they are registered.
             let provider = addonBranch.getCharPref("provider").toLowerCase();
 
-            if (!provider || provider == DEFAULT_LOCALE_PROVIDER)
+            if (!provider || provider == DEFAULT_LOCALE_PROVIDER) {
                 this._selectedProvider = DEFAULT_LOCALE_PROVIDER;
-            else {
+            } else {
                 try {
                     xcr.getSelectedLocale(provider);
                     this._selectedProvider = provider;
@@ -455,32 +456,32 @@ LanguageService.prototype = {
 
     observe: function(subject, topic, data) {
         switch (topic) {
-            case "profile-after-change" :
+            case "profile-after-change":
                 this.startup();
                 break;
 
-            case "quit-application" :
+            case "quit-application":
                 this.shutdown();
                 break;
 
-            case "nsPref:changed" :
+            case "nsPref:changed":
                 switch (data) {
-                    case "matchOS" :
-                    case "locale" :
+                    case "matchOS":
+                    case "locale":
                         scheduler.queue("selected-changed", function() {
                             languageService._onChangedSelectedLocale();
                         }, 40);
                         break;
 
-                    case "provider" :
+                    case "provider":
                         this._onChangedSelectedProvider();
                         break;
 
-                    case "applyOnQuit.matchOS" :
+                    case "applyOnQuit.matchOS":
                         this._onChangedWillMatchOS();
                         break;
 
-                    case "applyOnQuit.locale" :
+                    case "applyOnQuit.locale":
                         this._onChangedNextLocale();
                         break;
                 }
@@ -533,4 +534,4 @@ LanguageService.prototype = {
 };
 
 
-const NSGetFactory = XPCOMUtils.generateNSGetFactory([ LanguageService ]);
+const NSGetFactory = XPCOMUtils.generateNSGetFactory([LanguageService]);

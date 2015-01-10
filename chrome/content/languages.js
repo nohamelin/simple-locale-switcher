@@ -24,7 +24,7 @@ XPCOMUtils.defineLazyGetter(this, "langsvc", function() {
 
 var simplels = {
 
-    localeStrings: { languageNames: null, regionNames: null, formats: null },
+    localeStrings: {languageNames: null, regionNames: null, formats: null},
 
     matchPref: null,
     localePref: null,
@@ -65,13 +65,14 @@ var simplels = {
     onUpdateMatchPreference: function() {
         this.switchList.disabled = this.matchPref.value;
 
-        if (langsvc.isUserLocaleLocalized)
+        if (langsvc.isUserLocaleLocalized) {
             // When we have a localized localePref with its value set to the
             // default, toggling matchPref will affect this default value.
             // TODO: There are still some problems managing it if the
             // instantApply preference is false (uncommon, it isn't its default
             // value in platforms where localePref can be found localized)
             this.localePref.updateElements();
+        }
     },
 
 

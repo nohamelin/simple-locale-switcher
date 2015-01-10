@@ -6,7 +6,7 @@
 
 "use strict";
 
-var EXPORTED_SYMBOLS = [ "prefs" ];
+var EXPORTED_SYMBOLS = ["prefs"];
 
 const Cc = Components.classes;
 const Ci = Components.interfaces;

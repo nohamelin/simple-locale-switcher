@@ -6,7 +6,7 @@
 
 "use strict";
 
-var EXPORTED_SYMBOLS = [ "scheduler" ];
+var EXPORTED_SYMBOLS = ["scheduler"];
 
 const Cc = Components.classes;
 const Ci = Components.interfaces;
