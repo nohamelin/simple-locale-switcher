@@ -12,7 +12,6 @@ const Cu = Components.utils;
 var simplels = {
 
     getMoreLanguagesPref: null,
-
     customBcstr: null,
     customListItem: null,
 
@@ -29,7 +28,8 @@ var simplels = {
 
 
     onChangeGetMorePreference: function() {
-        if (this.getMoreLanguagesPref.value !== this.customListItem.value)
+        // Note the loose comparison between an integer and a string
+        if (this.getMoreLanguagesPref.value != this.customListItem.value)
             this.customBcstr.setAttribute("disabled", "true");
         else
             this.customBcstr.removeAttribute("disabled");
