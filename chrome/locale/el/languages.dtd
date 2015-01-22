@@ -1,0 +1,20 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the general.languages.caption string in the general.dtd file. -->
+<!ENTITY languages.title "Γλώσσα διεπαφής χρήστη">
+<!-- A CSS value, the default width of the paragraphs in the window. In most cases it doesn't need be changed; CJK languages can use a lower value. -->
+<!ENTITY languages.descriptions.width "32em">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
+<!ENTITY languages.switch.description "Επιλέξτε τη γλώσσα κειμένου που εμφανίζεται σε πλαίσια διαλόγων, μενού και εργαλειοθήκες του &brandShortName;:">
+<!ENTITY languages.switch.match.label "Προσπάθεια ταιριάσματος με τη γλώσσα του συστήματος">
+<!ENTITY languages.switch.match.accesskey "τ">
+<!ENTITY languages.switch.select.label "Χρήση της γλώσσας:">
+<!ENTITY languages.switch.select.accesskey "Χ">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.switch.restart.description "Θα πρέπει να κάνετε επανεκκίνηση του &brandShortName; για εφαρμογή αλλαγών στα υπάρχοντα παράθυρα.">
+<!ENTITY languages.switch.restore.label "Επαναφορά προκαθορισμένης">
+<!ENTITY languages.switch.restore.accesskey "Ε">

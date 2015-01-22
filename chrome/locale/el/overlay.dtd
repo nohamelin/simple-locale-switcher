@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY button.label "Γλώσσα">
+<!ENTITY tooltip.title "Γλώσσα διεπαφής χρήστη">
+<!-- It refers to a language -->
+<!ENTITY tooltip.selected.label "Επιλεγμένη:">
+<!-- It refers to a language -->
+<!ENTITY tooltip.current.label-2 "Εφαρμοσμένη σε αυτό το παράθυρο:">
+<!ENTITY tooltip.provider.label "Πακέτο παροχής της λίστας γλωσσών:">
+<!ENTITY popup.manage.label "Διαχείριση γλωσσών…">
+<!ENTITY popup.get.label "Αποκτήστε περισσότερα πακέτα γλώσσας…">
+<!ENTITY popup.restart.label "Επανεκκίνηση για εναλλαγή γλώσσας">
+<!ENTITY popup.match.label "Γλώσσα συστήματος">
+<!ENTITY popup.provider.label "Επαναφορά της λίστας διαθέσιμων γλωσσών">

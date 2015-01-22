@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the languages.get.label string in extensions.dtd file -->
+<!ENTITY prefwindow.get.caption "Αποκτήστε περισσότερα πακέτα γλώσσας">
+<!ENTITY prefwindow.get.destination.label "Προορισμός της εντολής:">
+<!ENTITY prefwindow.get.destination.accesskey "Π">
+<!ENTITY prefwindow.get.destination.list.ftp "Φάκελος πακέτων γλώσσας σε εξυπηρετητή FTP του Mozilla">
+<!ENTITY prefwindow.get.destination.list.amo "Σελίδα πακέτων γλώσσας στην ιστοσελίδα επεκτάσεων του Mozilla">
+<!ENTITY prefwindow.get.destination.list.custom "Προσαρμοσμένος">
+<!ENTITY prefwindow.get.custom.label "Διεύθυνση:">
+<!ENTITY prefwindow.get.custom.accesskey "Δ">
+<!ENTITY prefwindow.button.caption "Κουμπί γλωσσών στην εργαλειοθήκη">
+<!ENTITY prefwindow.button.descriptions.label "Ένδειξη της αντίστοιχης ετικέτας γλώσσας δίπλα στο όνομα κάθε παρατεταγμένης γλώσσας">
+<!ENTITY prefwindow.button.descriptions.accesskey "ν">

@@ -1,0 +1,20 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
+<!ENTITY languages.selected.label "Προτιμώμενη γλώσσα για τη διεπαφή του &brandShortName;:">
+<!ENTITY languages.switch.label "Εναλλαγή…">
+<!ENTITY languages.switch.accesskey "ν">
+<!ENTITY languages.switch.tooltiptext "Εναλλαγή προτιμώμενης γλώσσας για τη διεπαφή χρήστη">
+<!ENTITY languages.get.label "Αποκτήστε περισσότερα πακέτα γλώσσας…">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.get.tooltiptext "Αποκτήστε περισσότερα πακέτα γλώσσας για &brandShortName;">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.empty.description "Τα πακέτα γλωσσών παρέχουν επιπρόσθετες γλώσσες για τη διεπαφή του &brandShortName; και των επεκτάσεων">
+<!-- A CSS value. In most cases it doesn't need be changed; CJK languages (and other very compact languages) should use the value "auto". -->
+<!ENTITY languages.empty.description.width "30em">
+<!ENTITY languages.empty.learn.label "Μάθετε περισσότερα για τα πακέτα γλωσσών">
+<!ENTITY languages.empty.learn.accesskey "θ">

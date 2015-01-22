@@ -63,6 +63,18 @@
             </Description>
         </em:localized>
 
+        <em:localized> <!-- Greek -->
+            <Description>
+                <em:locale>el</em:locale>
+                <em:name>Simple Locale Switcher</em:name>
+                <em:description>Μια ευκολότερη διαχείριση της γλώσσας διεπαφής χρήστη</em:description>
+                <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
+                <em:creator>nohamelin</em:creator>
+                <em:translator>Γιώργος Μαλαμάς</em:translator>
+                <em:contributor>Ορισμένα εικονίδια που χρησιμοποιούνται από αυτή την επέκταση είναι μέρος του θέματος εικονιδίων του έργου «Tango Desktop Project»</em:contributor>
+            </Description>
+        </em:localized>
+
         <em:localized> <!-- Spanish -->
             <Description>
                 <em:locale>es-ES</em:locale>
