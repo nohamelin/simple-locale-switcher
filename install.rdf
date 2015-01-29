@@ -134,6 +134,18 @@
             </Description>
         </em:localized>
 
+        <em:localized> <!-- Serbian -->
+            <Description>
+                <em:locale>sr</em:locale>
+                <em:name>Simple Locale Switcher</em:name>
+                <em:description>Управљање језиком приказа</em:description>
+                <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
+                <em:creator>nohamelin</em:creator>
+                <em:translator>ДакСРБИЈА</em:translator>
+                <em:contributor>Неке од икона коришћених у овом додатку су део пакета икона Tango Desktop Project</em:contributor>
+            </Description>
+        </em:localized>
+
         <em:localized> <!-- Chinese Simplified -->
             <Description>
                 <em:locale>zh-CN</em:locale>

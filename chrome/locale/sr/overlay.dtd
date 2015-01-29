@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY button.label "Језик">
+<!ENTITY tooltip.title "Језик приказа">
+<!-- It refers to a language -->
+<!ENTITY tooltip.selected.label "Изабрано:">
+<!-- It refers to a language -->
+<!ENTITY tooltip.current.label-2 "Примењено на прозор:">
+<!ENTITY tooltip.provider.label "Добављач списка језика:">
+<!ENTITY popup.manage.label "Управљање језицима…">
+<!ENTITY popup.get.label "Набави више језичких пакета…">
+<!ENTITY popup.restart.label "Поново покрените за промену">
+<!ENTITY popup.match.label "Усклади са језиком система">
+<!ENTITY popup.provider.label "Врати списак доступних језика">

@@ -1,0 +1,20 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
+<!ENTITY languages.selected.label "Жељени језик приказа &brandShortName;:">
+<!ENTITY languages.switch.label "Промени…">
+<!ENTITY languages.switch.accesskey "П">
+<!ENTITY languages.switch.tooltiptext "Промени жељени језик приказа">
+<!ENTITY languages.get.label "Набави више језичких пакета…">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.get.tooltiptext "Набави више језичких пакета за &brandShortName;">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.empty.description "Језички пакети омогућавају додатке језике приказа за &brandShortName; и додатке">
+<!-- A CSS value. In most cases it doesn't need be changed; CJK languages (and other very compact languages) should use the value "auto". -->
+<!ENTITY languages.empty.description.width "30em">
+<!ENTITY languages.empty.learn.label "Сазнај више о језичким пакетима">
+<!ENTITY languages.empty.learn.accesskey "п">

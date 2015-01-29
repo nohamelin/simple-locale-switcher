@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the languages.get.label string in extensions.dtd file -->
+<!ENTITY prefwindow.get.caption "Набави више језичких пакета">
+<!ENTITY prefwindow.get.destination.label "Локација наредбе:">
+<!ENTITY prefwindow.get.destination.accesskey "Л">
+<!ENTITY prefwindow.get.destination.list.ftp "Фасцикла са језичким пакетима на Мозилином FTP серверу">
+<!ENTITY prefwindow.get.destination.list.amo "Страница са језичким пакетима на Мозилиној страници">
+<!ENTITY prefwindow.get.destination.list.custom "Прилагођено">
+<!ENTITY prefwindow.get.custom.label "Адреса:">
+<!ENTITY prefwindow.get.custom.accesskey "А">
+<!ENTITY prefwindow.button.caption "Дугме са језицима на траци са алаткама">
+<!ENTITY prefwindow.button.descriptions.label "Прикажи ознаку поред назива сваког назива језика">
+<!ENTITY prefwindow.button.descriptions.accesskey "о">
