@@ -110,7 +110,7 @@
             </Description>
         </em:localized>
 
-        <em:localized> <!-- Portuguese -->
+        <em:localized> <!-- Brazilian Portuguese -->
             <Description>
                 <em:locale>pt-BR</em:locale>
                 <em:name>Simple Locale Switcher</em:name>
@@ -146,7 +146,7 @@
             </Description>
         </em:localized>
 
-        <em:localized> <!-- Chinese Simplified -->
+        <em:localized> <!-- Simplified Chinese -->
             <Description>
                 <em:locale>zh-CN</em:locale>
                 <em:name>Simple Locale Switcher</em:name>
