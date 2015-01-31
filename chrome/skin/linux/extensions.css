@@ -7,6 +7,11 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 
+#simplels-empty-learn {
+    list-style-image: url("moz-icon://stock/gtk-help?size=button");
+}
+
+
 /* Recover the focus ring for some elements in the Languages pane.
  * It's a workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=633840 */
 #simplels-get:-moz-focusring {
