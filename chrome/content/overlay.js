@@ -229,8 +229,8 @@ var simplels = (function() {
             let popup = this.widgetMode
                         ? document.getElementById("simplels-view-body")
                         : document.getElementById("simplels-button-popup");
-            this.resetPopupLocales(popup);
-            this.populatePopupLocales(popup);
+
+            this.populatePopupLocales(popup, this.widgetMode);
         } else {
             this.isToolbarButtonUpdatePending = true;
         }
@@ -292,22 +292,12 @@ var simplels = (function() {
     },
 
 
-    resetPopupLocales: function(popup) {
-        let items = popup.childNodes;
+    populatePopupLocales: function(popup, forWidget) {
+        Cu.import("chrome://simplels/content/modules/dom.jsm", this);
 
-        for (let i = items.length - 1; i >= 0; --i) {
-            let item = items[i];
-
-            if (item.classList.contains("simplels-locale"))
-                popup.removeChild(item);
-        }
-    },
-
-
-    populatePopupLocales: function(popup) {
-        let localeItemType = this.widgetMode ? "toolbarbutton" : "menuitem";
-        let localeItemClass = this.widgetMode ? "simplels-locale subviewbutton"
-                                              : "simplels-locale";
+        let localeItemType = forWidget ? "toolbarbutton" : "menuitem";
+        let localeItemClass = forWidget ? "simplels-locale subviewbutton"
+                                        : "simplels-locale";
         let localeItemCallback = function(locale) {
             return function() { simplels.switchTo(locale); };
         };
@@ -322,6 +312,9 @@ var simplels = (function() {
 
         let locales = this.getWindowRelevantLocales();
         this.langUtils.sortLocales(locales);
+
+
+        this.domUtils.removeChildrenByClassName(popup, "simplels-locale");
 
         let popupFragment = document.createDocumentFragment();
         locales.forEach(function(locale) {
@@ -357,9 +350,7 @@ var simplels = (function() {
             popupFragment.appendChild(item);
         }, this);
 
-        let matchNode = this.widgetMode
-                        ? document.getElementById("simplels-view-match")
-                        : document.getElementById("simplels-button-match");
+        let matchNode = popup.getElementsByClassName("simplels-matching")[0];
         popup.insertBefore(popupFragment, matchNode.nextSibling);
     },
 

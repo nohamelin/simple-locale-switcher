@@ -99,14 +99,17 @@
                    tooltip="simplels-locale-tooltip">
 
             <menuitem id="simplels-button-manage"
+                      class="simplels-managing"
                       label="&popup.manage.label;"
                       command="sls_manageLanguages"/>
             <menuitem id="simplels-button-get"
+                      class="simplels-getting"
                       label="&popup.get.label;"
                       command="sls_getMoreLanguages"/>
             <menuseparator/>
 
             <menuitem id="simplels-button-restart"
+                      class="simplels-restarting"
                       type="checkbox"
                       closemenu="none"
                       label="&popup.restart.label;"
@@ -114,6 +117,7 @@
             <menuseparator/>
 
             <menuitem id="simplels-button-match"
+                      class="simplels-matching"
                       type="radio"
                       autocheck="false"
                       label="&popup.match.label;"
@@ -123,6 +127,7 @@
 
             <menuseparator observes="sls_customLanguagesProvider"/>
             <menuitem id="simplels-button-provider"
+                      class="simplels-providing"
                       label="&popup.provider.label;"
                       command="sls_resetLanguagesProvider"
                       observes="sls_customLanguagesProvider"/>
