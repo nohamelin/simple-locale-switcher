@@ -22,9 +22,8 @@ var simplels = (function() {
     strings: null,
     localeStrings: {languageNames: null, regionNames: null, formats: null},
 
-    widgetMode: null,
+    toolbarButtonAsWidget: null,
     toolbarButtonId: null,
-
     isToolbarButtonUpdatePending: false,
 
 
@@ -71,11 +70,11 @@ var simplels = (function() {
 
         // In Firefox 29 and later, the toolbar button will be built with the
         // new mechanisms provided by CustomizableUI, instead of plain XUL.
-        this.widgetMode = !!document.getElementById("simplels-widget-view");
-
-        this.toolbarButtonId = this.widgetMode ? "simplels-widget"
-                                               : "simplels-button";
-        if (this.widgetMode)
+        this.toolbarButtonAsWidget = !!document.getElementById(
+                                                    "simplels-widget-view");
+        this.toolbarButtonId = this.toolbarButtonAsWidget ? "simplels-widget"
+                                                          : "simplels-button";
+        if (this.toolbarButtonAsWidget)
             this.createToolbarButtonAsWidget();
 
         // Initialize dinamic attributes of commands and toolbar button
@@ -213,7 +212,7 @@ var simplels = (function() {
 
 
     tryToUpdateToolbarButton: function() {
-        let foundButton = this.widgetMode
+        let foundButton = this.toolbarButtonAsWidget
                     ? CustomizableUI.getPlacementOfWidget("simplels-widget")
                     : document.getElementById("simplels-button");
 
@@ -226,11 +225,11 @@ var simplels = (function() {
             // broadcasters, so they are always correctly set, and we can
             // to ignore them here.
 
-            let popup = this.widgetMode
+            let popup = this.toolbarButtonAsWidget
                         ? document.getElementById("simplels-view-body")
                         : document.getElementById("simplels-button-popup");
 
-            this.populatePopupLocales(popup, this.widgetMode);
+            this.populatePopupLocales(popup, this.toolbarButtonAsWidget);
         } else {
             this.isToolbarButtonUpdatePending = true;
         }
