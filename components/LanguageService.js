@@ -12,11 +12,15 @@ const Cu = Components.utils;
 
 Cu.import("resource://gre/modules/XPCOMUtils.jsm");
 Cu.import("resource://gre/modules/Services.jsm");
-Cu.import("resource://gre/modules/AddonManager.jsm");
-Cu.import("chrome://simplels/content/modules/general.jsm");
-Cu.import("chrome://simplels/content/modules/preferences.jsm");
-Cu.import("chrome://simplels/content/modules/logger.jsm");
-Cu.import("chrome://simplels/content/modules/scheduler.jsm");
+
+XPCOMUtils.defineLazyModuleGetter(this, "AddonManager",
+            "resource://gre/modules/AddonManager.jsm");
+XPCOMUtils.defineLazyModuleGetter(this, "prefs",
+            "chrome://simplels/content/modules/preferences.jsm");
+XPCOMUtils.defineLazyModuleGetter(this, "logger",
+            "chrome://simplels/content/modules/logger.jsm");
+XPCOMUtils.defineLazyModuleGetter(this, "scheduler",
+            "chrome://simplels/content/modules/scheduler.jsm");
 
 
 const DEFAULT_LOCALE_PROVIDER = "global";

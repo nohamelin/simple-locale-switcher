@@ -18,8 +18,11 @@ const Cc = Components.classes;
 const Ci = Components.interfaces;
 const Cu = Components.utils;
 
+Cu.import("resource://gre/modules/XPCOMUtils.jsm");
 Cu.import("resource://gre/modules/Services.jsm");
-Cu.import("chrome://simplels/content/modules/preferences.jsm");
+
+XPCOMUtils.defineLazyModuleGetter(this, "prefs",
+            "chrome://simplels/content/modules/preferences.jsm");
 
 
 const FIREFOX_ID = "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}";
