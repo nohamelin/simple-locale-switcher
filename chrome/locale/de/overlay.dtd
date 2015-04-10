@@ -6,8 +6,13 @@
 
 <!ENTITY button.label "Sprache">
 <!ENTITY tooltip.title "Sprache der Benutzeroberfläche">
-<!ENTITY tooltip.selected.label "Gewählt:">
+<!-- It refers to a language -->
+<!ENTITY tooltip.selected.label "Gewählte Sprache:">
+<!-- It refers to a language -->
+<!ENTITY tooltip.current.label-2 "Verwendete Sprache:">
+<!ENTITY tooltip.provider.label "Anbieterpaket der Sprachenliste:">
 <!ENTITY popup.manage.label "Sprachen verwalten…">
 <!ENTITY popup.get.label "Weitere Sprachpakete herunterladen…">
-<!ENTITY popup.restart.label "Nach Sprachauswahl neustarten">
-<!ENTITY popup.match.label "Systemsprache ermitteln">
+<!ENTITY popup.restart.label "Nach Sprachauswahl sofort neu starten">
+<!ENTITY popup.match.label "Systemsprache">
+<!ENTITY popup.provider.label "Liste der verfügbaren Sprachen wiederherstellen">

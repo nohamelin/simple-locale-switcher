@@ -4,7 +4,7 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/.
    -->
 
-<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
 <!ENTITY languages.selected.label "Langue préférée pour l'interface de &brandShortName; :">
 <!ENTITY languages.switch.label "Changer…">
 <!ENTITY languages.switch.accesskey "C">

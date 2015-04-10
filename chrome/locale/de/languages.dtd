@@ -5,16 +5,16 @@
    -->
 
 <!-- Same as the general.languages.caption string in the general.dtd file. -->
-<!ENTITY languages.title "Sprachen - Benutzeroberfläche">
+<!ENTITY languages.title "Sprache der Benutzeroberfläche">
 <!-- A CSS value, the default width of the paragraphs in the window. In most cases it doesn't need be changed; CJK languages can use a lower value. -->
 <!ENTITY languages.descriptions.width "32em">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
-<!ENTITY languages.switch.description "Wählen Sie die Sprache in welcher Text in Dialog-Fenstern, Menüs und Symbolleisten in &brandShortName; dargestellt werden soll:">
-<!ENTITY languages.switch.match.label "Systemsprache ermitteln">
+<!ENTITY languages.switch.description "Wählen Sie die Sprache aus, in welcher &brandShortName; den Text in Dialog-Fenstern, Menüs und Symbolleisten anzeigen soll:">
+<!ENTITY languages.switch.match.label "Systemsprache ermitteln und verwenden">
 <!ENTITY languages.switch.match.accesskey "e">
-<!ENTITY languages.switch.select.label "Sprache aktivieren:">
+<!ENTITY languages.switch.select.label "Folgende Sprache verwenden:">
 <!ENTITY languages.switch.select.accesskey "a">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
-<!ENTITY languages.switch.restart.description "&brandShortName; muss neu gestartet werden, um die Änderungen in den aktuellen Fenstern darzustellen.">
+<!ENTITY languages.switch.restart.description "Aktuelle Änderungen werden erst auf alle Fenster angewandt, wenn Sie &brandShortName; neu starten.">
 <!ENTITY languages.switch.restore.label "Standardwerte wiederherstellen">
-<!ENTITY languages.switch.restore.accesskey "h">
+<!ENTITY languages.switch.restore.accesskey "w">

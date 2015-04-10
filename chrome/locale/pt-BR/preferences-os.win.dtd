@@ -4,4 +4,5 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/.
    -->
 
+<!-- Don't translate the add-on name -->
 <!ENTITY prefwindow.title "Opções do Simple Locale Switcher">
