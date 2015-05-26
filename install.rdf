@@ -63,6 +63,18 @@
             </Description>
         </em:localized>
 
+        <em:localized> <!-- Lower Sorbian -->
+            <Description>
+                <em:locale>dsb</em:locale>
+                <em:name>Simple Locale Switcher</em:name>
+                <em:description>Lažčejše wobchadanje z rěcu wužywarskego pówjercha</em:description>
+                <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
+                <em:creator>nohamelin</em:creator>
+                <em:translator>milupo</em:translator>
+                <em:contributor>Někotare symbole wužywane pśez toś to rozšyrjenje su źěl symboloweje drastwy projekta Tango Desktop</em:contributor>
+            </Description>
+        </em:localized>
+
         <em:localized> <!-- Greek -->
             <Description>
                 <em:locale>el</em:locale>
@@ -95,6 +107,18 @@
                 <em:creator>nohamelin</em:creator>
                 <em:translator>AriesFr</em:translator>
                 <em:contributor>Certaines icônes utilisées par cette extension font partie du thème d'icônes de Tango Desktop Project</em:contributor>
+            </Description>
+        </em:localized>
+
+        <em:localized> <!-- Upper Sorbian -->
+            <Description>
+                <em:locale>hsb</em:locale>
+                <em:name>Simple Locale Switcher</em:name>
+                <em:description>Lóši wobchad z rěču wužiwarskeho powjercha</em:description>
+                <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
+                <em:creator>nohamelin</em:creator>
+                <em:translator>milupo</em:translator>
+                <em:contributor>Někotre symbole wužiwane přez tute rozšěrjenje su dźěl symboloweje drasty projekta Tango Desktop</em:contributor>
             </Description>
         </em:localized>
 

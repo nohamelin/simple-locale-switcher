@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the languages.get.label string in extensions.dtd file -->
+<!ENTITY prefwindow.get.caption "Dalšne rěcne pakśiki wobstaraś">
+<!ENTITY prefwindow.get.destination.label "Cel pśikaza:">
+<!ENTITY prefwindow.get.destination.accesskey "C">
+<!ENTITY prefwindow.get.destination.list.ftp "Zarědnik rěcnych pakśika na FTP-serwerje Mozilla">
+<!ENTITY prefwindow.get.destination.list.amo "Bok rěcnych pakśikow na websedle dodankow Mozilla">
+<!ENTITY prefwindow.get.destination.list.custom "Swójski">
+<!ENTITY prefwindow.get.custom.label "Adresa:">
+<!ENTITY prefwindow.get.custom.accesskey "A">
+<!ENTITY prefwindow.button.caption "Tłocašk rědki rěcow">
+<!ENTITY prefwindow.button.descriptions.label "Wótpowědny rěcny kod pódla mjenja kuždeje naliconeje rěcy pokazaś">
+<!ENTITY prefwindow.button.descriptions.accesskey "W">

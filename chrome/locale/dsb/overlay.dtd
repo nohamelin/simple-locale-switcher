@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY button.label "Rěc">
+<!ENTITY tooltip.title "Rěc wužywarskego pówjercha">
+<!-- It refers to a language -->
+<!ENTITY tooltip.selected.label "Wubrana:">
+<!-- It refers to a language -->
+<!ENTITY tooltip.current.label-2 "Na toś to wokno nałožona:">
+<!ENTITY tooltip.provider.label "Pakśik póbitowarja lisćiny rěcow:">
+<!ENTITY popup.manage.label "Rěcy zastojaś…">
+<!ENTITY popup.get.label "Dalšne rěcne pakśiki wobstaraś…">
+<!ENTITY popup.restart.label "Pó pśešaltowanju rěcy znowego startowaś">
+<!ENTITY popup.match.label "Systemowu rěc zwěsćiś">
+<!ENTITY popup.provider.label "Lisćinu k dispoziciji stojecych rěcow wótnowiś">

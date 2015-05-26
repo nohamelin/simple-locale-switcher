@@ -1,0 +1,20 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
+<!ENTITY languages.selected.label "Preferowana rěč za wužiwarski powjerch &brandShortName;:">
+<!ENTITY languages.switch.label "Přepinać…">
+<!ENTITY languages.switch.accesskey "P">
+<!ENTITY languages.switch.tooltiptext "Preferowanu rěč za wužiwarski powjerch přepinać">
+<!ENTITY languages.get.label "Dalše rěčne pakćiki wobstarać…">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.get.tooltiptext "Dalše rěčne pakćiki za &brandShortName; wobstarać">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.empty.description "Rěčne pakćiki stajeja přidatne rěče za wužiwarski powjerch &brandShortName; a rozšěrjenja k dispoziciji">
+<!-- A CSS value. In most cases it doesn't need be changed; CJK languages (and other very compact languages) should use the value "auto". -->
+<!ENTITY languages.empty.description.width "30em">
+<!ENTITY languages.empty.learn.label "Dalše informacije wo rěčnych pakćikach">
+<!ENTITY languages.empty.learn.accesskey "D">

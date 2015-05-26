@@ -1,0 +1,20 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the general.languages.caption string in the general.dtd file. -->
+<!ENTITY languages.title "Rěč wužiwarskeho powjercha">
+<!-- A CSS value, the default width of the paragraphs in the window. In most cases it doesn't need be changed; CJK languages can use a lower value. -->
+<!ENTITY languages.descriptions.width "32em">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
+<!ENTITY languages.switch.description "Wubjerće rěč za tekst, kotryž so w dialogowych polach, menijach a symbolowych lajstach &brandShortName; jewi:">
+<!ENTITY languages.switch.match.label "Systemowy rěč zwěsćić">
+<!ENTITY languages.switch.match.accesskey "z">
+<!ENTITY languages.switch.select.label "Slědowacu rěč wužiwać:">
+<!ENTITY languages.switch.select.accesskey "d">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.switch.restart.description "Dyrbiće &brandShortName; znowa startować, zo by so změna na eksistowace wokna nałožiła.">
+<!ENTITY languages.switch.restore.label "Standard wobnowić">
+<!ENTITY languages.switch.restore.accesskey "S">
