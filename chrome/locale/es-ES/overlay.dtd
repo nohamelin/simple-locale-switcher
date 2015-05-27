@@ -6,6 +6,7 @@
 
 <!ENTITY button.label "Idioma">
 
+<!-- Same as the languages.title string in the languages.dtd file. -->
 <!ENTITY tooltip.title "Idioma de la interfaz de usuario">
 <!-- It refers to a language -->
 <!ENTITY tooltip.selected.label "Seleccionado:">
