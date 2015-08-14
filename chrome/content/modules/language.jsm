@@ -116,7 +116,7 @@ var langUtils = {
         let availableLocales = langsvc.getAvailableLocales(fromGlobalProvider);
         let i = 0, available;
 
-        while (available = availableLocales[i++]) {
+        while ((available = availableLocales[i++])) {   // it's an assignment
             if (available === locale)
                 return true;
         }
