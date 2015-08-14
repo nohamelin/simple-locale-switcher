@@ -14,6 +14,6 @@ pref("extensions.simplels.button.showDescriptions", false);
 pref("extensions.simplels.getMoreLanguages", 2);
 //pref("extensions.simplels.getMoreLanguagesURL", "https://addons.mozilla.org/language-tools/");
 
-pref("extensions.simplels.learnMoreAboutLanguagesURL", "https://support.mozilla.org/%LOCALE%/kb/install-language-packs-get-more-languages");
+pref("extensions.simplels.learnMoreAboutLanguagesURL", "https://support.mozilla.org/%LOCALE%/kb/use-firefox-interface-other-languages-language-pack");
 
 pref("extensions.simplels.provider", "global");
