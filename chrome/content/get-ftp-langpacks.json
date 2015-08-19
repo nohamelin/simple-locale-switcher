@@ -1,36 +1,36 @@
 {
     "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}": {
-        "esr":          "https://download-installer.cdn.mozilla.net/pub/firefox/releases/%VERSION%esr/%__DIR_OS%/xpi/",
-        "release":      "https://download-installer.cdn.mozilla.net/pub/firefox/releases/%VERSION%/%__DIR_OS%/xpi/",
-        "beta":         "https://download-installer.cdn.mozilla.net/pub/firefox/releases/%VERSION%b1/%__DIR_OS%/xpi/",
-        "aurora":       "https://download-installer.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-aurora-l10n/%__DIR_OS%/xpi/",
-        "nightly":      "https://download-installer.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central-l10n/%__DIR_OS%/xpi/",
+        "esr":          "https://archive.mozilla.org/pub/firefox/releases/%VERSION%esr/%__DIR_OS%/xpi/",
+        "release":      "https://archive.mozilla.org/pub/firefox/releases/%VERSION%/%__DIR_OS%/xpi/",
+        "beta":         "https://archive.mozilla.org/pub/firefox/releases/%VERSION%b1/%__DIR_OS%/xpi/",
+        "aurora":       "https://archive.mozilla.org/pub/firefox/nightly/latest-mozilla-aurora-l10n/%__DIR_OS%/xpi/",
+        "nightly":      "https://archive.mozilla.org/pub/firefox/nightly/latest-mozilla-central-l10n/%__DIR_OS%/xpi/",
 
-        "default":      "https://download-installer.cdn.mozilla.net/pub/firefox/releases/%VERSION%/%__DIR_OS%/xpi/"
+        "default":      "https://archive.mozilla.org/pub/firefox/releases/%VERSION%/%__DIR_OS%/xpi/"
     },
 
     "{3550f703-e582-4d05-9a08-453d09bdfdc6}": {
-        "esr":          "https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/%VERSION%esr/%__DIR_OS%/xpi/",
-        "release":      "https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/%VERSION%/%__DIR_OS%/xpi/",
-        "beta":         "https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/%VERSION%b1/%__DIR_OS%/xpi/",
-        "aurora":       "https://download-installer.cdn.mozilla.net/pub/thunderbird/nightly/latest-comm-aurora-l10n/%__DIR_OS%/xpi/",
-        "nightly":      "https://download-installer.cdn.mozilla.net/pub/thunderbird/nightly/latest-comm-central-l10n/%__DIR_OS%/xpi/",
+        "esr":          "https://archive.mozilla.org/pub/thunderbird/releases/%VERSION%esr/%__DIR_OS%/xpi/",
+        "release":      "https://archive.mozilla.org/pub/thunderbird/releases/%VERSION%/%__DIR_OS%/xpi/",
+        "beta":         "https://archive.mozilla.org/pub/thunderbird/releases/%VERSION%b1/%__DIR_OS%/xpi/",
+        "aurora":       "https://archive.mozilla.org/pub/thunderbird/nightly/latest-comm-aurora-l10n/%__DIR_OS%/xpi/",
+        "nightly":      "https://archive.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/%__DIR_OS%/xpi/",
 
-        "default":      "https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/%VERSION%/%__DIR_OS%/xpi/"
+        "default":      "https://archive.mozilla.org/pub/thunderbird/releases/%VERSION%/%__DIR_OS%/xpi/"
     },
 
     "{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}": {
-        "release":      "https://download-installer.cdn.mozilla.net/pub/seamonkey/releases/%VERSION%/langpack/",
-        "beta":         "https://download-installer.cdn.mozilla.net/pub/seamonkey/releases/%VERSION%b1/langpack/",
+        "release":      "https://archive.mozilla.org/pub/seamonkey/releases/%VERSION%/langpack/",
+        "beta":         "https://archive.mozilla.org/pub/seamonkey/releases/%VERSION%b1/langpack/",
 
-        "default":      "https://download-installer.cdn.mozilla.net/pub/seamonkey/releases/%VERSION%/langpack/"
+        "default":      "https://archive.mozilla.org/pub/seamonkey/releases/%VERSION%/langpack/"
     },
 
     "fallback": {
-        "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}":   "https://download-installer.cdn.mozilla.net/pub/firefox/",
-        "{3550f703-e582-4d05-9a08-453d09bdfdc6}":   "https://download-installer.cdn.mozilla.net/pub/thunderbird/",
-        "{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}":   "https://download-installer.cdn.mozilla.net/pub/seamonkey/"
+        "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}":   "https://archive.mozilla.org/pub/firefox/",
+        "{3550f703-e582-4d05-9a08-453d09bdfdc6}":   "https://archive.mozilla.org/pub/thunderbird/",
+        "{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}":   "https://archive.mozilla.org/pub/seamonkey/"
     },
 
-    "fallback-all":     "https://download-installer.cdn.mozilla.net/pub/"
+    "fallback-all":     "https://archive.mozilla.org/pub/"
 }

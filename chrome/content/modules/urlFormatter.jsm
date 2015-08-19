@@ -19,7 +19,7 @@ Cu.import("chrome://simplels/content/modules/general.jsm");
 function getPlatformDirectory() {
     // Mozilla's naming convention for the containing folder of
     // platform-specific stuff in its file servers. See, for example:
-    //   ftp://ftp.mozilla.org/pub/firefox/releases/latest/
+    //   https://archive.mozilla.org/pub/firefox/releases/latest/
     switch (utils.os) {
         case "winnt":
             return "win32";
