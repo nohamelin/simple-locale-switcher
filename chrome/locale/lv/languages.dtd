@@ -1,0 +1,19 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY languages.title "Lietotāja saskarnes valoda">
+<!-- A CSS value, the default width of the paragraphs in the window. In most cases it doesn't need be changed; CJK languages can use a lower value. -->
+<!ENTITY languages.descriptions.width "32em">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
+<!ENTITY languages.switch.description "Izvēlieties valodu kas parādīsies &brandShortName; dialoglodziņos, izvēlnēs un rīkjoslās:">
+<!ENTITY languages.switch.match.label "Atbilstošu sistēmas valodai">
+<!ENTITY languages.switch.match.accesskey "S">
+<!ENTITY languages.switch.select.label "Lietot">
+<!ENTITY languages.switch.select.accesskey "L">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.switch.restart.description "Jums būs jārestartē &brandShortName;, lai izmaiņas stātos spēkā.">
+<!ENTITY languages.switch.restore.label "Atjaunot noklusējumu">
+<!ENTITY languages.switch.restore.accesskey "N">

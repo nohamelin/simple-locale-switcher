@@ -1,0 +1,19 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY button.label "Valoda">
+<!-- Same as the languages.title string in the languages.dtd file. -->
+<!ENTITY tooltip.title "Lietotāja saskarnes valoda">
+<!-- It refers to a language -->
+<!ENTITY tooltip.selected.label "Atlasīta:">
+<!-- It refers to a language -->
+<!ENTITY tooltip.current.label-2 "Piemērot šajā logā:">
+<!ENTITY tooltip.provider.label "Provider package of the languages list:">
+<!ENTITY popup.manage.label "Pārvaldīt valodas...">
+<!ENTITY popup.get.label "Iegūt valodu pakotnes...">
+<!ENTITY popup.restart.label "Restartēt pēc valodas pārslēgšanas">
+<!ENTITY popup.match.label "Sistēmas valoda">
+<!ENTITY popup.provider.label "Atjaunot pieejamo valodu sarakstu">

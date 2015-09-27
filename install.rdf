@@ -122,6 +122,18 @@
             </Description>
         </em:localized>
 
+        <em:localized> <!-- Latvian -->
+            <Description>
+                <em:locale>lv</em:locale>
+                <em:name>Simple Locale Switcher</em:name>
+                <em:description>Vieglāka lietotāja saskarnes valodu pārvaldība</em:description>
+                <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
+                <em:creator>nohamelin</em:creator>
+                <em:translator>Vards</em:translator>
+                <em:contributor>Šajā paplašinājumā ir izmantotas dažas ikonas no Tango Desktop Project</em:contributor>
+            </Description>
+        </em:localized>
+
         <em:localized> <!-- Dutch -->
             <Description>
                 <em:locale>nl</em:locale>

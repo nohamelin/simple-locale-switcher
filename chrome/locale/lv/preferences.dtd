@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the languages.get.label string in extensions.dtd file -->
+<!ENTITY prefwindow.get.caption "Iegūt valodu pakotnes">
+<!ENTITY prefwindow.get.destination.label "no:">
+<!ENTITY prefwindow.get.destination.accesskey "N">
+<!ENTITY prefwindow.get.destination.list.ftp "Valodu pakotņu mapes Mozilla FTP serverī">
+<!ENTITY prefwindow.get.destination.list.amo "Valodu pakotņu lapas Mozilla paplašinājumu vietnē">
+<!ENTITY prefwindow.get.destination.list.custom "Pielāgots">
+<!ENTITY prefwindow.get.custom.label "Adrese:">
+<!ENTITY prefwindow.get.custom.accesskey "A">
+<!ENTITY prefwindow.button.caption "Simple Locale Switcher ikona">
+<!ENTITY prefwindow.button.descriptions.label "Rādīt valodas kodu blakus valodas nosaukumam">
+<!ENTITY prefwindow.button.descriptions.accesskey "S">
