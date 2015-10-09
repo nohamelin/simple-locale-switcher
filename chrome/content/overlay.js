@@ -490,7 +490,7 @@ var simplels = (function() {
     restartAfterSwitch: function() {
         let wantRestart = this.prefs.getBoolPref("button.restartAfterSwitch");
         if (wantRestart)
-            Application.restart();      // It could be canceled by the user
+            this.utils.restartApplication();    // It could be canceled
     },
 
 
