@@ -170,6 +170,18 @@
             </Description>
         </em:localized>
 
+        <em:localized> <!-- Russian -->
+            <Description>
+                <em:locale>ru</em:locale>
+                <em:name>Simple Locale Switcher</em:name>
+                <em:description>Упрощённое управление языком пользовательского интерфейса</em:description>
+                <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
+                <em:creator>nohamelin</em:creator>
+                <em:translator>goldenapple</em:translator>
+                <em:contributor>Некоторые значки, используемые этим расширением, являются частью темы значков от Tango Desktop Project</em:contributor>
+            </Description>
+        </em:localized>
+
         <em:localized> <!-- Serbian -->
             <Description>
                 <em:locale>sr</em:locale>
@@ -179,6 +191,18 @@
                 <em:creator>nohamelin</em:creator>
                 <em:translator>ДакСРБИЈА</em:translator>
                 <em:contributor>Неке од икона коришћених у овом додатку су део пакета икона Tango Desktop Project</em:contributor>
+            </Description>
+        </em:localized>
+
+        <em:localized> <!-- Ukrainian -->
+            <Description>
+                <em:locale>uk-UA</em:locale>
+                <em:name>Simple Locale Switcher</em:name>
+                <em:description>Простіше керування мовою інтерфейсу користувача</em:description>
+                <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
+                <em:creator>nohamelin</em:creator>
+                <em:translator>goldenapple</em:translator>
+                <em:contributor>Деякі значки, використані в цьому розширенні, є частиною теми значків від Tango Desktop Project</em:contributor>
             </Description>
         </em:localized>
 

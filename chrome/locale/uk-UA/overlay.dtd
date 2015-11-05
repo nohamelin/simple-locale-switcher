@@ -1,0 +1,19 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY button.label "Мова">
+<!-- Same as the languages.title string in the languages.dtd file. -->
+<!ENTITY tooltip.title "Мова інтерфейсу користувача">
+<!-- It refers to a language -->
+<!ENTITY tooltip.selected.label "Обрана:">
+<!-- It refers to a language -->
+<!ENTITY tooltip.current.label-2 "Застосована до цього вікна:">
+<!ENTITY tooltip.provider.label "Пакет-постачальник списку мов:">
+<!ENTITY popup.manage.label "Керувати мовами…">
+<!ENTITY popup.get.label "Більше мовних пакетів…">
+<!ENTITY popup.restart.label "Перезапустити, щоб змінити мову">
+<!ENTITY popup.match.label "Співпадати з мовою системи">
+<!ENTITY popup.provider.label "Відновити список доступних мов">

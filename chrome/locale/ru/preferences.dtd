@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the languages.get.label string in extensions.dtd file -->
+<!ENTITY prefwindow.get.caption "Получить больше языковых пакетов">
+<!ENTITY prefwindow.get.destination.label "Место назначения команды:">
+<!ENTITY prefwindow.get.destination.accesskey "н">
+<!ENTITY prefwindow.get.destination.list.ftp "Папка языковых пакетов на FTP сервере Mozilla">
+<!ENTITY prefwindow.get.destination.list.amo "Страница языковых пакетов на сайте дополнений Mozilla">
+<!ENTITY prefwindow.get.destination.list.custom "Своё">
+<!ENTITY prefwindow.get.custom.label "Адрес:">
+<!ENTITY prefwindow.get.custom.accesskey "А">
+<!ENTITY prefwindow.button.caption "Панель инструментов языков">
+<!ENTITY prefwindow.button.descriptions.label "Показывать соответствующий языковой тег рядом с названием каждого перечисленного языка">
+<!ENTITY prefwindow.button.descriptions.accesskey "П">

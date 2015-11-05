@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the languages.get.label string in extensions.dtd file -->
+<!ENTITY prefwindow.get.caption "Отримати більше мовних пакетів">
+<!ENTITY prefwindow.get.destination.label "Місце призначення команди:">
+<!ENTITY prefwindow.get.destination.accesskey "М">
+<!ENTITY prefwindow.get.destination.list.ftp "Тека мовних пакетів на FTP сервері Mozilla">
+<!ENTITY prefwindow.get.destination.list.amo "Сторінка мовних пакетів на сайті додатків Mozilla">
+<!ENTITY prefwindow.get.destination.list.custom "Своє">
+<!ENTITY prefwindow.get.custom.label "Адреса:">
+<!ENTITY prefwindow.get.custom.accesskey "А">
+<!ENTITY prefwindow.button.caption "Панель інструментів мов">
+<!ENTITY prefwindow.button.descriptions.label "Показувати відповідний мовний тег поряд з назвою кожної перерахованої мови">
+<!ENTITY prefwindow.button.descriptions.accesskey "П">

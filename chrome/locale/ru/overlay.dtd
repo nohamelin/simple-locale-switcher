@@ -1,0 +1,19 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY button.label "Язык">
+<!-- Same as the languages.title string in the languages.dtd file. -->
+<!ENTITY tooltip.title "Язык пользовательского интерфейса">
+<!-- It refers to a language -->
+<!ENTITY tooltip.selected.label "Выбран:">
+<!-- It refers to a language -->
+<!ENTITY tooltip.current.label-2 "Применено к этому окну:">
+<!ENTITY tooltip.provider.label "Пакет-поставщик списка языков:">
+<!ENTITY popup.manage.label "Управление языками…">
+<!ENTITY popup.get.label "Больше языковых пакетов…">
+<!ENTITY popup.restart.label "Перезагрузить, чтобы сменить язык">
+<!ENTITY popup.match.label "Соответствовать языку системы">
+<!ENTITY popup.provider.label "Восстановить список доступных языков">

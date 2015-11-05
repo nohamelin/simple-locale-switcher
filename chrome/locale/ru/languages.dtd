@@ -1,0 +1,19 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY languages.title "Язык пользовательского интерфейса">
+<!-- A CSS value, the default width of the paragraphs in the window. In most cases it doesn't need be changed; CJK languages can use a lower value. -->
+<!ENTITY languages.descriptions.width "32em">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
+<!ENTITY languages.switch.description "Выберите язык текста в диалоговых окнах, меню и панелях инструментов &brandShortName;:">
+<!ENTITY languages.switch.match.label "Соответствовать языку системы">
+<!ENTITY languages.switch.match.accesskey "С">
+<!ENTITY languages.switch.select.label "Использовать язык:">
+<!ENTITY languages.switch.select.accesskey "И">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.switch.restart.description "Вам нужно будет перезапустить &brandShortName;, чтобы применить изменения к существующим окнам.">
+<!ENTITY languages.switch.restore.label "Восстановить по умолчанию">
+<!ENTITY languages.switch.restore.accesskey "В">
