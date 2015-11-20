@@ -7,25 +7,52 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 
+/* Icon for the toolbar button: Firefox & Thunderbird with classic UI */
 #simplels-button {
     list-style-image: url("chrome://simplels/skin/button.png");
 }
-toolbar[grippytooltiptext] #simplels-button {   /* SeaMonkey */
-    list-style-image: url("chrome://simplels/skin/button-suite.png");
-}
-#simplels-widget,
 toolbar[iconsize="small"] #simplels-button {
     list-style-image: url("chrome://simplels/skin/button-small.png");
 }
-toolbar[iconsize="small"][grippytooltiptext] #simplels-button {
-    list-style-image: url("chrome://simplels/skin/button-suite-small.png");
+
+/* Icon for the toolbar button: Firefox with Australis UI */
+#simplels-widget {
+    list-style-image: url("chrome://simplels/skin/button-small.png");
 }
 #simplels-widget[cui-areatype="menu-panel"],
 toolbarpaletteitem[place="palette"] > #simplels-widget {
     list-style-image: url("chrome://simplels/skin/button-big.png");
 }
 
+/* Icon for the toolbar button: Thunderbird with flat monochrome UI (1) */
+toolbar:not([iconsize]) #simplels-button,
+toolbar[iconsize=""] #simplels-button {     /* for manually added toolbars */
+    list-style-image: url("chrome://simplels/skin/button-small.png");
+}
 
+/* Icon for the toolbar button: Thunderbird with flat monochrome UI (2)
+ *
+ * For releases 31 to 40 of Thunderbird, upstream rules setting the inverse
+ * icon theme with dark personas in Windows 7+ have a high CSS specificity and
+ * are (wrongly) applied to buttons provided by add-ons too, overriding our
+ * settings. The next fix it. */
+:-moz-any(#mail-toolbox, #navigation-toolbox)
+              toolbar[brighttext]:not([iconsize]) #simplels-button,
+#mail-toolbox toolbar[brighttext][iconsize=""] #simplels-button {
+    list-style-image: url("chrome://simplels/skin/button-small.png");
+}
+
+/* Icon for the toolbar button: SeaMonkey with default theme */
+toolbar[grippytooltiptext] #simplels-button {
+    list-style-image: url("chrome://simplels/skin/button-suite.png");
+}
+toolbar[iconsize="small"][grippytooltiptext] #simplels-button {
+    list-style-image: url("chrome://simplels/skin/button-suite-small.png");
+}
+
+
+
+/* Tooltip of the toolbar button */
 #simplels-button-tooltip {
     max-width: none;
 }
@@ -56,7 +83,7 @@ toolbarpaletteitem[place="palette"] > #simplels-widget {
 }
 
 
-/* It's redundant with the default theme, but a lot of themes lack
+/* It's redundant with the default theme, but a lot of complete themes lack
  * the appropriate support for xul descriptions. */
 .simplels-locale-desc {
     font-style: italic;
