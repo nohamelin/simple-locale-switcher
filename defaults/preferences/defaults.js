@@ -9,7 +9,7 @@
 
 //pref("extensions.simplels.button.migrated", false);
 pref("extensions.simplels.button.restartAfterSwitch", true);
-pref("extensions.simplels.button.showDescriptions", false);
+pref("extensions.simplels.button.showDescriptions", true);
 
 pref("extensions.simplels.getMoreLanguages", 2);
 //pref("extensions.simplels.getMoreLanguagesURL", "https://addons.mozilla.org/language-tools/");
