@@ -1,0 +1,19 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY button.label "言語">
+<!-- Same as the languages.title string in the languages.dtd file. -->
+<!ENTITY tooltip.title "ユーザインタフェース言語">
+<!-- It refers to a language -->
+<!ENTITY tooltip.selected.label "選択され:">
+<!-- It refers to a language -->
+<!ENTITY tooltip.current.label-2 "使用中の言語:">
+<!ENTITY tooltip.provider.label "言語リストのプロバイダパッケージ：">
+<!ENTITY popup.manage.label "言語 管理…">
+<!ENTITY popup.get.label "他の言語パックを手に入れる…">
+<!ENTITY popup.restart.label "変更を適用するには再起動">
+<!ENTITY popup.match.label "基本システム言語">
+<!ENTITY popup.provider.label "デフォルトの言語プロバイダを使用">

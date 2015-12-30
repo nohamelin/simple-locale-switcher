@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the languages.get.label string in extensions.dtd file -->
+<!ENTITY prefwindow.get.caption "他の言語パックを追加">
+<!ENTITY prefwindow.get.destination.label "言語パックのダウンロード場所:">
+<!ENTITY prefwindow.get.destination.accesskey "D">
+<!ENTITY prefwindow.get.destination.list.ftp "Mozilla FTP サーバーの言語パックのフォルダ">
+<!ENTITY prefwindow.get.destination.list.amo "Mozilla アドオンサイトの言語パックのウェブページ">
+<!ENTITY prefwindow.get.destination.list.custom "ユーザー設定">
+<!ENTITY prefwindow.get.custom.label "アドレス:">
+<!ENTITY prefwindow.get.custom.accesskey "A">
+<!ENTITY prefwindow.button.caption "言語ツールバーボタン">
+<!ENTITY prefwindow.button.descriptions.label "言語リストに言語コードを表示">
+<!ENTITY prefwindow.button.descriptions.accesskey "S">

@@ -1,0 +1,19 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY languages.title "ユーザインタフェース言語">
+<!-- A CSS value, the default width of the paragraphs in the window. In most cases it doesn't need be changed; CJK languages can use a lower value. -->
+<!ENTITY languages.descriptions.width "28em">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
+<!ENTITY languages.switch.description "&brandShortName;のダイアログボックス, メニュー, ツ－ルメニューに表示する言語を選択してください:">
+<!ENTITY languages.switch.match.label "システム言語 使用">
+<!ENTITY languages.switch.match.accesskey "m">
+<!ENTITY languages.switch.select.label "言語 選択:">
+<!ENTITY languages.switch.select.accesskey "U">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.switch.restart.description "&brandShortName;の言語を変更を適用するには再起動が必要です。">
+<!ENTITY languages.switch.restore.label "既定値に戻す">
+<!ENTITY languages.switch.restore.accesskey "R">

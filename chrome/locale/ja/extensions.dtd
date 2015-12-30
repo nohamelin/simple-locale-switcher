@@ -1,0 +1,20 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
+<!ENTITY languages.selected.label "使用中の&brandShortName; インタフェース言語:">
+<!ENTITY languages.switch.label "変更…">
+<!ENTITY languages.switch.accesskey "S">
+<!ENTITY languages.switch.tooltiptext "ユーザインタフェース言語変更します">
+<!ENTITY languages.get.label "他の言語パックを手に入れる…">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.get.tooltiptext "&brandShortName;の言語パックを手に入れる">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.empty.description "言語パックは、&brandShortName;や拡張機能のインターフェイスのための追加の言語を提供">
+<!-- A CSS value. In most cases it doesn't need be changed; CJK languages (and other very compact languages) should use the value "auto". -->
+<!ENTITY languages.empty.description.width "auto">
+<!ENTITY languages.empty.learn.label "言語パックの詳細情報">
+<!ENTITY languages.empty.learn.accesskey "L">

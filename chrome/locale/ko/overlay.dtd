@@ -1,0 +1,19 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY button.label "언어">
+<!-- Same as the languages.title string in the languages.dtd file. -->
+<!ENTITY tooltip.title "사용자 인터페이스 언어">
+<!-- It refers to a language -->
+<!ENTITY tooltip.selected.label "선택됨:">
+<!-- It refers to a language -->
+<!ENTITY tooltip.current.label-2 "사용중 인 언어:">
+<!ENTITY tooltip.provider.label "사용 가능한 언어 목록:">
+<!ENTITY popup.manage.label "언어팩 관리…">
+<!ENTITY popup.get.label "언어팩 추가…">
+<!ENTITY popup.restart.label "언어 변경 후 다시 시작">
+<!ENTITY popup.match.label "시스템 기본 언어">
+<!ENTITY popup.provider.label "사용 가능한 언어 목록 복구">

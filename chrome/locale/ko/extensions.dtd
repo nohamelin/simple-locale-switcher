@@ -1,0 +1,20 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
+<!ENTITY languages.selected.label "사용 중인 &brandShortName; 언어팩:">
+<!ENTITY languages.switch.label "변경…">
+<!ENTITY languages.switch.accesskey "S">
+<!ENTITY languages.switch.tooltiptext "사용자 인터페이스 언어를 변경합니다">
+<!ENTITY languages.get.label "언어팩 추가…">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.get.tooltiptext "&brandShortName; 언어팩을 추가합니다">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.empty.description "언어팩으로 &brandShortName; 및 확장팩 인터페이스에 언어를 추가할 수 있습니다.">
+<!-- A CSS value. In most cases it doesn't need be changed; CJK languages (and other very compact languages) should use the value "auto". -->
+<!ENTITY languages.empty.description.width "auto">
+<!ENTITY languages.empty.learn.label "언어팩 추가 정보">
+<!ENTITY languages.empty.learn.accesskey "L">

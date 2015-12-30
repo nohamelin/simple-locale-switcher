@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the languages.get.label string in extensions.dtd file -->
+<!ENTITY prefwindow.get.caption "언어팩 추가">
+<!ENTITY prefwindow.get.destination.label "언어팩 다운로드 위치:">
+<!ENTITY prefwindow.get.destination.accesskey "D">
+<!ENTITY prefwindow.get.destination.list.ftp "Mozilla FTP 서버의 언어팩 폴더">
+<!ENTITY prefwindow.get.destination.list.amo "Mozilla 애드온 사이트의 언어팩 웹페이지">
+<!ENTITY prefwindow.get.destination.list.custom "사용자 설정">
+<!ENTITY prefwindow.get.custom.label "주소:">
+<!ENTITY prefwindow.get.custom.accesskey "A">
+<!ENTITY prefwindow.button.caption "언어 도구 모음">
+<!ENTITY prefwindow.button.descriptions.label "언어 목록에 언어 코드 표시">
+<!ENTITY prefwindow.button.descriptions.accesskey "S">
