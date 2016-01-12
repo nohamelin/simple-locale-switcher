@@ -148,7 +148,7 @@
 
         <em:localized> <!-- Latvian -->
             <Description>
-                <em:locale>lv</em:locale>
+                <em:locale>lv-LV</em:locale>
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Vieglāka lietotāja saskarnes valodu pārvaldība</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
