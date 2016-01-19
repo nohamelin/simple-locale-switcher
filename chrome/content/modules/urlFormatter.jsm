@@ -33,7 +33,7 @@ function getPlatformDirectory() {
 }
 
 
-/**
+/*
  * A extended implementation of the native formatter for urls
  * (nsIURLFormatter): same behaviour, a few new variables are supported;
  * they starts with a double underscore: "__". TODO: Move to a component and

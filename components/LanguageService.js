@@ -87,7 +87,7 @@ LanguageService.prototype = {
     QueryInterface:	XPCOMUtils.generateQI([Ci.nsIObserver]),
 
 
-    /**
+    /*
      * A language tag associated to the preferred language for the UI of
      * applications, according to the operating system.
      */
@@ -100,7 +100,7 @@ LanguageService.prototype = {
     },
 
 
-    /**
+    /*
      * A language tag associated to the "nearest" language to the preferred
      * language, selected between the currently available locales for the
      * application, and effectively used for new windows and chrome pages.
@@ -115,18 +115,18 @@ LanguageService.prototype = {
     },
 
 
-    /**
+    /*
      * A language tag associated to the preferred, expected language for the
      * UI of the application (no caring about availability).
      */
     get selectedLocale() {
-        // TODO: It's wrong. It should take into account if the application
+        // WARN: It's wrong. It should take into account if the application
         // was launched with the -UILocale command-line flag, but it seems
-        // that we don't have a reliable way for to figure it: the application
+        // that we don't have a reliable way to figure it: the application
         // manages the flag and hides the language tag passed as parameter
         // in a very early runtime stage, a point unreachable for an add-on.
         // See:
-        // http://mxr.mozilla.org/mozilla-release/source/chrome/src/nsChromeRegistryChrome.cpp?rev=21cd4d9e679b#371
+        // http://mxr.mozilla.org/mozilla-release/source/chrome/nsChromeRegistryChrome.cpp?rev=fba67babe664#327
         return this.matchingOS ? this.osLocale : this.userLocale;
     },
 
@@ -140,7 +140,7 @@ LanguageService.prototype = {
     },
 
 
-    /**
+    /*
      * An object mapping each chrome package selected as locale provider
      * with a collection of language tags: all the available languages that
      * can be effectively applied to that package.
@@ -170,7 +170,7 @@ LanguageService.prototype = {
     },
 
 
-    /**
+    /*
      * intl.locale.matchOS
      *
      * This preference determines if the preferred language for the UI is
@@ -206,7 +206,7 @@ LanguageService.prototype = {
     },
 
 
-    /**
+    /*
      * general.useragent.locale
      *
      * This preference stores the language tag corresponding to the preferred
@@ -263,7 +263,7 @@ LanguageService.prototype = {
     },
 
 
-    /**
+    /*
      * extensions.simplels.applyOnQuit.matchOS
      *
      * A volatile (without an explicit default value) preference.
@@ -295,7 +295,7 @@ LanguageService.prototype = {
     },
 
 
-    /**
+    /*
      * extensions.simplels.applyOnQuit.locale
      *
      * A volatile (without an explicit default value) preference.
@@ -328,7 +328,7 @@ LanguageService.prototype = {
     },
 
 
-    /**
+    /*
      * extensions.simplels.provider
      *
      * Name of the chrome package from whom the list of available locales is
@@ -337,12 +337,12 @@ LanguageService.prototype = {
      * or of packages without locales associated to them will be ignored.
      *
      * WARN: some events that unregister the selected package aren't detected
-     * currently (e.g. a restartless disabling of a extension -not a language
-     * pack- providing it), letting effectively to have selected an unknown
-     * package and causing inconsistences about the current available locales.
+     * currently (e.g. a restartless disabling of the extension providing it),
+     * letting effectively to have selected an unknown package and therefore
+     * having here wrong cached data about the current available locales.
      * Triggering an event that rebuild that data can fix the latter issue,
-     * until that a new change of the provider preference or a restart of the
-     * application is done.
+     * that until a new change of the provider preference or a restart of the
+     * application is finally done.
      */
     get selectedProvider() {
         if (!("_selectedProvider" in this)) {

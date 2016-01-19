@@ -6,14 +6,15 @@
 
 var simplels = (function() {
 
-    // Our global simplels container is defined via a closure for to get
-    // privately the shorthands for Components, not available in SeaMonkey.
+    // Our global simplels container is defined via a closure to get
+    // privately these shorthands for Components, not available in SeaMonkey,
+    // and to prevent re-declarating them in other cases.
     const Cc = Components.classes;
     const Ci = Components.interfaces;
     const Cu = Components.utils;
 
 
-  return {      // 3 indentation levels before starting *real* coding? No way
+    return {
 
     langsvc: null,
     windowLocale: null,
@@ -519,8 +520,8 @@ var simplels = (function() {
     getStringBundle: function(id) {
         return this.langUtils.getStringBundle(id, document);
     }
-  };
 
+    };
 })();
 
 

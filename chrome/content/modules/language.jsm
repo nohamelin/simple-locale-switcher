@@ -24,7 +24,7 @@ XPCOMUtils.defineLazyGetter(this, "langsvc", function() {
 
 var langUtils = {
 
-    /**
+    /*
      * Build a pretty name for a language tag. The exact format is dependent of
      * the localization work. Examples (en-US):
      *
@@ -86,7 +86,7 @@ var langUtils = {
     },
 
 
-    /**
+    /*
      * Sort an Array of language tags.
      *
      * Sorting languages by name can to seems more natural, but the resulting

@@ -109,7 +109,7 @@ var utils = {
     },
 
 
-    /**
+    /*
      * It's the same (though a bit simplified) implementation as the old
      * FUEL/STEEL/SMILE library, and the more recent restartApplication()
      * in the BrowserUtils.jsm module (Firefox 40 and later):
@@ -133,7 +133,7 @@ var utils = {
 
 var tbUtils = {
 
-    /**
+    /*
      * Open an url as a Content Tab. See:
      * https://developer.mozilla.org/en-US/docs/Thunderbird/Content_Tabs
      *
