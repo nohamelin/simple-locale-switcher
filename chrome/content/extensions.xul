@@ -47,7 +47,8 @@
 
 
     <vbox id="list-view">
-        <hbox class="view-header global-info-container sls-languages-info-container"
+        <hbox id="simplels-info-container"
+              class="view-header global-info-container"
               insertbefore="addon-list-empty">
 
             <hbox flex="1" align="center">
@@ -69,6 +70,23 @@
                         label="&languages.get.label;"
                         tooltiptext="&languages.get.tooltiptext;"
                         command="sls_getMoreLanguages"/>
+            </hbox>
+        </hbox>
+
+        <hbox id="simplels-restart-container"
+              hidden="true"
+              insertbefore="addon-list-empty">
+
+            <hbox flex="1" align="center">
+                <spacer flex="5000"/>   <!-- Allow the about label to wrap -->
+                <image class="pending-icon"/>
+                <label id="simplels-restart-about" flex="1" crop="end"
+                       value="&languages.restart.about.label;"/>
+                <button id="simplels-restart"
+                        class="button-link"
+                        label="&addon.restartNow.label;"
+                        command="cmd_restartApp"/>
+                <spacer flex="5000"/>   <!-- Allow the about label to wrap -->
             </hbox>
         </hbox>
 

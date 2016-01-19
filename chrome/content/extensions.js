@@ -45,6 +45,7 @@ var simplels = {
         Services.obs.addObserver(this, "sls:selected-changed", false);
 
         this.updateSelectedItem();
+        this.updateRestartBox();
     },
 
 
@@ -61,9 +62,23 @@ var simplels = {
             selectedItem.tooltipText = this.strings.getString(
                                             "selected.match.tooltiptext");
         } else {
-            selectedItem.value = this.getLocaleName(this.langsvc.userLocale);
-            selectedItem.tooltipText = this.langsvc.userLocale;
+            let userLocale = this.langsvc.userLocale;
+            selectedItem.value = this.getLocaleName(userLocale);
+            selectedItem.tooltipText = userLocale;
         }
+    },
+
+
+    updateRestartBox: function() {
+        let restartBox = document.getElementById("simplels-restart-container");
+
+        // Still for the cases when the selected locale changed back to the
+        // original found at startup, a restart of the application can be
+        // still necessary due to some places building their strings on load,
+        // and being it not necessarily at startup, e.g. the Add-ons Manager
+        // with the category names. So, after a switch of the selected locale,
+        // this box will be always visible.
+        restartBox.hidden = !this.langsvc.wasSelectedLocaleChanged;
     },
 
 
@@ -71,6 +86,7 @@ var simplels = {
         switch (topic) {
             case "sls:selected-changed":
                 this.updateSelectedItem();
+                this.updateRestartBox();
                 break;
         }
     },

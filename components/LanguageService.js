@@ -136,7 +136,33 @@ LanguageService.prototype = {
         delete this._userLocale;
         delete this._isMatchingOSLocked;
         delete this._isUserLocaleLocked;
+
+        this._wasSelectedLocaleChanged = true;
+
         Services.obs.notifyObservers(null, "sls:selected-changed", null);
+    },
+
+
+    /*
+     * The selected locale found at the startup of the application.
+     */
+    _initialSelectedLocale: null,
+
+
+    get initialSelectedLocale() {
+        return this._initialSelectedLocale;
+    },
+
+
+    /*
+     * Remember if the selected locale has been changed at least one time
+     * during the execution of the application.
+     */
+    _wasSelectedLocaleChanged: false,
+
+
+    get wasSelectedLocaleChanged() {
+        return this._wasSelectedLocaleChanged;
     },
 
 
@@ -402,6 +428,8 @@ LanguageService.prototype = {
         localeBranch.addObserver("", this, false);
         matchBranch.QueryInterface(Ci.nsIPrefBranch2);  // COMPAT: Gecko 12-
         matchBranch.addObserver("", this, false);
+
+        this._initialSelectedLocale = this.selectedLocale;
 
         // Supporting restartless language packs (Gecko 21 and later)
         AddonManager.addInstallListener(this.installListener);

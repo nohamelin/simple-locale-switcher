@@ -16,6 +16,6 @@
 <!ENTITY languages.switch.select.label "Use the language:">
 <!ENTITY languages.switch.select.accesskey "U">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
-<!ENTITY languages.switch.restart.description "You will need to restart &brandShortName; for to apply any change to the existent windows.">
+<!ENTITY languages.switch.restart.description "You will need to restart &brandShortName; to apply any change to the existent windows.">
 <!ENTITY languages.switch.restore.label "Restore to Default">
 <!ENTITY languages.switch.restore.accesskey "R">
