@@ -24,13 +24,17 @@ XPCOMUtils.defineLazyGetter(this, "langsvc", function() {
 
 var simplels = {
 
+    strings: null,
     localeStrings: {languageNames: null, regionNames: null, formats: null},
 
     matchPref: null,
     localePref: null,
 
+    switchList: null,
+
 
     onLoad: function() {
+        this.strings = this.getStringBundle("simplels-strings");
         this.localeStrings.languageNames = this.getStringBundle(
                                                 "simplels-language-names");
         this.localeStrings.regionNames = this.getStringBundle(
@@ -49,6 +53,11 @@ var simplels = {
             let value = this.localePref.valueFromPreferences;
             this.localePref._setValue(value, false);
         }
+
+        let matchInfoMsg = document.getElementById("match-info");
+        matchInfoMsg.value = this.strings.getFormattedString(
+                                    "switch.match.info",
+                                    [this.getLocaleName(langsvc.osLocale)]);
 
         this.switchList = document.getElementById("switch-list");
 

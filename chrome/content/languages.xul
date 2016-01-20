@@ -43,10 +43,17 @@
         </description>
         <radiogroup id="match-group"
                     preference="intl.locale.matchOS">
-            <radio id="match"
-                   value="true"
-                   label="&languages.switch.match.label;"
-                   accesskey="&languages.switch.match.accesskey;"/>
+            <vbox id="match-box">
+                <radio id="match"
+                       value="true"
+                       label="&languages.switch.match.label;"
+                       accesskey="&languages.switch.match.accesskey;"/>
+
+                <hbox id="match-info-box" class="indent" align="center">
+                    <label id="match-info"/>
+                </hbox>
+            </vbox>
+            <separator class="thin"/>
 
             <hbox id="switch-box" align="center">
                 <radio id="nomatch"
@@ -80,6 +87,8 @@
             src="chrome://simplels/content/languages.js"/>
 
     <stringbundleset>
+        <stringbundle id="simplels-strings"
+                      src="chrome://simplels/locale/languages.properties"/>
         <stringbundle id="simplels-language-names"
                       src="chrome://global/locale/languageNames.properties"/>
         <stringbundle id="simplels-region-names"
