@@ -1,0 +1,19 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the languages.get.label string in extensions.dtd file -->
+<!ENTITY prefwindow.get.caption "Faigh barrachd pacaidean cànain">
+<!ENTITY prefwindow.get.destination.label "Ceann-uidhe na h-àithne:">
+<!ENTITY prefwindow.get.destination.accesskey "C">
+<!ENTITY prefwindow.get.destination.list.ftp "Pasgan-soithich nam pacaidean cànain air an fhrithealaiche aig Mozilla">
+<!ENTITY prefwindow.get.destination.list.amo "Duilleag nam pacaidean-cànain air làrach-lìn nan tuilleadan aig Mozilla">
+<!ENTITY prefwindow.get.destination.list.custom "Gnàthaichte">
+<!ENTITY prefwindow.get.custom.label "Seòladh:">
+<!ENTITY prefwindow.get.custom.accesskey "S">
+
+<!ENTITY prefwindow.button.caption "Putan chànanan a’ bhàir-inneal">
+<!ENTITY prefwindow.button.descriptions.label "Seall taga gach cànain ri taobh ainm">
+<!ENTITY prefwindow.button.descriptions.accesskey "t">

@@ -1,0 +1,22 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
+<!ENTITY languages.selected.label "An cànan as fhearr leat airson na h-eadar-aghaidh aig &brandShortName;:">
+<!ENTITY languages.switch.label "Atharraich…">
+<!ENTITY languages.switch.accesskey "A">
+<!ENTITY languages.switch.tooltiptext "Atharraich an cànan as fhearr leat airson na h-eadar-aghaidh">
+<!ENTITY languages.get.label "Faigh barrachd pacaidean cànain…">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.get.tooltiptext " Faigh barrachd pacaidean cànain airson &brandShortName;">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.restart.about.label "Tòisich &brandShortName; às ùr gus an cànan air na h-uinneagan làithreach atharrachadh">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.empty.description "Bheir pacaidean cànain barrachd chànanan dhut airson na h-eadar-aghaidh ’s nan leudachan aig &brandShortName;">
+<!-- A CSS value. In most cases it doesn't need be changed; CJK languages (and other very compact languages) should use the value "auto". -->
+<!ENTITY languages.empty.description.width "30em">
+<!ENTITY languages.empty.learn.label "Barrachd fiosrachaidh mu phacaidean cànain">
+<!ENTITY languages.empty.learn.accesskey "f">

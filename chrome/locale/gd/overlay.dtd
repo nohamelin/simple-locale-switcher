@@ -1,0 +1,21 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY button.label "Cànan">
+
+<!-- Same as the languages.title string in the languages.dtd file. -->
+<!ENTITY tooltip.title "Cànan na h-eadar-aghaidh">
+<!-- It refers to a language -->
+<!ENTITY tooltip.selected.label "Air a thaghadh:">
+<!-- It refers to a language -->
+<!ENTITY tooltip.current.label-2 "An sàs air an uinneag seo:">
+<!ENTITY tooltip.provider.label "Pacaid solaraiche airson liosta nan cànan:">
+
+<!ENTITY popup.manage.label "Stiùirich na cànain…">
+<!ENTITY popup.get.label "Faigh barrachd pacaidean cànain…">
+<!ENTITY popup.restart.label "Ath-thòisich gus an cànan atharrachadh">
+<!ENTITY popup.match.label "Freagair ri cànan an t-siostaim">
+<!ENTITY popup.provider.label "Aisig liosta nan cànan ri am faighinn">
