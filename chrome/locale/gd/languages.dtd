@@ -12,10 +12,10 @@
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
 <!ENTITY languages.switch.description "Tagh cànan an teacsa a nochdas sna bogsaichean-còmhraidh, sna clàran-taice agus sna bàraichean-inneal aig &brandShortName;:">
 <!ENTITY languages.switch.match.label "Feuch ri cànan an t-siostaim">
-<!ENTITY languages.switch.match.accesskey "s">
+<!ENTITY languages.switch.match.accesskey "F">
 <!ENTITY languages.switch.select.label "Cleachd an cànan:">
-<!ENTITY languages.switch.select.accesskey "c">
+<!ENTITY languages.switch.select.accesskey "C">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
 <!ENTITY languages.switch.restart.description "Feumaidh tu &brandShortName; a thòiseachadh às ùr gus atharrachadh sam bith a chur an sàs air na h-uinneagan làithreach.">
 <!ENTITY languages.switch.restore.label "Aisig dhan bhun-roghainn">
-<!ENTITY languages.switch.restore.accesskey "r">
+<!ENTITY languages.switch.restore.accesskey "A">

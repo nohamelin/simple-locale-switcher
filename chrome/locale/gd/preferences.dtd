@@ -8,8 +8,8 @@
 <!ENTITY prefwindow.get.caption "Faigh barrachd pacaidean cànain">
 <!ENTITY prefwindow.get.destination.label "Ceann-uidhe na h-àithne:">
 <!ENTITY prefwindow.get.destination.accesskey "C">
-<!ENTITY prefwindow.get.destination.list.ftp "Pasgan-soithich nam pacaidean cànain air frithealaiche Mhozilla">
-<!ENTITY prefwindow.get.destination.list.amo "Duilleag nam pacaidean-cànain air làrach-lìn nan tuilleadan Mhozilla">
+<!ENTITY prefwindow.get.destination.list.ftp "Pasgan-soithich nam pacaidean cànain air an fhrithealaiche aig Mozilla">
+<!ENTITY prefwindow.get.destination.list.amo "Duilleag nam pacaidean-cànain air làrach-lìn nan tuilleadan aig Mozilla">
 <!ENTITY prefwindow.get.destination.list.custom "Gnàthaichte">
 <!ENTITY prefwindow.get.custom.label "Seòladh:">
 <!ENTITY prefwindow.get.custom.accesskey "S">

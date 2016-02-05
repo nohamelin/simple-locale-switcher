@@ -16,6 +16,6 @@
 
 <!ENTITY popup.manage.label "Stiùirich na cànain…">
 <!ENTITY popup.get.label "Faigh barrachd pacaidean cànain…">
-<!ENTITY popup.restart.label "Ath-thòisich an uairsin gus an cànan atharrachadh">
+<!ENTITY popup.restart.label "Ath-thòisich gus an cànan atharrachadh">
 <!ENTITY popup.match.label "Freagair ri cànan an t-siostaim">
 <!ENTITY popup.provider.label "Aisig liosta nan cànan ri am faighinn">
