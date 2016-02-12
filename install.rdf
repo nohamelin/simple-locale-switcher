@@ -110,6 +110,18 @@
             </Description>
         </em:localized>
 
+        <em:localized> <!-- Scottish Gaelic -->
+            <Description>
+                <em:locale>gd</em:locale>
+                <em:name>Simple Locale Switcher</em:name>
+                <em:description>Stiùireadh nas fhasa air cànain na h-eadar-aghaidh</em:description>
+                <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
+                <em:creator>nohamelin</em:creator>
+                <em:translator>GunChleoc</em:translator>
+                <em:contributor>Tha cuid dhe na h-ìomhaigheagan a chleachdas an leudachan seo ’nam pàirt de dh’ùrlar nan ìomhaigheagan aig Tango Desktop Project</em:contributor>
+            </Description>
+        </em:localized>
+
         <em:localized> <!-- Upper Sorbian -->
             <Description>
                 <em:locale>hsb</em:locale>
