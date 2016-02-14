@@ -18,16 +18,12 @@
 }
 
 
-#simplels-button-popup > .simplels-locale {
+#simplels-button[descriptions="true"] .simplels-locale {
     -moz-binding: url(
         "chrome://simplels/content/menu.xml#menuitem-iconic-locale");
 }
 
 
-#simplels-button[descriptions="true"] .simplels-locale-desc-placeholder,
-#simplels-button:not([descriptions="true"]) .simplels-locale-desc {
-    display: none;
-}
 #simplels-widget-view[descriptions="true"] .simplels-locale::after {
    content: attr(description);
 }

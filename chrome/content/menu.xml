@@ -24,15 +24,8 @@
                        flex="1"
                        xbl:inherits="value=label,accesskey,crop"
                        crop="right"/>
-            <xul:hbox class="menu-accel-container">
-                <xul:label class="menu-description simplels-locale-desc"
-                           xbl:inherits="value=description"/>
-                <!-- The next provides us with the default spacing against
-                     the border of the popup when the previous label is hidden.
-                     It will not hold any acceltext. -->
-                <xul:label class="menu-iconic-accel
-                                  simplels-locale-desc-placeholder"/>
-            </xul:hbox>
+            <xul:label class="menu-description simplels-locale-desc"
+                       xbl:inherits="value=description"/>
         </content>
     </binding>
 
