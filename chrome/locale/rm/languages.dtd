@@ -4,7 +4,6 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/.
    -->
 
-<!-- Same as the general.languages.caption string in the general.dtd file. -->
 <!ENTITY languages.title "Lingua da la surfatscha">
 <!-- A CSS value, the default width of the paragraphs in the window. In most cases it doesn't need be changed; CJK languages can use a lower value. -->
 <!ENTITY languages.descriptions.width "32em">
