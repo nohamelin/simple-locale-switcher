@@ -7,11 +7,6 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 
-#match-info {
-    font-weight: bold;
-}
-
-
 /* It's redundant with the default theme, but a lot of complete themes lack
  * the appropriate support for xul descriptions. */
 .switch-locale > .menu-description {
