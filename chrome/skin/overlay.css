@@ -88,3 +88,13 @@ toolbar[iconsize="small"][grippytooltiptext] #simplels-button {
 .simplels-locale-desc {
     font-style: italic;
 }
+
+
+/* Using flags instead of locale codes in the menu of the toolbar button:
+ * images in menus are by default set to a fixed size, e.g. 16x16. The next
+ * let to display the flag proportionally while using the most available
+ * space. */
+.simplels-locale-flag {
+    width: auto;
+    -moz-margin-start: 1ex;
+}

@@ -10,6 +10,8 @@
           xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
           xmlns:xbl="http://www.mozilla.org/xbl">
 
+    <!-- Same as the menuitem-iconic binding from upstream, but using our
+         own label at the end for the locale instead of an acceltext. -->
     <binding id="menuitem-iconic-locale"
              extends="chrome://global/content/bindings/menu.xml#menuitem">
         <content>
@@ -29,4 +31,30 @@
         </content>
     </binding>
 
+    <!-- Same as our previous menuitem-iconic-locale binding, but using an
+         flag image (or any image set by the user) to identify the locale.
+
+         It's not used by the extension, it's made available only for users
+         who may want to customize the way to identify a language. -->
+    <binding id="menuitem-iconic-locale-flag"
+             extends="chrome://global/content/bindings/menu.xml#menuitem">
+        <content>
+            <xul:hbox class="menu-iconic-left"
+                      align="center"
+                      pack="center"
+                      xbl:inherits="selected,_moz-menuactive,disabled,checked">
+                <xul:image class="menu-iconic-icon"
+                           xbl:inherits="src=image,validate,src"/>
+            </xul:hbox>
+            <xul:label class="menu-iconic-text"
+                       flex="1"
+                       xbl:inherits="value=label,accesskey,crop"
+                       crop="right"/>
+            <xul:hbox align="center"
+                      pack="center">
+                <xul:image class="menu-iconic-icon simplels-locale-flag"
+                           xbl:inherits="locale"/>
+            </xul:hbox>
+        </content>
+    </binding>
 </bindings>
