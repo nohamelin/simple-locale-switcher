@@ -31,7 +31,7 @@ XPCOMUtils.defineLazyGetter(this, "addonBranch", function() {
 });
 
 XPCOMUtils.defineLazyGetter(this, "ftpURL", function() {
-    let getString = utils.getFileContents(FTP_GET_MORE_FILE);
+    let getString = utils.getAddonFileContents(FTP_GET_MORE_FILE);
     let getObject = JSON.parse(getString);
 
     let url;

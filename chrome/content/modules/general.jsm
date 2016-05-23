@@ -72,11 +72,23 @@ var utils = {
     },
 
 
-    getFileContents: function(url) {
+    getAddonFileContents: function(spec) {
         let sis = Cc["@mozilla.org/scriptableinputstream;1"]
                   .getService(Ci.nsIScriptableInputStream);
 
-        let channel = Services.io.newChannel(url, null, null);
+        let uri = Services.io.newURI(spec, null, null);
+        let channel;
+        try {   // COMPAT: newChannelFromURI2 is available from Gecko 36
+            channel = Services.io.newChannelFromURI2(
+                        uri,
+                        null,
+                        Services.scriptSecurityManager.getSystemPrincipal(),
+                        null,
+                        Ci.nsILoadInfo.SEC_NORMAL,
+                        Ci.nsIContentPolicy.TYPE_OTHER);
+        } catch (e) {
+            channel = Services.io.newChannelFromURI(uri);
+        }
         let input = channel.open();
         sis.init(input);
 
