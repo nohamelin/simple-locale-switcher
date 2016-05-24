@@ -78,7 +78,8 @@ var utils = {
 
         let uri = Services.io.newURI(spec, null, null);
         let channel;
-        try {   // COMPAT: newChannelFromURI2 is available from Gecko 36
+        // COMPAT: newChannelFromURI2 is available from Gecko 36
+        if ("newChannelFromURI2" in Services.io) {
             channel = Services.io.newChannelFromURI2(
                         uri,
                         null,
@@ -86,7 +87,7 @@ var utils = {
                         null,
                         Ci.nsILoadInfo.SEC_NORMAL,
                         Ci.nsIContentPolicy.TYPE_OTHER);
-        } catch (e) {
+        } else {
             channel = Services.io.newChannelFromURI(uri);
         }
         let input = channel.open();
