@@ -13,6 +13,8 @@
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
 <!ENTITY languages.get.tooltiptext "Набави више језичких пакета за &brandShortName;">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.restart.about.label "Поново покрените &brandShortName; да бисте применили промену језика">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
 <!ENTITY languages.empty.description "Језички пакети омогућавају додатке језике приказа за &brandShortName; и додатке">
 <!-- A CSS value. In most cases it doesn't need be changed; CJK languages (and other very compact languages) should use the value "auto". -->
 <!ENTITY languages.empty.description.width "30em">

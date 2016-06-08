@@ -13,7 +13,7 @@
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
 <!ENTITY languages.get.tooltiptext "Obtener más paquetes de idioma para &brandShortName;">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
-<!ENTITY languages.restart.about.label "Reinicia &brandShortName; para aplicar el cambio de idioma a las ventanas existentes">
+<!ENTITY languages.restart.about.label "Reinicie &brandShortName; para aplicar el cambio de idioma a las ventanas existentes">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
 <!ENTITY languages.empty.description "Los paquetes de idioma le permiten tener más idiomas disponibles para la interfaz de &brandShortName; y extensiones">
 <!-- A CSS value. In most cases it doesn't need be changed; CJK languages (and other very compact languages) should use the value "auto". -->

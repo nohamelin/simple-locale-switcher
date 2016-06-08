@@ -11,7 +11,7 @@
 
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
 <!ENTITY languages.switch.description "Escoja el idioma para el texto que aparece en los cuadros de diálogo, menús y barras de herramientas de &brandShortName;:">
-<!ENTITY languages.switch.match.label "Coincidir cuando sea posible con el idioma del sistema">
+<!ENTITY languages.switch.match.label "Coincidir en lo posible con el idioma del sistema">
 <!ENTITY languages.switch.match.accesskey "C">
 <!ENTITY languages.switch.select.label "Usar el idioma:">
 <!ENTITY languages.switch.select.accesskey "U">
