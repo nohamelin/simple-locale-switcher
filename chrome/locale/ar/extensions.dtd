@@ -1,0 +1,22 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
+<!ENTITY languages.selected.label "اللغة المفضلة لواجهة &brandShortName;:">
+<!ENTITY languages.switch.label "بدّل…">
+<!ENTITY languages.switch.accesskey "ب">
+<!ENTITY languages.switch.tooltiptext "بدّل اللغة المفضلة لواجهة المستخدم">
+<!ENTITY languages.get.label "احصل على المزيد من حزم اللغات…">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.get.tooltiptext "احصل على المزيد من حزم اللغات لـ &brandShortName;">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.restart.about.label "أعد تشغيل &brandShortName; لتطبيق تغيير اللغة على النوافذ الحالية">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.empty.description "حزم اللغات توفر لغات إضافية لواجهة &brandShortName; وإضافاته">
+<!-- A CSS value. In most cases it doesn't need be changed; CJK languages (and other very compact languages) should use the value "auto". -->
+<!ENTITY languages.empty.description.width "30em">
+<!ENTITY languages.empty.learn.label "اعرف المزيد عن حزم اللغات">
+<!ENTITY languages.empty.learn.accesskey "ع">

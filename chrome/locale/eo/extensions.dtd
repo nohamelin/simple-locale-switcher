@@ -1,0 +1,22 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
+<!ENTITY languages.selected.label "Preferata lingvo de interfaco de &brandShortName;:">
+<!ENTITY languages.switch.label "Ŝanĝi…">
+<!ENTITY languages.switch.accesskey "Ŝ">
+<!ENTITY languages.switch.tooltiptext "Ŝanĝi la preferatan lingvon de la uzanta interfaco">
+<!ENTITY languages.get.label "Akiri pli da lingvajn pakaĵojn…">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.get.tooltiptext "Akiri pli da lingvajn pakaĵojn por &brandShortName;">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.restart.about.label "Restartigi &brandShortName; por apliki la lingva ŝanĝo al la ekzistaj fenestroj">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.empty.description "Lingvaj pakaĵoj provizas pluajn lingvajn por la interfaco de &brandShortName; kaj la etendaĵoj">
+<!-- A CSS value. In most cases it doesn't need be changed; CJK languages (and other very compact languages) should use the value "auto". -->
+<!ENTITY languages.empty.description.width "30em">
+<!ENTITY languages.empty.learn.label "Scii pli pri lingvaj pakaĵoj">
+<!ENTITY languages.empty.learn.accesskey "S">

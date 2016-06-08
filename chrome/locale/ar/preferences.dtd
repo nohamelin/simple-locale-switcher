@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the languages.get.label string in extensions.dtd file -->
+<!ENTITY prefwindow.get.caption "احصل على المزيد من حزم اللغات">
+<!ENTITY prefwindow.get.destination.label "هدف الأمر:">
+<!ENTITY prefwindow.get.destination.accesskey "ه">
+<!ENTITY prefwindow.get.destination.list.ftp "مجلد حزم اللغات على خادم FTP الخاص بموزيلا">
+<!ENTITY prefwindow.get.destination.list.amo "صفحة حزم اللغات على موقع إضافات موزيلا">
+<!ENTITY prefwindow.get.destination.list.custom "مخصص">
+<!ENTITY prefwindow.get.custom.label "العنوان:">
+<!ENTITY prefwindow.get.custom.accesskey "ع">
+<!ENTITY prefwindow.button.caption "زر شريط أدوات اللغات">
+<!ENTITY prefwindow.button.descriptions.label "أظهر وسم كل لغة مدرجة بجانب اسمها">
+<!ENTITY prefwindow.button.descriptions.accesskey "ظ">

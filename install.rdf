@@ -51,6 +51,18 @@
         </em:targetApplication>
 
     <!-- Localizations -->
+        <em:localized> <!-- Arabic -->
+            <Description>
+                <em:locale>ar</em:locale>
+                <em:name>Simple Locale Switcher</em:name>
+                <em:description>إدارة أسهل للغة واجهة المستخدم</em:description>
+                <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
+                <em:creator>nohamelin</em:creator>
+                <em:translator>noureddin</em:translator>
+                <em:contributor>بعض الأيقونات المستخدمة في هذه الإضافة هي جزء من سمة أيقونات مشروع سطح مكتب تانغو</em:contributor>
+            </Description>
+        </em:localized>
+
         <em:localized> <!-- German -->
             <Description>
                 <em:locale>de</em:locale>
@@ -84,6 +96,18 @@
                 <em:creator>nohamelin</em:creator>
                 <em:translator>Γιώργος Μαλαμάς</em:translator>
                 <em:contributor>Ορισμένα εικονίδια που χρησιμοποιούνται από αυτή την επέκταση είναι μέρος του θέματος εικονιδίων του έργου «Tango Desktop Project»</em:contributor>
+            </Description>
+        </em:localized>
+
+        <em:localized> <!-- Esperanto -->
+            <Description>
+                <em:locale>eo</em:locale>
+                <em:name>Simple Locale Switcher</em:name>
+                <em:description>Pli facila administrado de la lingvo de la uzanta interfaco</em:description>
+                <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
+                <em:creator>nohamelin</em:creator>
+                <em:translator>noureddin</em:translator>
+                <em:contributor>Kelkaj piktogramoj, kiujn uzas tiu etendaĵo, estas parto de la piktograma etoso Tango Desktop Project</em:contributor>
             </Description>
         </em:localized>
 

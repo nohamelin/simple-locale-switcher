@@ -1,0 +1,19 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY button.label "Lingvo">
+<!-- Same as the languages.title string in the languages.dtd file. -->
+<!ENTITY tooltip.title "Lingvo de la uzanta interfaco">
+<!-- It refers to a language -->
+<!ENTITY tooltip.selected.label "Elektita:">
+<!-- It refers to a language -->
+<!ENTITY tooltip.current.label-2 "Aplikata al ĉi tiu fenestro:">
+<!ENTITY tooltip.provider.label "La pakaĵo provizanta la liston de la lingvoj:">
+<!ENTITY popup.manage.label "Administri lingvojn…">
+<!ENTITY popup.get.label "Akiri pli da lingvaj pakaĵoj…">
+<!ENTITY popup.restart.label "Restartigi por ŝanĝi la lingvon">
+<!ENTITY popup.match.label "Kongrui kun la sistema lingvo">
+<!ENTITY popup.provider.label "Restaŭri la liston de disponeblaj lingvoj">

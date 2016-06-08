@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the languages.get.label string in extensions.dtd file -->
+<!ENTITY prefwindow.get.caption "Akiri pli da lingvaj pakaĵoj">
+<!ENTITY prefwindow.get.destination.label "La celo de la komando:">
+<!ENTITY prefwindow.get.destination.accesskey "c">
+<!ENTITY prefwindow.get.destination.list.ftp "La dosierujo de lingvaj pakaĵoj ĉe la servilo de FTP de Mozilla">
+<!ENTITY prefwindow.get.destination.list.amo "Paĝo de lingvaj pakaĵoj ĉe la aldonaĵ-retejo de Mozilla">
+<!ENTITY prefwindow.get.destination.list.custom "propra">
+<!ENTITY prefwindow.get.custom.label "Adreso:">
+<!ENTITY prefwindow.get.custom.accesskey "A">
+<!ENTITY prefwindow.button.caption "Ilobreta butono de la lingvaj">
+<!ENTITY prefwindow.button.descriptions.label "Montri apud ĉiu nomo de enlistigita lingvo la respektivan lingvan etikedon">
+<!ENTITY prefwindow.button.descriptions.accesskey "M">

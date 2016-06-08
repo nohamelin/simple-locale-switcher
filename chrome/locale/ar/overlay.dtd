@@ -1,0 +1,19 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY button.label "اللغة">
+<!-- Same as the languages.title string in the languages.dtd file. -->
+<!ENTITY tooltip.title "لغة واجهة المستخدم">
+<!-- It refers to a language -->
+<!ENTITY tooltip.selected.label "المختارة:">
+<!-- It refers to a language -->
+<!ENTITY tooltip.current.label-2 "تتطبق على هذه النافذة:">
+<!ENTITY tooltip.provider.label "الحزمة الموفرة لقائمة اللغات:">
+<!ENTITY popup.manage.label "أدر اللغات…">
+<!ENTITY popup.get.label "احصل على المزيد من حزم اللغات…">
+<!ENTITY popup.restart.label "أعد التشغيل لتبديل اللغة">
+<!ENTITY popup.match.label "طابق لغة النظام">
+<!ENTITY popup.provider.label "استعد قائمة اللغات المتاحة">

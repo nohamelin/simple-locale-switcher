@@ -1,0 +1,19 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY languages.title "لغة واجهة المستخدم">
+<!-- A CSS value, the default width of the paragraphs in the window. In most cases it doesn't need be changed; CJK languages can use a lower value. -->
+<!ENTITY languages.descriptions.width "32em">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
+<!ENTITY languages.switch.description "اختر لغة النصوص التي تظهر في الصناديق الحوارية والقوائم وأشرطة الأدوات الخاصة ببرنامج &brandShortName;:">
+<!ENTITY languages.switch.match.label "حاول أن تختر لغةً متطابقةً للغة النظام">
+<!ENTITY languages.switch.match.accesskey "ط">
+<!ENTITY languages.switch.select.label "استخدم اللغة:">
+<!ENTITY languages.switch.select.accesskey "خ">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.switch.restart.description "تحتاج لإعادة تشغيل &brandShortName; لتطبيق أيّة تغييرات على النوافذ الحالية.">
+<!ENTITY languages.switch.restore.label "استعد الوضع المبدئي">
+<!ENTITY languages.switch.restore.accesskey "ع">
