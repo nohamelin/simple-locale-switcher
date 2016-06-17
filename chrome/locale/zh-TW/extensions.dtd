@@ -1,0 +1,22 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
+<!ENTITY languages.selected.label "&brandShortName; 的介面語言：">
+<!ENTITY languages.switch.label "切換…">
+<!ENTITY languages.switch.accesskey "S">
+<!ENTITY languages.switch.tooltiptext "切換使用者介面語言">
+<!ENTITY languages.get.label "取得更多語言套件…">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.get.tooltiptext "為 &brandShortName; 取得更多語言套件">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.restart.about.label "重新啟動 &brandShortName; 以將語言切換套用到已開啟的視窗">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.empty.description "語言套件為 &brandShortName; 和擴充套件的使用者介面提供更多的語言">
+<!-- A CSS value. In most cases it doesn't need be changed; CJK languages (and other very compact languages) should use the value "auto". -->
+<!ENTITY languages.empty.description.width "auto">
+<!ENTITY languages.empty.learn.label "深入了解語言套件">
+<!ENTITY languages.empty.learn.accesskey "L">

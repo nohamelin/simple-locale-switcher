@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the languages.get.label string in extensions.dtd file -->
+<!ENTITY prefwindow.get.caption "取得更多語言包">
+<!ENTITY prefwindow.get.destination.label "指令目標：">
+<!ENTITY prefwindow.get.destination.accesskey "D">
+<!ENTITY prefwindow.get.destination.list.ftp "Mozilla FTP 伺服器上的語言套件目錄">
+<!ENTITY prefwindow.get.destination.list.amo "Mozilla 附加元件網站上的語言套件頁面">
+<!ENTITY prefwindow.get.destination.list.custom "自訂">
+<!ENTITY prefwindow.get.custom.label "位置：">
+<!ENTITY prefwindow.get.custom.accesskey "A">
+<!ENTITY prefwindow.button.caption "語言工具列按鈕">
+<!ENTITY prefwindow.button.descriptions.label "在列出的每個語言旁邊顯示對應的語言標籤">
+<!ENTITY prefwindow.button.descriptions.accesskey "S">

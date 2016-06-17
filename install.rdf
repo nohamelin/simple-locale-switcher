@@ -280,5 +280,17 @@
             </Description>
         </em:localized>
 
+        <em:localized> <!-- Traditional Chinese -->
+            <Description>
+                <em:locale>zh-TW</em:locale>
+                <em:name>Simple Locale Switcher</em:name>
+                <em:description>為使用者介面語言提供更好的管理</em:description>
+                <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
+                <em:creator>nohamelin</em:creator>
+                <em:translator>Merci chao</em:translator>
+                <em:contributor>此擴充套件所使用的某些圖示取自於 Tango Desktop 項目的部分圖示主題</em:contributor>
+            </Description>
+        </em:localized>
+
     </Description>
 </RDF>

@@ -1,0 +1,19 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY languages.title "使用者介面語言">
+<!-- A CSS value, the default width of the paragraphs in the window. In most cases it doesn't need be changed; CJK languages can use a lower value. -->
+<!ENTITY languages.descriptions.width "28em">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
+<!ENTITY languages.switch.description "選擇出現在 &brandShortName; 對話框、選單和工具列等處的語言：">
+<!ENTITY languages.switch.match.label "嘗試使用系統語言">
+<!ENTITY languages.switch.match.accesskey "M">
+<!ENTITY languages.switch.select.label "使用語言：">
+<!ENTITY languages.switch.select.accesskey "U">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.switch.restart.description "您需要重新啟動 &brandShortName; 以套用變更至所有已開啟的視窗。">
+<!ENTITY languages.switch.restore.label "回復為預設值">
+<!ENTITY languages.switch.restore.accesskey "R">
