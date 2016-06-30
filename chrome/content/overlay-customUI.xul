@@ -37,7 +37,7 @@
                                closemenu="none"
                                label="&popup.restart.label;"
                                command="sls_toggleRestartAfterSwitch"/>
-                <toolbarseparator/>
+                <toolbarseparator class="small-separator"/>
 
                 <toolbarbutton id="simplels-view-match"
                                class="subviewbutton simplels-matching"
