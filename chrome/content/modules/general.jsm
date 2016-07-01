@@ -72,6 +72,13 @@ var utils = {
     },
 
 
+    platformVersionIsEqualOrGreaterThan: function(version) {
+        let compare = Services.vc.compare(Services.appinfo.platformVersion,
+                                          version);
+        return (compare === 0 || compare === 1);
+    },
+
+
     getAddonFileContents: function(spec) {
         let sis = Cc["@mozilla.org/scriptableinputstream;1"]
                   .getService(Ci.nsIScriptableInputStream);

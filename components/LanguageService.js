@@ -12,6 +12,7 @@ const Cu = Components.utils;
 
 Cu.import("resource://gre/modules/XPCOMUtils.jsm");
 Cu.import("resource://gre/modules/Services.jsm");
+Cu.import("chrome://simplels/content/modules/general.jsm");
 
 XPCOMUtils.defineLazyModuleGetter(this, "AddonManager",
             "resource://gre/modules/AddonManager.jsm");
@@ -435,6 +436,16 @@ LanguageService.prototype = {
         AddonManager.addInstallListener(this.installListener);
         AddonManager.addAddonListener(this.addonListener);
 
+        // COMPAT: Gecko 47 changed which events are broadcasted when the
+        // availability of an add-on changes:
+        //   https://bugzilla.mozilla.org/show_bug.cgi?id=612168
+        //
+        // We use a separated, extra listener for the new required cases,
+        // to ensure that our own broadcasts aren't triggered multiple times
+        // needlessly in older versions of the application.
+        if (utils.platformVersionIsEqualOrGreaterThan("47.0"))
+            AddonManager.addAddonListener(this.addonListener2);
+
         Services.obs.addObserver(this, "quit-application", false);
 
 
@@ -454,6 +465,7 @@ LanguageService.prototype = {
 
         AddonManager.removeInstallListener(this.installListener);
         AddonManager.removeAddonListener(this.addonListener);
+        AddonManager.removeAddonListener(this.addonListener2);
 
         Services.obs.removeObserver(this, "quit-application");
 
@@ -553,6 +565,7 @@ LanguageService.prototype = {
                 this._handle();
         },
 
+
         _handle: function() {
             // At this point the Toolkit Chrome Registry already know about
             // the change of availability of the locale; the queue is to try
@@ -561,6 +574,19 @@ LanguageService.prototype = {
             scheduler.queue("addon-availability-changed", function() {
                 languageService._onChangedAvailableLocales();
             }, 80);
+        }
+    },
+
+
+    addonListener2: {   // COMPAT: Gecko 47 and later
+        onUninstalling: function(addon) {
+            if (addon.type === "locale" && addon.isActive)
+                languageService.addonListener._handle();
+        },
+
+        onOperationCancelled: function(addon) {
+            if (addon.type === "locale" && !addon.userDisabled)
+                languageService.addonListener._handle();
         }
     }
 };
