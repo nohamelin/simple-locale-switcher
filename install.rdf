@@ -256,6 +256,18 @@
             </Description>
         </em:localized>
 
+        <em:localized> <!-- Swedish -->
+            <Description>
+                <em:locale>sv-SE</em:locale>
+                <em:name>Simple Locale Switcher</em:name>
+                <em:description>En enklare hantering av användargränssnittets språk</em:description>
+                <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
+                <em:creator>nohamelin</em:creator>
+                <em:translator>A. Regnander</em:translator>
+                <em:contributor>Vissa ikoner som används av detta tillägg är del av ikontemat från Tango Desktop Project</em:contributor>
+            </Description>
+        </em:localized>
+
         <em:localized> <!-- Ukrainian -->
             <Description>
                 <em:locale>uk-UA</em:locale>

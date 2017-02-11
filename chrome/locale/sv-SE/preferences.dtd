@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the languages.get.label string in extensions.dtd file -->
+<!ENTITY prefwindow.get.caption "Hämta fler språkpaket">
+<!ENTITY prefwindow.get.destination.label "Kommandots destination:">
+<!ENTITY prefwindow.get.destination.accesskey "d">
+<!ENTITY prefwindow.get.destination.list.ftp "Mapp för språkpaket i Mozillas FTP-server">
+<!ENTITY prefwindow.get.destination.list.amo "Sida över språkpaket på Mozillas tilläggswebbplats">
+<!ENTITY prefwindow.get.destination.list.custom "Anpassad">
+<!ENTITY prefwindow.get.custom.label "Adress:">
+<!ENTITY prefwindow.get.custom.accesskey "A">
+<!ENTITY prefwindow.button.caption "Språkfältsknapp">
+<!ENTITY prefwindow.button.descriptions.label "Visa respektive språktagg intill namnet för varje listat språk">
+<!ENTITY prefwindow.button.descriptions.accesskey "V">

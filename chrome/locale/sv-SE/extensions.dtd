@@ -1,0 +1,22 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
+<!ENTITY languages.selected.label "Föredraget språk för gränssnittet i &brandShortName;:">
+<!ENTITY languages.switch.label "Byt…">
+<!ENTITY languages.switch.accesskey "B">
+<!ENTITY languages.switch.tooltiptext "Byt det föredragna språket för användargränssnittet">
+<!ENTITY languages.get.label "Hämta fler språkpaket…">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.get.tooltiptext "Hämta fler språkpaket för &brandShortName;">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.restart.about.label "Starta om &brandShortName; för att verkställa språkbytet i befintliga fönster">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.empty.description "Språkpaket tillhandahåller ytterligare språk för gränssnittet i &brandShortName; och tilläggen">
+<!-- A CSS value. In most cases it doesn't need be changed; CJK languages (and other very compact languages) should use the value "auto". -->
+<!ENTITY languages.empty.description.width "30em">
+<!ENTITY languages.empty.learn.label "Läs mer om språkpaket">
+<!ENTITY languages.empty.learn.accesskey "L">

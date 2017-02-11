@@ -1,0 +1,19 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY button.label "Språk">
+<!-- Same as the languages.title string in the languages.dtd file. -->
+<!ENTITY tooltip.title "Användargränssnittets språk">
+<!-- It refers to a language -->
+<!ENTITY tooltip.selected.label "Valt:">
+<!-- It refers to a language -->
+<!ENTITY tooltip.current.label-2 "Verkställs i detta fönster:">
+<!ENTITY tooltip.provider.label "Tillhandahåller listan över språkpaket:">
+<!ENTITY popup.manage.label "Hantera språk…">
+<!ENTITY popup.get.label "Hämta fler språkpaket…">
+<!ENTITY popup.restart.label "Starta om efter språkbyte">
+<!ENTITY popup.match.label "Matcha systemspråket">
+<!ENTITY popup.provider.label "Återställ listan över tillgängliga språk">
