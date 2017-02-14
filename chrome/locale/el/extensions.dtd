@@ -13,6 +13,8 @@
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
 <!ENTITY languages.get.tooltiptext "Αποκτήστε περισσότερα πακέτα γλώσσας για &brandShortName;">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.restart.about.label "Επανεκκίνηση του &brandShortName; για εφαρμογή της αλλαγής γλώσσας στα υπάρχοντα παράθυρα">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
 <!ENTITY languages.empty.description "Τα πακέτα γλωσσών παρέχουν επιπρόσθετες γλώσσες για τη διεπαφή του &brandShortName; και των επεκτάσεων">
 <!-- A CSS value. In most cases it doesn't need be changed; CJK languages (and other very compact languages) should use the value "auto". -->
 <!ENTITY languages.empty.description.width "30em">

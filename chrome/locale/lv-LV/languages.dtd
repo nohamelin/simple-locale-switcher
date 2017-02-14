@@ -8,12 +8,12 @@
 <!-- A CSS value, the default width of the paragraphs in the window. In most cases it doesn't need be changed; CJK languages can use a lower value. -->
 <!ENTITY languages.descriptions.width "32em">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
-<!ENTITY languages.switch.description "Izvēlieties valodu kas parādīsies &brandShortName; dialoglodziņos, izvēlnēs un rīkjoslās:">
-<!ENTITY languages.switch.match.label "Atbilstošu sistēmas valodai">
+<!ENTITY languages.switch.description "Izvēlieties teksta valodu &brandShortName; dialoglodziņos, izvēlnēs un rīkjoslās:">
+<!ENTITY languages.switch.match.label "Izmantot sistēmas valodu">
 <!ENTITY languages.switch.match.accesskey "S">
-<!ENTITY languages.switch.select.label "Lietot">
-<!ENTITY languages.switch.select.accesskey "L">
+<!ENTITY languages.switch.select.label "Izmantot:">
+<!ENTITY languages.switch.select.accesskey "I">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
-<!ENTITY languages.switch.restart.description "Jums būs jārestartē &brandShortName;, lai izmaiņas stātos spēkā.">
+<!ENTITY languages.switch.restart.description "Restartējiet &brandShortName;, lai izmaiņas stātos spēkā.">
 <!ENTITY languages.switch.restore.label "Atjaunot noklusējumu">
 <!ENTITY languages.switch.restore.accesskey "N">

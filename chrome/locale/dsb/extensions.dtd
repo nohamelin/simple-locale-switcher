@@ -13,6 +13,8 @@
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
 <!ENTITY languages.get.tooltiptext "Dalšne rěcne pakśiki za &brandShortName; wobstaraś">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.restart.about.label "&brandShortName; znowego startowaś, aby nowu rěc na eksistěrujuce wokna nałožył">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
 <!ENTITY languages.empty.description "Rěcne pakśiki stajaju pśidatne rěcy za wužywarski pówjerch &brandShortName; a rozšyrjenja k dispoziciji">
 <!-- A CSS value. In most cases it doesn't need be changed; CJK languages (and other very compact languages) should use the value "auto". -->
 <!ENTITY languages.empty.description.width "30em">

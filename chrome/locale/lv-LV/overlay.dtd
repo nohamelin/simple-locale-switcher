@@ -11,7 +11,7 @@
 <!ENTITY tooltip.selected.label "Atlasīta:">
 <!-- It refers to a language -->
 <!ENTITY tooltip.current.label-2 "Piemērot šajā logā:">
-<!ENTITY tooltip.provider.label "Provider package of the languages list:">
+<!ENTITY tooltip.provider.label "Valodu saraksta pakešpiegādātājs:">
 <!ENTITY popup.manage.label "Pārvaldīt valodas...">
 <!ENTITY popup.get.label "Iegūt valodu pakotnes...">
 <!ENTITY popup.restart.label "Restartēt pēc valodas pārslēgšanas">

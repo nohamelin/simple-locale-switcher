@@ -5,6 +5,7 @@
    -->
 
 <!ENTITY button.label "Rěč">
+<!-- Same as the languages.title string in the languages.dtd file. -->
 <!ENTITY tooltip.title "Rěč wužiwarskeho powjercha">
 <!-- It refers to a language -->
 <!ENTITY tooltip.selected.label "Wubrana:">

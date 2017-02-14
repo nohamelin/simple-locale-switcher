@@ -5,13 +5,15 @@
    -->
 
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
-<!ENTITY languages.selected.label "Vēlamā &brandShortName; saskarnes valoda:">
+<!ENTITY languages.selected.label "Izvēlētā &brandShortName; saskarnes valoda:">
 <!ENTITY languages.switch.label "Pārslēgt...">
 <!ENTITY languages.switch.accesskey "S">
 <!ENTITY languages.switch.tooltiptext "Pārslēgt lietotāja saskarnes valodu">
 <!ENTITY languages.get.label "Iegūt valodu pakotnes">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
-<!ENTITY languages.get.tooltiptext "Iegūt valodu pakotnes no &brandShortName;">
+<!ENTITY languages.get.tooltiptext "Iegūt &brandShortName; valodu pakotnes">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.restart.about.label "Restartēt &brandShortName;, lai pārslēgtu valodu esošajiem logiem">
 <!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
 <!ENTITY languages.empty.description "Valodu pakotnes nodrošina papildu saskarnes valodas &brandShortName; un paplašinājumiem">
 <!-- A CSS value. In most cases it doesn't need be changed; CJK languages (and other very compact languages) should use the value "auto". -->

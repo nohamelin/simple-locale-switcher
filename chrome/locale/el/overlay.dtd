@@ -5,6 +5,7 @@
    -->
 
 <!ENTITY button.label "Γλώσσα">
+<!-- Same as the languages.title string in the languages.dtd file. -->
 <!ENTITY tooltip.title "Γλώσσα διεπαφής χρήστη">
 <!-- It refers to a language -->
 <!ENTITY tooltip.selected.label "Επιλεγμένη:">
