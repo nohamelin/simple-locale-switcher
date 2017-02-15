@@ -96,7 +96,7 @@ var simplels = (function() {
             // The next is no longer enougth with CustomizableUI because
             // adding our widget to some area from the palette make it
             // immediately full interactive in any existent browser window
-            // except the one displaying yet about:customizing
+            // except the one still displaying the "Customize Firefox" tab.
             window.addEventListener("aftercustomization", simplels);
         }
     },
