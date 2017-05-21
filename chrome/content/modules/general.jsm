@@ -58,31 +58,19 @@ var utils = {
     },
 
 
-    platformVersionIsEqualOrGreaterThan: function(version) {
-        let compare = Services.vc.compare(Services.appinfo.platformVersion,
-                                          version);
-        return (compare === 0 || compare === 1);
-    },
-
-
     getAddonFileContents: function(spec) {
         let sis = Cc["@mozilla.org/scriptableinputstream;1"]
                   .getService(Ci.nsIScriptableInputStream);
 
         let uri = Services.io.newURI(spec, null, null);
-        let channel;
-        // COMPAT: newChannelFromURI2 is available from Gecko 36
-        if ("newChannelFromURI2" in Services.io) {
-            channel = Services.io.newChannelFromURI2(
+        let channel = Services.io.newChannelFromURI2(
                         uri,
                         null,
                         Services.scriptSecurityManager.getSystemPrincipal(),
                         null,
                         Ci.nsILoadInfo.SEC_NORMAL,
                         Ci.nsIContentPolicy.TYPE_OTHER);
-        } else {
-            channel = Services.io.newChannelFromURI(uri);
-        }
+
         let input = channel.open();
         sis.init(input);
 

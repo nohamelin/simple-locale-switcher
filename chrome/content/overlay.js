@@ -63,7 +63,6 @@ var simplels = (function() {
         this.localeStrings.formats = this.getStringBundle(
                                                 "simplels-name-formats");
 
-        this.prefs.QueryInterface(Ci.nsIPrefBranch2);   // COMPAT: Gecko 12-
         this.prefs.addObserver("", this, false);
 
         Services.obs.addObserver(this, "sls:selected-changed", false);
