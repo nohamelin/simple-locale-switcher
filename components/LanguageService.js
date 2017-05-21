@@ -172,26 +172,26 @@ LanguageService.prototype = {
      * with a collection of language tags: all the available languages that
      * can be effectively applied to that package.
      */
-    _availableLocales: Object.create(null),
+    _availableLocales: new Map(),
 
 
     getAvailableLocales: function(fromGlobalProvider) {
         let provider = fromGlobalProvider ? DEFAULT_LOCALE_PROVIDER
                                           : this.selectedProvider;
 
-        if (!(provider in this._availableLocales)) {
-            this._availableLocales[provider] = new Array();
+        if (!this._availableLocales.has(provider)) {
+            this._availableLocales.set(provider, new Array());
 
             let availables = tcr.getLocalesForPackage(provider);
             while (availables.hasMore())
-                this._availableLocales[provider].push(availables.getNext());
+                this._availableLocales.get(provider).push(availables.getNext());
         }
-        return this._availableLocales[provider];
+        return this._availableLocales.get(provider);
     },
 
 
     _onChangedAvailableLocales: function() {
-        this._availableLocales = Object.create(null);
+        this._availableLocales.clear();
 
         Services.obs.notifyObservers(null, "sls:availables-changed", null);
     },
@@ -408,7 +408,7 @@ LanguageService.prototype = {
             // being currently changed to be rebuilt the next time that this
             // same provider will be selected by the user, because undetected
             // changes can happen to this data meanwhile.
-            delete this._availableLocales[this._selectedProvider];
+            this._availableLocales.delete(this._selectedProvider);
         }
         delete this._selectedProvider;
 

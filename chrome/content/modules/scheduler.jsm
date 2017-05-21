@@ -13,8 +13,7 @@ const Ci = Components.interfaces;
 const Cu = Components.utils;
 
 
-var waiting = Object.create(null);  // No inherited keys
-                                    // COMPAT TODO: Use Map() (Gecko 13+)
+var waiting = new Map();
 
 /*
  * It does basically the same as the first version of the DeferredTask.jsm
@@ -25,12 +24,14 @@ var waiting = Object.create(null);  // No inherited keys
 var scheduler = {
 
     queue: function(id, callback, delay) {
-        waiting[id] = waiting[id] ||
-                      Cc["@mozilla.org/timer;1"].createInstance(Ci.nsITimer);
+        if (!waiting.has(id)) {
+            waiting.set(id, Cc["@mozilla.org/timer;1"]
+                            .createInstance(Ci.nsITimer));
+        }
 
-        waiting[id].initWithCallback({
+        waiting.get(id).initWithCallback({
             notify: function(timer) {
-                delete waiting[id];
+                waiting.delete(id);
                 callback.apply(null);
             }
         }, delay, Ci.nsITimer.TYPE_ONE_SHOT);
@@ -38,9 +39,9 @@ var scheduler = {
 
 
     cancel: function(id) {
-        if (waiting[id]) {
-            waiting[id].cancel();
-            delete waiting[id];
+        if (waiting.has(id)) {
+            waiting.get(id).cancel();
+            waiting.delete(id);
         }
     }
 };
