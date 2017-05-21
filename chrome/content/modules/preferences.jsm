@@ -70,13 +70,6 @@ var prefs = {
     },
 
 
-    getDefaultCharPref: function(prefName) {
-        let branch = Services.prefs.getDefaultBranch("");
-
-        return branch.getCharPref(prefName);
-    },
-
-
     isDefaultCharPrefLocalized: function(prefName) {
         let branch = Services.prefs.getDefaultBranch("");
 
