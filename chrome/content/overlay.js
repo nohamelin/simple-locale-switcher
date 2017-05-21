@@ -466,8 +466,10 @@ var simplels = (function() {
 
     restartAfterSwitch: function() {
         let wantRestart = this.prefs.getBoolPref("button.restartAfterSwitch");
-        if (wantRestart)
-            this.utils.restartApplication();    // It could be canceled
+        if (wantRestart) {
+            Cu.import("resource://gre/modules/BrowserUtils.jsm", {})
+              .BrowserUtils.restartApplication();
+        }
     },
 
 

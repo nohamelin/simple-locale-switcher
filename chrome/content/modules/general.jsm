@@ -100,27 +100,6 @@ var utils = {
         features += instantApply ? ",dialog=no" : ",modal";
 
         parent.openDialog(url, title, features);
-    },
-
-
-    /*
-     * It's the same (though a bit simplified) implementation as the old
-     * FUEL/STEEL/SMILE library, and the more recent restartApplication()
-     * in the BrowserUtils.jsm module (Firefox 40 and later):
-     *   resource://gre/modules/BrowserUtils.jsm
-     */
-    restartApplication: function() {
-        let cancelQuit = Cc["@mozilla.org/supports-PRBool;1"]
-                            .createInstance(Ci.nsISupportsPRBool);
-        Services.obs.notifyObservers(cancelQuit,
-                                     "quit-application-requested",
-                                     "restart");
-        if (cancelQuit.data)
-            return false;   // The quit request has been canceled
-
-        Cc["@mozilla.org/toolkit/app-startup;1"]
-            .getService(Ci.nsIAppStartup)
-            .quit(Ci.nsIAppStartup.eAttemptQuit | Ci.nsIAppStartup.eRestart);
     }
 };
 
