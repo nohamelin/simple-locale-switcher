@@ -3,7 +3,7 @@
         "esr":          "https://archive.mozilla.org/pub/firefox/releases/%VERSION%esr/%__DIR_OS%/xpi/",
         "release":      "https://archive.mozilla.org/pub/firefox/releases/%VERSION%/%__DIR_OS%/xpi/",
         "beta":         "https://archive.mozilla.org/pub/firefox/releases/%__DISPLAY_VERSION%/%__DIR_OS%/xpi/",
-        "aurora":       "https://archive.mozilla.org/pub/firefox/nightly/latest-mozilla-aurora-l10n/%__DIR_OS%/xpi/",
+        "aurora":       "https://archive.mozilla.org/pub/devedition/releases/%__DISPLAY_VERSION%/%__DIR_OS%/xpi/",
         "nightly":      "https://archive.mozilla.org/pub/firefox/nightly/latest-mozilla-central-l10n/%__DIR_OS%/xpi/",
 
         "default":      "https://archive.mozilla.org/pub/firefox/releases/%VERSION%/%__DIR_OS%/xpi/"
