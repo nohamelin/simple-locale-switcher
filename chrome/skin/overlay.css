@@ -7,7 +7,7 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 
-/* Icon for the toolbar button: Firefox & Thunderbird with classic UI */
+/* Icon for the toolbar button: defaults */
 #simplels-button {
     list-style-image: url("chrome://simplels/skin/button.png");
 }
@@ -15,7 +15,7 @@ toolbar[iconsize="small"] #simplels-button {
     list-style-image: url("chrome://simplels/skin/button-small.png");
 }
 
-/* Icon for the toolbar button: Firefox with Australis UI */
+/* Icon for the toolbar button: Firefox */
 #simplels-widget {
     list-style-image: url("chrome://simplels/skin/button-small.png");
 }
@@ -24,21 +24,11 @@ toolbarpaletteitem[place="palette"] > #simplels-widget {
     list-style-image: url("chrome://simplels/skin/button-big.png");
 }
 
-/* Icon for the toolbar button: Thunderbird with flat monochrome UI (1) */
-toolbar:not([iconsize]) #simplels-button,
-toolbar[iconsize=""] #simplels-button {     /* for manually added toolbars */
-    list-style-image: url("chrome://simplels/skin/button-small.png");
-}
-
-/* Icon for the toolbar button: Thunderbird with flat monochrome UI (2)
- *
- * For releases 31 to 40 of Thunderbird, upstream rules setting the inverse
- * icon theme with dark personas in Windows 7+ have a high CSS specificity and
- * are (wrongly) applied to buttons provided by add-ons too, overriding our
- * settings. The next fix it. */
-:-moz-any(#mail-toolbox, #navigation-toolbox)
-              toolbar[brighttext]:not([iconsize]) #simplels-button,
-#mail-toolbox toolbar[brighttext][iconsize=""] #simplels-button {
+/* Icon for the toolbar button: Thunderbird.
+ * Thunderbird 52 uses small monochrome icons as the unique supported choice,
+ * but it still has set the toolbar[iconsize="large"] attribute, so we ignore
+ * it, but then it maybe doesn't mix very well with some complete themes. */
+:-moz-any(#mail-toolbox, #navigation-toolbox) #simplels-button {
     list-style-image: url("chrome://simplels/skin/button-small.png");
 }
 

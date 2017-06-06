@@ -12,7 +12,7 @@
 
     <toolbarbutton id="simplels-button" removeelement="true"/>
 
-    <panelmultiview id="PanelUI-multiView">
+    <panelmultiview id="PanelUI-multiView"> <!-- Firefox -->
         <panelview id="simplels-widget-view"
                    flex="1"
                    observes="sls_showLocaleDescriptions">

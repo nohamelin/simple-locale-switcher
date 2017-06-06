@@ -7,17 +7,6 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 
-/* Improve the absurd default layout of the toolbar button in Firefox (pre
- * Australis) */
-#main-window toolbar:not([grippytooltiptext]) #simplels-button {
-    -moz-box-orient: horizontal;
-}
-#main-window toolbar[mode="full"]:not([grippytooltiptext]) #simplels-button {
-    -moz-binding: url(
-        "chrome://global/content/bindings/toolbarbutton.xml#menu-vertical");
-}
-
-
 #simplels-button[descriptions="true"] .simplels-locale {
     -moz-binding: url(
         "chrome://simplels/content/menu.xml#menuitem-iconic-locale");

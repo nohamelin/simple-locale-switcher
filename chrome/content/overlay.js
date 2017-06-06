@@ -63,14 +63,13 @@ var simplels = (function() {
         this.localeStrings.formats = this.getStringBundle(
                                                 "simplels-name-formats");
 
-        this.prefs.QueryInterface(Ci.nsIPrefBranch2);   // COMPAT: Gecko 12-
         this.prefs.addObserver("", this, false);
 
         Services.obs.addObserver(this, "sls:selected-changed", false);
         Services.obs.addObserver(this, "sls:availables-changed", false);
 
-        // In Firefox 29 and later, the toolbar button will be built with the
-        // new mechanisms provided by CustomizableUI, instead of plain XUL.
+        // In Firefox, the toolbar button will be built with the mechanisms
+        // provided by CustomizableUI, instead of plain XUL.
         this.toolbarButtonAsWidget = !!document.getElementById(
                                                     "simplels-widget-view");
         this.toolbarButtonId = this.toolbarButtonAsWidget ? "simplels-widget"
@@ -90,13 +89,9 @@ var simplels = (function() {
 
         // Don't miss to update the toolbar button when it's added from the
         // toolbar palette.
-        if ("CustomizableUI" in window) {
+        if ("CustomizableUI" in window) {   // Firefox
             CustomizableUI.addListener(this.customizableListener);
         } else {
-            // The next is no longer enougth with CustomizableUI because
-            // adding our widget to some area from the palette make it
-            // immediately full interactive in any existent browser window
-            // except the one still displaying the "Customize Firefox" tab.
             window.addEventListener("aftercustomization", simplels);
         }
     },
@@ -182,25 +177,6 @@ var simplels = (function() {
                     node.tooltip = "simplels-button-tooltip";
                 }
             });
-
-            // Ensure that, after updating the extension (from 0.6 or older),
-            // the widget is placed in the same original position of the XUL
-            // button.
-            let buttonPlacement = CustomizableUI.getPlacementOfWidget(
-                                                 "simplels-button");
-            if (buttonPlacement) {
-                let migrated = false;
-                try {
-                    migrated = this.prefs.getBoolPref("button.migrated");
-                } catch (e) {}
-
-                if (!migrated) {
-                    CustomizableUI.addWidgetToArea("simplels-widget",
-                                                   buttonPlacement.area,
-                                                   buttonPlacement.position);
-                    this.prefs.setBoolPref("button.migrated", true);
-                }
-            }
         }
     },
 
@@ -359,7 +335,7 @@ var simplels = (function() {
         let node = document.tooltipNode;
 
         // The locale attribute is used here instead of the simplels-locale
-        // class for to include the case of an empty locale.
+        // class to include the case of an empty locale.
         if (!node.getAttribute("locale"))
             return false;
 
@@ -490,8 +466,10 @@ var simplels = (function() {
 
     restartAfterSwitch: function() {
         let wantRestart = this.prefs.getBoolPref("button.restartAfterSwitch");
-        if (wantRestart)
-            this.utils.restartApplication();    // It could be canceled
+        if (wantRestart) {
+            Cu.import("resource://gre/modules/BrowserUtils.jsm", {})
+              .BrowserUtils.restartApplication();
+        }
     },
 
 

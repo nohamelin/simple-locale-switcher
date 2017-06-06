@@ -12,7 +12,6 @@ const Cu = Components.utils;
 
 Cu.import("resource://gre/modules/XPCOMUtils.jsm");
 Cu.import("resource://gre/modules/Services.jsm");
-Cu.import("chrome://simplels/content/modules/general.jsm");
 
 XPCOMUtils.defineLazyModuleGetter(this, "AddonManager",
             "resource://gre/modules/AddonManager.jsm");
@@ -172,26 +171,26 @@ LanguageService.prototype = {
      * with a collection of language tags: all the available languages that
      * can be effectively applied to that package.
      */
-    _availableLocales: Object.create(null),
+    _availableLocales: new Map(),
 
 
     getAvailableLocales: function(fromGlobalProvider) {
         let provider = fromGlobalProvider ? DEFAULT_LOCALE_PROVIDER
                                           : this.selectedProvider;
 
-        if (!(provider in this._availableLocales)) {
-            this._availableLocales[provider] = new Array();
+        if (!this._availableLocales.has(provider)) {
+            this._availableLocales.set(provider, new Array());
 
             let availables = tcr.getLocalesForPackage(provider);
             while (availables.hasMore())
-                this._availableLocales[provider].push(availables.getNext());
+                this._availableLocales.get(provider).push(availables.getNext());
         }
-        return this._availableLocales[provider];
+        return this._availableLocales.get(provider);
     },
 
 
     _onChangedAvailableLocales: function() {
-        this._availableLocales = Object.create(null);
+        this._availableLocales.clear();
 
         Services.obs.notifyObservers(null, "sls:availables-changed", null);
     },
@@ -408,7 +407,7 @@ LanguageService.prototype = {
             // being currently changed to be rebuilt the next time that this
             // same provider will be selected by the user, because undetected
             // changes can happen to this data meanwhile.
-            delete this._availableLocales[this._selectedProvider];
+            this._availableLocales.delete(this._selectedProvider);
         }
         delete this._selectedProvider;
 
@@ -423,28 +422,21 @@ LanguageService.prototype = {
 
     ///////////////////////////////////////////////////////////////////////////
     startup: function() {
-        addonBranch.QueryInterface(Ci.nsIPrefBranch2);  // COMPAT: Gecko 12-
         addonBranch.addObserver("", this, false);
-        localeBranch.QueryInterface(Ci.nsIPrefBranch2); // COMPAT: Gecko 12-
         localeBranch.addObserver("", this, false);
-        matchBranch.QueryInterface(Ci.nsIPrefBranch2);  // COMPAT: Gecko 12-
         matchBranch.addObserver("", this, false);
 
         this._initialSelectedLocale = this.selectedLocale;
 
-        // Supporting restartless language packs (Gecko 21 and later)
+        // Support for restartless language packs.
+        // It's worth noting that Gecko 47 changed which events are broadcasted
+        // when the availability of an add-on changes:
+        //    https://bugzilla.mozilla.org/show_bug.cgi?id=612168
+        //
+        // The respective documentation in MDN hasn't been updated to reflect
+        // that changes.
         AddonManager.addInstallListener(this.installListener);
         AddonManager.addAddonListener(this.addonListener);
-
-        // COMPAT: Gecko 47 changed which events are broadcasted when the
-        // availability of an add-on changes:
-        //   https://bugzilla.mozilla.org/show_bug.cgi?id=612168
-        //
-        // We use a separated, extra listener for the new required cases,
-        // to ensure that our own broadcasts aren't triggered multiple times
-        // needlessly in older versions of the application.
-        if (utils.platformVersionIsEqualOrGreaterThan("47.0"))
-            AddonManager.addAddonListener(this.addonListener2);
 
         Services.obs.addObserver(this, "quit-application", false);
 
@@ -465,7 +457,6 @@ LanguageService.prototype = {
 
         AddonManager.removeInstallListener(this.installListener);
         AddonManager.removeAddonListener(this.addonListener);
-        AddonManager.removeAddonListener(this.addonListener2);
 
         Services.obs.removeObserver(this, "quit-application");
 
@@ -565,6 +556,15 @@ LanguageService.prototype = {
                 this._handle();
         },
 
+        onUninstalling: function(addon) {
+            if (addon.type === "locale" && addon.isActive)
+                this._handle();
+        },
+
+        onOperationCancelled: function(addon) {
+            if (addon.type === "locale" && !addon.userDisabled)
+                this._handle();
+        },
 
         _handle: function() {
             // At this point the Toolkit Chrome Registry already know about
@@ -574,19 +574,6 @@ LanguageService.prototype = {
             scheduler.queue("addon-availability-changed", function() {
                 languageService._onChangedAvailableLocales();
             }, 80);
-        }
-    },
-
-
-    addonListener2: {   // COMPAT: Gecko 47 and later
-        onUninstalling: function(addon) {
-            if (addon.type === "locale" && addon.isActive)
-                languageService.addonListener._handle();
-        },
-
-        onOperationCancelled: function(addon) {
-            if (addon.type === "locale" && !addon.userDisabled)
-                languageService.addonListener._handle();
         }
     }
 };

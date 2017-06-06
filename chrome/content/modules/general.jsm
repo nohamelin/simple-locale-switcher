@@ -21,8 +21,8 @@ const Cu = Components.utils;
 Cu.import("resource://gre/modules/XPCOMUtils.jsm");
 Cu.import("resource://gre/modules/Services.jsm");
 
-XPCOMUtils.defineLazyModuleGetter(this, "prefs",
-            "chrome://simplels/content/modules/preferences.jsm");
+XPCOMUtils.defineLazyModuleGetter(this, "UpdateUtils",
+            "resource://gre/modules/UpdateUtils.jsm");
 
 
 const FIREFOX_ID = "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}";
@@ -50,32 +50,11 @@ var utils = {
 
     get channel() {
         if (!("_channel" in this)) {
-            // COMPAT TODO: use the existent module (Gecko 18 and later):
-            //   resource://gre/modules/UpdateChannel.jsm
-
-            // User values for the app.update.channel preference are ignored
-            // by the application "for to ensure that the channel is tightly
-            // coupled with the application and does not apply to other
-            // instances that may use the same profile".
-            try {
-                this._channel = prefs.getDefaultCharPref("app.update.channel");
-            } catch (e) {
-                // Some builds (linux distributions) may not have this
-                // preference.
-                this._channel = "default";
-            }
-
-            // For now, we can to ignore the partnership bits for the channel
-            // string.
+            // The given argument let us to ignore the possible partnership
+            // bits from the channel string.
+            this._channel = UpdateUtils.getUpdateChannel(false);
         }
         return this._channel;
-    },
-
-
-    platformVersionIsEqualOrGreaterThan: function(version) {
-        let compare = Services.vc.compare(Services.appinfo.platformVersion,
-                                          version);
-        return (compare === 0 || compare === 1);
     },
 
 
@@ -84,19 +63,14 @@ var utils = {
                   .getService(Ci.nsIScriptableInputStream);
 
         let uri = Services.io.newURI(spec, null, null);
-        let channel;
-        // COMPAT: newChannelFromURI2 is available from Gecko 36
-        if ("newChannelFromURI2" in Services.io) {
-            channel = Services.io.newChannelFromURI2(
+        let channel = Services.io.newChannelFromURI2(
                         uri,
                         null,
                         Services.scriptSecurityManager.getSystemPrincipal(),
                         null,
                         Ci.nsILoadInfo.SEC_NORMAL,
                         Ci.nsIContentPolicy.TYPE_OTHER);
-        } else {
-            channel = Services.io.newChannelFromURI(uri);
-        }
+
         let input = channel.open();
         sis.init(input);
 
@@ -126,27 +100,6 @@ var utils = {
         features += instantApply ? ",dialog=no" : ",modal";
 
         parent.openDialog(url, title, features);
-    },
-
-
-    /*
-     * It's the same (though a bit simplified) implementation as the old
-     * FUEL/STEEL/SMILE library, and the more recent restartApplication()
-     * in the BrowserUtils.jsm module (Firefox 40 and later):
-     *   resource://gre/modules/BrowserUtils.jsm
-     */
-    restartApplication: function() {
-        let cancelQuit = Cc["@mozilla.org/supports-PRBool;1"]
-                            .createInstance(Ci.nsISupportsPRBool);
-        Services.obs.notifyObservers(cancelQuit,
-                                     "quit-application-requested",
-                                     "restart");
-        if (cancelQuit.data)
-            return false;   // The quit request has been canceled
-
-        Cc["@mozilla.org/toolkit/app-startup;1"]
-            .getService(Ci.nsIAppStartup)
-            .quit(Ci.nsIAppStartup.eAttemptQuit | Ci.nsIAppStartup.eRestart);
     }
 };
 

@@ -11,12 +11,6 @@
 .view-pane:not([type="locale"]) > #simplels-restart-container {
     display: none;
 }
-/* COMPAT: Fix the displaying of our container being messed up by the
- * global-info-container class (Gecko 30 and before) */
-.view-pane[type="locale"] > #simplels-info-container {
-    display: -moz-box !important;
-}
-
 
 .view-pane:not([type="locale"]) .sls-list-empty-box,
 .view-pane[type="locale"] .sls-list-empty-box ~ .alert {

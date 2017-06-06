@@ -81,7 +81,7 @@
 
 
     <!-- Toolbar button -->
-    <toolbarpalette id="BrowserToolbarPalette"> <!-- Firefox & SeaMonkey -->
+    <toolbarpalette id="BrowserToolbarPalette"> <!-- SeaMonkey -->
         <toolbarbutton id="simplels-button"/>
     </toolbarpalette>
     <toolbarpalette id="MailToolbarPalette"> <!-- Thunderbird & SeaMonkey -->
