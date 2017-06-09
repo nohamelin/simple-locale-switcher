@@ -69,7 +69,7 @@
                          class="padded uri-element"
                          preference="getMoreLanguagesURL"
                          type="autocomplete"
-                         autocompletesearch="history"
+                         autocompletesearch="unifiedcomplete"
                          placeholder="&prefwindow.get.destination.list.amo;"
                          observes="customDestination"
                          flex="1"/>
