@@ -1,0 +1,22 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
+<!ENTITY languages.selected.label "Idioma preferit per a la interfície del &brandShortName;:">
+<!ENTITY languages.switch.label "Canvia…">
+<!ENTITY languages.switch.accesskey "C">
+<!ENTITY languages.switch.tooltiptext "Canvia l'idioma preferit per a la interfície d'usuari">
+<!ENTITY languages.get.label "Aconseguiu més paquets d'idioma…">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.get.tooltiptext "Aconseguit més paquets d'idioma per al &brandShortName;">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.restart.about.label "Reinicieu el &brandShortName; per a aplicar el canvi d'idioma a la finestra actual">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.empty.description "Els paquets d'idioma proporcionen idiomes addicionals per a la interfície del &amp;brandShortName i les seves extensions">
+<!-- A CSS value. In most cases it doesn't need be changed; CJK languages (and other very compact languages) should use the value "auto". -->
+<!ENTITY languages.empty.description.width "30em">
+<!ENTITY languages.empty.learn.label "Llegiu-ne més sobre els paquets d'idioma">
+<!ENTITY languages.empty.learn.accesskey "L">

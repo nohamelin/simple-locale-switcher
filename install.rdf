@@ -65,6 +65,18 @@
             </Description>
         </em:localized>
 
+        <em:localized> <!-- Catalan -->
+            <Description>
+                <em:locale>ca</em:locale>
+                <em:name>Simple Locale Switcher</em:name>
+                <em:description>Una forma més fàcil de gestionar l'idioma de la interfície d'usuari</em:description>
+                <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
+                <em:creator>nohamelin</em:creator>
+                <em:translator>Xavi Ivars - Softcatalà</em:translator>
+                <em:contributor>Algunes icones d'aquesta extensió són part del tema d'iciones del projecte Tango Desktop</em:contributor>
+            </Description>
+        </em:localized>
+
         <em:localized> <!-- German -->
             <Description>
                 <em:locale>de</em:locale>

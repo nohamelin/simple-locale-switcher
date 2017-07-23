@@ -1,0 +1,18 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the languages.get.label string in extensions.dtd file -->
+<!ENTITY prefwindow.get.caption "Aconsegueix més paquets d'idioma">
+<!ENTITY prefwindow.get.destination.label "Destinació de l'ordre:">
+<!ENTITY prefwindow.get.destination.accesskey "D">
+<!ENTITY prefwindow.get.destination.list.ftp "Carpeta que conté els paquets d'idioma al servidor FTP de Mozilla">
+<!ENTITY prefwindow.get.destination.list.amo "Pàgina dels paquets d'idimoa a lloc web de complements de Mozilla">
+<!ENTITY prefwindow.get.destination.list.custom "Personalitzat">
+<!ENTITY prefwindow.get.custom.label "Adreça:">
+<!ENTITY prefwindow.get.custom.accesskey "A">
+<!ENTITY prefwindow.button.caption "Botó de la barra d'eines d'idiomes">
+<!ENTITY prefwindow.button.descriptions.label "Mostra el codi d'idioma al costat del nom de cada idioma llistat">
+<!ENTITY prefwindow.button.descriptions.accesskey "S">

@@ -1,0 +1,19 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY button.label "Idioma">
+<!-- Same as the languages.title string in the languages.dtd file. -->
+<!ENTITY tooltip.title "Idioma de la interfície d'usuari">
+<!-- It refers to a language -->
+<!ENTITY tooltip.selected.label "Seleccionat:">
+<!-- It refers to a language -->
+<!ENTITY tooltip.current.label-2 "Aplicat a aquesta finestra:">
+<!ENTITY tooltip.provider.label "Proveidor de la llista d'idiomes:">
+<!ENTITY popup.manage.label "Gestiona els idiomes…">
+<!ENTITY popup.get.label "Aconseguiu més paquets d'idioma…">
+<!ENTITY popup.restart.label "Reinicia després de canviar l'idioma">
+<!ENTITY popup.match.label "Fes-lo coincidir amb la llengua del sistema">
+<!ENTITY popup.provider.label "Restaura la llista d'idiomes disponibles">
