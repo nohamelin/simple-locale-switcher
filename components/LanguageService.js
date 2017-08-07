@@ -41,6 +41,9 @@ XPCOMUtils.defineLazyServiceGetter(this, "tcr",
 XPCOMUtils.defineLazyServiceGetter(this, "ls",
                                    "@mozilla.org/intl/nslocaleservice;1",
                                    "nsILocaleService");
+XPCOMUtils.defineLazyServiceGetter(this, "osp",
+                                   "@mozilla.org/intl/ospreferences;1",
+                                   "mozIOSPreferences");
 
 XPCOMUtils.defineLazyGetter(this, "addonBranch", function() {
     return Services.prefs.getBranch(ADDON_BRANCH_NAME);
@@ -93,8 +96,12 @@ LanguageService.prototype = {
      */
     get osLocale() {
         if (!("_osLocale" in this)) {
-            this._osLocale = ls.getSystemLocale()
-                               .getCategory("NSILOCALE_MESSAGES");
+            try {
+                this._osLocale = osp.systemLocale;
+            } catch(e) {    // COMPAT: Firefox 53 and before
+                this._osLocale = ls.getSystemLocale()
+                                   .getCategory("NSILOCALE_MESSAGES");
+            }
         }
         return this._osLocale;
     },
