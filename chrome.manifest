@@ -33,6 +33,8 @@ overlay     chrome://mozapps/content/extensions/extensions.xul          chrome:/
 # Style overlays
 style       chrome://global/content/customizeToolbar.xul                chrome://simplels/skin/overlay.css
 
+style       chrome://browser/content/browser.xul                        chrome://simplels/skin/overlay.fx57.css                 appversion>=57.0a1
+
 
 # XPCOM registration
 component   {92ffb138-103f-11e2-84fe-286f6188709b}      components/LanguageService.js
