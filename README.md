@@ -1,9 +1,17 @@
 Simple Locale Switcher
 ----------------------
 
-An extension for Mozilla Firefox, Thunderbird and the SeaMonkey suite that exposes the hidden preferences that define the preferred language for the user interface of the application.
+An XUL-based extension for Mozilla Firefox, Thunderbird and the SeaMonkey suite that exposes the hidden preferences that define the preferred language for the user interface of the application.
 
-Screenshots and the latest public release can be found in the [main page of the extension in addons.mozilla.org (AMO)](https://addons.mozilla.org/addon/simple-locale-switcher). Older releases, along with the changelogs and compatibility info, are listed in the [versions page in AMO](https://addons.mozilla.org/addon/simple-locale-switcher/versions/).
+
+### Install
+The latest public release can be found in the [main page of the extension in addons.mozilla.org (AMO)](https://addons.mozilla.org/addon/simple-locale-switcher). Older releases, along with the changelogs and compatibility info, are listed in the [versions page in AMO](https://addons.mozilla.org/addon/simple-locale-switcher/versions/).
+
+#### Firefox 57 and later
+
+Being a so-called "legacy" add-on, it can't be installed in Firefox 57 (a.k.a Firefox Quantum) and later versions, where only add-ons built using the WebExtensions model are accepted. Sadly, [it's not possible to port this add-on to WebExtensions](https://github.com/nohamelin/simple-locale-switcher/issues/16).
+
+The only remaining option for Fx users is to manage the language manually, setting the [related internal preferences](https://support.mozilla.org/en-US/kb/use-firefox-interface-other-languages-language-pack#w_how-to-change-the-language-of-the-user-interface) of the application each time.
 
 
 ### Docs
