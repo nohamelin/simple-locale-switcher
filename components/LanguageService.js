@@ -51,9 +51,6 @@ XPCOMUtils.defineLazyGetter(this, "addonBranch", function() {
 XPCOMUtils.defineLazyGetter(this, "localeBranch", function() {
     return Services.prefs.getBranch(LOCALE_BRANCH_NAME);
 });
-XPCOMUtils.defineLazyGetter(this, "matchBranch", function() {
-    return Services.prefs.getBranch(MATCH_BRANCH_NAME);
-});
 
 
 var languageService = null;
@@ -431,7 +428,6 @@ LanguageService.prototype = {
     startup: function() {
         addonBranch.addObserver("", this, false);
         localeBranch.addObserver("", this, false);
-        matchBranch.addObserver("", this, false);
 
         this._initialSelectedLocale = this.selectedLocale;
 
@@ -460,7 +456,6 @@ LanguageService.prototype = {
     shutdown: function() {
         addonBranch.removeObserver("", this);
         localeBranch.removeObserver("", this);
-        matchBranch.removeObserver("", this);
 
         AddonManager.removeInstallListener(this.installListener);
         AddonManager.removeAddonListener(this.addonListener);
