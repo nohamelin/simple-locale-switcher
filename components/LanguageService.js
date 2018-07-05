@@ -25,7 +25,6 @@ XPCOMUtils.defineLazyModuleGetter(this, "scheduler",
 
 const DEFAULT_LOCALE_PROVIDER = "global";
 
-const ADDON_ID = "simplels@nohamelin";
 const ADDON_BRANCH_NAME = "extensions.simplels.";
 const LOCALE_BRANCH_NAME = "general.useragent.";
 const LOCALE_PREF_NAME = "general.useragent.locale";
@@ -294,71 +293,6 @@ LanguageService.prototype = {
 
 
     /*
-     * extensions.simplels.applyOnQuit.matchOS
-     *
-     * A volatile (without an explicit default value) preference.
-     * Its existence is checked during the shutdown of the application, where
-     * its value is copied to the intl.locale.matchOS preference, and then
-     * this preference is reset.
-     */
-    get willMatchOS() {
-        if (!("_willMatchOS" in this)) {
-            try {
-                this._willMatchOS = addonBranch.getBoolPref(
-                                                "applyOnQuit.matchOS");
-            } catch (e) {
-                return undefined;
-            }
-        }
-        return this._willMatchOS;
-    },
-
-
-    _onChangedWillMatchOS: function() {
-        delete this._willMatchOS;
-        Services.obs.notifyObservers(null, "sls:selected-will-change", null);
-    },
-
-
-    _resetWillMatchOS: function() {
-        addonBranch.clearUserPref("applyOnQuit.matchOS");
-    },
-
-
-    /*
-     * extensions.simplels.applyOnQuit.locale
-     *
-     * A volatile (without an explicit default value) preference.
-     * Its existence is checked during the shutdown of the application, where
-     * its value is copied to the general.useragent.locale preference, setting
-     * intl.locale.matchOS to false if it's required, and then this preference
-     * is reset.
-     */
-    get nextLocale() {
-        if (!("_nextLocale" in this)) {
-            try {
-                this._nextLocale = addonBranch.getCharPref(
-                                               "applyOnQuit.locale");
-            } catch (e) {
-                return undefined;
-            }
-        }
-        return this._nextLocale;
-    },
-
-
-    _onChangedNextLocale: function() {
-        delete this._nextLocale;
-        Services.obs.notifyObservers(null, "sls:selected-will-change", null);
-    },
-
-
-    _resetNextLocale: function() {
-        addonBranch.clearUserPref("applyOnQuit.locale");
-    },
-
-
-    /*
      * extensions.simplels.provider
      *
      * Name of the chrome package from whom the list of available locales is
@@ -461,33 +395,6 @@ LanguageService.prototype = {
         AddonManager.removeAddonListener(this.addonListener);
 
         Services.obs.removeObserver(this, "quit-application");
-
-
-        AddonManager.getAddonByID(ADDON_ID, function(addon) {
-            let addonDisabledAfterRestart = addon.pendingOperations &
-                                            AddonManager.PENDING_DISABLE;
-            let addonUninstalledAfterRestart = addon.pendingOperations &
-                                               AddonManager.PENDING_UNINSTALL;
-            let addonAvailableAfterRestart = !addonDisabledAfterRestart &&
-                                             !addonUninstalledAfterRestart;
-
-            if (languageService.nextLocale !== undefined) {
-                // Don't give surprises to the user *after* that this add-on
-                // was uninstalled or disabled.
-                if (addonAvailableAfterRestart)
-                    languageService.userLocale = languageService.nextLocale;
-
-                languageService._resetNextLocale();
-            }
-            if (languageService.willMatchOS !== undefined) {
-                // Don't give surprises to the user *after* that this add-on
-                // was uninstalled or disabled.
-                if (addonAvailableAfterRestart)
-                    languageService.matchingOS = languageService.willMatchOS;
-
-                languageService._resetWillMatchOS();
-            }
-        });
     },
 
 
@@ -512,14 +419,6 @@ LanguageService.prototype = {
 
                     case "provider":
                         this._onChangedSelectedProvider();
-                        break;
-
-                    case "applyOnQuit.matchOS":
-                        this._onChangedWillMatchOS();
-                        break;
-
-                    case "applyOnQuit.locale":
-                        this._onChangedNextLocale();
                         break;
                 }
                 break;

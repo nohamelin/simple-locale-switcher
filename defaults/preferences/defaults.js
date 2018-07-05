@@ -4,9 +4,6 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-//pref("extensions.simplels.applyOnQuit.matchOS", false);
-//pref("extensions.simplels.applyOnQuit.locale", "en-US");
-
 pref("extensions.simplels.button.restartAfterSwitch", true);
 pref("extensions.simplels.button.showDescriptions", true);
 
