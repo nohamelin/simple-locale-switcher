@@ -108,7 +108,6 @@ var simplels = {
                 this.tbUtils.openContentTab(getURL);
                 break;
 
-            case this.FIREFOX_ID:
             case this.SEAMONKEY_ID:
             default:
                 openURL(getURL);
@@ -126,7 +125,6 @@ var simplels = {
                 this.tbUtils.openContentTab(learnURL);
                 break;
 
-            case this.FIREFOX_ID:
             case this.SEAMONKEY_ID:
             default:
                 openURL(learnURL);

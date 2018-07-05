@@ -11,8 +11,3 @@
     -moz-binding: url(
         "chrome://simplels/content/menu.xml#menuitem-iconic-locale");
 }
-
-
-#simplels-widget-view[descriptions="true"] .simplels-locale::after {
-   content: attr(description);
-}

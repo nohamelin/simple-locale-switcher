@@ -15,14 +15,6 @@ toolbar[iconsize="small"] #simplels-button {
     list-style-image: url("chrome://simplels/skin/button-small.png");
 }
 
-/* Icon for the toolbar button: Firefox */
-#simplels-widget {
-    list-style-image: url("chrome://simplels/skin/button-small.png");
-}
-#simplels-widget[cui-areatype="menu-panel"],
-toolbarpaletteitem[place="palette"] > #simplels-widget {
-    list-style-image: url("chrome://simplels/skin/button-big.png");
-}
 
 /* Icon for the toolbar button: Thunderbird.
  * Thunderbird 52 uses small monochrome icons as the unique supported choice,
@@ -59,17 +51,6 @@ toolbar[iconsize="small"][grippytooltiptext] #simplels-button {
 .simplels-locale[current="true"] > .toolbarbutton-text,
 .simplels-locale[current="true"] > .menu-iconic-text {
     font-weight: bold;
-}
-
-
-#simplels-widget-view[descriptions="true"] .simplels-locale::after {
-   float: right;
-   font-style: italic;
-   color: hsl(0,0%,50%);
-   -moz-margin-start: 2ex;
-}
-#PanelUI-multiView #simplels-widget-view[descriptions="true"] .simplels-locale::after {
-   -moz-margin-start: 1ex;
 }
 
 

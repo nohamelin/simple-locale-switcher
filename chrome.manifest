@@ -21,8 +21,6 @@ override    chrome://simplels/locale/preferences-os.dtd                 chrome:/
 
 
 # XUL overlays
-overlay     chrome://browser/content/browser.xul                        chrome://simplels/content/overlay.xul
-overlay     chrome://browser/content/browser.xul                        chrome://simplels/content/overlay-customUI.xul
 overlay     chrome://messenger/content/messenger.xul                    chrome://simplels/content/overlay.xul
 overlay     chrome://navigator/content/navigator.xul                    chrome://simplels/content/overlay.xul
 
@@ -32,8 +30,6 @@ overlay     chrome://mozapps/content/extensions/extensions.xul          chrome:/
 
 # Style overlays
 style       chrome://global/content/customizeToolbar.xul                chrome://simplels/skin/overlay.css
-
-style       chrome://browser/content/browser.xul                        chrome://simplels/skin/overlay.fx57.css                 appversion>=57.0a1
 
 
 # XPCOM registration

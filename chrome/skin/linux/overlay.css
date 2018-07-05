@@ -5,10 +5,3 @@
  */
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
-
-/* Workaround for
- *   https://bugzilla.mozilla.org/show_bug.cgi?id=994700 */
-#simplels-view-body > .simplels-locale[checked="true"][disabled="true"] {
-    color: GrayText;
-}

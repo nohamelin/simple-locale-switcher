@@ -23,8 +23,6 @@ var simplels = (function() {
     strings: null,
     localeStrings: {languageNames: null, regionNames: null, formats: null},
 
-    toolbarButtonAsWidget: null,
-    toolbarButtonId: null,
     isToolbarButtonUpdatePending: false,
 
 
@@ -68,15 +66,6 @@ var simplels = (function() {
         Services.obs.addObserver(this, "sls:selected-changed", false);
         Services.obs.addObserver(this, "sls:availables-changed", false);
 
-        // In Firefox, the toolbar button will be built with the mechanisms
-        // provided by CustomizableUI, instead of plain XUL.
-        this.toolbarButtonAsWidget = !!document.getElementById(
-                                                    "simplels-widget-view");
-        this.toolbarButtonId = this.toolbarButtonAsWidget ? "simplels-widget"
-                                                          : "simplels-button";
-        if (this.toolbarButtonAsWidget)
-            this.createToolbarButtonAsWidget();
-
         // Initialize dinamic attributes of commands and toolbar button
         this.updateRestartCommand();
         this.updateMatchCommand();
@@ -87,13 +76,7 @@ var simplels = (function() {
             simplels.tryToUpdateToolbarButton();
         }, 60);
 
-        // Don't miss to update the toolbar button when it's added from the
-        // toolbar palette.
-        if ("CustomizableUI" in window) {   // Firefox
-            CustomizableUI.addListener(this.customizableListener);
-        } else {
-            window.addEventListener("aftercustomization", simplels);
-        }
+        window.addEventListener("aftercustomization", simplels);
     },
 
 
@@ -102,9 +85,6 @@ var simplels = (function() {
 
         Services.obs.removeObserver(this, "sls:selected-changed");
         Services.obs.removeObserver(this, "sls:availables-changed");
-
-        if ("CustomizableUI" in window)
-            CustomizableUI.removeListener(this.customizableListener);
     },
 
 
@@ -154,33 +134,6 @@ var simplels = (function() {
     },
 
 
-    createToolbarButtonAsWidget: function() {
-        let widget = CustomizableUI.getWidget("simplels-widget");
-
-        if (!widget || widget.provider === CustomizableUI.PROVIDER_XUL) {
-            if (widget)
-                CustomizableUI.destroyWidget("simplels-widget");
-
-            CustomizableUI.createWidget({
-                id: "simplels-widget",
-                type: "view",
-                viewId: "simplels-widget-view",
-                label: simplels.strings.getString("widget.label"),
-                tooltiptext: "Language",   // HACK, see below
-
-                onCreated: function(node) {
-                    // HACK: The tooltiptext property was specified only for
-                    // to prevent a dummy "Could not localize property..."
-                    // warning from the application while building the widget;
-                    // this callback is run after that.
-                    node.removeAttribute("tooltiptext");
-                    node.tooltip = "simplels-button-tooltip";
-                }
-            });
-        }
-    },
-
-
     checkIfUpdatingToolbarButton: function() {
         if (this.isToolbarButtonUpdatePending) {
             this.tryToUpdateToolbarButton();
@@ -189,24 +142,16 @@ var simplels = (function() {
 
 
     tryToUpdateToolbarButton: function() {
-        let foundButton = this.toolbarButtonAsWidget
-                    ? CustomizableUI.getPlacementOfWidget("simplels-widget")
-                    : document.getElementById("simplels-button");
-
+        let foundButton = document.getElementById("simplels-button");
         if (foundButton) {
             this.isToolbarButtonUpdatePending = false;
 
             this.updateToolbarButtonTooltip();
+            this.populatePopupLocales();
 
             // The general items of the toolbar button's popup work with
             // broadcasters, so they are always correctly set, and we can
             // to ignore them here.
-
-            let popup = this.toolbarButtonAsWidget
-                        ? document.getElementById("simplels-view-body")
-                        : document.getElementById("simplels-button-popup");
-
-            this.populatePopupLocales(popup, this.toolbarButtonAsWidget);
         } else {
             this.isToolbarButtonUpdatePending = true;
         }
@@ -268,16 +213,12 @@ var simplels = (function() {
     },
 
 
-    populatePopupLocales: function(popup, forWidget) {
+    populatePopupLocales: function() {
         Cu.import("chrome://simplels/content/modules/dom.jsm", this);
 
-        let localeItemType = forWidget ? "toolbarbutton" : "menuitem";
-        let localeItemClass = forWidget ? "simplels-locale subviewbutton"
-                                        : "simplels-locale";
         let localeItemCallback = function(locale) {
             return function() { simplels.switchTo(locale); };
         };
-
         let checkedLocale = this.langsvc.userLocale;
         let isCheckedAvailable = this.langUtils
                                      .isLocaleAvailable(checkedLocale);
@@ -289,14 +230,14 @@ var simplels = (function() {
         let locales = this.getWindowRelevantLocales();
         this.langUtils.sortLocales(locales);
 
-
+        let popup = document.getElementById("simplels-button-popup");
         this.domUtils.removeChildrenByClassName(popup, "simplels-locale");
 
         let popupFragment = document.createDocumentFragment();
         locales.forEach(function(locale) {
-            let item = document.createElement(localeItemType);
+            let item = document.createElement("menuitem");
 
-            item.className = localeItemClass;
+            item.className = "simplels-locale";
             item.setAttribute("type", "radio");
             item.setAttribute("autocheck", "false");
             item.setAttribute("locale", locale);
@@ -375,48 +316,15 @@ var simplels = (function() {
     },
 
 
-    customizableListener: {
-
-        onWidgetAdded: function(id) {
-            if (id === simplels.toolbarButtonId)
-                this._handle();
-        },
-
-        onWidgetUndoMove: function(node) {
-            if (node.id === simplels.toolbarButtonId)
-                this._handle();
-        },
-
-        // At least one add-on (The Puzzle Piece 2, aka Puzzle Toolbars)
-        // relies that we handle onAreaNodeRegistered to initialize our
-        // button if it's placed in an extra toolbar provided by them.
-        onAreaNodeRegistered: function(area, container) {
-            this._handle();
-        },
-
-        _handle: function() {
-            // Note that CustomizableUI events are dispatched synchronously
-            // on the UI thread.
-            window.setTimeout(function() {
-                simplels.checkIfUpdatingToolbarButton();
-            }, 60);
-        }
-    },
-
-
     openLanguagesManager: function() {
         switch (this.utils.application) {
-            case this.THUNDERBIRD_ID:
-                openAddonsMgr("addons://list/locale");
-                break;
-
             case this.SEAMONKEY_ID:
                 toEM("addons://list/locale");
                 break;
 
-            case this.FIREFOX_ID:
+            case this.THUNDERBIRD_ID:
             default:
-                BrowserOpenAddonsMgr("addons://list/locale");
+                openAddonsMgr("addons://list/locale");
                 break;
         }
     },
@@ -427,17 +335,13 @@ var simplels = (function() {
         let getURL = this.getMoreLanguagesURL();
 
         switch (this.utils.application) {
-            case this.THUNDERBIRD_ID:
-                this.tbUtils.openContentTab(getURL);
-                break;
-
             case this.SEAMONKEY_ID:
                 openUILink(getURL);
                 break;
 
-            case this.FIREFOX_ID:
+            case this.THUNDERBIRD_ID:
             default:
-                openUILinkIn(getURL, "tab");
+                this.tbUtils.openContentTab(getURL);
                 break;
         }
     },
