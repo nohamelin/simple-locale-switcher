@@ -15,7 +15,6 @@ toolbar[iconsize="small"] #simplels-button {
     list-style-image: url("chrome://simplels/skin/button-small.png");
 }
 
-
 /* Icon for the toolbar button: Thunderbird.
  * Thunderbird 52 uses small monochrome icons as the unique supported choice,
  * but it still has set the toolbar[iconsize="large"] attribute, so we ignore

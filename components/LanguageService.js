@@ -37,9 +37,6 @@ XPCOMUtils.defineLazyServiceGetter(this, "xcr",
 XPCOMUtils.defineLazyServiceGetter(this, "tcr",
                                    "@mozilla.org/chrome/chrome-registry;1",
                                    "nsIToolkitChromeRegistry");
-XPCOMUtils.defineLazyServiceGetter(this, "ls",
-                                   "@mozilla.org/intl/nslocaleservice;1",
-                                   "nsILocaleService");
 XPCOMUtils.defineLazyServiceGetter(this, "osp",
                                    "@mozilla.org/intl/ospreferences;1",
                                    "mozIOSPreferences");
@@ -92,12 +89,7 @@ LanguageService.prototype = {
      */
     get osLocale() {
         if (!("_osLocale" in this)) {
-            try {
-                this._osLocale = osp.systemLocale;
-            } catch(e) {    // COMPAT: Firefox 53 and before
-                this._osLocale = ls.getSystemLocale()
-                                   .getCategory("NSILOCALE_MESSAGES");
-            }
+            this._osLocale = osp.systemLocale;
         }
         return this._osLocale;
     },
