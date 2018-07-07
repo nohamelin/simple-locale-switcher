@@ -6,6 +6,8 @@
    -->
 
 <?xml-stylesheet type="text/css" href="chrome://global/skin/"?>
+<?xml-stylesheet type="text/css"
+                 href="chrome://messenger/skin/preferences/preferences.css"?>
 
 <!DOCTYPE prefwindow [
     <!ENTITY % prefsDTD SYSTEM "chrome://simplels/locale/preferences.dtd">

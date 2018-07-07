@@ -6,6 +6,8 @@
    -->
 
 <?xml-stylesheet type="text/css" href="chrome://global/skin/"?>
+<?xml-stylesheet type="text/css"
+                 href="chrome://messenger/skin/preferences/preferences.css"?>
 <?xml-stylesheet type="text/css" href="chrome://simplels/skin/languages.css"?>
 
 <!DOCTYPE overlay [
