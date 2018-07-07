@@ -29,7 +29,7 @@ overlay     chrome://mozapps/content/extensions/extensions.xul          chrome:/
 
 
 # Style overlays
-style       chrome://global/content/customizeToolbar.xul                chrome://simplels/skin/overlay.css
+style       chrome://messenger/content/customizeToolbar.xul             chrome://simplels/skin/overlay.css
 
 
 # XPCOM registration
