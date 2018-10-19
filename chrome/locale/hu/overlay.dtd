@@ -1,0 +1,21 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!ENTITY button.label "Nyelv">
+
+<!-- Same as the languages.title string in the languages.dtd file. -->
+<!ENTITY tooltip.title "Felhasználói felület nyelve">
+<!-- It refers to a language -->
+<!ENTITY tooltip.selected.label "Kiválasztott:">
+<!-- It refers to a language -->
+<!ENTITY tooltip.current.label-2 "Erre az ablakra alkalmazva:">
+<!ENTITY tooltip.provider.label "A nyelvek listájának szolgáltatói csomagja:">
+
+<!ENTITY popup.manage.label "Nyelvek kezelése…">
+<!ENTITY popup.get.label "További nyelvcsomagok beszerzése…">
+<!ENTITY popup.restart.label "Újra indítás a nyelv változtatás után">
+<!ENTITY popup.match.label "Illessze be a rendszer nyelvét">
+<!ENTITY popup.provider.label "Állítsa vissza a rendelkezésre álló nyelvek listáját">
