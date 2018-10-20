@@ -419,7 +419,7 @@
         <em:localized> <!-- Hungarian -->
             <Description>
                 <em:locale>hu</em:locale>
-                <em:name>Nyelvkapcsoló (Simple Locale Switcher)</em:name>
+                <em:name>Területi kapcsoló (Simple Locale Switcher)</em:name>
                 <em:description>A felhasználói felület nyelvének könnyebb kezelése</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
                 <em:creator>Carlos Mella</em:creator>
