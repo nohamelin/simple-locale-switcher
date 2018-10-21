@@ -17,9 +17,9 @@ The only remaining option for Firefox users is to manage the language manually, 
 
 #### Thunderbird 60 and later
 
-[Support for Thunderbird 60 and later](https://github.com/nohamelin/simple-locale-switcher/issues/18) is in progress. A date when a compatible build is ready is unknown; sorry about that.
+[Support for Thunderbird 60 and later](https://github.com/nohamelin/simple-locale-switcher/issues/18) is in progress. A date when a compatible build is ready is unknown; sorry about that. However, if you can contribute to the code to help this add-on work with Thunderbird 60 and later, please create a [pull request](https://help.github.com/articles/creating-a-pull-request/) and comment at [this issue](https://github.com/nohamelin/simple-locale-switcher/issues/18). Thank you
 
-Until a compatible build is ready, the recommended procedure is to download and reinstall the entire application for [Thunderbird](https://www.thunderbird.net/thunderbird/all/) already translated into your language.
+Until a compatible build is ready, the recommended procedure is to download and reinstall the entire application for [Thunderbird](https://www.thunderbird.net/thunderbird/all/) already translated into your language. Downdload links for “Thunderbird 64-bit for Windows” can be found by [clicking here](https://www.m64.info/index.php/thunderbird-64-bit-download).
 
 
 ### Docs
