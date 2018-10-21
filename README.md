@@ -37,8 +37,43 @@ Other external, related resources:
 ### Contact, contribute
 
 * Questions, bug reports and feature requests are tracked in the [Issues](https://github.com/nohamelin/simple-locale-switcher/issues) page. You will need to have a GitHub account to post here. Alternatively, there is a [thread in the MozillaZine forums](http://forums.mozillazine.org/viewtopic.php?f=48&t=2746943) open to general discussion.
-* Translations are managed via the [BabelZilla platform](https://www.babelzilla.org/forum/index.php?showtopic=7551). They are done by a helpful group of volunteers. Please go there if you want to collaborate updating or starting a new localization.
+* Collaborate updating or starting a new localization (i.e. translation) at [locale](https://github.com/nohamelin/simple-locale-switcher/tree/master/chrome/locale). Translations are done by a helpful group of volunteers and were formerly managed via the [BabelZilla platform](https://www.babelzilla.org/forum/index.php?showtopic=7551).
 * About code contributions via pull requests: before to start one, [**please create a new branch**](https://help.github.com/articles/creating-a-pull-request/) in your repository to accommodate your commits; it makes things easier if you need to do further amendments to your code.
+
+
+### Coders
+
+* Carlos Mella (author and maintainer)
+* Some icons which are part Tango Desktop Project icon theme
+
+### Translators
+
+* noureddin (ar) [نزّلها الآن](https://addons.thunderbird.net/ar/addon/simple-locale-switcher/)
+* Xavi Ivars – Softcatalà (ca) [Baixa'l ara](https://addons.thunderbird.net/ca/addon/simple-locale-switcher/)
+* [Erwin D. Glockner](erglo.l10n@gmail.com) (de) [Jetzt herunterladen](https://addons.thunderbird.net/de/addon/simple-locale-switcher/)
+* milupo (dsb) [Něnto ześěgnuś](https://addons.thunderbird.net/dsb/addon/simple-locale-switcher/)
+* Γιώργος Μαλαμάς (el) [Λήψη τώρα](https://addons.thunderbird.net/el/addon/simple-locale-switcher/)
+* Carlos Mella (en-US) [Download Now](https://addons.thunderbird.net/en-US/addon/simple-locale-switcher/)
+* noureddin (eo) [Elŝuti nun](https://addons.thunderbird.net/eo/addon/simple-locale-switcher/)
+* nohamelin (es-ES) [Descargar ahora](https://addons.thunderbird.net/es-ES/addon/simple-locale-switcher/)
+* AriesFr (fr) [Télécharger maintenant](https://addons.thunderbird.net/fr/addon/simple-locale-switcher/)
+* GunChleoc (gd) [Luchdaich sìos a-nis](https://addons.thunderbird.net/gd/addon/simple-locale-switcher/)
+* milupo (hsb) [Nětko sćahnyć](https://addons.thunderbird.net/hsb/addon/simple-locale-switcher/)
+* Óvári (hu) [Letöltés most](https://addons.thunderbird.net/hue/addon/simple-locale-switcher/)
+* BlueX (ja) [今すぐダウンロード](https://addons.thunderbird.net/ja/addon/simple-locale-switcher/)
+* BlueX (ko) [다운로드](https://addons.thunderbird.net/ko/addon/simple-locale-switcher/)
+* Vards (lv-LV) [Lejuplādēt tagad](https://addons.thunderbird.net/lv-LV/addon/simple-locale-switcher/)
+* markh van BabelZilla.org (nl) [Nu downloaden](https://addons.thunderbird.net/nl/addon/simple-locale-switcher/)
+* ouesten (pt-BR) [Baixar agora](https://addons.thunderbird.net/pt-BR/addon/simple-locale-switcher/)
+* gionandri (rm)
+* goldenapple (ru) [Загрузить сейчас](https://addons.thunderbird.net/ru/addon/simple-locale-switcher/)
+* ДакСРБИЈА (sr) [Преузми сада](https://addons.thunderbird.net/sr/addon/simple-locale-switcher/)
+* A. Regnander (sv-SE) [Hämta nu](https://addons.thunderbird.net/sv-SE/addon/simple-locale-switcher/)
+* goldenapple (uk-UA) [Завантажити зараз](https://addons.thunderbird.net/uk-UA/addon/simple-locale-switcher/)
+* YFdyh000 (zh-CN) [立即下载](https://addons.thunderbird.net/zh-CN/addon/simple-locale-switcher/)
+* Merci chao (zh-TW) [立即下載](https://addons.thunderbird.net/zh-TW/addon/simple-locale-switcher/)
+* [Transvision](https://transvision.mozfr.org/)
+* [KDE Localization](https://l10n.kde.org/dictionary/search-translations.php)
 
 
 ### License
