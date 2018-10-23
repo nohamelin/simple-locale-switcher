@@ -18,7 +18,31 @@
 
         <em:description>An easier management of the user interface language</em:description>
         <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-        <em:creator>nohamelin</em:creator>
+        <em:creator>Carlos Mella</em:creator>
+        <em:translator>noureddin (ar)</em:translator>
+        <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+        <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+        <em:translator>milupo (dsb)</em:translator>
+        <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+        <em:translator>Carlos Mella (en-US)</em:translator>
+        <em:translator>noureddin (eo)</em:translator>
+        <em:translator>nohamelin (es-ES)</em:translator>
+        <em:translator>AriesFr (fr)</em:translator>
+        <em:translator>GunChleoc (gd)</em:translator>
+        <em:translator>milupo (hsb)</em:translator>
+        <em:translator>Óvári (hu)</em:translator>
+        <em:translator>BlueX (ja)</em:translator>
+        <em:translator>BlueX (ko)</em:translator>
+        <em:translator>Vards (lv-LV)</em:translator>
+        <em:translator>markh van BabelZilla.org (nl)</em:translator>
+        <em:translator>ouesten (pt-BR)</em:translator>
+        <em:translator>gionandri (rm)</em:translator>
+        <em:translator>goldenapple (ru)</em:translator>
+        <em:translator>ДакСРБИЈА (sr)</em:translator>
+        <em:translator>A. Regnander (sv-SE)</em:translator>
+        <em:translator>goldenapple (uk-UA)</em:translator>
+        <em:translator>YFdyh000 (zh-CN)</em:translator>
+        <em:translator>Merci chao (zh-TW)</em:translator>
         <em:contributor>Some icons used by this extension are part of the icon theme of the Tango Desktop Project</em:contributor>
 
         <em:optionsURL>chrome://simplels/content/preferences.xul</em:optionsURL>
@@ -59,8 +83,31 @@
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>إدارة أسهل للغة واجهة المستخدم</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-                <em:creator>nohamelin</em:creator>
-                <em:translator>noureddin</em:translator>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
                 <em:contributor>بعض الأيقونات المستخدمة في هذه الإضافة هي جزء من سمة أيقونات مشروع سطح مكتب تانغو</em:contributor>
             </Description>
         </em:localized>
@@ -71,8 +118,31 @@
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Una forma més fàcil de gestionar l'idioma de la interfície d'usuari</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-                <em:creator>nohamelin</em:creator>
-                <em:translator>Xavi Ivars - Softcatalà</em:translator>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
                 <em:contributor>Algunes icones d'aquesta extensió són part del tema d'iciones del projecte Tango Desktop</em:contributor>
             </Description>
         </em:localized>
@@ -83,8 +153,31 @@
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Die Sprache der Benutzeroberfläche einfacher verwalten</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-                <em:creator>nohamelin</em:creator>
-                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com)</em:translator>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
                 <em:contributor>Einige der hier verwendeten Symbole sind Teil des Symbolthemas des Tango Desktop Projects</em:contributor>
             </Description>
         </em:localized>
@@ -95,8 +188,31 @@
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Lažčejše wobchadanje z rěcu wužywarskego pówjercha</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-                <em:creator>nohamelin</em:creator>
-                <em:translator>milupo</em:translator>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
                 <em:contributor>Někotare symbole wužywane pśez toś to rozšyrjenje su źěl symboloweje drastwy projekta Tango Desktop</em:contributor>
             </Description>
         </em:localized>
@@ -107,8 +223,31 @@
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Μια ευκολότερη διαχείριση της γλώσσας διεπαφής χρήστη</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-                <em:creator>nohamelin</em:creator>
-                <em:translator>Γιώργος Μαλαμάς</em:translator>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
                 <em:contributor>Ορισμένα εικονίδια που χρησιμοποιούνται από αυτή την επέκταση είναι μέρος του θέματος εικονιδίων του έργου «Tango Desktop Project»</em:contributor>
             </Description>
         </em:localized>
@@ -119,8 +258,31 @@
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Pli facila administrado de la lingvo de la uzanta interfaco</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-                <em:creator>nohamelin</em:creator>
-                <em:translator>noureddin</em:translator>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
                 <em:contributor>Kelkaj piktogramoj, kiujn uzas tiu etendaĵo, estas parto de la piktograma etoso Tango Desktop Project</em:contributor>
             </Description>
         </em:localized>
@@ -131,7 +293,31 @@
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Un más fácil control del idioma de la interfaz de usuario</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-                <em:creator>nohamelin</em:creator>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
                 <em:contributor>Algunos iconos usados por esta extensión son parte de la biblioteca de iconos del proyecto de escritorio Tango</em:contributor>
             </Description>
         </em:localized>
@@ -142,8 +328,31 @@
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Une gestion plus facile de la langue de l'interface utilisateur</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-                <em:creator>nohamelin</em:creator>
-                <em:translator>AriesFr</em:translator>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
                 <em:contributor>Certaines icônes utilisées par cette extension font partie du thème d'icônes de Tango Desktop Project</em:contributor>
             </Description>
         </em:localized>
@@ -154,8 +363,31 @@
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Stiùireadh nas fhasa air cànain na h-eadar-aghaidh</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-                <em:creator>nohamelin</em:creator>
-                <em:translator>GunChleoc</em:translator>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
                 <em:contributor>Tha cuid dhe na h-ìomhaigheagan a chleachdas an leudachan seo ’nam pàirt de dh’ùrlar nan ìomhaigheagan aig Tango Desktop Project</em:contributor>
             </Description>
         </em:localized>
@@ -166,9 +398,67 @@
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Lóši wobchad z rěču wužiwarskeho powjercha</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-                <em:creator>nohamelin</em:creator>
-                <em:translator>milupo</em:translator>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
                 <em:contributor>Někotre symbole wužiwane přez tute rozšěrjenje su dźěl symboloweje drasty projekta Tango Desktop</em:contributor>
+            </Description>
+        </em:localized>
+
+        <em:localized> <!-- Hungarian -->
+            <Description>
+                <em:locale>hu</em:locale>
+                <em:name>Területi kapcsoló (Simple Locale Switcher)</em:name>
+                <em:description>A felhasználói felület nyelvének könnyebb kezelése</em:description>
+                <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
+                <em:contributor>Néhány, a bővítmény által használt ikon a Tango Desktop Project ikon témájához tartozik</em:contributor>
             </Description>
         </em:localized>
 
@@ -178,8 +468,31 @@
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>簡単なユーザーインターフェースの言語管理</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-                <em:creator>nohamelin</em:creator>
-                <em:translator>BlueX</em:translator>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
                 <em:contributor>この拡張機能によって使用されるいくつかのアイコンは Tango デスクトップ プロジェクトのアイコンテーマの一部であります</em:contributor>
             </Description>
         </em:localized>
@@ -190,8 +503,31 @@
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>쉬운 사용자 인터페이스 언어 관리</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-                <em:creator>nohamelin</em:creator>
-                <em:translator>BlueX</em:translator>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
                 <em:contributor>이 부가 기능에 사용된 몇몇 아이콘들은 Tango 데스크톱 프로젝트의 아이콘 테마의 일부분입니다</em:contributor>
             </Description>
         </em:localized>
@@ -202,8 +538,31 @@
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Vieglāka lietotāja saskarnes valodu pārvaldība</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-                <em:creator>nohamelin</em:creator>
-                <em:translator>Vards</em:translator>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
                 <em:contributor>Šajā paplašinājumā ir izmantotas dažas ikonas no Tango Desktop Project</em:contributor>
             </Description>
         </em:localized>
@@ -214,8 +573,31 @@
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Een eenvoudiger beheer van de gebruikersinterfacetaal</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-                <em:creator>nohamelin</em:creator>
-                <em:translator>markh van BabelZilla.org</em:translator>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
                 <em:contributor>Sommige door deze extensie gebruikte pictogrammen zijn onderdeel van het pictogrammenthema van het Tango Desktop Project</em:contributor>
             </Description>
         </em:localized>
@@ -226,8 +608,31 @@
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Uma gestão mais fácil do idioma da interface do usuário</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-                <em:creator>nohamelin</em:creator>
-                <em:translator>ouesten</em:translator>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
                 <em:contributor>Alguns ícones utilizados por esta extensão fazem parte do tema de ícones da área de trabalho do Projeto Tango</em:contributor>
             </Description>
         </em:localized>
@@ -238,8 +643,31 @@
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Ina administraziun pli simpla da la lingua da la surfatscha</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-                <em:creator>nohamelin</em:creator>
-                <em:translator>gionandri</em:translator>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
                 <em:contributor>Intginas iconas che questa extensiun utilisescha fan part dal theme Tango Desktop Project</em:contributor>
             </Description>
         </em:localized>
@@ -250,8 +678,31 @@
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Упрощённое управление языком пользовательского интерфейса</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-                <em:creator>nohamelin</em:creator>
-                <em:translator>goldenapple</em:translator>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
                 <em:contributor>Некоторые значки, используемые этим расширением, являются частью темы значков от Tango Desktop Project</em:contributor>
             </Description>
         </em:localized>
@@ -262,8 +713,31 @@
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Управљање језиком приказа</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-                <em:creator>nohamelin</em:creator>
-                <em:translator>ДакСРБИЈА</em:translator>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
                 <em:contributor>Неке од икона коришћених у овом додатку су део пакета икона Tango Desktop Project</em:contributor>
             </Description>
         </em:localized>
@@ -274,8 +748,31 @@
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>En enklare hantering av användargränssnittets språk</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-                <em:creator>nohamelin</em:creator>
-                <em:translator>A. Regnander</em:translator>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
                 <em:contributor>Vissa ikoner som används av detta tillägg är del av ikontemat från Tango Desktop Project</em:contributor>
             </Description>
         </em:localized>
@@ -286,8 +783,31 @@
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>Простіше керування мовою інтерфейсу користувача</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-                <em:creator>nohamelin</em:creator>
-                <em:translator>goldenapple</em:translator>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
                 <em:contributor>Деякі значки, використані в цьому розширенні, є частиною теми значків від Tango Desktop Project</em:contributor>
             </Description>
         </em:localized>
@@ -298,8 +818,31 @@
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>添加简单好用的用户界面语言管理功能</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-                <em:creator>nohamelin</em:creator>
-                <em:translator>YFdyh000</em:translator>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
                 <em:contributor>本扩展使用的某些图标源自 Tango Desktop 项目的图标主题</em:contributor>
             </Description>
         </em:localized>
@@ -310,8 +853,31 @@
                 <em:name>Simple Locale Switcher</em:name>
                 <em:description>為使用者介面語言提供更好的管理</em:description>
                 <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
-                <em:creator>nohamelin</em:creator>
-                <em:translator>Merci chao</em:translator>
+                <em:creator>Carlos Mella</em:creator>
+                <em:translator>noureddin (ar)</em:translator>
+                <em:translator>Xavi Ivars – Softcatalà (ca)</em:translator>
+                <em:translator>Erwin D. Glockner (erglo.l10n@gmail.com) (de)</em:translator>
+                <em:translator>milupo (dsb)</em:translator>
+                <em:translator>Γιώργος Μαλαμάς (el)</em:translator>
+                <em:translator>Carlos Mella (en-US)</em:translator>
+                <em:translator>noureddin (eo)</em:translator>
+                <em:translator>nohamelin (es-ES)</em:translator>
+                <em:translator>AriesFr (fr)</em:translator>
+                <em:translator>GunChleoc (gd)</em:translator>
+                <em:translator>milupo (hsb)</em:translator>
+                <em:translator>Óvári (hu)</em:translator>
+                <em:translator>BlueX (ja)</em:translator>
+                <em:translator>BlueX (ko)</em:translator>
+                <em:translator>Vards (lv-LV)</em:translator>
+                <em:translator>markh van BabelZilla.org (nl)</em:translator>
+                <em:translator>ouesten (pt-BR)</em:translator>
+                <em:translator>gionandri (rm)</em:translator>
+                <em:translator>goldenapple (ru)</em:translator>
+                <em:translator>ДакСРБИЈА (sr)</em:translator>
+                <em:translator>A. Regnander (sv-SE)</em:translator>
+                <em:translator>goldenapple (uk-UA)</em:translator>
+                <em:translator>YFdyh000 (zh-CN)</em:translator>
+                <em:translator>Merci chao (zh-TW)</em:translator>
                 <em:contributor>此擴充套件所使用的某些圖示取自於 Tango Desktop 項目的部分圖示主題</em:contributor>
             </Description>
         </em:localized>
