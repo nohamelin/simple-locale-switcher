@@ -1,0 +1,19 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- Same as the languages.get.label string in extensions.dtd file -->
+<!ENTITY prefwindow.get.caption "További nyelvi csomagok beszerzése">
+<!ENTITY prefwindow.get.destination.label "A parancs célpontja:">
+<!ENTITY prefwindow.get.destination.accesskey "p">
+<!ENTITY prefwindow.get.destination.list.ftp "A nyelvi csomagok mappa tárolója a Mozilla FTP szerverén">
+<!ENTITY prefwindow.get.destination.list.amo "A nyelvi csomagok oldalai a Mozilla kiegészítők honlapján">
+<!ENTITY prefwindow.get.destination.list.custom "Egyéni">
+<!ENTITY prefwindow.get.custom.label "Cím:">
+<!ENTITY prefwindow.get.custom.accesskey "C">
+
+<!ENTITY prefwindow.button.caption "Nyelvek eszköztár gombja">
+<!ENTITY prefwindow.button.descriptions.label "Mutassa meg a megfelelő nyelvcímkét az egyes felsorolt nyelvek neve mellett">
+<!ENTITY prefwindow.button.descriptions.accesskey "M">
