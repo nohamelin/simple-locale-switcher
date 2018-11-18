@@ -1,0 +1,22 @@
+<!--
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   -->
+
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). Don't miss the colon at the end. -->
+<!ENTITY languages.selected.label "A(z) &brandShortName; kezelőfelületének előnyben részesített nyelve:">
+<!ENTITY languages.switch.label "Nyelvkapcsoló…">
+<!ENTITY languages.switch.accesskey "k">
+<!ENTITY languages.switch.tooltiptext "Kapcsolja be a felhasználói felület preferált nyelvét">
+<!ENTITY languages.get.label "További nyelvi csomagok beszerzése…">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.get.tooltiptext "Nyújtson több nyelvi csomagot a(z) &brandShortName; számára">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.restart.about.label "Indítsa újra a(z) &brandShortName; alkalmazást a nyelvkapcsoló meglévő ablakokra történő alkalmazásához">
+<!-- &brandShortName; is dynamically replaced by the application's name (e.g. Firefox). -->
+<!ENTITY languages.empty.description "A nyelvi csomagok további nyelveket biztosítanak a(z) &brandShortName; és a kiterjesztések felületéhez">
+<!-- A CSS value. In most cases it doesn't need be changed; CJK languages (and other very compact languages) should use the value "auto". -->
+<!ENTITY languages.empty.description.width "30em">
+<!ENTITY languages.empty.learn.label "További információ a nyelvi csomagokról">
+<!ENTITY languages.empty.learn.accesskey "T">

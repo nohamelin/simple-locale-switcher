@@ -172,6 +172,18 @@
             </Description>
         </em:localized>
 
+        <em:localized> <!-- Hungarian -->
+            <Description>
+                <em:locale>hu</em:locale>
+                <em:name>Területi kapcsoló (Simple Locale Switcher)</em:name>
+                <em:description>A felhasználói felület nyelvének könnyebb kezelése</em:description>
+                <em:homepageURL>https://github.com/nohamelin/simple-locale-switcher</em:homepageURL>
+                <em:creator>nohamelin</em:creator>
+                <em:translator>Óvári</em:translator>
+                <em:contributor>Néhány, a bővítmény által használt ikon a „Tango Desktop Project” ikon témájához tartozik</em:contributor>
+            </Description>
+        </em:localized>
+
         <em:localized> <!-- Japanese -->
             <Description>
                 <em:locale>ja</em:locale>
